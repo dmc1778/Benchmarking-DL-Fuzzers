@@ -24,5 +24,3 @@ source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
 conda deactivate
 
 conda env remove --name $env_name -y
-
-conda clean --all -y

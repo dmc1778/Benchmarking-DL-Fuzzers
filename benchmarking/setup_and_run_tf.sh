@@ -20,8 +20,6 @@ conda create --name $env_name python=3.9 -y
 source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
 conda activate "$env_name"
 
-pip install pandas
-
 conda install -c conda-forge cudatoolkit=${dict[$tf_version]} -y  
 pip install nvidia-cudnn-cu11==8.6.0.163
 
@@ -29,6 +27,7 @@ CUDNN_PATH=$(dirname $(python -c "import nvidia.cudnn;print(nvidia.cudnn.__file_
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/:$CUDNN_PATH/lib
 
 pip install tensorflow==$tf_version
+pip install protobuf==3.20.*
 
 pip install pandas
 pip install pymongo
@@ -40,4 +39,3 @@ conda deactivate
 
 conda env remove --name $env_name -y
 
-conda clean --all -y
