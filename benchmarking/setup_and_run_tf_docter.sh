@@ -39,19 +39,14 @@ conda create --name $env_name python=${pyversion[$tf_version]} -y
 source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
 conda activate "$env_name"
 
-conda install -c conda-forge cudatoolkit=${dict[$tf_version]} -y  
-pip install nvidia-cudnn-cu11==8.6.0.163
-
-CUDNN_PATH=$(dirname $(python -c "import nvidia.cudnn;print(nvidia.cudnn.__file__)"))
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/:$CUDNN_PATH/lib
-
-pip install tensorflow==$tf_version
-pip install protobuf==3.20.*
-pip install numpy==${tf2np[$tf_version]}
 pip install pandas
-pip install pymongo
+pip install ruamel-yaml==0.16.10
+pip install scikit-learn==1.2.0
+pip install networkx==2.4
 
-python /media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/FreeFuzz/src/FreeFuzz.py --conf=/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/FreeFuzz/src/config/expr.conf --release=$tf_version --library=$library
+cd /home/nimashiri/code/docter/
+bash run_fuzzer.sh $library ./all_constr/tf2 ./configs/vi.config $tf_version | tee /home/workdir/ci.log
+
 
 source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
 conda deactivate
