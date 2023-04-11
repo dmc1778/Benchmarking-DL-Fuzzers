@@ -21,10 +21,10 @@ tf2np["2.4.0"]="1.21"
 tf2np["2.3.0"]="1.21"
 
 declare  -A pyversion
-pyversion["2.11.0"]="3.10"
-pyversion["2.10.0"]="3.10"
-pyversion["2.9.0"]="3.10"
-pyversion["2.8.0"]="3.10"
+pyversion["2.11.0"]="3.9"
+pyversion["2.10.0"]="3.9"
+pyversion["2.9.0"]="3.9"
+pyversion["2.8.0"]="3.9"
 pyversion["2.7.0"]="3.9"
 pyversion["2.6.0"]="3.9"
 pyversion["2.4.0"]="3.7"
@@ -45,18 +45,14 @@ pip install nvidia-cudnn-cu11==8.6.0.163
 CUDNN_PATH=$(dirname $(python -c "import nvidia.cudnn;print(nvidia.cudnn.__file__)"))
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/:$CUDNN_PATH/lib
 
-pip install tensorflow==$tf_version
-
-pip install protobuf==3.20.*
 pip install pandas
-pip install numpy
-pip install ruamel-yaml
-pip install scikit-learn
-pip install networkx
+pip install pymongo
+pip install textdistance
+pip install munkres
+pip install tensorflow==$tf_version
+pip install protobuf==3.20.*
 
-cd /home/nimashiri/code/docter/
-bash run_fuzzer.sh $library ./all_constr/tf2 ./configs/vi.config $tf_version | tee /home/workdir/ci.log
-
+python /media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/DeepREL/tensorflow/src/DeepREL.py $tf_version $library
 
 source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
 conda deactivate

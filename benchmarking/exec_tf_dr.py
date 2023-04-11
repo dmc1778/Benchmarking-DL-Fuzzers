@@ -25,9 +25,9 @@ TF_RELEASE_CUDNN_MAP = {
 # Loop over TensorFlow releases
 for tf_version, _ in TF_RELEASE_CUDA_MAP.items():
 
-    env_name_tf = f"fuzzer_docter_tf_{tf_version}"
+    env_name_tf = f"fuzzer_deeprel_tf_{tf_version}"
     shell_command = [
-        "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/benchmarking/setup_and_run_tf_docter.sh",
+        "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/benchmarking/setup_and_run_tf_deep_rel.sh",
         env_name_tf,
         tf_version,
         "tensorflow",

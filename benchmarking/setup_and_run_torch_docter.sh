@@ -1,14 +1,24 @@
 #!/bin/bash
 
 declare -A pyversion
-pyversion["2.11.0"]="3.10"
-pyversion["2.10.0"]="3.10"
-pyversion["2.9.0"]="3.10"
-pyversion["2.8.0"]="3.10"
-pyversion["2.7.0"]="3.9"
-pyversion["2.6.0"]="3.9"
-pyversion["2.4.0"]="3.7"
-pyversion["2.3.0"]="3.7"
+pyversion["1.13.0"]="3.9"
+pyversion["1.12.0"]="3.9"
+pyversion["1.11.0"]="3.9"
+pyversion["1.10.1"]="3.9"
+pyversion["1.10.0"]="3.9"
+pyversion["1.9.1"]="3.9"
+pyversion["1.9.0"]="3.9"
+pyversion["1.8.2"]="3.9"
+pyversion["1.8.1"]="3.9"
+pyversion["1.8.0"]="3.9"
+pyversion["1.7.1"]="3.8"
+pyversion["1.7.0"]="3.8"
+pyversion["1.6.0"]="3.8"
+pyversion["1.5.1"]="3.7"
+pyversion["1.5.0"]="3.7"
+pyversion["1.4.0"]="3.7"
+pyversion["1.1.0"]="3.6"
+pyversion["1.0.0"]="3.6"
 
 env_name=$1
 pt_version=$2
@@ -23,9 +33,10 @@ conda activate "$env_name"
 $setup_command
 
 pip install pandas
-pip install ruamel-yaml==0.16.10
-pip install scikit-learn==1.2.0
-pip install networkx==2.4
+pip install numpy
+pip install ruamel-yaml
+pip install scikit-learn
+pip install networkx
 
 cd /home/nimashiri/code/docter/
 bash run_fuzzer.sh $library ./all_constr/pt ./configs/ci.config $pt_version | tee /home/workdir/ci.log
