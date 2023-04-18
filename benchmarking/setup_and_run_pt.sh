@@ -25,20 +25,28 @@ pt_version=$2
 library=$3
 setup_command=$4
 
-conda create --name $env_name python=${pyversion[$pt_version]} -y
+# conda create --name $env_name python=${pyversion[$pt_version]} -y
 
 source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
 conda activate "$env_name"
 
-$setup_command
+# $setup_command
 
-pip install pandas
-pip install pymongo
-pip install tensorflow
+# pip install pandas
+# pip install pymongo
+# pip install tensorflow
 
-python /media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/FreeFuzz/src/FreeFuzz.py --conf=/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/FreeFuzz/src/config/expr.conf --release=$pt_version --library=$library
+#python /media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/FreeFuzz/src/FreeFuzz.py --conf=/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/FreeFuzz/src/config/expr.conf --release=$pt_version --library=$library
 
-source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
-conda deactivate
+ROOT_DIR="/media/nimashiri/SSD/testing_results/FreeFuzz/torch/$pt_version"
 
-conda env remove --name $env_name -y
+for dir in $(find "$ROOT_DIR" -type d); do
+    if echo "$dir" | grep -Eq "potential-bug" || echo "$dir" | grep -Eq "FreeFuzz_bugs"; then
+        find "$dir" -name "*.py" -exec sh -c 'echo "Processing file: $1"; python "$1"' sh {} \; &>> "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/logs/pytorch/$pt_version.txt";
+    fi
+done
+
+# source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
+# conda deactivate
+
+# conda env remove --name $env_name -y

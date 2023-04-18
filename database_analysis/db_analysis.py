@@ -7,6 +7,7 @@ from pymongo import MongoClient
 from pymongo.errors import ServerSelectionTimeoutError
 from csv import writer
 import pandas as pd
+
 logging.basicConfig(level=logging.INFO)
 
 """
@@ -170,39 +171,75 @@ def get_single_api(api, dbname):
 def get_all_databases():
     print(myclient.list_database_names())
 
+
 def get_overlap_docter(tool_name, libname):
-    files = os.listdir(f'/home/nimashiri/code/docter/all_constr/{libname}')
+    files = os.listdir(f"/home/nimashiri/code/docter/all_constr/{libname}")
     i = 0
     for api in files:
-        api_split = api.split('.')
+        api_split = api.split(".")
         new_api = ".".join(api_split[0:-1])
         flag = search_in_dataset(tool_name, new_api, libname)
         if flag:
             i = i + 1
-            print(f'Found {new_api}:{i}')
+            print(f"Found {new_api}:{i}")
 
-        
+
+def remove_overlap_docter(tool_name, libname):
+    files = os.listdir(f"/home/nimashiri/Desktop/nima_constr/{libname}")
+    i = 0
+    for api in files:
+        api_split = api.split(".")
+        new_api = ".".join(api_split[0:-1])
+        flag = search_in_dataset(tool_name, new_api, libname)
+        if not flag:
+            os.remove(
+                os.path.join(f"/home/nimashiri/Desktop/nima_constr/{libname}", api)
+            )
+            i = i + 1
+            print(f"Found non overlapping api{new_api}:{i}")
+
 
 def search_in_dataset(tool_name, api_name, lib):
     flag = False
-    if lib == 'pt':
-        data = pd.read_csv('/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/data/torch_data.csv')
+    if lib == "pt":
+        data = pd.read_csv(
+            "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/data/torch_data.csv"
+        )
     else:
-        data = pd.read_csv('/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/data/tf_data.csv')
+        data = pd.read_csv(
+            "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/data/tf_data.csv"
+        )
     for idx, row in data.iterrows():
-        if api_name == row['Buggy API']:
+        if api_name == row["Buggy API"]:
             flag = True
-            if lib == 'pt':
-                common_data_out = [tool_name, 'torch',row['Issue link'], api_name, row['Release']]     
-            else:
-                common_data_out = [tool_name, 'tf',row['Issue link'], api_name, row['Release']]
-            with open('/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/data/overlap_data_all.csv', mode='a', newline='\n') as fd:
-                writer_object = writer(fd)
-                writer_object.writerow(common_data_out)   
+            # if lib == "pt":
+            #     common_data_out = [
+            #         tool_name,
+            #         "torch",
+            #         row["Issue link"],
+            #         api_name,
+            #         row["Release"],
+            #     ]
+            # else:
+            #     common_data_out = [
+            #         tool_name,
+            #         "tf",
+            #         row["Issue link"],
+            #         api_name,
+            #         row["Release"],
+            #     ]
+            # with open(
+            #     "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/data/overlap_data_all.csv",
+            #     mode="a",
+            #     newline="\n",
+            # ) as fd:
+            #     writer_object = writer(fd)
+            #     writer_object.writerow(common_data_out)
     return flag
 
-def get_overlap_freefuzz(tool_name,dbname, lib):
-    
+
+def get_overlap_freefuzz(tool_name, dbname, lib):
+
     DB = pymongo.MongoClient(host="localhost", port=27017)[dbname]
 
     i = 0
@@ -210,14 +247,16 @@ def get_overlap_freefuzz(tool_name,dbname, lib):
         flag = search_in_dataset(tool_name, api_name, lib)
         if flag:
             i = i + 1
-            print(f'Found {api_name}:{i}')
+            print(f"Found {api_name}:{i}")
+
 
 def main():
-    get_overlap_freefuzz('mongo_based_tools',"deeprel-torch", 'pt')
-    get_overlap_freefuzz('mongo_based_tools',"freefuzz-tf", 'tf2')
-    get_overlap_docter('DocTer','pt')
-    get_overlap_docter('DocTer','tf2')
-    
+    remove_overlap_docter("DocTer", "tf2")
+    # get_overlap_freefuzz("mongo_based_tools", "deeprel-torch", "pt")
+    # get_overlap_freefuzz("mongo_based_tools", "freefuzz-tf", "tf2")
+    # get_overlap_docter("DocTer", "pt")
+    # get_overlap_docter("DocTer", "tf2")
+
 
 if __name__ == "__main__":
     main()
