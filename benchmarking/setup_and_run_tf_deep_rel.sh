@@ -52,7 +52,15 @@ pip install munkres
 pip install tensorflow==$tf_version
 pip install protobuf==3.20.*
 
-python /media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/DeepREL/tensorflow/src/DeepREL.py $tf_version $library
+# python /media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/DeepREL/tensorflow/src/DeepREL.py $tf_version $library
+
+ROOT_DIR="/media/nimashiri/SSD/testing_results/DeepRel/tensorflow/$tf_version"
+
+for dir in $(find "$ROOT_DIR" -type d); do
+    if echo "$dir" | grep -Eq "neq" || echo "$dir" | grep -Eq "bug"; then
+        find "$dir" -name "*.py" -exec sh -c 'echo "Processing file: $1"; python "$1"' sh {} \; |& tee -a "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/logs/DeepRel/tensorflow/$tf_version.txt";
+    fi
+done
 
 source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
 conda deactivate

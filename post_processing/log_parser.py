@@ -48,11 +48,11 @@ def decompose_detections(splitted_lines):
 
 def main():
     for root, dir, files in os.walk(
-        "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/logs"
+        "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/logs/"
     ):
-        for lib in dir:
+        for lib in ["tensorflow"]:
             current_lib = os.path.join(root, lib)
-            for f in os.listdir(current_lib):
+            for f in sorted(os.listdir(current_lib), key=len):
                 current_file = os.path.join(current_lib, f)
                 data = read_txt(current_file)
                 decomposed_logs = decompose_detections(data)
@@ -65,6 +65,8 @@ def main():
                         item
                         for item in decomposed_log_path
                         if re.search(r"(torch\.)", item)
+                        or re.search(r"(tf\.)", item)
+                        or re.search(r"(tensorflow\.)", item)
                     ]
                     API_name[0] = API_name[0].replace(".py", "")
 
@@ -72,8 +74,14 @@ def main():
 
                     mydata = [API_name[0], log]
 
+                    if not os.path.exists(
+                        f"/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/results/{lib}/"
+                    ):
+                        os.makedirs(
+                            f"/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/results/{lib}/"
+                        )
                     with open(
-                        f"/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/results/DetectionMat_{release}.csv",
+                        f"/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/results/{lib}/DetectionMat_{release}.csv",
                         "a",
                         newline="\n",
                     ) as fd:

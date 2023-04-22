@@ -296,3 +296,62 @@ Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/preci
 Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.mm/19.py
 {'time_low': 1.0693635940551758, 'time_high': 0.0014476776123046875}
 Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.mm/2.py
+{'time_low': 1.924041509628296, 'time_high': 0.0014433860778808594}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.mm/20.py
+{'time_low': 2.1212425231933594, 'time_high': 0.003933429718017578}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.mm/21.py
+{'time_low': 1.0804247856140137, 'time_high': 0.0014653205871582031}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.mm/22.py
+{'time_low': 2.0772056579589844, 'time_high': 0.0031409263610839844}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.mm/23.py
+{'time_low': 2.1240475177764893, 'time_high': 0.0035593509674072266}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.mm/24.py
+{'time_low': 1.0002350807189941, 'time_high': 0.0011131763458251953}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.mm/25.py
+{'time_low': 0.882451057434082, 'time_high': 0.0010075569152832031}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.mm/26.py
+{'time_low': 1.0621600151062012, 'time_high': 0.0012214183807373047}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.mm/3.py
+{'time_low': 1.0126678943634033, 'time_high': 0.0012369155883789062}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.mm/4.py
+{'time_low': 0.8847355842590332, 'time_high': 0.001117706298828125}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.mm/5.py
+{'time_low': 1.0825738906860352, 'time_high': 0.0009710788726806641}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.mm/6.py
+{'time_low': 3.3016440868377686, 'time_high': 0.004948139190673828}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.mm/7.py
+{'time_low': 1.0540025234222412, 'time_high': 0.0015769004821777344}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.mm/8.py
+{'time_low': 3.530698776245117, 'time_high': 0.004792690277099609}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.mm/9.py
+{'time_low': 2.263150691986084, 'time_high': 0.0038652420043945312}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.nn.functional.conv2d/1.py
+{'time_low': 2.0756337642669678, 'time_high': 0.011237382888793945}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.nn.functional.conv2d/2.py
+{'time_low': 0.6865997314453125, 'time_high': 0.012287616729736328}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.nn.functional.conv2d/3.py
+{'time_low': 1.8991823196411133, 'time_high': 0.02500438690185547}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.nn.functional.conv2d/4.py
+{'time_low': 34.316407203674316, 'time_high': 0.1080770492553711}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.nn.functional.conv2d/5.py
+{'time_low': 1.0167622566223145, 'time_high': 0.005828142166137695}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.nn.functional.conv2d/6.py
+{'time_low': 0.976654052734375, 'time_high': 0.0031042098999023438}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.nn.functional.conv2d/7.py
+{'time_low': 0.8632833957672119, 'time_high': 0.004389047622680664}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.nn.functional.linear/1.py
+{'time_low': 7.495864391326904, 'time_high': 0.0039958953857421875}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.nn.functional.linear/2.py
+{'time_low': 3.33709979057312, 'time_high': 0.0013060569763183594}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.nn.functional.linear/3.py
+{'time_low': 2.4149789810180664, 'time_high': 0.004023075103759766}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.nn.functional.linear/4.py
+{'time_low': 23.70764136314392, 'time_high': 0.019527435302734375}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.nn.functional.linear/5.py
+{'time_low': 4.835205078125, 'time_high': 0.015218257904052734}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.nn.functional.linear/6.py
+{'time_low': 37.977925539016724, 'time_high': 0.022695541381835938}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.nn.functional.linear/7.py
+{'time_low': 11.262210130691528, 'time_high': 0.006882190704345703}
+Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.8.1/precision-oracle/potential-bug/torch.set_num_threads/1.py
+{'time_low': 0.04486513137817383, 'time_high': 0.02570962905883789}

@@ -1,0 +1,284 @@
+torch.nn.functional.batch_norm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/crash-oracle/potential-bug/torch.nn.functional.batch_norm/1.py
+Traceback (most recent call last):
+  File ""/media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/crash-oracle/potential-bug/torch.nn.functional.batch_norm/1.py"", line 15, in <module>
+    res = torch.nn.functional.batch_norm(arg_1,arg_2,arg_3,arg_4,arg_5,arg_6,arg_7,arg_8,)
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/functional.py"", line 2281, in batch_norm
+    return torch.batch_norm(
+RuntimeError: t.defined() && t.dim() == 1INTERNAL ASSERT FAILED at ""/opt/conda/conda-bld/pytorch_1631630778054/work/aten/src/ATen/native/Normalization.cpp"":184, please report a bug to PyTorch. "
+torch.nn.functional.batch_norm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/crash-oracle/potential-bug/torch.nn.functional.batch_norm/2.py
+Traceback (most recent call last):
+  File ""/media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/crash-oracle/potential-bug/torch.nn.functional.batch_norm/2.py"", line 15, in <module>
+    res = torch.nn.functional.batch_norm(arg_1,arg_2,arg_3,arg_4,arg_5,arg_6,arg_7,arg_8,)
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/functional.py"", line 2281, in batch_norm
+    return torch.batch_norm(
+RuntimeError: t.defined() && t.dim() == 1INTERNAL ASSERT FAILED at ""/opt/conda/conda-bld/pytorch_1631630778054/work/aten/src/ATen/native/Normalization.cpp"":184, please report a bug to PyTorch. "
+torch.nn.LayerNorm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/crash-oracle/potential-bug/torch.nn.LayerNorm/1.py
+Traceback (most recent call last):
+  File ""/media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/crash-oracle/potential-bug/torch.nn.LayerNorm/1.py"", line 7, in <module>
+    res = arg_class(*arg_2)
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/modules/module.py"", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/modules/normalization.py"", line 173, in forward
+    return F.layer_norm(
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/functional.py"", line 2346, in layer_norm
+    return torch.layer_norm(input, normalized_shape, weight, bias, eps, torch.backends.cudnn.enabled)
+RuntimeError: isDifferentiableType(variable.scalar_type())INTERNAL ASSERT FAILED at ""/opt/conda/conda-bld/pytorch_1631630778054/work/torch/csrc/autograd/functions/utils.h"":65, please report a bug to PyTorch. "
+torch.nn.LayerNorm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/crash-oracle/potential-bug/torch.nn.LayerNorm/2.py
+Traceback (most recent call last):
+  File ""/media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/crash-oracle/potential-bug/torch.nn.LayerNorm/2.py"", line 7, in <module>
+    res = arg_class(*arg_2)
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/modules/module.py"", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/modules/normalization.py"", line 173, in forward
+    return F.layer_norm(
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/functional.py"", line 2346, in layer_norm
+    return torch.layer_norm(input, normalized_shape, weight, bias, eps, torch.backends.cudnn.enabled)
+RuntimeError: isDifferentiableType(variable.scalar_type())INTERNAL ASSERT FAILED at ""/opt/conda/conda-bld/pytorch_1631630778054/work/torch/csrc/autograd/functions/utils.h"":65, please report a bug to PyTorch. "
+torch.nn.functional.batch_norm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/crash-oracle/potential-bug/torch.nn.functional.batch_norm/1.py
+Traceback (most recent call last):
+  File ""/media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/crash-oracle/potential-bug/torch.nn.functional.batch_norm/1.py"", line 15, in <module>
+    res = torch.nn.functional.batch_norm(arg_1,arg_2,arg_3,arg_4,arg_5,arg_6,arg_7,arg_8,)
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/functional.py"", line 2281, in batch_norm
+    return torch.batch_norm(
+RuntimeError: t.defined() && t.dim() == 1INTERNAL ASSERT FAILED at ""/opt/conda/conda-bld/pytorch_1631630778054/work/aten/src/ATen/native/Normalization.cpp"":184, please report a bug to PyTorch. "
+torch.nn.functional.batch_norm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/crash-oracle/potential-bug/torch.nn.functional.batch_norm/2.py
+Traceback (most recent call last):
+  File ""/media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/crash-oracle/potential-bug/torch.nn.functional.batch_norm/2.py"", line 15, in <module>
+    res = torch.nn.functional.batch_norm(arg_1,arg_2,arg_3,arg_4,arg_5,arg_6,arg_7,arg_8,)
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/functional.py"", line 2281, in batch_norm
+    return torch.batch_norm(
+RuntimeError: t.defined() && t.dim() == 1INTERNAL ASSERT FAILED at ""/opt/conda/conda-bld/pytorch_1631630778054/work/aten/src/ATen/native/Normalization.cpp"":184, please report a bug to PyTorch. "
+torch.nn.LayerNorm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/crash-oracle/potential-bug/torch.nn.LayerNorm/1.py
+Traceback (most recent call last):
+  File ""/media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/crash-oracle/potential-bug/torch.nn.LayerNorm/1.py"", line 7, in <module>
+    res = arg_class(*arg_2)
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/modules/module.py"", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/modules/normalization.py"", line 173, in forward
+    return F.layer_norm(
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/functional.py"", line 2346, in layer_norm
+    return torch.layer_norm(input, normalized_shape, weight, bias, eps, torch.backends.cudnn.enabled)
+RuntimeError: isDifferentiableType(variable.scalar_type())INTERNAL ASSERT FAILED at ""/opt/conda/conda-bld/pytorch_1631630778054/work/torch/csrc/autograd/functions/utils.h"":65, please report a bug to PyTorch. "
+torch.nn.LayerNorm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/crash-oracle/potential-bug/torch.nn.LayerNorm/2.py
+Traceback (most recent call last):
+  File ""/media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/crash-oracle/potential-bug/torch.nn.LayerNorm/2.py"", line 7, in <module>
+    res = arg_class(*arg_2)
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/modules/module.py"", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/modules/normalization.py"", line 173, in forward
+    return F.layer_norm(
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/functional.py"", line 2346, in layer_norm
+    return torch.layer_norm(input, normalized_shape, weight, bias, eps, torch.backends.cudnn.enabled)
+RuntimeError: isDifferentiableType(variable.scalar_type())INTERNAL ASSERT FAILED at ""/opt/conda/conda-bld/pytorch_1631630778054/work/torch/csrc/autograd/functions/utils.h"":65, please report a bug to PyTorch. "
+torch.median,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/FreeFuzz_bugs/torch.median.py
+Segmentation fault"
+torch.mul,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/FreeFuzz_bugs/torch.mul.py
+Killed"
+torch.nanmean,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/FreeFuzz_bugs/torch.nanmean.py
+Traceback (most recent call last):
+  File ""/media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/FreeFuzz_bugs/torch.nanmean.py"", line 13, in <module>
+    results[""time_low""] = arg_class(*arg_5)
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/modules/module.py"", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/modules/conv.py"", line 298, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/modules/conv.py"", line 294, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+RuntimeError: ""unfolded2d_copy"" not implemented for 'Half'"
+torch.nn.ConstantPad2d,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/FreeFuzz_bugs/torch.nn.ConstantPad2d.py
+Killed"
+torch.nn.ConvTranspose1d,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/FreeFuzz_bugs/torch.nn.ConvTranspose1d.py
+Killed"
+torch.nn.ConvTranspose2d,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/FreeFuzz_bugs/torch.nn.ConvTranspose2d.py
+Killed"
+torch.nn.functional.conv_transpose2d,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/FreeFuzz_bugs/torch.nn.functional.conv_transpose2d.py
+Floating point exception"
+torch.nn.HuberLoss,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/FreeFuzz_bugs/torch.nn.HuberLoss.py
+Killed"
+torch.randn,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/FreeFuzz_bugs/torch.randn.py
+Killed"
+torch.stack,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/FreeFuzz_bugs/torch.stack.py
+Killed"
+torch.sum,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/FreeFuzz_bugs/torch.sum.py
+Killed"
+torch.utils.dlpack.to_dlpack,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/FreeFuzz_bugs/torch.utils.dlpack.to_dlpack.py
+Traceback (most recent call last):
+  File ""/media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/FreeFuzz_bugs/torch.utils.dlpack.to_dlpack.py"", line 10, in <module>
+    results[""time_low""] = arg_class(*arg_2)
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/modules/module.py"", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File ""/home/nimashiri/anaconda3/envs/fuzzer_pt_1.9.1/lib/python3.9/site-packages/torch/nn/modules/pooling.py"", line 1098, in forward
+    return F.adaptive_avg_pool1d(input, self.output_size)
+RuntimeError: ""adaptive_avg_pool2d"" not implemented for 'Half'"
+torch.einsum,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.einsum/1.py
+{'time_low': 21.41489338874817, 'time_high': 0.008337259292602539}"
+torch.einsum,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.einsum/2.py
+{'time_low': 8.412917137145996, 'time_high': 0.007553577423095703}"
+torch.einsum,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.einsum/3.py
+{'time_low': 8.556142330169678, 'time_high': 0.017955541610717773}"
+torch.einsum,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.einsum/4.py
+{'time_low': 8.806028842926025, 'time_high': 0.007961750030517578}"
+torch.einsum,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.einsum/5.py
+{'time_low': 9.380239725112915, 'time_high': 0.009684324264526367}"
+torch.einsum,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.einsum/6.py
+{'time_low': 9.366146326065063, 'time_high': 0.006459474563598633}"
+torch.einsum,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.einsum/7.py
+{'time_low': 9.179933547973633, 'time_high': 0.008644580841064453}"
+torch.einsum,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.einsum/8.py
+{'time_low': 9.183629989624023, 'time_high': 0.0069026947021484375}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/1.py
+{'time_low': 1.6568074226379395, 'time_high': 0.002454042434692383}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/10.py
+{'time_low': 1.6380765438079834, 'time_high': 0.0015981197357177734}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/11.py
+{'time_low': 0.8530445098876953, 'time_high': 0.0006749629974365234}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/12.py
+{'time_low': 0.9730014801025391, 'time_high': 0.0011680126190185547}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/13.py
+{'time_low': 2.0327329635620117, 'time_high': 0.003388643264770508}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/14.py
+{'time_low': 1.9902911186218262, 'time_high': 0.0036029815673828125}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/15.py
+{'time_low': 3.2664794921875, 'time_high': 0.00566554069519043}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/16.py
+{'time_low': 2.382648468017578, 'time_high': 0.0034432411193847656}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/17.py
+{'time_low': 3.7311742305755615, 'time_high': 0.005045890808105469}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/18.py
+{'time_low': 3.7041237354278564, 'time_high': 0.005411386489868164}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/19.py
+{'time_low': 1.2276122570037842, 'time_high': 0.0011355876922607422}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/2.py
+{'time_low': 3.6359922885894775, 'time_high': 0.004728078842163086}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/20.py
+{'time_low': 3.707688808441162, 'time_high': 0.006372213363647461}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/3.py
+{'time_low': 2.2916228771209717, 'time_high': 0.003653287887573242}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/4.py
+{'time_low': 1.1001451015472412, 'time_high': 0.00103759765625}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/5.py
+{'time_low': 1.0665900707244873, 'time_high': 0.0012099742889404297}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/6.py
+{'time_low': 1.8876895904541016, 'time_high': 0.001466989517211914}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/7.py
+{'time_low': 2.302478313446045, 'time_high': 0.003072023391723633}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/8.py
+{'time_low': 1.955892562866211, 'time_high': 0.0014483928680419922}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/9.py
+{'time_low': 2.2739479541778564, 'time_high': 0.0033185482025146484}"
+torch.nn.functional.conv2d,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.conv2d/1.py
+{'time_low': 4.2232396602630615, 'time_high': 0.018354415893554688}"
+torch.nn.functional.conv2d,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.conv2d/2.py
+Killed"
+torch.nn.functional.conv2d,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.conv2d/3.py
+{'time_low': 14.984163284301758, 'time_high': 0.10039496421813965}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/1.py
+{'time_low': 4.534442186355591, 'time_high': 0.0034444332122802734}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/10.py
+{'time_low': 7.073206186294556, 'time_high': 0.00419306755065918}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/11.py
+{'time_low': 6.001288890838623, 'time_high': 0.003123044967651367}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/2.py
+{'time_low': 11.384881973266602, 'time_high': 0.005817413330078125}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/3.py
+{'time_low': 24.49000382423401, 'time_high': 0.009404659271240234}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/4.py
+{'time_low': 2.463043451309204, 'time_high': 0.003860950469970703}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/5.py
+{'time_low': 4.798526287078857, 'time_high': 0.014740467071533203}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/6.py
+{'time_low': 0.3524918556213379, 'time_high': 0.0020236968994140625}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/7.py
+{'time_low': 12.134538173675537, 'time_high': 0.004780769348144531}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/8.py
+{'time_low': 1.6460587978363037, 'time_high': 0.0040283203125}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/9.py
+{'time_low': 1.7875406742095947, 'time_high': 0.0036199092864990234}"
+torch.pow,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.pow/1.py
+{'time_low': 0.00610804557800293, 'time_high': 0.0015316009521484375}"
+torch.einsum,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.einsum/1.py
+{'time_low': 11.870656967163086, 'time_high': 0.013647794723510742}"
+torch.einsum,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.einsum/2.py
+{'time_low': 11.141865968704224, 'time_high': 0.008024930953979492}"
+torch.einsum,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.einsum/3.py
+{'time_low': 11.327587127685547, 'time_high': 0.0074918270111083984}"
+torch.einsum,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.einsum/4.py
+{'time_low': 11.37442922592163, 'time_high': 0.007837533950805664}"
+torch.einsum,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.einsum/5.py
+{'time_low': 10.248800992965698, 'time_high': 0.007350921630859375}"
+torch.einsum,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.einsum/6.py
+{'time_low': 10.488145351409912, 'time_high': 0.006890058517456055}"
+torch.einsum,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.einsum/7.py
+{'time_low': 10.430826663970947, 'time_high': 0.007587909698486328}"
+torch.einsum,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.einsum/8.py
+{'time_low': 10.226597547531128, 'time_high': 0.0067822933197021484}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/1.py
+{'time_low': 1.8740789890289307, 'time_high': 0.0018818378448486328}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/10.py
+{'time_low': 1.8719136714935303, 'time_high': 0.0013456344604492188}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/11.py
+{'time_low': 0.9946579933166504, 'time_high': 0.0011179447174072266}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/12.py
+{'time_low': 0.9271116256713867, 'time_high': 0.0011887550354003906}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/13.py
+{'time_low': 2.1393983364105225, 'time_high': 0.0038957595825195312}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/14.py
+{'time_low': 2.1292381286621094, 'time_high': 0.0035026073455810547}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/15.py
+{'time_low': 3.369274854660034, 'time_high': 0.005279064178466797}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/16.py
+{'time_low': 2.183706521987915, 'time_high': 0.004040956497192383}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/17.py
+{'time_low': 3.6036083698272705, 'time_high': 0.004892587661743164}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/18.py
+{'time_low': 3.5031306743621826, 'time_high': 0.005117893218994141}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/19.py
+{'time_low': 1.0357410907745361, 'time_high': 0.001691579818725586}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/2.py
+{'time_low': 3.4403982162475586, 'time_high': 0.004968166351318359}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/20.py
+{'time_low': 3.4662232398986816, 'time_high': 0.005215167999267578}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/3.py
+{'time_low': 2.060239791870117, 'time_high': 0.025457143783569336}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/4.py
+{'time_low': 0.9085850715637207, 'time_high': 0.00107574462890625}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/5.py
+{'time_low': 1.1075866222381592, 'time_high': 0.0013456344604492188}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/6.py
+{'time_low': 1.873598337173462, 'time_high': 0.0013082027435302734}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/7.py
+{'time_low': 2.133772850036621, 'time_high': 0.0033202171325683594}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/8.py
+{'time_low': 1.8327486515045166, 'time_high': 0.0015125274658203125}"
+torch.mm,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.mm/9.py
+{'time_low': 2.1628966331481934, 'time_high': 0.003474712371826172}"
+torch.nn.functional.conv2d,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.conv2d/1.py
+{'time_low': 3.4182615280151367, 'time_high': 0.011763811111450195}"
+torch.nn.functional.conv2d,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.conv2d/2.py
+Killed"
+torch.nn.functional.conv2d,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.conv2d/3.py
+{'time_low': 14.648033857345581, 'time_high': 0.10046792030334473}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/1.py
+{'time_low': 4.242872476577759, 'time_high': 0.0031380653381347656}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/10.py
+{'time_low': 6.9931840896606445, 'time_high': 0.005188465118408203}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/11.py
+{'time_low': 5.863596677780151, 'time_high': 0.0028083324432373047}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/2.py
+{'time_low': 11.387024641036987, 'time_high': 0.006185770034790039}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/3.py
+{'time_low': 23.82380747795105, 'time_high': 0.010499000549316406}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/4.py
+{'time_low': 2.407181739807129, 'time_high': 0.0037717819213867188}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/5.py
+{'time_low': 4.92843770980835, 'time_high': 0.015691518783569336}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/6.py
+{'time_low': 0.4070723056793213, 'time_high': 0.0020487308502197266}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/7.py
+{'time_low': 11.834354639053345, 'time_high': 0.00483393669128418}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/8.py
+{'time_low': 1.5878980159759521, 'time_high': 0.004113435745239258}"
+torch.nn.functional.linear,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.nn.functional.linear/9.py
+{'time_low': 1.642327070236206, 'time_high': 0.0036640167236328125}"
+torch.pow,"Processing file: /media/nimashiri/SSD/testing_results/FreeFuzz/torch/1.9.1/precision-oracle/potential-bug/torch.pow/1.py
+{'time_low': 0.005927562713623047, 'time_high': 0.0015163421630859375}"
