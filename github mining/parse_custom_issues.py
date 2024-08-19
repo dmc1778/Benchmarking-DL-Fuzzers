@@ -174,7 +174,7 @@ def requests_retry_session(
 def main(libname):
     current_token = tokens[0]
     
-    data = pd.read_csv(f'issues/phase2/{libname}.csv')
+    data = pd.read_csv(f'issues/phase1/{libname}.csv')
     for idx, row in data.iterrows():
         if not row['Related Checks']:
             print('This issue is already labeled as not related.')
@@ -227,7 +227,7 @@ def main(libname):
             lib_version = extractVersion(json_response["title"], json_response["body"], libname)
             cuda_version = cudaVersion(json_response["title"], json_response["body"], libname)
             output_data = [libname, json_response["html_url"],json_response["created_at"], json_response['title'], bug_label, api_name, lib_version, cuda_version]
-            write_to_csv('issues/phase3', f'{libname}', output_data)
+            write_to_csv('issues/phase2', f'{libname}', output_data)
 
 if __name__ == "__main__":
     libname = sys.argv[1]

@@ -1,0 +1,356 @@
+Library,Issue Link,Date,Title,API Name,Library Version,CUDA Version
+tensorflow,https://github.com/tensorflow/tensorflow/issues/73519,2024-08-10T13:39:20Z,Segmentation fault (core dumped) in `tf.config.threading.set_inter_op_parallelism_threads`,tf.config.threading.set_inter_op_parallelism_threads,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/73518,2024-08-10T13:33:57Z,Aborted (core dumped) in `tf.config.threading.set_intra_op_parallelism_threads`,tf.config.threading.set_intra_op_parallelism_threads,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/73465,2024-08-09T14:22:36Z,Aborted (core dumped) in `tf.io.TFRecordOptions`,tf.io.TFRecordOptions,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/73367,2024-08-08T09:36:08Z,Gradient computation for `vectorized_map` nested inside `while_loop`,tf.map_fn,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/73367,2024-08-08T09:36:08Z,Gradient computation for `vectorized_map` nested inside `while_loop`,tf.while_loop,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/73367,2024-08-08T09:36:08Z,Gradient computation for `vectorized_map` nested inside `while_loop`,tf.vectorized_map,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/73362,2024-08-08T09:14:54Z,sample_weight taking long to initialize,tf.keras.Model.fit,2.12.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/72953,2024-08-01T12:52:10Z,Please initialize `TimeDistributed` layer with a `tf.keras.layers.Layer` instance,tf.keras.layers.TimeDistributed,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/72873,2024-07-31T09:35:26Z,TF strings do not work on the GPU as indices for `tf.gather` / `tf.nn.embedding_lookup`,"tf.gather 
+tf.nn.embedding_lookup 
+tf.lookup.StaticHashTable",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/72785,2024-07-30T15:03:03Z,Sparse segment mean/sum gives random result on empty tensor,"tf.math.sparse_segment_mean
+tf.math.sparse_segment_sum",2.12.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/72755,2024-07-30T07:10:50Z,Can not provide a sparse tensor to calculate ctc loss in TnesorFlow2,"tf.nn.ctc_loss 
+tf.sparse.from_dense",2.18.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/72709,2024-07-29T15:18:49Z,`tf.bitwise.left_shift`'s behavior is different on cpu and gpu on tensorflow 2.18.0-dev20240728,tf.bitwise.left_shift,2.18.0,12.4
+tensorflow,https://github.com/tensorflow/tensorflow/issues/72365,2024-07-23T13:34:32Z,tf.range miss some dtypes support,tf.range,2.18.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/72362,2024-07-23T12:46:06Z,tf.raw_ops.BlockLSTMV2: tensorflow/core/framework/tensor.cc:1075] Check failed: 0 = start (0 vs. -9) Aborted (core dumped),tf.raw_ops.BlockLSTMV2,2.18.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/72332,2024-07-23T00:44:47Z,tf.strided_slice new_axis_mask inconsistency,tf.strided_slice,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/72295,2024-07-22T14:08:43Z,tf.raw_ops.MapUnstage: Check failed: 1 == NumElements() (1 vs. 120)Must have a one element tensor Aborted (core dumped),tf.raw_ops.MapUnstage,2.18.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/71937,2024-07-16T15:02:16Z,`tf.data.Dataset.prefetch()` error with basic usage,tf.data.Dataset.prefetch,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/71833,2024-07-14T21:08:50Z,Inconsistent results from distributed training of models containing `TimeDistributed` or `SeparableConv2D`,"tf.TimeDistributed
+tf.SeparableConv2D",2.18.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/71744,2024-07-12T12:24:35Z,`tf.data.Dataset.from_tensor_slices` allocates GPU RAM,tf.data.Dataset.from_tensor_slices,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/70311,2024-06-24T22:48:34Z,model.fit ValueError: Cannot take the length of shape with unknown rank.,tf.model.fit,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/69700,2024-06-13T14:38:21Z,Segmentation fault in `tf.raw_ops.CollectiveAllToAllV2`,tf.raw_ops.CollectiveAllToAllV2,2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/69699,2024-06-13T14:35:21Z,Segmentation fault in `tf.raw_ops.CollectiveGatherV2`,tf.raw_ops.CollectiveGatherV2,2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/69595,2024-06-12T12:44:00Z,tf.signal.rfftnd throws NotFoundError on CPU execution (GPU-behavior unknown),tf.signal.rfftnd,2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/69471,2024-06-10T13:24:51Z,Aborted (core dumped) in `tf.experimental.numpy.diag/tf.compat.v1.linalg.diag/tf.experimental.numpy.diagflat/tf.keras.ops.diag`,"tf.experimental.numpy.diag
+tf.compat.v1.linalg.diag
+tf.experimental.numpy.diagflat
+tf.keras.ops.diag",2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/69286,2024-06-06T01:24:46Z,Aborted (core dumped) in `tf.raw_ops.ResourceApplyCenteredRMSProp/tf.raw_ops.ResourceSparseApplyCenteredRMSProp`,"tf.raw_ops.ResourceApplyCenteredRMSProp 
+tf.raw_ops.ResourceSparseApplyCenteredRMSProp",2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/69285,2024-06-06T01:19:37Z,Aborted (core dumped) in `tf.raw_ops.ResourceApplyAdagrad/tf.raw_ops.ResourceApplyAdagradDA/tf.raw_ops.ResourceApplyAdagradV2`,"tf.raw_ops.ResourceApplyAdagrad
+tf.raw_ops.ResourceApplyAdagradDA
+tf.raw_ops.ResourceApplyAdagradV2",2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/69284,2024-06-06T01:15:35Z,Aborted (core dumped) in `tf.raw_ops.ResourceSparseApplyAdagrad/tf.raw_ops.ResourceSparseApplyAdagradDA/tf.raw_ops.ResourceSparseApplyAdagradV2`,"tf.raw_ops.ResourceSparseApplyAdagrad 
+tf.raw_ops.ResourceSparseApplyAdagradDA 
+tf.raw_ops.ResourceSparseApplyAdagradV2",2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/69283,2024-06-06T01:10:53Z,Aborted (core dumped) in `tf.raw_ops.ResourceSparseApplyAdadelta/tf.raw_ops.ResourceApplyAdadelta`,"tf.raw_ops.ResourceSparseApplyAdadelta
+tf.raw_ops.ResourceApplyAdadelta",2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/69281,2024-06-06T01:07:46Z,Aborted (core dumped) in `tf.raw_ops.ResourceApplyRMSProp/tf.raw_ops.ResourceSparseApplyRMSProp`,"tf.raw_ops.ResourceApplyRMSProp
+tf.raw_ops.ResourceSparseApplyRMSProp",2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/69279,2024-06-06T01:01:58Z,Aborted (core dumped) in `tf.raw_ops.ResourceApplyKerasMomentum/tf.raw_ops.ResourceSparseApplyKerasMomentum`,"tf.raw_ops.ResourceApplyKerasMomentum
+tf.raw_ops.ResourceSparseApplyKerasMomentum",2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/69278,2024-06-06T00:53:19Z,Aborted (core dumped) in `tf.raw_ops.ResourceApplyFtrl/tf.raw_ops.ResourceApplyFtrlV2/tf.raw_ops.ResourceSparseApplyFtrl/tf.raw_ops.ResourceSparseApplyFtrlV2`,"tf.raw_ops.ResourceApplyFtrl
+tf.raw_ops.ResourceApplyFtrlV2
+tf.raw_ops.ResourceSparseApplyFtrl
+tf.raw_ops.ResourceSparseApplyFtrlV2",2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/69220,2024-06-05T10:42:09Z,Aborted (core dumped) in `tf.raw_ops.QuantizeAndDequantizeV3`,tf.raw_ops.QuantizeAndDequantizeV3,2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/69213,2024-06-05T09:19:56Z,Aborted (core dumped) in `tf.transpose`,"tf.transpose 
+tf.experimental.numpy.transpose 
+tf.compat.v1.transpose 
+tf.keras.ops.transpose 
+tf.raw_ops.transpose 
+tf.raw_ops.ConjugateTranspose",2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/68836,2024-05-29T19:33:25Z,segmentation fault when tf.histogram_fixed_width receives large `value_range` and `nbins` on CPU mode,"API Name
+tf.histogram_fixed_width",2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/68593,2024-05-24T11:24:11Z,Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence when call some methods of `tf.data`,tf.data,2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/67023,2024-05-06T14:57:57Z,GlobalAveragePooling1D fails with empty inputs and a mask,tf.keras.layers.GlobalAveragePooling1D,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/66768,2024-05-01T04:08:30Z,Aborted (core dumped) in `TensorScatterOp`,"tf.raw_ops.TensorScatterAdd
+tf.raw_ops.TensorScatterMax
+tf.raw_ops.TensorScatterMin
+tf.raw_ops.TensorScatterSub
+tf.raw_ops.TensorScatterUpdate",2.16.1,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/66766,2024-05-01T03:53:11Z,Aborted (core dumped) in `tf.raw_ops.SparseBincount`,tf.raw_ops.SparseBincount,2.16.1,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/66765,2024-05-01T03:50:23Z,Aborted (core dumped) in `tf.raw_ops.NearestNeighbors`,tf.raw_ops.NearestNeighbors,2.16.1,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/66764,2024-05-01T03:46:46Z,Check fail in `tf.raw_ops.MaxPoolGradWithArgmax`,tf.raw_ops.MaxPoolGradWithArgmax,2.16.1,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/66763,2024-05-01T03:41:25Z,Aborted (core dumped) with `tf.raw_ops.LSTMBlockCellGrad`,tf.raw_ops.LSTMBlockCellGrad,2.16.1,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/66762,2024-05-01T03:37:18Z,Aborted (core dumped) with `tf.raw_ops.LSTMBlockCell`,tf.raw_ops.LSTMBlockCell,2.16.1,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/66761,2024-05-01T03:33:03Z,Aborted (core dumped) with `tf.raw_ops.LRNGrad`,tf.raw_ops.LRNGrad,2.16.1,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/66759,2024-05-01T03:16:02Z,Aborted (core dumped) with `tf.raw_ops.FakeQuantWithMinMaxVarsPerChannelGradient`,tf.raw_ops.FakeQuantWithMinMaxVarsPerChannelGradient,2.16.1,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/66758,2024-05-01T03:05:19Z,Aborted (core dumped) with `tf.raw_ops.Dilation2DBackpropFilter`,tf.raw_ops.Dilation2DBackpropFilter,2.16.1,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/66757,2024-05-01T02:59:49Z,Aborted (core dumped) with `tf.raw_ops.CombinedNonMaxSuppression`,tf.raw_ops.CombinedNonMaxSuppression,2.16.1,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/66583,2024-04-28T09:40:56Z,tf.raw_ops.StringSplitV2 does not limit a number of splits by max_split attribute,tf.raw_ops.StringSplitV2,2.16.1,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/66115,2024-04-19T22:45:12Z,tf.function deadlock with multiple multiprocess/threading,tf.function,2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65871,2024-04-16T19:18:25Z,`Overflow` in `tf.raw_ops.SparseReduceSumSparse` when there are too large values in `input_shape`.,tf.raw_ops.SparseReduceSumSparse,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65868,2024-04-16T19:07:33Z,`Assertion failure` in `tf.signal.inverse_stft` when the value of `frame_length` is too large.,tf.signal.inverse_stft,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65866,2024-04-16T18:52:12Z,`Check failed` in `tf.linalg.diag`,tf.linalg.diag,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65864,2024-04-16T18:32:12Z,`Overflow` in `tf.compat.v1.nn.ctc_loss` and `tf.compat.v1.nn.ctc_loss_v2` when there are too large values in `labels`.,"tf.compat.v1.nn.ctc_loss
+tf.compat.v1.nn.ctc_loss_v2",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65862,2024-04-16T18:14:07Z,`Check failed` in `tf.raw_ops.TensorListSplit` when the values of `element_shape` are too large.,tf.raw_ops.TensorListSplit,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65835,2024-04-16T10:53:07Z,Segmentation fault in `tf.config.experimental_connect_to_cluster` with `@tf.function`,tf.config.experimental_connect_to_cluster,2.16.1,12.0.0
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65793,2024-04-16T05:25:05Z,`Segmentation fault` in `tf.raw_ops.TensorArrayV3` when the value of `size` is too large.,tf.raw_ops.TensorArrayV3,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65791,2024-04-16T05:10:26Z,`Segmentation fault` in `tf.raw_ops.SparseFillEmptyRows` when the value of `dense_shape` is too large.,tf.raw_ops.SparseFillEmptyRows,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65790,2024-04-16T05:05:06Z,`Segmentation fault` in `tf.raw_ops.RaggedRange` and `tf.ragged.range` when `starts` or `limits` has large (postive/negative) values.,"tf.raw_ops.RaggedRange 
+tf.ragged.range",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65785,2024-04-16T04:43:40Z,`Segmentation fault` in `tf.raw_ops.CollectiveGather` when `input` is empty.,tf.raw_ops.CollectiveGather,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65783,2024-04-16T04:35:16Z,`Segmentation fault` in `tf.raw_ops.ConjugateTranspose` when `perm` have negative values.,tf.raw_ops.ConjugateTranspose,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65736,2024-04-15T17:12:56Z,`Assertion failure` in `tf.raw_ops.RFFT` and `tf.signal.rfft` when the value of `fft_length` is 0.,"tf.raw_ops.RFFT
+tf.signal.rfft",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65735,2024-04-15T17:11:05Z,`Assertion failure` in `tf.raw_ops.RFFT2D` and `tf.signal.rfft2d` when the values of `fft_length` are 0.,"tf.raw_ops.RFFT2D
+tf.signal.rfft2d",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65733,2024-04-15T16:58:23Z,Some crash errors in `tf.raw_ops.RFFT3D` and `tf.signal.rfft3d`,"tf.raw_ops.RFFT3D 
+tf.signal.rfft3d",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65732,2024-04-15T16:19:28Z,`Segmentation fault` in `tf.raw_ops.LoadAndRemapMatrix` when the value of `num_cols` is too large while `col_remapping` is empty.,tf.raw_ops.LoadAndRemapMatrix,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65731,2024-04-15T16:04:05Z,`Check failed` in `tf.raw_ops.LoadAndRemapMatrix` when the rank of `ckpt_path` is not equal to the rank of `old_tensor_name`.,tf.raw_ops.LoadAndRemapMatrix,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65729,2024-04-15T15:35:53Z,`Check failed` in `tf.raw_ops.Batch` when the value of `num_batch_threads` is too large.,tf.raw_ops.Batch,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65728,2024-04-15T15:09:23Z,`Check Failed` in `tf.raw_ops.FakeQuantWithMinMaxVarsPerChannel` and `tf.quantization.fake_quant_with_min_max_vars_per_channel` when the input of `inputs` is scalar.,"tf.raw_ops.FakeQuantWithMinMaxVarsPerChannel 
+tf.quantization.fake_quant_with_min_max_vars_per_channel",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65727,2024-04-15T14:50:33Z,`Overflow` in `tf.raw_ops.SerializeManySparse` when there are too large values in `sparse_shape`.,tf.raw_ops.SerializeManySparse,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65724,2024-04-15T14:40:25Z,Some errors in `tf.raw_ops.SparseTensorDenseMatMul` when there are negative or too large values in `a_shape`.,tf.raw_ops.SparseTensorDenseMatMul,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65721,2024-04-15T12:48:08Z,`Check failed` in `f.raw_ops.CropAndResizeGradBoxes` when `boxes` and `box_indices` are empty.,tf.raw_ops.CropAndResizeGradBoxes,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65675,2024-04-14T19:02:53Z,Memory leak in tf.data when iterating over Dataset.from_generator,tf.data.Dataset.from_generator,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65674,2024-04-14T17:41:03Z,Some `Check Failed` errors in `tf.raw_ops.MatrixSetDiagV2`,tf.raw_ops.MatrixSetDiagV2,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65673,2024-04-14T17:33:52Z,Some `Check Failed` errors in `tf.raw_ops.MatrixSetDiagV3`,tf.raw_ops.MatrixSetDiagV3,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65672,2024-04-14T17:14:00Z,`Segmentation Fault` in `tf.raw_ops.TensorListScatter` and `tf.raw_ops.TensorListScatterV2` when the value of `indices` is too large.,"tf.raw_ops.TensorListScatter
+tf.raw_ops.TensorListScatterV2",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65671,2024-04-14T16:46:04Z,`Check failed` in `tf.raw_ops.TensorScatterAdd` and `tf.tensor_scatter_nd_add` when the rank of `indices`  2.,"tf.raw_ops.TensorScatterAdd
+tf.tensor_scatter_nd_add",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65670,2024-04-14T16:41:30Z,`Check failed` in `tf.raw_ops.TensorScatterSub` and `tf.tensor_scatter_nd_sub` when the rank of `indices`  2.,"tf.raw_ops.TensorScatterSub
+tf.tensor_scatter_nd_sub",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65668,2024-04-14T16:16:43Z,`Check failed` in `tf.raw_ops.TensorScatterMax` and `tf.tensor_scatter_nd_max` when the rank of `indices`  2.,"tf.raw_ops.TensorScatterMax
+tf.tensor_scatter_nd_max",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65667,2024-04-14T16:11:54Z,`Check failed` in `tf.raw_ops.TensorScatterUpdate` and `tf.tensor_scatter_nd_update` when the rank of `indices`  2.,"tf.raw_ops.TensorScatterUpdate 
+tf.tensor_scatter_nd_update",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65666,2024-04-14T15:25:42Z,`Check failed` in `tf.raw_ops.ScatterNd` and `tf.scatter_nd` when the rank of `indices`  2.,"tf.raw_ops.ScatterNd
+tf.scatter_nd",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65653,2024-04-14T05:32:07Z,`Check failed` and `segmentation fault` in `tf.raw_ops.AudioSpectrogram`.,tf.raw_ops.AudioSpectrogram,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65652,2024-04-14T05:10:59Z,`Check failed` in `tf.image.crop_and_resize` and `tf.compat.v1.image.crop_and_resize` when `boxes` and `box_indices` are empty.,"tf.image.crop_and_resize
+tf.compat.v1.image.crop_and_resize",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65647,2024-04-14T04:28:10Z,`segmentation fault` in `tf.raw_ops.AddManySparseToTensorsMap` when `sparse_indices` and `sparse_values` are empty and `sparse_shape` is too large.,tf.raw_ops.AddManySparseToTensorsMap,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65636,2024-04-13T18:25:26Z,`Check failed` in `tf.raw_ops.UnbatchGrad` when the input of `original_input` is empty.,tf.raw_ops.UnbatchGrad,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65634,2024-04-13T18:07:22Z,`Overflow` in `tf.raw_ops.DenseBincount` when the value of `size` is too large.,tf.raw_ops.DenseBincount,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65633,2024-04-13T17:50:28Z,Some `Check Failed` errors in `tf.raw_ops.Unbatch`,tf.raw_ops.Unbatch,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65632,2024-04-13T16:27:05Z,`Check failed` in `tf.strings.unsorted_segment_join` when the rank of `inputs` is larger than 1 and the value of `num_segments` is too large.,tf.strings.unsorted_segment_join,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65630,2024-04-13T15:18:37Z,`Check failed` and other errors in `tf.unstack` when dtype of `axis` is `uint64`.,tf.unstack,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65436,2024-04-11T03:57:52Z,model.summary() broken for custom models subclassed from tf.keras.Model,tf.keras.Model,2.16.1,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65379,2024-04-10T06:56:36Z,"tf.raw_ops.Unbatch aborts with ""Check failed: d  dims()""",tf.raw_ops.Unbatch,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/65120,2024-04-05T12:49:16Z,`floating point exception` in `tf.nn.max_pool3d` when value of `ksize` is too large.,tf.nn.max_pool3d,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/64928,2024-04-02T17:03:12Z,`SystemError` in `tf.raw_ops.ParallelConcat` when `dtype` of `shape` is `tf.qint16` or `tf.quint16`.,tf.raw_ops.ParallelConcat,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/64923,2024-04-02T15:36:54Z,`SystemError` in `tf.signal.frame` when `dtype` of `frame_step` is `tf.uint64` and its value is too large.,tf.signal.frame,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/64917,2024-04-02T12:46:59Z,`SystemError` in `tf.ensure_shape` and `tf.compat.v1.ensure_shape` when `dtype` of `shape` is `tf.uint64` and its value is too large.,"tf.ensure_shape
+tf.compat.v1.ensure_shape",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/64681,2024-03-28T16:15:23Z,Check failed: ret == 0 (11 vs. 0)Thread tf_data_private_threadpool creation via pthread_create() failed. Aborted (core dumped),tf.data.Dataset.from_tensor_slices,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/64655,2024-03-28T07:38:24Z,Aborted (core dumped) with `tf.raw_ops.LoadAndRemapMatrix`,tf.raw_ops.LoadAndRemapMatrix,2.16.1,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/64349,2024-03-23T08:43:08Z,how to solve this error ? : AttributeError: module 'keras._tf_keras.keras.layers' has no attribute 'experimental',tf.keras.layers.experimental.SyncBatchNormalization,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/64256,2024-03-22T05:21:16Z,"tf.raw_ops.ApproximateEqual/Erfinv fail support a few data types, inconsistent with the documentation","tf.raw_ops.ApproximateEqual 
+tf.raw_ops.Erfinv",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/64225,2024-03-21T21:30:58Z,using tf.linalg.det in custom loss function yields matrix inversion error,tf.linalg.det,2.16.1,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63937,2024-03-19T02:26:44Z,Aborted (core dumped) in tf.raw_ops.SparseMatrixZeros,tf.raw_ops.SparseMatrixZeros,2.13.0,12
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63848,2024-03-17T08:26:25Z,tf.math.angle(nan) returns inconsistent results on dtype float64 / complex128.,tf.math.angle,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63721,2024-03-14T15:59:00Z,A check fail can be triggered in tf.raw_ops.StatefulPartitionedCall,tf.raw_ops.StatefulPartitionedCall,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63720,2024-03-14T15:57:19Z,A check fail can be triggered in tf.raw_ops.ResourceSparseApplyKerasMomentum,tf.raw_ops.ResourceSparseApplyKerasMomentum,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63697,2024-03-14T05:57:34Z,tf.raw_ops.ResourceApplyProximalAdagrad: Aborted (core dumped),tf.raw_ops.ResourceApplyProximalAdagrad,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63696,2024-03-14T05:55:30Z,tf.raw_ops.ResourceApplyMomentum: Aborted (core dumped),tf.raw_ops.ResourceApplyMomentum,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63693,2024-03-14T05:50:58Z,tf.raw_ops.QuantizeAndDequantizeV3: Aborted (core dumped),tf.raw_ops.QuantizeAndDequantizeV3,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63691,2024-03-14T05:48:39Z,tf.raw_ops.ExperimentalDatasetToTFRecord: Aborted (core dumped),tf.raw_ops.ExperimentalDatasetToTFRecord,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63689,2024-03-14T05:41:47Z,tf.raw_ops.DatasetToTFRecord: Aborted (core dumped),tf.raw_ops.DatasetToTFRecord,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63685,2024-03-14T05:16:01Z,tf.transpose lead to program abortion on a normal value while the perm contains -1,"API Name
+tf.transpose",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63643,2024-03-13T19:26:58Z,Incorrect result when using tf.norm to conduct p-norm computation on float16 precision,tf.norm,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63632,2024-03-13T18:29:08Z,How can I exit the XLAControlFlowContext when inside a jit_compile tf.function? Exit() function take no effect.,tf.function,2.15.0,12.3
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63392,2024-03-11T07:27:07Z,conv2d op produces output without nan with nan inputs,tf.cast,2.10.0,12.2
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63380,2024-03-10T15:00:49Z,tf.tensor_scatter_nd_add: Aborted (core dumped),tf.tensor_scatter_nd_add,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63378,2024-03-10T14:57:36Z,tf.raw_ops.TensorScatterSub: Aborted (core dumped),tf.raw_ops.TensorScatterSub,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63376,2024-03-10T14:51:07Z,tf.raw_ops.FusedPadConv2D: Aborted (core dumped),tf.raw_ops.FusedPadConv2D,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63355,2024-03-09T15:03:18Z,core dumped with tf.raw_ops.FakeQuantWithMinMaxVarsPerChannel,tf.raw_ops.FakeQuantWithMinMaxVarsPerChannel,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63353,2024-03-09T14:54:40Z,Aborted (core dumped) with tf.raw_ops.AvgPoolGrad,tf.raw_ops.AvgPoolGrad,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63352,2024-03-09T14:50:26Z,Segmentation fault with tf.raw_ops.AudioSpectrogram,tf.raw_ops.AudioSpectrogram,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63337,2024-03-09T03:15:46Z,Aborted (core dumped) in tf.io.TFRecordWriter,tf.io.TFRecordWriter,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63271,2024-03-08T08:28:07Z,The result of tf.quantization.fake_quant_with_min_max_args is inconsistent between CPU and GPU,tf.quantization.fake_quant_with_min_max_args,2.15.0,12.2
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63070,2024-02-27T13:06:46Z,`tf.raw_ops.ArgMax`: Heap buffer overflow,tf.raw_ops.ArgMax,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63069,2024-02-27T12:44:00Z,"Given Shapes are not Broadcastable, tf to tf-lite conversion error",tf.math.subtract,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63067,2024-02-27T11:12:14Z,`tf.raw_ops.ExtractImagePatches`: Assertion failure in shape inference step,tf.raw_ops.ExtractImagePatches,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63063,2024-02-27T10:11:25Z,`tf.raw_ops.ExtractGlimpse`: Assertion failure in shape inference step,tf.raw_ops.ExtractGlimpse,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63062,2024-02-27T09:52:15Z,`tf.raw_ops.DecodeAndCropJpeg`: Assertion failure in shape inference step,tf.raw_ops.DecodeAndCropJpeg,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63034,2024-02-23T13:29:12Z,`tf.raw_ops.AvgPool`: negative kernel size is not checked at shape inference step,tf.raw_ops.AvgPool,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/63033,2024-02-23T13:09:32Z,`tf.raw_ops.ConjugateTranspose`: negative value of `perm` can lead to out-of-bounds read,tf.raw_ops.ConjugateTranspose,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62995,2024-02-20T10:39:53Z,`tf.raw_ops.Transpose` aborts with negative `perm` value,tf.raw_ops.Transpose,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62983,2024-02-17T17:48:24Z,`tf.raw_ops.FakeQuantWithMinMaxArgs` aborts when `min0` in Debug build,"tf.raw_ops.FakeQuantWithMinMaxArgs 
+tf.raw_ops.FakeQuantWithMinMaxArgsGradient",2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62982,2024-02-17T17:39:07Z,`tf.raw_ops.LoopCond` aborts in Debug build,tf.raw_ops.LoopCond,2.17.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62861,2024-01-29T09:22:38Z,tf.concat (and tf.transpose) inside a for loop with tf.range in the context of a GradientTape while using XLA dosn't work,"tf.concat
+tf.transpose",2.15.0,12.2
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62793,2024-01-15T04:24:51Z,Gradients with tf.math.expm and complex inputs generates casting warning,tf.linalg.expm,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62788,2024-01-13T17:07:04Z,tf.data.Dataset.map() makes unnecessary memory allocations,tf.data.Dataset.map,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62767,2024-01-09T10:13:42Z,Inconsistencies in Results for `tf.keras.metrics` and `tf.keras.losses`,"tf.keras.metrics.LogCoshError
+tf.keras.losses.LogCosh",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62603,2023-12-09T14:54:43Z,Process is aborted (core dumped) when axis is a large negative integer when calling tf.gather,tf.gather,2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62571,2023-12-05T08:52:11Z,tf.keras.layers.GlobalAveragePooling2D() freezes tf.distribute.MirroredStrategy(),"tf.keras.layers.GlobalAveragePooling2D 
+tf.distribute.MirroredStrategy",2.13.1,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62558,2023-12-04T01:46:32Z,Unexpected NaN when invoking apis combination of tf.GradientTape().jacobian and tf.multiply and tf.math.reciprocal,"tf.GradientTape
+tf.multiply
+tf.math.reciprocal",2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62528,2023-12-01T16:18:38Z,"Inconsistency in XLA Compiled Model with `tf.add, tf.experimental.numpy.triu, tf.math.reduce_max` and Additional Transpose Output on GPU","tf.add
+tf.experimental.numpy.triu
+tf.math.reduce_max",2.15.0,12.2
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62519,2023-11-30T18:23:14Z,"Inconsistency in XLA Compiled TensorFlow Model with `tf.nn.softmax, tf.math.reduce_sum` with Extra Transposed Output","tf.nn.softmax
+tf.math.reduce_sum",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62514,2023-11-30T13:59:55Z,"Output Discrepancy in XLA Compiled Models with `tf.divide, tf.math.reduce_prod, and tf.cos` Involving Extra Node","tf.divide
+tf.math.reduce_prod
+tf.cos",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62510,2023-11-30T11:36:18Z,Output Discrepancy in Mathematically Equivalent Models with`tf.abs` Under XLA Compilation,tf.abs,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62509,2023-11-30T09:59:49Z,Significant Output Discrepancies in `tf.math.reduce_prod + tf.tan` with Extra Transposed Tensor Output,"tf.math.reduce_prod
+tf.tan",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62488,2023-11-27T18:42:58Z,"GPU-Specific Inconsistency in XLA Compiled Model with `tf.nn.atrous_conv2d, tf.cos, and tf.multiply`","tf.nn.atrous_conv2d
+tf.cos
+tf.multiply",2.15.0,12.2
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62486,2023-11-27T16:30:24Z,Inconsistent Outputs from `tf.nn.astrous_conv2d + tf.round` with XLA compiled model on GPU,"tf.nn.atrous_conv2d 
+tf.round",2.15.0,12.2
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62477,2023-11-26T16:09:08Z,Inconsistent Outputs from `tf.nn.conv2d_transpose` on GPU,tf.nn.conv2d_transpose,2.15.0,12.2
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62451,2023-11-21T15:08:06Z,`tf.linalg.cholesky` Produces Inconsistent Results with Complex and Float Tensors,tf.linalg.cholesky,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62399,2023-11-14T23:45:40Z,`tf.math.log` thinks that -103 is -inf,tf.math.log,2.12.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62391,2023-11-14T07:54:57Z,jit-compiled `tfnp.take_along_axis` shape bug,tf.experimental.numpy.take_along_axis,2.16.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62280,2023-10-30T12:59:35Z,Different Behavior of tf.raw_ops.Acos with jit_compile=True,tf.raw_ops.Acos,2.14.0,11.8
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62263,2023-10-28T02:08:02Z,Different Behavior of tf.raw_ops.SqrtGrad with jit_compile=True,tf.raw_ops.SqrtGrad,2.14.0,11.8
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62220,2023-10-25T07:04:01Z,Different Behavior of tf.raw_ops.Asinh with jit_compile=True,tf.raw_ops.Asinh,2.14.0,11.8
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62205,2023-10-24T08:24:07Z,Bug/Problem when ploting the result of `tf.image.resize`. Solution is given to the problem,tf.image.resize,2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62184,2023-10-20T13:29:03Z,core dumped Error with tf.raw_ops.TensorScatterUpdate,tf.raw_ops.TensorScatterUpdate,2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62174,2023-10-19T12:34:32Z,tf.map_fn and TensorArray do not seem to support backpropagation,"tf.map_fn 
+tf.TensorArray",2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62169,2023-10-19T06:26:51Z,null pointer dereference in split_v,tf.split_v,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62168,2023-10-19T06:23:32Z,null pointer dereference in reduce_prod,tf.reduce_prod,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62167,2023-10-19T06:20:18Z,null pointer dereference in pad,tf.pad,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62166,2023-10-19T06:16:31Z,null pointer dereference in onehot,tf.onehot,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62165,2023-10-19T03:28:57Z,null pointer dereference in maximum,tf.maximum,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62164,2023-10-19T03:23:05Z,null pointer dereference in reshape,tf.reshape,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62163,2023-10-19T03:18:32Z,null pointer dereference in exp,tf.exp,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62162,2023-10-19T03:12:22Z,null pointer dereference in dequantize,tf.dequantize,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62161,2023-10-19T03:08:24Z,null pointer dereference in densify,tf.densify,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62160,2023-10-19T03:03:34Z,null pointer dereference in squeeze,tf.squeeze,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62146,2023-10-18T05:32:47Z,core dumped with tf.raw_ops.BiasAdd,tf.raw_ops.BiasAdd,2.15.0,11.8
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62070,2023-10-09T08:36:40Z,tf.truncatemod does not support half and bfloat16 data type,tf.truncatemod,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/62006,2023-09-28T15:49:30Z,tf.train.Checkpoint.restore does not restore the tf.data.Iterator state.,tf.train.Checkpoint.restore,2.13.0,11.8
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61916,2023-09-19T13:54:42Z,tf.linalg.cholesky output normal value on a complex64 matrix that is not positive definite.,tf.linalg.cholesky,2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61912,2023-09-19T10:48:34Z,"Randomization generating repeated sequences with `tf.function`, `tf.random.set_seed` and `tf.cond`","tf.function
+tf.random.set_seed
+tf.cond
+tf.random.uniform",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61911,2023-09-19T10:21:44Z,`tf.device` context manager does not restore `cudaCurrentDevice` under some conditions,tf.device,2.13.0,12
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61907,2023-09-19T05:37:10Z,tf.linalg.cholesky fails on half precision,tf.linalg.cholesky,2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61905,2023-09-19T03:52:07Z,FPE in DepthwiseConv2D,tf.DepthwiseConv2D,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61902,2023-09-19T03:35:38Z,FPE in Conv2d,tf.nn.conv2d,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61899,2023-09-18T19:42:59Z,TFLite model cannot slice a zero-dim tensor,"tf.math.top_k 
+tf.slice 
+tf.lite.TFLiteConverter 
+tf.lite.Interpreter",2.15.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61881,2023-09-16T21:02:17Z,XLA compiled `tf.matmul` can work for two size-incompatible matrices,tf.matmul,2.15.1,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61879,2023-09-15T23:55:07Z,Invalid `Conv2d` can be executed without compilation,tf.keras.layers.Conv2D,2.15.2,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61866,2023-09-14T17:44:28Z,StringLookup / tf.lookup resource cleanup on model cleared,tf.lookup.StringLookup,2.12.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61862,2023-09-14T15:39:18Z,Compiled x.shape throws Tuple out-of-range error,tf.function,2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61856,2023-09-13T21:09:29Z,XLA compiled `tf.reshape` throws ValueError: Shape must be rank 1 but is rank 0,tf.reshape,2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61827,2023-09-10T15:58:12Z,tf.linalg.eigvals outputs UnboundLocalError when receiving a float16 tensor,tf.linalg.eigvals,2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61826,2023-09-10T15:54:18Z,"Inconsistent result between tf.linalg.eigvals and numpy/scipy on a (3,3) tensor",tf.linalg.eigvals,2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61820,2023-09-09T09:40:31Z,The `mask` dtype should be asserted to be boolean in `tf.compat.v1.boolean_mask` (and `tf.boolean_mask`),"tf.compat.v1.boolean_mask 
+tf.boolean_mask",2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61815,2023-09-08T14:16:17Z,Wrong answer from tflite model with certain configurations of depthwise conv2d,"tf.keras.layers.DepthwiseConv2D 
+tf.lite.TFLiteConverter 
+tf.lite.Interpreter",2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61800,2023-09-06T11:59:27Z,Incorrect behaviour of `tf.nn.sigmoid` on complex inputs,tf.nn.sigmoid,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61780,2023-09-03T14:31:11Z,Process aborted when running `tf.gather` and `tf.compat.v1.gather` on GPU with large parameters and indices,"tf.gather
+tf.compat.v1.gather",2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61778,2023-09-03T14:26:52Z,Process aborted when running `tf.keras.layers.MaxPooling1D` on GPU with large `pool_size`,"tf.keras.layers.MaxPooling1D
+tf.compat.v1.layers.MaxPooling1D
+tf.compat.v1.keras.layers.MaxPooling1D",2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61736,2023-08-28T22:43:16Z,tf.data.Dataset.save deadlocks on error,API Name tf.data.Dataset.save,2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61708,2023-08-26T06:08:07Z,Null pointer exception in constant folding of grappler.,"tf.GraphDef 
+tf.NodeDef 
+tf.ConstantFolding 
+tf.GraphProperties 
+tf.NodeDefT",2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61701,2023-08-25T18:38:43Z,tf.math.top_k gradient taping fails when `index_type=tf.int64`,tf.math.top_k,2.13.0,11.8
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61662,2023-08-21T23:40:13Z,Ops listed in 'experimental_select_user_tf_ops' not being recognized by tf lite converter,"tf.lite.TFLiteConverter
+tf.lite.TargetSpec
+tf.RandomUniform
+tf.Mul",2.10.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61652,2023-08-21T04:27:24Z,Check failed when running tensorflow.python.ops.gen_nn_ops.max_pool_grad_with_argmax (colab+local),tf.gen_nn_ops.max_pool_grad_with_argmax,2.13.0,11.8.0
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61643,2023-08-19T02:33:17Z,Check failure when running tf.keras.layers.RepeatVector,tf.keras.layers.RepeatVector,2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61642,2023-08-19T02:28:18Z,Check failure when running tf.compat.v1.layers.MaxPooling1D,tf.compat.v1.layers.MaxPooling1D,2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61639,2023-08-18T13:55:11Z,Softmax overflow issue with a large tensor,tf.math.softmax,2.14.0,11.8
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61571,2023-08-15T01:27:36Z,Crash when running tensorflow.python.framework.importer._PopulateTFImportGraphDefOptions,tf.importer._PopulateTFImportGraphDefOptions,2.13.0,11.8.0
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61570,2023-08-15T01:25:50Z,Crash when running tensorflow.python.framework.importer._GatherReturnElements,tf.python.framework.importer._GatherReturnElements,2.13.0,11.8.0
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61562,2023-08-14T23:10:46Z,Floating point exception when running tensorflow.python.ops.gen_array_ops.depth_to_space,tf.python.ops.gen_array_ops.depth_to_space,2.13.0,11.8.0
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61557,2023-08-14T22:16:47Z,Crash when running tensorflow.python.ops.list_ops.tensor_list_from_tensor,tf.python.ops.list_ops.tensor_list_from_tensor,2.13.0,11.8.0
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61538,2023-08-13T04:11:20Z,tensorflow.python.autograph.operators.data_structures.tf_tensor_list_new,tf.tensor_list_new,2.13.0,11.8.0
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61482,2023-08-04T22:24:18Z,Incorrect tf.nn.max_pool2d outputs for NCHW and NHWC in the same thread.,tf.nn.max_pool2d,2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61364,2023-07-24T14:39:54Z,tf.io.gfile.rename not working for directories in S3,tf.io.gfile.rename,2.12.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61249,2023-07-12T05:06:25Z,tf.linalg.logdet outputs -inf on a matrix with complex data type,tf.linalg.logdet,2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61246,2023-07-11T16:05:56Z,tf.image.adjust_contrast fails on the tf.half data type,tf.image.adjust_contrast,2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61117,2023-06-28T16:17:39Z,`tf.math.reduce_prod` produces wrong second-order gradient,tf.math.reduce_prod,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/61084,2023-06-26T19:39:17Z,tf.data.Dataset prefetch not fetching data asynchronously,tf.data.Dataset,2.11.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60861,2023-06-14T14:21:08Z,tf.data debug mode breaks dataset.save(),"tf.data.experimental.enable_debug_mode
+tf.data.Dataset.save",2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60813,2023-06-08T10:16:56Z,"tf.keras.Model.predict passing x=tf.keras.utils.Sequence causing exceptions ValueError: Data is expected to be in format `x`, `(x,)`, `(x, y)`, or `(x, y, sample_weight)`",tf.keras.Model.predict,2.12.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60772,2023-06-03T18:23:30Z,Inefficient count_nonzero,tf.math.count_nonzero,2.12.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60765,2023-06-02T10:59:11Z,Inconsistency-bug in `tf.raw_ops.AddN` between jit mode and normal mode,tf.raw_ops.AddN,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60764,2023-06-02T10:50:29Z,Inconsistency-bug in `tf.raw_ops.Acos` between jit mode and normal mode,tf.raw_ops.Acos,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60759,2023-06-02T03:48:27Z,Check fail can be triggered in `tf.raw_ops.Empty` under jit compile mode.,tf.raw_ops.Empty,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60758,2023-06-02T03:41:51Z,Check fail can be triggered in `tf.raw_ops.EmptyTensorList` due to overflow under jit compile mode.,tf.raw_ops.EmptyTensorList,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60757,2023-06-02T03:22:05Z,Check fail can be triggered in `tf.raw_ops.Fill` under jit compile mode.,tf.raw_ops.Fill,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60756,2023-06-02T03:14:31Z,Check fail can be triggered in `tf.raw_ops.GatherV2` under jit compile mode.,tf.raw_ops.GatherV2,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60714,2023-05-26T17:33:07Z,`tf.split` or `tf.transpose` cause errors for quantize-aware training with `quantize_apply`,"tf.split
+tf.transpose",2.12.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60599,2023-05-15T14:54:49Z,Weird memory usage of shuffling in `tf.data.Dataset`,tf.data.Dataset,2.12.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60583,2023-05-12T10:16:39Z,rejection_resample loses track of ragged tensors,API Name tf.data.Dataset.rejection_resample,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60549,2023-05-09T20:14:39Z,Large inconsistencies in tf.signal.stft's and tf.signal.inverse_stft's results with @tf.function decorator for certain inputs,"tf.signal.stft
+tf.signal.inverse_stft",2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60547,2023-05-09T19:42:32Z,tf.linalg.matrix_rank results has different results with or without @tf.function for numpy inputs under tensorflow-cpu,tf.linalg.matrix_rank,2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60472,2023-05-02T16:34:56Z,"XLA size-inference integration bug (tf.where, tf.TensorArray, slice, loop)","tf.where 
+tf.size 
+tf.repeat 
+tf.TensorArray",2.14.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60406,2023-04-24T04:07:40Z,"The dim size of inferred shape in GraphProperties is less than -1, which is inconsistent with TensorShapeProto","tf.GraphProperties 
+tf.TensorShapeProto 
+tf.TensorShapeProto::Dim 
+tf.InferenceContext 
+tf.ShapeIsSymbolicallyDefined 
+tf.ShapesSymbolicallyEqual 
+tf.IsUnknown",2.12.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60400,2023-04-22T18:30:48Z,The inferred shape of `tf.RaggedTensor.row_lengths(axis=2)` in Keras graph is incorrect for ragged tensor with uniform row lengths,tf.RaggedTensor.row_lengths,2.12.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60239,2023-04-05T10:26:05Z,"In tf.data.experimental.enable_debug_mode, tf.data.Dataset.ragged_batch fails with an error","tf.data.experimental.enable_debug_mode
+tf.data.Dataset.ragged_batch",2.12.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60200,2023-04-01T08:36:16Z,A check fail can be triggered in ThreadUnsafeUnigramCandidateSampler,tf.raw_ops.ThreadUnsafeUnigramCandidateSampler,2.13.0,11.8
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60197,2023-04-01T08:23:48Z,A check fail can be triggered in LearnedUnigramCandidateSampler,tf.raw_ops.LearnedUnigramCandidateSampler,2.13.1,11.8
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60196,2023-04-01T08:21:17Z,A check fail can be triggered in StatelessRandomGammaV2,tf.raw_ops.StatelessRandomGammaV2,2.13.2,11.8
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60149,2023-03-28T17:06:53Z,tf.data.Dataset.from_generator crashes with abortion,tf.data.Dataset.from_generator,2.13.3,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60121,2023-03-27T02:53:54Z,tf.raw_ops.AssignAddVariableOp crash with abortion,tf.raw_ops.AssignAddVariableOp,2.13.4,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60084,2023-03-23T16:02:58Z,tf.py_function throws KeyError when computing Jacobian matrix,tf.py_function,2.11.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/60059,2023-03-22T00:32:52Z,QuantizeAndDequantizeV4 throws TypeError in gradient computation in forward mode,tf.raw_ops.QuantizeAndDequantizeV4,2.11.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/59960,2023-03-12T01:12:14Z,quantize_and_dequantize_v2 crashes when computing gradients in forward mode,tf.quantization.quantize_and_dequantize_v2,2.11.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/59772,2023-02-22T09:20:16Z,DepthwiseConv2D is 24 times slower then Conv2D with CUDA 11.8 and jit_compile=True,"tf.DepthwiseConv2D 
+tf.Conv2D",2.13.0,12
+tensorflow,https://github.com/tensorflow/tensorflow/issues/59727,2023-02-17T16:11:20Z,RaggedTensor slice gradient computation error,tf.RaggedTensor,2.11.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/59702,2023-02-15T20:59:06Z,tf.cast behaves differently in CPU and GPU when casting negative values,tf.cast,2.13.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/59635,2023-02-10T07:31:14Z,Non deterministic random numbers generated in Eager and Graph mode,tf.random.uniform,2.11.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/59525,2023-02-02T11:20:23Z,"ConvertFusedBatchNorm returns uninitialized value when data_format = ""NDHWC""",tf.convert_fused_batch_norm,2.12.0,11.8
+tensorflow,https://github.com/tensorflow/tensorflow/issues/59099,2023-01-04T20:44:47Z,TensorListScatterV2 fail to support gradient computation,tf.raw_ops.TensorListScatterV2,2.12.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/58790,2022-12-05T23:37:00Z,tf.math.cumsum() propagates Inf or NaN when axis is ragged,tf.math.cumsum,2.11.0,11.7
+tensorflow,https://github.com/tensorflow/tensorflow/issues/58628,2022-11-21T06:35:21Z,tf.distribute.experimental.rpc.Server memory leak on server,tf.distribute.experimental.rpc.Server,2.11.0,11.2
+tensorflow,https://github.com/tensorflow/tensorflow/issues/58523,2022-11-10T17:21:48Z,`tf.linalg.pinv` produces all-zero matrix instead of all-`nan` matrix when given `nan` input on GPU,tf.linalg.pinv,2.10.0,11.3
+tensorflow,https://github.com/tensorflow/tensorflow/issues/58517,2022-11-10T10:03:17Z,`tf.round` on GPU rounds `-0.5` to `0.0` rather than `-0.0`,tf.round,2.10.0,11.3
+tensorflow,https://github.com/tensorflow/tensorflow/issues/58290,2022-10-25T02:56:12Z,`tf.data.experimental.CsvDataset` cause IOT instruction crash,tf.data.experimental.CsvDataset,2.10.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/57935,2022-10-01T21:59:46Z,Wrong result in `tf.experimental.numpy.floor_divide` and `tf.experimental.numpy.remainder` when divide 0 by 0,"tf.experimental.numpy.floor_divide
+tf.experimental.numpy.remainder",2.11.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/57863,2022-09-27T13:47:04Z,`tf.experimental.numpy.isposinf` has wrong output when input is integer.,tf.experimental.numpy.isposinf,2.10.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/57847,2022-09-26T21:34:20Z,Custom Op failure due to Status symbol resolution in docker image tensorflow/tensorflow:2.10.0,tf.load_op_library,2.10.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/57838,2022-09-26T03:32:38Z,Conv2D layer fails to run with XLA on CUDA,tf.layers.Conv2D,2.11.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/57751,2022-09-19T16:48:39Z,Wrong shape broadcasting during tensor equal check,API Name tf.experimental.numpy.isreal,2.11.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/57664,2022-09-11T09:08:08Z,Inconsistant behavior of Conv2D between eager mode and tracing,tf.layers.Conv2D,2.11.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/57492,2022-08-29T02:01:08Z,Tensor size-related conditional logic ignored in `tf.function`,"tf.function 
+tf.size 
+tf.tensor_scatter_nd_update 
+tf.convert_to_tensor 
+tf.shape 
+tf.concat 
+tf.range 
+tf.newaxis",2.9.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/57365,2022-08-22T13:35:38Z,[BUG] Gradient tape *inside* tf.function broken for tf.Variable argument.,"tf.function 
+tf.Variable 
+tf.GradientTape",2.9.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/56849,2022-07-21T13:10:13Z,Inconsistent results from `tf.raw_ops.LRNGrad` between CPU and GPU,tf.raw_ops.LRNGrad,2.10.0,11.2
+tensorflow,https://github.com/tensorflow/tensorflow/issues/57748,2022-09-19T11:24:41Z,Conv2D with XLA jit_compile=True fails to run,tf.function,2.11.0,CPU
+tensorflow,https://github.com/tensorflow/tensorflow/issues/73531,2024-08-11T10:45:11Z,Conv2D is no longer supporting Masking in TF v2.17.0,tf.keras.layers.Conv2D,2.17.0,12.6.0

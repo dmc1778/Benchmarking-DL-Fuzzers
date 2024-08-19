@@ -460,7 +460,7 @@ def main():
                             sdate = _date.split("-")
 
                             with open(
-                                f"./issues/{r_prime[4]}.csv",
+                                f"./issues/phase1/{r_prime[4]}.csv",
                                 "a",
                                 newline="\n",
                             ) as fd:
