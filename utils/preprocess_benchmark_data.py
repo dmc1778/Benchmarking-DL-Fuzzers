@@ -14,7 +14,7 @@ def flat_multiple_apis(data, fname):
     for idx, row in data.iterrows():
         apis_separated = count_apis(row['API Name'])
         for api in apis_separated:
-            output_list = [row['Library'], row['Issue Link'],row['Date'],row['Title'],api,row['Library Version'],row['CUDA Version']]
+            output_list = [row['Library'], row['Issue Link'],row['Date'],row['Title'],api ,row['Library Version'],row['CUDA Version']]
             write_to_csv('data',fname,output_list)
             
 if __name__ == '__main__':
