@@ -54,6 +54,7 @@ def is_buggy(input_string):
 def completions_with_backoff(prompt, temperature,  model='gpt-4o-mini'):
     response = client.chat.completions.create(
         model=model,
+        logprobs=True,
         temperature=temperature,
         messages=[
             {"role": "system", "content": prompt}
