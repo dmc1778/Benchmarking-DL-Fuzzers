@@ -1,0 +1,812 @@
+https://github.com/pytorch/pytorch/commit/fd33499b0c355c42a62cd9628c89b543fb142926,2024,<torch.sum>
+https://github.com/pytorch/pytorch/commit/4a2cf50edf0e3c3a28e6213c491030b04e63cbfb,2024,"<torch.amp.autocast_mode._enter_autocast, torch.amp.autocast_mode._exit_autocast>"
+https://github.com/pytorch/pytorch/commit/46994e753bf0d7859c3701bff726d267f264a4e6,2024,"<torch.layer_norm, torch.nn.functional.layer_norm>"
+https://github.com/pytorch/pytorch/commit/89053e382a6d08345d2f156010b4fb1c851c7ff0,2024,<torch.softmax>
+https://github.com/pytorch/pytorch/commit/8fe2bf212dc5e01b15cbe728958f940873230d64,2024,"<torch.layer_norm, torch.nn.functional.layer_norm>"
+https://github.com/pytorch/pytorch/commit/f862f457304f1952e75336f9f74e4ea3d2a5eb72,2024,"<torch.layer_norm, torch.nn.functional.layer_norm>"
+https://github.com/pytorch/pytorch/commit/bcf5c68c18c6a109e1fa00829eea0428d44cfb6b,2024,<torch.softmax>
+https://github.com/pytorch/pytorch/commit/fdf1451bfa5ae6a019b495d7aee89f06581302b9,2024,<torch.optim>
+https://github.com/pytorch/pytorch/commit/9589d986faac1da361ac29e318dddbe6a8e4d375,2024,<torch.testing.assert_close>
+https://github.com/pytorch/pytorch/commit/5570a0da0af369768083875a354b70cd72f0ff07,2024,"<aten.conj, aten.mul, aten._conj>"
+https://github.com/pytorch/pytorch/commit/2bf649f5ae580a44367e35b0bec180b5019d5f7e,2024,<torch._check>
+https://github.com/pytorch/pytorch/commit/e8956c9fe63b2261367563eedce8934681c9422d,2024,torch.masked_fill
+https://github.com/pytorch/pytorch/commit/29c9f8c782f7f87d427672295ff561c9e9d25b69,2024,<torch._logging>
+https://github.com/pytorch/pytorch/commit/faddb0f30c441318253de6a0313af87a3370e2d6,2024,<torch.mean>
+https://github.com/pytorch/pytorch/commit/979429ca892b61bdd5d66fbf9efb40dac39702a9,2024,<aten.view.dtype>
+https://github.com/pytorch/pytorch/commit/9e753d1f206f3d148b3641356946c4625e4706fe,2024,<torch.cuda.memory.list_gpu_processes>
+https://github.com/pytorch/pytorch/commit/8bf0be7c78e59127bb3c9d9c75a51cbdd21efa8c,2024,"<torch.ops.aten.mul, torch.ops.aten.view.default, torch.ops.aten.native_group_norm.default>"
+https://github.com/pytorch/pytorch/commit/5979014059b4dc4a14037b66f9b4cfc513f39c58,2024,<torch.aten.copy_>
+https://github.com/pytorch/pytorch/commit/53cf46b8c602f8512d49a5c30bca7fcf5411e25c,2024,"<torch.ops.mylib.somefunc_forward>
+<torch.ops.mylib.somefunc_backward>
+<torch._C._set_grad_enabled>
+<torch.library.custom_op>"
+https://github.com/pytorch/pytorch/commit/7cd48df2dae7e2194438b162968c47d1f05bf20e,2024,<torch.device>
+https://github.com/pytorch/pytorch/commit/74da2a467f166e00316aee82ba24835ca563ed87,2024,<torch.library.custom_op>
+https://github.com/pytorch/pytorch/commit/1ad0f38a372f35f5687f32de848defe00444ee07,2024,<torch.flex_attention>
+https://github.com/pytorch/pytorch/commit/f422027fceb71b1f2f7d940f3ade32ced2ed0ba0,2024,torch.linalg.lstsq
+https://github.com/pytorch/pytorch/commit/b38de2f9e21860dc12cccd0ee0d320df54aeaf18,2024,torch.aten._to_copy
+https://github.com/pytorch/pytorch/commit/b4cc25f12635e42bd472061bc3e7501961139de3,2024,<torch.library.custom_op>
+https://github.com/pytorch/pytorch/commit/c8ab2e8b637515b6488931f5e59f23848aae9991,2024,<torch.ops.sample_inputs_masked_fill>
+https://github.com/pytorch/pytorch/commit/c0735a3dd36760f04c2dd05599fc4c63c85f1cb7,2024,<torch._dynamo.utils.same>
+https://github.com/pytorch/pytorch/commit/257b9c7936b372368f6d2b7d26e9b97675b2a046,2024,<torch.empty_like>
+https://github.com/pytorch/pytorch/commit/45f3e20527c0cc27a4d6c3b93f2fa529b80556bb,2024,torch.serialization.add_safe_globals
+https://github.com/pytorch/pytorch/commit/e364290718b1623828ebcb4ae4572631dee7c14d,2024,"<torch.mm, torch.matmul>"
+https://github.com/pytorch/pytorch/commit/27ae1f981d8a800505ddfde08898ddcf4c6f9765,2024,<torch.nn.Linear>
+https://github.com/pytorch/pytorch/commit/ba19ed9a1a4efc7fa9ccdd6ace6a85fd1f43b49f,2024,<aten.sym_storage_offset>
+https://github.com/pytorch/pytorch/commit/7e734e2d0835c42b6af786badd383f947b2456ae,2024,"<torch.ops.prims.iota.default, torch.ops.aten.repeat_interleave.Tensor, torch.ops.aten.index.Tensor>"
+https://github.com/pytorch/pytorch/commit/3bc2004f9123a32f381ef64202252d59109507f3,2024,<torch.prim::dtype>
+https://github.com/pytorch/pytorch/commit/bb13fad7aa7754042efe6e9465410cf5e543a77e,2024,<torch.distributed.TCPStore>
+https://github.com/pytorch/pytorch/commit/db515b6ac7c875c39e9068ba81e72574e8b79e55,2024,torch.cuda
+https://github.com/pytorch/pytorch/commit/f343f98710dfa7305a873f558086c595a3c3d3d4,2024,<torch.jit.load>
+https://github.com/pytorch/pytorch/commit/f33beb767d04ad00aecbcf16690e786eb93ebdd8,2024,"<torch.mark_dynamic, torch.maybe_mark_dynamic>"
+https://github.com/pytorch/pytorch/commit/cd06ae0cb80104cc63095040d1c209f2cf57ed9c,2024,<torch.utils.swap_tensors>
+https://github.com/pytorch/pytorch/commit/49ad90349d57c35ab83f40c28d8b18caefb416d1,2024,<torch.aten::_local_scalar_dense>
+https://github.com/pytorch/pytorch/commit/02b1cdab23ffbf836aa2d2e1f5497567de2947a4,2024,<torch._flash_attention_forward>
+https://github.com/pytorch/pytorch/commit/665637714f46f6dcc7f6d2ad860184e6335fe35a,2024,<torch.optim.SparseAdam>
+https://github.com/pytorch/pytorch/commit/a379ed6e98fe91b1b41ce4c7e0916f6ad1faea02,2024,<torch.get_default_dtype>
+https://github.com/pytorch/pytorch/commit/abc4b661249337670c10b91d2449b4bb8f6ddb20,2024,<torch._inductor.utils.fresh_inductor_cache>
+https://github.com/pytorch/pytorch/commit/d54c28e7fcb6377aa007c0d3e53837683420af4b,2024,<torch._C._nn.thnn_conv2d>
+https://github.com/pytorch/pytorch/commit/7dfd2949d74ab3a523a0abc6270cc426cdcf4a00,2024,<torch.tensor>
+https://github.com/pytorch/pytorch/commit/92eb1731d4cdc9f15cf9304477a5701415453227,2024,"<torch.multiprocessing.ProcessContext.join, torch.distributed.elastic.multiprocessing.api.MultiprocessingContext>"
+https://github.com/pytorch/pytorch/commit/e046c59e5bd2d7c105f8e424dda2d1c8b5aed21a,2024,<torch.nn.Parameter>
+https://github.com/pytorch/pytorch/commit/4dd33a1c2bcf08c3437a436057c0f618542e817d,2024,<torch.backends.xeon.run_cpu>
+https://github.com/pytorch/pytorch/commit/1b8891a31d783d87ef02e1ec32c0bbb30080c5da,2024,<torch._check>
+https://github.com/pytorch/pytorch/commit/d4225c55d9676b5183497e425e853e373951c27a,2024,"<torch.ops.aten._local_scalar_dense, torch.ops.aten.__assert_async_msg, torch.ops.aten.__assert_scalar_default, torch.ops.aten.slice_copy>"
+https://github.com/pytorch/pytorch/commit/e15da7856caf2deacbf0d9adabd53e5e3f0d9a1d,2024,"<torch.cumsum, torch.cumprod>"
+https://github.com/pytorch/pytorch/commit/a216d87c6bf6840006da148ce3976e092b13273f,2024,torch.ops.aten.native_layer_norm.default
+https://github.com/pytorch/pytorch/commit/761a7b84ba493e6113ad6dcc3899123801230cec,2024,<torch.aten.alias>
+https://github.com/pytorch/pytorch/commit/cdc66e9dc3a3f15de2eb467262ab75e5c362063f,2024,torch.get_autocast_dtype
+https://github.com/pytorch/pytorch/commit/66b0156e0bba432f42cc9dc45e2580d3f232ee75,2024,<torch._check>
+https://github.com/pytorch/pytorch/commit/5677128cb892d17fe2281beae9e394fd6f89e455,2024,torch.nn.functional.binary_cross_entropy
+https://github.com/pytorch/pytorch/commit/78824fd212d236e3a467d81245f53b5ff532c934,2024,<torch.full>
+https://github.com/pytorch/pytorch/commit/5b8c81eb824c58820ad2b71b0c807280c6dd6c61,2024,<torch.sharded_tensor>
+https://github.com/pytorch/pytorch/commit/9c3b87833acd143d88fccb570357173860c376f3,2024,<torch.set_()>
+https://github.com/pytorch/pytorch/commit/7a7853446835b2e88c7e7618d18e9e15ca1029ce,2024,<torch._dynamo.exc.Unsupported>
+https://github.com/pytorch/pytorch/commit/7b029101636512038a3a09f4b4ae72fe931c7248,2024,<torch.compile>
+https://github.com/pytorch/pytorch/commit/d7fe0603a109710541a3f59be83326f49b3a71db,2024,"<torch.optim.Adagrad>
+<torch.optim.SGD>
+<torch.optim.SparseAdam>"
+https://github.com/pytorch/pytorch/commit/b524a404e0ab6de43cbbb27a5a72dc93a8c24d3b,2024,<torch.upsample_bicubic2d>
+https://github.com/pytorch/pytorch/commit/f178d996a893737f44c97c18a7ed6358780374db,2024,torch._dynamo.exc.Unsupported
+https://github.com/pytorch/pytorch/commit/c81c9ba472ca46d5acac94ea7eea4dbd264a93fb,2024,"<torch.FakeTensor.data_ptr, torch.FunctionalTensor.data_ptr>"
+https://github.com/pytorch/pytorch/commit/1c1268b6e912af37ea3649826707c271885982fb,2024,<torch.distributed.all_reduce>
+https://github.com/pytorch/pytorch/commit/cf06189a2d2785ac493bcd0d55e520af5a0e3b97,2024,<torch.diagonal_scatter>
+https://github.com/pytorch/pytorch/commit/ed15370aabf951eec2ba0140de5ff71634868791,2024,torch._inductor.promote_constants
+https://github.com/pytorch/pytorch/commit/139647d317ace829a0993b459411fa59191cb617,2024,"torch.nn.TripletMarginLoss, torch.nn.TripletMarginWithDistanceLoss"
+https://github.com/pytorch/pytorch/commit/42624bceb6856a8934a1fcacb8a621a418f1a2c3,2024,torch.bfloat16
+https://github.com/pytorch/pytorch/commit/e26280ad8bf6eecb0f218d69f3ec90f01617fac4,2024,torch.autograd.Function
+https://github.com/pytorch/pytorch/commit/fc33bbf8279aee09befb7e99b847099db1164e57,2024,torch.set_default_dtype
+https://github.com/pytorch/pytorch/commit/5b1642516f7de24ab50f95e3eac35269c4a66e50,2024,"<torch.autograd.profiler.record_function>
+<torch.ops.profiler.record_function_exit>"
+https://github.com/pytorch/pytorch/commit/1866ee6735adb53b8c8fcc46186d74209e8d5496,2024,torch.where
+https://github.com/pytorch/pytorch/commit/edd80f87b8ded8879372009cf9e1f9e8383a471d,2024,<torch.Tensor.__repr__>
+https://github.com/pytorch/pytorch/commit/69cedc16c593e777cd36f064dd862c78d6291c0b,2024,"torch._C._nn.replication_pad1d, torch._C._nn.replication_pad3d, torch._C._nn.replication_pad3d"
+https://github.com/pytorch/pytorch/commit/aa0b0944d50f294f613f0138ff56514f13005981,2024,"<torch.Tensor.new, torch.Tensor.new_empty>"
+https://github.com/pytorch/pytorch/commit/34e3f6f3c9ed0b8ebdbf37637722a6e53274198a,2024,<torch.native_channel_shuffle>
+https://github.com/pytorch/pytorch/commit/06fe6ed82b9878dda750dc45f5ffd47d97ba194c,2024,torch.scalar_tensor
+https://github.com/pytorch/pytorch/commit/54bac042e711f08e909dda939f70d6f272dbe8ce,2024,"torch.linalg.lu_factor, torch.linalg.lu_solve"
+https://github.com/pytorch/pytorch/commit/609cde94f917c9e3b6941a2b838de4757f1524d3,2024,<torch.clone>
+https://github.com/pytorch/pytorch/commit/761fa5d6ecc77e85fa9dd92251201727671c48d0,2024,<torch._utils._rebuild_tensor_v2>
+https://github.com/pytorch/pytorch/commit/4240304da4ddc42335b0219bae11f072ca240fe5,2024,<torch.distributed.elastic.multiprocessing.api>
+https://github.com/pytorch/pytorch/commit/8ec3d8e35faa8b37a0f6639dc56fe0c444d2ca48,2024,torch.FxGraphDrawer
+https://github.com/pytorch/pytorch/commit/82248f0b1c3bf863a0a42a3f161a71b25053091e,2024,<torch.FakeTensor>
+https://github.com/pytorch/pytorch/commit/ed20e9118bd870a58e6b21cad6c7a5e574f60606,2024,torch._functorch.compile_utils.fx_graph_cse
+https://github.com/pytorch/pytorch/commit/f3a2094065c8b4b7bae426e71c923a8a8abb74b5,2024,<torch._dynamo.export>
+https://github.com/pytorch/pytorch/commit/1d61011c1177f7639206bef7e5c06fd4c3330382,2024,<torch.legacy_complex_as_view>
+https://github.com/pytorch/pytorch/commit/113506d2d4a0120e912c8f36e70a621f55378f81,2024,"<torch._utils._rebuild_tensor>
+<torch._subclasses.fake_tensor.FakeTensorMode>"
+https://github.com/pytorch/pytorch/commit/f6bf7d26e1649bffc99fbcedd3013f0c9f50c912,2024,"torch._dynamo.symbolic_convert
+torch.fx.experimental.symbolic_shapes"
+https://github.com/pytorch/pytorch/commit/b8bb12cd454b716da6a98db826fcc45fd7c0db05,2024,<torch._foreach_norm>
+https://github.com/pytorch/pytorch/commit/4dc53f777bbab93e785989ea7c20501b149c433b,2024,"torch._numpy._ndarray.astype()  
+torch._numpy._ndarray.put()  
+torch._numpy._ndarray.view()"
+https://github.com/pytorch/pytorch/commit/426339e4de2efc0cbd501e2bff947ba890ec9817,2024,"<torch._utils._rebuild_tensor>
+<torch._utils._rebuild_tensor_v2>
+<torch._subclasses.fake_tensor.FakeTensorMode>"
+https://github.com/pytorch/pytorch/commit/b5ba80828f77c565bcda7558da97c792af32d517,2024,<torch.optim.load_state_dict>
+https://github.com/pytorch/pytorch/commit/d947b9d50011ebd75db2e90d86644a19c4fe6234,2024,<torch.optim.load_state_dict>
+https://github.com/pytorch/pytorch/commit/a1dd367716ee2846aac20a074d6d553b270d6943,2024,<torch.bicubic>
+https://github.com/pytorch/pytorch/commit/eaa45f47f825777599c097af577d854bb47711ae,2024,<torch.save>
+https://github.com/pytorch/pytorch/commit/65917411834874a98d39923c179a1308d371a733,2024,<torch.inference_mode>
+https://github.com/pytorch/pytorch/commit/41dfdde9f5cd593e25732021347015d5e64acc8f,2024,<torch.compile>
+https://github.com/pytorch/pytorch/commit/939008a268cfc345d758a51c13a2fd9fe8327a84,2024,<torch.jit.trace>
+https://github.com/pytorch/pytorch/commit/4d625c1c92534ad78199d977ad95139e1c03cfe5,2024,torch._export.aot_load
+https://github.com/pytorch/pytorch/commit/3ee092f75b34cd794e9880f181440ac90fca1ac8,2024,<torch._refs.sgn>
+https://github.com/pytorch/pytorch/commit/181e6dafd04073118a7d9f25fc73bbe30c923c00,2024,<torch.nn.Linear>
+https://github.com/pytorch/pytorch/commit/1872834247084d76544c95e04fe2ec3370bac87d,2024,<torch.mm>
+https://github.com/pytorch/pytorch/commit/d9b265adaf038a5c7c9a0795ef854a3af120bed4,2024,"<torch.backends.cudnn, torch.ops, torch.backends.cudnn.CudnnModule, torch._ops._Ops>"
+https://github.com/pytorch/pytorch/commit/29ae4f22bfb35610d2e21a300f810699e093ccb1,2024,<torch.load>
+https://github.com/pytorch/pytorch/commit/534c73d478fc967cb3a6a29f5eada94bc4ce2c29,2024,<torch.signal.windows.kaiser>
+https://github.com/pytorch/pytorch/commit/d0cf2182eac1c87805ceef4416397e9049100685,2024,<torch._transformer_encoder_layer_fwd>
+https://github.com/pytorch/pytorch/commit/6793b9910787c388c156e0dcf630e781af7a17f5,2024,"<torch.all, torch.any>"
+https://github.com/pytorch/pytorch/commit/b72127cd4b56a4e6978ec3d46bc8daf7c75e0c08,2023,<torch.ops.aten.div>
+https://github.com/pytorch/pytorch/commit/327bdcdb148bdbb9014030c3913f186b82d197bf,2023,"<torch.set_default_device, torch.get_default_device>"
+https://github.com/pytorch/pytorch/commit/4123cca859037b6ac86f83cdb0b6030eac345c6f,2023,"<torch.at::globalContext().userEnabledMkldnn, torch.at::globalContext().setUserEnabledMkldnn, torch.mkldnn_matmul>"
+https://github.com/pytorch/pytorch/commit/74dfdc567bd90301e1db0550683c184075bdb4e8,2023,torch.erfinv
+https://github.com/pytorch/pytorch/commit/0959e67de32b617e5ab0e1410fd60d2db7fc99ca,2023,torch.cuda.current_device
+https://github.com/pytorch/pytorch/commit/c7ae2c170f1e5e85badec0a0679abad136ecf8b7,2023,<torch.compile>
+https://github.com/pytorch/pytorch/commit/1becd2c314f45bded8d3fbec91d785e7190b4afe,2023,"<torch._use_cudnn_ctc_loss, torch._cudnn_ctc_loss>"
+https://github.com/pytorch/pytorch/commit/8739d1e3f9b08f4282fe79fc8dacd781d16913ff,2023,torch.autograd.gradcheck
+https://github.com/pytorch/pytorch/commit/495054545ccd7f0d277b5d464183a35a1028d38e,2023,<torch.random.fork_rng>
+https://github.com/pytorch/pytorch/commit/b5d3d3ebf06360b5e1b9a447745ea9139741c7a0,2023,<torch.hist_obs>
+https://github.com/pytorch/pytorch/commit/f5919335db6aee27da62e62a5eedd78334e6421d,2023,<torch.load_state_dict>
+https://github.com/pytorch/pytorch/commit/7b3429d97ce8cf4573977ab8cc904f22a83c8a66,2023,torch._dynamo.utils.run_node
+https://github.com/pytorch/pytorch/commit/c8974d649d684a33a5c02a0b112a6e0743201d97,2023,<torch.autograd.Function>
+https://github.com/pytorch/pytorch/commit/74e10f0f60a26fe07a5aa39b699edb4a5ae29b14,2023,<torch.split>
+https://github.com/pytorch/pytorch/commit/cef79c0df4a340e812efd7fd8534a7fe3ba0109b,2023,"<torch.ops.aten.constant_pad_nd.default, torch.ops.aten._sparse_semi_structured_linear.default, torch.ops.aten.slice.Tensor, torch.ops.aten.view.default, torch.ops.aten.relu.default, torch.ops.aten.alias.default, torch.ops.aten.le.Scalar>"
+https://github.com/pytorch/pytorch/commit/ddf1cb78705dcf79fe8c8df01f6f18ca4a218c55,2023,<torch.set_()>
+https://github.com/pytorch/pytorch/commit/ccb1de3595fad0d8dc1f9269130dede16547fb77,2023,torch.split
+https://github.com/pytorch/pytorch/commit/cd7d6938c18d90870356553d4631f1388d2bb699,2023,<torch.split>
+https://github.com/pytorch/pytorch/commit/85aa3723749e0d06aa5fd34215b9b93529a60995,2023,<torch.nn.functional.conv2d>
+https://github.com/pytorch/pytorch/commit/ed05af278caa47db55b4fea878341f683acb8767,2023,"```
+torch.compile
+```"
+https://github.com/pytorch/pytorch/commit/d416e5b34f5bfcb0d0d3cdaa53e59eacc5986bc5,2023,torch.distributed.run
+https://github.com/pytorch/pytorch/commit/2b72543f3667096f3e41ddab528af14191c15ec3,2023,<torch.optim.lr_scheduler.CyclicLR>
+https://github.com/pytorch/pytorch/commit/c77a4a409654dbc0ac4a528c37873b0acb1be32d,2023,<torch.prims.mul>
+https://github.com/pytorch/pytorch/commit/a911b4db9d82238a1d423e2b4c0a3d700217f0c1,2023,<torch.set_()>
+https://github.com/pytorch/pytorch/commit/4b07fca7d7f761dee3191c301024a290861e2587,2023,<torch._dynamo.export>
+https://github.com/pytorch/pytorch/commit/0c450f4504d1ca1fed0958f5454e393664ce9637,2023,<torch._functorch.vmap>
+https://github.com/pytorch/pytorch/commit/0885c5829643fe10ed9d0810093f11da2c97d066,2023,<torch.distributed.init_process_group>
+https://github.com/pytorch/pytorch/commit/a56af029133ba0e87ed4c099e7e4efc40a24e20c,2023,<torch.is_contiguous>
+https://github.com/pytorch/pytorch/commit/9146ca6a079dfabea728bb3bbe6eb32516a3e275,2023,<torch.compile>
+https://github.com/pytorch/pytorch/commit/78f3937ee84e71475942598f4b51dce7c8a70783,2023,"torch.set_num_threads  
+torch.set_num_interop_threads"
+https://github.com/pytorch/pytorch/commit/6ed20af10e67e3fddea40396d1f07125d56b34b2,2023,"<torch.equal, torch.is_same_size>"
+https://github.com/pytorch/pytorch/commit/b3a7d9208bb4eef902b4f5164789abbda40aa18b,2023,<torch._int_mm>
+https://github.com/pytorch/pytorch/commit/3afb4e5cf7b0162c532449fb5c9e7c7058a4c803,2023,<torch.set_>
+https://github.com/pytorch/pytorch/commit/d64bc8f0f81bd9b514eb1a5ee6f5b03094e4e6e9,2023,<torch.compile>
+https://github.com/pytorch/pytorch/commit/e2236ae097eb25dbdbeb740373f93643a4e70f6b,2023,<torch.ops.c10d_functional.wait_tensor.default>
+https://github.com/pytorch/pytorch/commit/3e4d14702aad366a3deb930307fffb4197bf958a,2023,<torch.grad>
+https://github.com/pytorch/pytorch/commit/623a311d221fafca3eeb1ab7c2107d962dcd4738,2023,torch.distributed.rpc
+https://github.com/pytorch/pytorch/commit/5296c140945c4a8c0e1f3a4542459ab658ffaa31,2023,"torch.distributions.InverseGamma
+torch.distributions.PowerTransform"
+https://github.com/pytorch/pytorch/commit/a21851c69dd50ebd1489b293ccb7e3e2db6fb0b3,2023,<torch.foreach>
+https://github.com/pytorch/pytorch/commit/67638d4dadc120ed48a3f7d70cce05ca0483a0fc,2023,<torch.randn.generator>
+https://github.com/pytorch/pytorch/commit/a8c74e822538668df3d74cc231f64a6a895d91a8,2023,torch.export.Dim
+https://github.com/pytorch/pytorch/commit/2aaa7e542cb3b217e19284d10d0c0ae1e2df202b,2023,<torch.compile>
+https://github.com/pytorch/pytorch/commit/09040f6fbbb3598b6002bed78e4233d4141c9674,2023,torch.cuda.device_count()
+https://github.com/pytorch/pytorch/commit/0b424ee0b7bfe09e0a438a63e8336e95eea85901,2023,<torch.cuda.memory_stats>
+https://github.com/pytorch/pytorch/commit/c4ab229a82f3fe5e1f02f4213bcfc61e0306bffa,2023,<torch.Tensor>
+https://github.com/pytorch/pytorch/commit/03da0694b7f414f8124d6a1e377e1a7484e0cfb6,2023,<torch.sort>
+https://github.com/pytorch/pytorch/commit/41490119f252e6192db3c29b674dbba4782a12e6,2023,torch.compile
+https://github.com/pytorch/pytorch/commit/a3e9b80082e1faf590ada272c384e2f193d3536c,2023,"torch.diagonal, torch.onnx.export"
+https://github.com/pytorch/pytorch/commit/35750bf9d134726b47451d78b731017ad27fbc8b,2023,<torch.ops.aten.lift_fresh_copy.default>
+https://github.com/pytorch/pytorch/commit/9316c8b4bc5e449705e945a3069f35b690d70140,2023,torch._check
+https://github.com/pytorch/pytorch/commit/4d29b40299e9af1e4287b48024b6ef28b7cbf738,2023,"<torch.ops.aten.view.default, torch.ops.aten._to_copy.default, torch.ops.aten.detach.default, torch.ops.c10d_functional.all_gather_into_tensor.default, torch.ops.c10d_functional.wait_tensor.default, torch.ops.aten.split.Tensor, torch.ops.aten.cat.default, torch.ops.aten.mm.default, torch.ops.aten.t.default, torch.ops.aten.clone.default, torch.ops.c10d_functional.reduce_scatter_tensor.default>"
+https://github.com/pytorch/pytorch/commit/98c8550158a4a79c4d39533a5331c5953f6ea279,2023,<torch.triplet_margin_loss>
+https://github.com/pytorch/pytorch/commit/3812f2e40cbf2f2aadb36cbd9bc6210612fe0ed7,2023,<torch.memory_format>
+https://github.com/pytorch/pytorch/commit/a58864875938c044202803cedfdc1a565214bfa3,2023,<torch.cpu.current_device>
+https://github.com/pytorch/pytorch/commit/40b83d98de1f5ebb72d081b04b253251caeee32a,2023,"<torch.export.export, torch.export.save>"
+https://github.com/pytorch/pytorch/commit/c0d746c90e3f5f5699f32178f89c6c304e9df8b0,2023,<torch.onnx.export>
+https://github.com/pytorch/pytorch/commit/3663436db31bd3cebcb76efe05d8355553a05c57,2023,<torch.randn>
+https://github.com/pytorch/pytorch/commit/e73efbffabab9778b0737c88074850b098fcd9e3,2023,torch.distributed._shard.api
+https://github.com/pytorch/pytorch/commit/1a361e4e9ff1a8dadd72c7301441cfb83d687f24,2023,"<torch.ops.aten.gt.Scalar, torch.ops.aten.mul.Tensor, torch.ops.aten.where.self, torch.ops.aten.copy_.default>"
+https://github.com/pytorch/pytorch/commit/706d8e223057bb33b0ad65e857e816d228ef6bd5,2023,"<torch._dynamo.disable>
+<torch._dynamo.eval_frame>
+<torch._dynamo.external_utils>
+<torch.fx.experimental.proxy_tensor>
+<torch._higher_order_ops.cond>
+<torch._dynamo.convert_frame>
+<torch._dynamo.utils>
+<torch._dynamo.bytecode_transformation>
+<torch._dynamo.symbolic_convert>
+<torch._dynamo.variables.builder>
+<torch.fx.experimental.symbolic_shapes>"
+https://github.com/pytorch/pytorch/commit/f3d14018430b312ac80d1a829b067f27a719fda6,2023,"<torch._export.export, torch.func.functional_call, torch.nn.utils.stateless._functional_call, torch._dynamo.export, torch._dynamo.evalu_frame, torch._higher_order_ops.cond>"
+https://github.com/pytorch/pytorch/commit/53496152401a44be3e7c6c1a08a3557271a571fe,2023,torch.jit.isinstance
+https://github.com/pytorch/pytorch/commit/fa623086732dda539d23cc6f58cb4908f8a7be2c,2023,<torch.bfloat16>
+https://github.com/pytorch/pytorch/commit/33c94b8b1680d875ba6bd0d379d8e8540caad943,2023,"<torch._dynamo.exc.UncapturedHigherOrderOpError, torch._dynamo.exc.Unsupported, torch._dynamo.exc.AttributeMutationError>"
+https://github.com/pytorch/pytorch/commit/e7bd9c53158fd6a08b0f93462ee883646c7451f9,2023,<torch.cuda.CUDAGraph>
+https://github.com/pytorch/pytorch/commit/eab57145ab6dfcdda14d932f143faf59cb4ca683,2023,"torch.linalg.matrix_power  
+torch.linalg.solve"
+https://github.com/pytorch/pytorch/commit/0b44fdfaecd4fc3acefce2c20c7791a412e6a640,2023,<torch.Tensor.kthvalue>
+https://github.com/pytorch/pytorch/commit/1b3dc05c3e703841e64e0277d473a0baf3296671,2023,<torch.contiguous>
+https://github.com/pytorch/pytorch/commit/1e71c5135089b868ae0d468e4ec33ee0a76c7a86,2023,<torch.ops.higher_order.cond>
+https://github.com/pytorch/pytorch/commit/6f0d0b3850db984e73aad91daf75e65272301e8d,2023,torch.max_pool1d
+https://github.com/pytorch/pytorch/commit/31b044570221e577c0aa27fbc7153d98c8fba30b,2023,<torch.compile>
+https://github.com/pytorch/pytorch/commit/cbcd55104504609e7b42d208310514a9e8afb2c0,2023,<torch.compile>
+https://github.com/pytorch/pytorch/commit/1641d671e57a2e7f4f843d6311be269e61f4b14b,2023,<torch.optim.Adam>
+https://github.com/pytorch/pytorch/commit/3b160ecc71eaed3db64cac53ef9089bea876b6d3,2023,<torch.nn.AdaptiveMaxPool1d>
+https://github.com/pytorch/pytorch/commit/42625da5e1c29d710abf6db01c2506898043fdb2,2023,<torch.Generator>
+https://github.com/pytorch/pytorch/commit/2b3917dc63f7daf197602f3f924a1bb1c0c94802,2023,<torch.onnx.export>
+https://github.com/pytorch/pytorch/commit/d8dadb0f25debc98a5798ffd3f8554f061e9bd2d,2023,<torch._export.aot_compile>
+https://github.com/pytorch/pytorch/commit/d6c120d7f9b4f08b63715652142bcbaa0627d8fc,2023,<torch.distributed._tensor.api>
+https://github.com/pytorch/pytorch/commit/b1b3f61f2cb437365860773d009a2d33929bfeb1,2023,<torch.mm>
+https://github.com/pytorch/pytorch/commit/7b94d934313320eff91236540d37021d62bc8984,2023,"<API(s) Name>
+torch.SHARD_GRAD_OP"
+https://github.com/pytorch/pytorch/commit/b2d3a2f433602250ef5177c1c492c7efb2bf4336,2023,<torch.copy_>
+https://github.com/pytorch/pytorch/commit/424dc238f4951b3e083411f4e627a42e3752545e,2023,<torch.fx.passes.split_module>
+https://github.com/pytorch/pytorch/commit/2f281949a5bc884eb25da9b424236899d35cdc47,2023,torch._dynamo
+https://github.com/pytorch/pytorch/commit/97396cdbb2fe5b51462944455fc8d0725fb7bf13,2023,<torch.lapackEig>
+https://github.com/pytorch/pytorch/commit/50e3f9cbbb5f5a778e52a38c98186512e6527dd3,2023,<torch.cuda.Stream.priority_range>
+https://github.com/pytorch/pytorch/commit/df50f91571891ec3f87977a2bdd4a2b609d70afc,2023,torch.utils._pytree
+https://github.com/pytorch/pytorch/commit/71d18f61059dbb617a8afc79b64598d2fbb89d63,2023,"<torch.linalg.inverse, torch.linalg.inv>"
+https://github.com/pytorch/pytorch/commit/842616bcba64e001ccc67b8f911939cc465364e9,2023,"<torch._dynamo.export>  
+<torch.nn.Module.state_dict>"
+https://github.com/pytorch/pytorch/commit/5abc5ab55dc5fd7bc0d199c5de8518f8e503515c,2023,<torch.index_put_>
+https://github.com/pytorch/pytorch/commit/ad6dad810e871da3ec9d19f1ec0f11a7b62fca03,2023,"torch.profiler.record_function  
+torch.profiler.profile"
+https://github.com/pytorch/pytorch/commit/ef05c5f20273ac80ed5a61f1c3dd2a6358bf04a4,2023,"<torch.optim.Adam>
+<torch.optim.AdamW>
+<torch._tensor.__rpow__>"
+https://github.com/pytorch/pytorch/commit/634659e262f82bbc76aa776119c9fea079fbffe3,2023,"torch._export.deserialize_graph  
+torch.ao.ns.fx.weight_utils.get_lstm_mod_weights  
+torch.ao.quantization._pt2e.qat_utils"
+https://github.com/pytorch/pytorch/commit/0ccdbbe2337b0955a41407a7b31991772387abb0,2023,torch.Tensor.resize_
+https://github.com/pytorch/pytorch/commit/3834582327f0252c217f81f1432431ac1c347d87,2023,<torch.onnx.export>
+https://github.com/pytorch/pytorch/commit/9626604bdd313901524d8e8d0c6c6bef427d82f1,2023,torch.squeeze
+https://github.com/pytorch/pytorch/commit/8cad411d3dca086632eb8067e33618e6f7125144,2023,torch.storage.UntypedStorage
+https://github.com/pytorch/pytorch/commit/998c07799f22a0bb63a39c84d15eae29778631f4,2023,<torch._dynamo.optimize>
+https://github.com/pytorch/pytorch/commit/9165d46b8949f38744c9c642172767cf5833b292,2023,<torch.distributed.all_reduce>
+https://github.com/pytorch/pytorch/commit/d8a2e7461b332c96b2aadb20b28173f554735c97,2023,<torch.rand>
+https://github.com/pytorch/pytorch/commit/fed5fba6e4ee3f221bac481798c5a31f785ba75e,2023,<torch.distributed.all_reduce>
+https://github.com/pytorch/pytorch/commit/fb6173a4ac60ed5a22cff2c68134633eb72e53b9,2023,torch.export
+https://github.com/pytorch/pytorch/commit/9541053ccaa029e66bbb665afa022aa07bf0bdc5,2023,"<torch._subclasses.fake_tensor.DataDependentOutputException, aten._local_scalar_dense.default>"
+https://github.com/pytorch/pytorch/commit/d80174e2db679365f8b58ff8583bdc4af5a8b74c,2023,<torch.randperm>
+https://github.com/pytorch/pytorch/commit/b27c3558a43a28d9185e1e953cf90128cb13e870,2023,"<torch.constrain_as_size, torch._export.export, torch.empty, torch._constrain_range, torch.sym_constrain_range, torch.constrain_range_int>"
+https://github.com/pytorch/pytorch/commit/90ee6a73543f78901a0e0042fffed0df6388a9a6,2023,"<torch._ops.OpOverload, torch._ops.OpOverloadPacket>"
+https://github.com/pytorch/pytorch/commit/674d18c12410ac51fe573c6d699a4f2d37cf8a37,2023,<torch.index_expr>
+https://github.com/pytorch/pytorch/commit/3ffac082719a39a84eb17a97cb5d70080bada8f3,2023,"<torch.fx.all_input_nodes, torch.fx.replace_input_with>"
+https://github.com/pytorch/pytorch/commit/7550ec16a4f77f36c7b36e9fa0b60ac680396cf1,2023,<torch.compile>
+https://github.com/pytorch/pytorch/commit/8e5b7ce5db73c8f2784c0c588b0c309067de853e,2023,"<torch.load, torch.to_dtype>"
+https://github.com/pytorch/pytorch/commit/adcefcb3781b29ed0a1430b66ccf5d5d8ae47dda,2023,<torch.to_dtype>
+https://github.com/pytorch/pytorch/commit/61736679cd3d944ebabb61fe8a9fd5d5bcf08883,2023,"<torch.nn._conv_forward, torch.nn._output_padding>"
+https://github.com/pytorch/pytorch/commit/213e10dc3d54ac232f8e7a19b834f6bdb835490b,2023,"torch.jit.trace, torch.cummax"
+https://github.com/pytorch/pytorch/commit/9f97b7c43b035b4ba6e40541d7ed50d116d66aa2,2023,"<torch.sparse.check_sparse_tensor_invariants>  
+<torch.sparse_csr_tensor>"
+https://github.com/pytorch/pytorch/commit/e6fc7d814d5e94e19ecda84c2697d36d6eff6a10,2023,"<torch.jit.load, torch.jit.jit_module_from_flatbuffer>"
+https://github.com/pytorch/pytorch/commit/98ab11a2c3f07457595b9aa8ab2b8cd861e5085d,2023,<torch.is_grad_enabled>
+https://github.com/pytorch/pytorch/commit/d55aad1f3ea8c9b3b4e73b8660f60778ce49be83,2023,<torch.cuda.CUDAStreamVariable>
+https://github.com/pytorch/pytorch/commit/c9f8f4cf2d4c14692696e5152fa86db26dfa1f60,2023,torch.DoubleStorage
+https://github.com/pytorch/pytorch/commit/4f9aa7cb0ff02a318b0d4353d6b61b7623b555fe,2023,torch._export.export
+https://github.com/pytorch/pytorch/commit/1fabee399d74ee5e1b519673a15619e9fded6562,2023,<torch.is_grad_enabled>
+https://github.com/pytorch/pytorch/commit/61b6b038b02b38e0d2758d86305fdc24edf76d00,2023,<torch.backends.xeon.run_cpu>
+https://github.com/pytorch/pytorch/commit/e5b7c7a04fae8c58de30a647d7e879f4ffc9eda2,2023,<torch.neg>
+https://github.com/pytorch/pytorch/commit/563d8058f44d5a6324893b4187b91c4cfb134aa7,2023,torch.nn.MaxPool1d
+https://github.com/pytorch/pytorch/commit/effe1425dd698dda2497e9ce25f5c1655b33ecc4,2023,<torch::jit::toPyObject>
+https://github.com/pytorch/pytorch/commit/8a20ea0a1fc12da29fec512b28fface307a90b54,2023,<torch.cuda.amp.autocast>
+https://github.com/pytorch/pytorch/commit/ec144b9412ab2e592de95377236393bc5605622c,2023,<torch.compile>
+https://github.com/pytorch/pytorch/commit/3362c1d240df76e6c031c14d0f205cdf5ddc7fca,2023,torch.sum
+https://github.com/pytorch/pytorch/commit/40df6e164777e834b5f5b50e066632ed40bd25ef,2023,<torch.repeat_interleave>
+https://github.com/pytorch/pytorch/commit/bf52d570d9be0167501cd6a206b7e262e6d3860c,2023,<torch.jit.load>
+https://github.com/pytorch/pytorch/commit/87f08d717e022b8dd8de03c82ab77a9b3d52d5f6,2023,<torch.jit.load>
+https://github.com/pytorch/pytorch/commit/ff974cd962fc351c4eec75f5ed5b3fe6afcac4e8,2023,torch.nn.functional.interpolate
+https://github.com/pytorch/pytorch/commit/76bcc87277fcd5030ee844cc783a9e1524012423,2023,<torch.backends.xeon.run_cpu>
+https://github.com/pytorch/pytorch/commit/a145a3332cff48e061ff8f57478d145a711af732,2023,<torch.t_>
+https://github.com/pytorch/pytorch/commit/022119879065990ba6b65fbed17e97dc0e79f2f4,2023,torch.RNN
+https://github.com/pytorch/pytorch/commit/477ca1789c5eaa915a46134863fb6130c8980b6b,2023,"<torch.isinf, torch.isnan, torch.any, torch._foreach_non_finite_check_and_unscale_cpu_>"
+https://github.com/pytorch/pytorch/commit/bb4e9e9124a81859de6ac1ef0c0798643cb9b7a6,2023,<torch.compile>
+https://github.com/pytorch/pytorch/commit/41069f2faa726faa8f9ca633391453d16f346e11,2023,<torch.split_with_sizes>
+https://github.com/pytorch/pytorch/commit/efed5a4969c38da406b033af05db81d5d3ded90a,2023,<torch.segment_reduce>
+https://github.com/pytorch/pytorch/commit/cf357adc7e68a77f38de23890bdf3a81a22bb790,2023,<torch.fx>
+https://github.com/pytorch/pytorch/commit/dbf0db958fa44a92d7685dd0128d76fc58089516,2023,<torch.nn.FractionalMaxPool2d>
+https://github.com/pytorch/pytorch/commit/aa4ed332c33a63324cf76574ae5df3107f02cadb,2023,<torch.cond>
+https://github.com/pytorch/pytorch/commit/5b692fd819f1428fc070c3ec3a0cde5d4b83dd03,2023,<torch.as_strided_scatter>
+https://github.com/pytorch/pytorch/commit/a8429342df25531f39f2b16a934a082566d44da1,2023,<torch.binary_ops>
+https://github.com/pytorch/pytorch/commit/15fe5a0798e017701784ac6dc7f725988b4972e7,2023,torch._dynamo.config
+https://github.com/pytorch/pytorch/commit/951df11af89162b23a7e995a0c14cd6030755e54,2023,"<torch._dynamo.disable, torch._dynamo.graph_break>"
+https://github.com/pytorch/pytorch/commit/a2e0f5128cf427962eda588161b953c061146c89,2023,<torch._dynamo.skip>
+https://github.com/pytorch/pytorch/commit/c9adc4c376d473c71903d21de68082d604e73b73,2023,<torch.ops.aten.add.Tensor>
+https://github.com/pytorch/pytorch/commit/fa4cab8925575af4b49830b8de416dc5396c5e63,2023,torch.expand
+https://github.com/pytorch/pytorch/commit/9c7b03d51e097c40abdb9ef55ce79b98d7f1fd48,2023,"torch.is_floating_point, torch.is_complex"
+https://github.com/pytorch/pytorch/commit/937ba248eb3c18146064e98f16a0ec4a042b47f8,2023,<torch.nn.functional.grid_sample>
+https://github.com/pytorch/pytorch/commit/3686416a57d9a29b8ca5093f3ee72f2bf7a165de,2023,"<torch.batch_norm_gather_stats_with_counts, torch.batch_norm_backward_elemt>"
+https://github.com/pytorch/pytorch/commit/2af09393f936cb646fea03bdedc8d7429f1120f6,2023,<torch.masked_scatter>
+https://github.com/pytorch/pytorch/commit/3dc440527817b065fa5cb652467921c9514cdd1c,2023,torch.arange
+https://github.com/pytorch/pytorch/commit/c0e0fbb6e158f13cb990f17e80b5903ac4407bfe,2023,<torch.ops.aten.view.default>
+https://github.com/pytorch/pytorch/commit/c757647dd8c198fbcca4d4e6c7cba6f1d12b97e6,2023,"<torch.nn.MHA, torch.nn.TransformerEncoderLayer, torch.F.MHA, torch.F.SDPA>"
+https://github.com/pytorch/pytorch/commit/29b216acd5f8db0968e0de85b4515fce215598ed,2023,"<torch.detach>
+<torch.no_grad>
+<torch.mul>
+<torch.copy_>"
+https://github.com/pytorch/pytorch/commit/a3b505c55e6b500fa9ca4101a123f32a27695aad,2023,<torch.ao.nn.quantizable.LSTM>
+https://github.com/pytorch/pytorch/commit/cba8b12fa7ea6093a8be7605e1da6b9b8e78f31b,2023,<torch.ao.quantization.utils>
+https://github.com/pytorch/pytorch/commit/0c0694495be47d3561a902cf2e9cad0c574d8133,2023,torch.sparse.check_sparse_tensor_invariants
+https://github.com/pytorch/pytorch/commit/b9e95158d5d55a372c09bb7b574431278dc2da5b,2023,<torch.nn.LSTM>
+https://github.com/pytorch/pytorch/commit/a4b02a15d33cdd946d95af51f48bb0640a6abcb5,2023,"<torch.autograd.python_variable.pushPyOutToStack, torch.jit.frontend.schema_type_parser.SchemaTypeParser.parseFakeAndRealType>"
+https://github.com/pytorch/pytorch/commit/30d0112bf34971d8fcd447ce3b2c4b1630d1e7d6,2023,<torch.sparse.mm>
+https://github.com/pytorch/pytorch/commit/6ae06e49ac92442e583f05e6b88f58670cecebaa,2023,<torch.ops.aten.unsqueeze_>
+https://github.com/pytorch/pytorch/commit/a4085ab8376eaf07ee9c18d6ff7059753cb3a273,2023,<torch.nn.Module>
+https://github.com/pytorch/pytorch/commit/1d7133c542fd5f87cd4efd87da449d4484050aaa,2023,"<torch.ops.aten.sigmoid.default, torch.ops.aten.mean.dim>"
+https://github.com/pytorch/pytorch/commit/8da776e3a716091aaa1bfab774badd1d1ea15f3c,2023,"<API(s) Name>torch._free_unsharded_flat_param, torch._use_sharded_flat_param"
+https://github.com/pytorch/pytorch/commit/97510c6d50e2c8215aa0dd0c703497a29c774598,2023,torch.logical_not
+https://github.com/pytorch/pytorch/commit/92f3feabaa919767229c51adc76e2f7ff2d74ad0,2023,<torch.var>
+https://github.com/pytorch/pytorch/commit/d04fd6b808bf4e8483d03a779ce3cee17481febc,2023,<torch.ops.mkldnn._convolution_pointwise_>
+https://github.com/pytorch/pytorch/commit/948cd61afc90e1b9067b35d4aec4ec74deeb73f6,2023,<torch.autograd.meta>
+https://github.com/pytorch/pytorch/commit/db6cfff827158c3f22a6707aed35d2013ec2d994,2023,<torch.index_select>
+https://github.com/pytorch/pytorch/commit/8ba87fa525b8744486a7f3d792a3ca6ef9f59b27,2023,<torch.Tensor>
+https://github.com/pytorch/pytorch/commit/f04106f1c28ba2833f72a98ca7453ec89460c4ef,2023,<torch.chunks>
+https://github.com/pytorch/pytorch/commit/6e1cfcdf4bbb5348450c87625ee16524c4ea5ff0,2023,<torch.Tensor.cauchy_>
+https://github.com/pytorch/pytorch/commit/9a2becf60a49c327f3d29f3bfffc3ee302145bf1,2023,<torch.ops.aten.concat>
+https://github.com/pytorch/pytorch/commit/900f8886e2df633fcc24e1f6d8a1dddfb35bcbe1,2023,<torch.as_strided>
+https://github.com/pytorch/pytorch/commit/2f0b0c5dd7a6b0386ede4938f744a169b15d666d,2023,torch.exponential_
+https://github.com/pytorch/pytorch/commit/d88bc38b0c4774a0c9b576944ed5c4401b825b47,2023,"<torch.nn.functional.dropout, torch.func.vmap>"
+https://github.com/pytorch/pytorch/commit/1af40d5108ee5ddd408eed8115ce3abf6512149c,2023,<torch.cublasLt>
+https://github.com/pytorch/pytorch/commit/bdbd3ed312e0fc81e75302239ea78b3445fe95e7,2023,torch._dynamo.optimize
+https://github.com/pytorch/pytorch/commit/bb7790781f5530b728400276d5259eb8aa4206e4,2023,<torch.aot_autograd>
+https://github.com/pytorch/pytorch/commit/21d2bd782bf18faba0ac3dfcaf6d58f929367687,2023,"<torch.func.stack_module_state, torch.functorch.combine_state_for_ensemble, Tensor.backwrd>"
+https://github.com/pytorch/pytorch/commit/a76bc410df7d20eac8b2a85ea7902c3257173b9a,2023,<torch._foreach_norm>
+https://github.com/pytorch/pytorch/commit/3790b5050520dd8d619f73bc1df9521c870a1f53,2023,<torch.to>
+https://github.com/pytorch/pytorch/commit/d6bd67f2ebebb840ecf9d1c7c70653c900e6ee96,2023,<torch.trace>
+https://github.com/pytorch/pytorch/commit/06bdd491fb431a7c7cc58c2402e485fcb8406ef9,2022,"<torch.vmap, torch.sum, torch.count_nonzero>"
+https://github.com/pytorch/pytorch/commit/7e9bf2ed860b8b60d252eead4cc457c3fe5f1667,2022,torch._dynamo.optimize
+https://github.com/pytorch/pytorch/commit/4ab81ae80d97d6f7d23955a58250619aefeabefd,2022,<torch.autograd.set_detect_anomaly>
+https://github.com/pytorch/pytorch/commit/a10b3ce8768c7f86feef38de4f17bcb7dda1134b,2022,<torch.cuda.device>
+https://github.com/pytorch/pytorch/commit/ffa89033c5c036b82efe67f7641c25d45cb88ef9,2022,<torch.ones>
+https://github.com/pytorch/pytorch/commit/e11650887eb46b26c930aa05a742ae33eba6ba5e,2022,<torch.histogram_observer>
+https://github.com/pytorch/pytorch/commit/0e7918b9317d0a481c3747264b3584c37dc4a28f,2022,<torch.ops.quantized.conv2d>
+https://github.com/pytorch/pytorch/commit/296e1ba4d0d5a1766a4b31aa8a9474f4ba982506,2022,"torch.select, torch.select_copy"
+https://github.com/pytorch/pytorch/commit/e4ccec6ecab9b48e804d58f60135f0950fca864f,2022,torch.autograd.Function
+https://github.com/pytorch/pytorch/commit/37e46a503502cdeda791cf684522ef83b5655328,2022,torch.LongTensor
+https://github.com/pytorch/pytorch/commit/9eed6b7f9aa4f5fc65075de3189acc9add221660,2022,"torch.Tensor.type  
+torch.Tensor.get_device  
+torch.nn.functional._Reduction.get_enum  
+torch._utils._get_device_index  
+torch.Tensor.data_ptr"
+https://github.com/pytorch/pytorch/commit/795473ff5e861f21c6b5e0611177fcfa9e1c4e0c,2022,<torch.sizes>
+https://github.com/pytorch/pytorch/commit/04169c5b6e53e89e339f02b61287154034ee9fca,2022,torch._assert
+https://github.com/pytorch/pytorch/commit/cd81a700ecfb84a039257896af7b8398435b089e,2022,<torch.nn.functional.interpolate>
+https://github.com/pytorch/pytorch/commit/62ba15e10e875ce088dff26e872605ee70c8c04a,2022,<torch._assert>
+https://github.com/pytorch/pytorch/commit/911a1349dd5d93b9de62d82f439b09eae9aedb92,2022,"<torch.is_tensor, torch.overrides.is_tensor_like>"
+https://github.com/pytorch/pytorch/commit/cc04cf50bfb6110e4c1c5889ad7da626dafac384,2022,torch._inductor.overrides.lowmem_dropout
+https://github.com/pytorch/pytorch/commit/e6561291b89ecfbe35990decfcf16db47419d429,2022,"<torch.sparse_csr_tensor, torch.testing._internal.common_utils.TestCase.assertEqual, torch.Tensor.to_dense>"
+https://github.com/pytorch/pytorch/commit/eb9b1560195a89df6a14ded05b3e76d97346a1f2,2022,<torch._neg_view>
+https://github.com/pytorch/pytorch/commit/7560a7b27c431f194dd6e06d24f7b49757ea562d,2022,"<torch.nn.Sigmoid, torch.nn.Tanh>"
+https://github.com/pytorch/pytorch/commit/15e54293efb7d3ec58ded51e2854971d16b2fa66,2022,<torch.nn.functional.embedding>
+https://github.com/pytorch/pytorch/commit/a8f40b39ce4f9fa9ffd90400b7d10ea4051d623a,2022,"<torch.JitScalarType, torch.from_name, torch.from_dtype, torch.from_value>"
+https://github.com/pytorch/pytorch/commit/4c78c7c82af08872f901076c5daaf8148f03b096,2022,<torch.TransformerEncoderLayer>
+https://github.com/pytorch/pytorch/commit/c7ac3334308adebd8037f2af7b66972f42311ab5,2022,<torch.fused_moving_avg_obs_fake_quant>
+https://github.com/pytorch/pytorch/commit/75dbe3790938c30716463604ccfa68c0f9f6a7f5,2022,<torch.clear_autocast_cache>
+https://github.com/pytorch/pytorch/commit/edac0d22afb6108841b1808ed3948500976942ea,2022,<torch.nn.utils.clip_grad_norm_()>
+https://github.com/pytorch/pytorch/commit/620dbc43d8e3c836ad8d934987ee2f87fefbad7a,2022,<torch.where>
+https://github.com/pytorch/pytorch/commit/b805e1abefd10efabff019e9bb5e3d7d8ba85660,2022,torch.cat
+https://github.com/pytorch/pytorch/commit/48f02312232d71f8e5cabfcc85b70f8330953057,2022,<torch.ops.aten.where.ScalarSelf>
+https://github.com/pytorch/pytorch/commit/7980ed95bd708d6e9baf64c95b1aa83df8891b59,2022,<torch.jit.trace>
+https://github.com/pytorch/pytorch/commit/4839f73f329b38819e6f69a8662d61dc36558e52,2022,<torch._C._has_storage>
+https://github.com/pytorch/pytorch/commit/c4f0b93f8653505584bbd71162f82d4e7633da0c,2022,<torch.ops.aten.sum.dim_IntList>
+https://github.com/pytorch/pytorch/commit/ce7751188afb42263ebda159d6ee7a343a833cc1,2022,<torch.nn.utils.rnn.pack_padded_sequence>
+https://github.com/pytorch/pytorch/commit/97d2e1df5565b7f3a5358178b8f3a2a039c7f976,2022,torch.half
+https://github.com/pytorch/pytorch/commit/8da704cdb7f68bfa09516e7be17f004b98c48eb3,2022,"<torch.copy_to_mps_>
+<torch.copy_from_mps_>"
+https://github.com/pytorch/pytorch/commit/be327ec08f320e256d444693dde65fe55831bc46,2022,<torch.tensor>
+https://github.com/pytorch/pytorch/commit/9f1468ae6c8e6e3938a3f1cfb9378e11af2fd0cd,2022,<torch.CyclicLR>
+https://github.com/pytorch/pytorch/commit/8c952db13ae6c634da2f1e42c1b053d0ad40003e,2022,torch.ormqr
+https://github.com/pytorch/pytorch/commit/52a2b612035e081626ff6f23eec87782bde6643c,2022,<torch.utils.data.DataLoader>
+https://github.com/pytorch/pytorch/commit/cfeb53170051f4cf942ae683e1727fd48f60f18c,2022,torch.jit.save
+https://github.com/pytorch/pytorch/commit/e6ee8e613dfe764f61b2b29ad0a4a2c36f143eaa,2022,"<torch.ops.aten.t.default, torch.ops.aten.detach.default>"
+https://github.com/pytorch/pytorch/commit/1cad744694d7feb7c55e5f4ff4a6ae749686bfb5,2022,<torch.nested_tensor>
+https://github.com/pytorch/pytorch/commit/65beff5acb0d7c0c484bd0558bcaf8ddc9c96aab,2022,<torch.norm>
+https://github.com/pytorch/pytorch/commit/ece0002c4beaebaf083dc75b7bf8ceb19edf7a0b,2022,"<torch.onnx.export, torch.jit.trace, torch.cuda.amp.autocast>"
+https://github.com/pytorch/pytorch/commit/897907d42cc379af2c16885345bc20b5e8ca894d,2022,<torch.Tensor.split>
+https://github.com/pytorch/pytorch/commit/ec714e33a3365ce405e2ae048c8adaa2751b9dba,2022,<torch.nn.LazyLinear>
+https://github.com/pytorch/pytorch/commit/bf25a140f9d948915d52f294b5204196d1ca22e3,2022,torch.onnx.export
+https://github.com/pytorch/pytorch/commit/31f151767b2fde8ba2b73e0fe2b9bd68f284673b,2022,<torch.per_channel_affine>
+https://github.com/pytorch/pytorch/commit/658f958bc4bb314d9c6030eeaf3e1784792b5d15,2022,<torch.nn.functional.interpolate>
+https://github.com/pytorch/pytorch/commit/4902254b9b595adf1a0346d6f79a6c7b145dbcaa,2022,torch._C._nn.linear
+https://github.com/pytorch/pytorch/commit/e9e7363854978e2f70cc65200b5b76a462e37672,2022,"<torch.pow.Scalar, torch.add, torch.ge, torch.ge_>"
+https://github.com/pytorch/pytorch/commit/2c089290b676a221817e48c7de42d1b2bd13609a,2022,<torch._C.TypeList>
+https://github.com/pytorch/pytorch/commit/111214ac71a69a76faa961a8b3cbcdfff873292a,2022,torch._C._jit_pass_propagate_shapes_on_graph
+https://github.com/pytorch/pytorch/commit/27f790bbd7c05b69349b6ce5dbde390d475f2d66,2022,torch.diag
+https://github.com/pytorch/pytorch/commit/24a084eda69f2c636537a7614060382032565521,2022,<torch.batch_isend_irecv>
+https://github.com/pytorch/pytorch/commit/6bdf89b0c71a827be2a0969afa33f151e87a32f3,2022,"<torch.argmin, torch.argmax>"
+https://github.com/pytorch/pytorch/commit/0b132602f05dc0b825d41bd40126a8db919738ea,2022,<torch.autograd.function.FusedLayerNorm>
+https://github.com/pytorch/pytorch/commit/b019a416741c1a78ebed89516c1f9fdbfb276898,2022,"<torch.contiguous_format, torch.channels_last>"
+https://github.com/pytorch/pytorch/commit/6ab1fe19eec0aa610bca6de881d373905da2fb37,2022,torch.sparse.softmax
+https://github.com/pytorch/pytorch/commit/76ca5af216410c81e976958503dbf4916c35d901,2022,<torch.Tensor.view>
+https://github.com/pytorch/pytorch/commit/38023ff3717f0a121091da221c768ddbaba32e5b,2022,torch.tensor
+https://github.com/pytorch/pytorch/commit/d636450ac995754009f7d72af8f82eae9d4ba3b8,2022,torch.requires_grad_()
+https://github.com/pytorch/pytorch/commit/ff9558a2ea626b1526ded6848e06e1e809fae53c,2022,torch.einsum
+https://github.com/pytorch/pytorch/commit/f6c0cd8cad1053a65518ada507616a2b21e20c5f,2022,torch.where
+https://github.com/pytorch/pytorch/commit/a1b35d830abfa35e5ffa706f30dd5c261a590817,2021,"torch._index_put_impl_  
+torch.index_put_"
+https://github.com/pytorch/pytorch/commit/eb9ba23888147716862c5c0a3a20dabf48ae1735,2021,torch.nn.functional.pad
+https://github.com/pytorch/pytorch/commit/b2f72d10ba40df453ecf63dbef86c336328814ee,2021,torch.log_softmax
+https://github.com/pytorch/pytorch/commit/a9ac8e814cbfa52c7751bda7e3440645e041eb53,2021,<torch.empty>
+https://github.com/pytorch/pytorch/commit/f536c20b053487321297f0a1518d2c322b42aa40,2021,<torch.functorch>
+https://github.com/pytorch/pytorch/commit/445ee5620ec203cfccefd6f3dca4f0962a83b03e,2022,<torch.nn.grad>
+https://github.com/pytorch/pytorch/commit/ed0091f8db1265449f13e2bdd1647bf873bd1fea,2022,torch._lazy
+https://github.com/pytorch/pytorch/commit/75fdebde6290e2955129e665c2b0d99c391542a7,2022,torch.nn.utils.rnn.PackedSequence
+https://github.com/pytorch/pytorch/commit/960758b0b78671b9c23d0dbe39fe863e1e48ede0,2022,"<torch.ops.aten._fused_moving_avg_obs_fq_helper, torch.ops.aten._fused_moving_avg_obs_fq_helper.functional>"
+https://github.com/pytorch/pytorch/commit/45f77189c178597f683157106e8de24befd5f450,2022,<torch.autograd.backward>
+https://github.com/pytorch/pytorch/commit/7549f901a51e8c02d12a5f88c9c2a51a9433b053,2022,<torch.mode>
+https://github.com/pytorch/pytorch/commit/8895862744ce09a69699a085b1132b700a99044b,2022,torch._refs.mean
+https://github.com/pytorch/pytorch/commit/1a845579b67f522e22d899126c92672f46f6a7b9,2022,torch.rand
+https://github.com/pytorch/pytorch/commit/5158a6b41a7a2779786042c973cda6a31f24aa01,2022,<torch.utils.data.graph_settings.apply_sharding>
+https://github.com/pytorch/pytorch/commit/c1cbe3bad3a2a42118fca5e8a4061ab3bfb1326a,2022,<torch._utils.rebuild_qtensor>
+https://github.com/pytorch/pytorch/commit/2d4291fb81b385f2b6ec064b61599a9bcd75a519,2022,<torch.nn.ConvTranspose3d>
+https://github.com/pytorch/pytorch/commit/459e10f4465fd5a75e6dea96597b427feae71e42,2022,<torch.mean>
+https://github.com/pytorch/pytorch/commit/3df0140cbd827aea8a2afd240ba879705b974594,2022,<torch.sparse.sampled_addmm>
+https://github.com/pytorch/pytorch/commit/1f1d0b30ce869c02c372d735c5856307e5edb4d6,2022,<torch.mul>
+https://github.com/pytorch/pytorch/commit/b0c5fba967381691bebe358df62691f81d24740d,2022,<torch.cuda.graph>
+https://github.com/pytorch/pytorch/commit/f02b7a9c36dd6182da694bc47a5c345285dfd951,2022,torch.F.pad
+https://github.com/pytorch/pytorch/commit/bba4780232388d305619b97c9e93355a8fcf1a9c,2022,"<torch.abs, torch.neg, torch.conj_physical, torch.addmm, torch.mm, torch.to_sparse_csr>"
+https://github.com/pytorch/pytorch/commit/515d61f2fc86cfe61281adf3b51ed943d67bb2d6,2022,<torch.Tensor.to>
+https://github.com/pytorch/pytorch/commit/f1f185f6f9c4b7675473be1eb04a7839252a1054,2022,"<torch.add, torch.ops.quantized.add>"
+https://github.com/pytorch/pytorch/commit/c1f0e6e763b6720789e54cb83477bb353139a12f,2022,<torch.onnx.export>
+https://github.com/pytorch/pytorch/commit/cd80ef6cdbc413dbe6a22afd55101168306f7020,2022,"torch.group_norm, torch.nn.GroupNorm"
+https://github.com/pytorch/pytorch/commit/87ab665ba6f42565c48619e1df75e23eee707e98,2022,<torch.batch_norm_stats>
+https://github.com/pytorch/pytorch/commit/8e12d2bf253521dee2a91c31daffcbfb7039c06f,2022,torch.jit.script
+https://github.com/pytorch/pytorch/commit/4a0f6e6c530b624bb5a4fbcaebe3fd43b1ff66c3,2022,<torch.nn.GroupNorm>
+https://github.com/pytorch/pytorch/commit/c1d070d0f0ac32ff5a149e9179cbb4ead534156b,2022,<torch.fx>
+https://github.com/pytorch/pytorch/commit/35ce68bbf3c46709681f80e7729124d67289251b,2022,<torch.arange>
+https://github.com/pytorch/pytorch/commit/b2a55076546021fd059794676e9066f361b3a091,2022,<torch.autograd.Function>
+https://github.com/pytorch/pytorch/commit/4a06b8d36cf8ba8e991ddb473b6fdd6c2f39bf0c,2022,torch.FullyShardedDataParallel
+https://github.com/pytorch/pytorch/commit/bcd0843bec194397437b0fbdea92df163cba5dbd,2022,<torch.distributed>
+https://github.com/pytorch/pytorch/commit/199d9a992c0062de7bd7fe0a9f3414a3c1f08a74,2022,<torch.linalg.solve>
+https://github.com/pytorch/pytorch/commit/75db05c3fdb6f3b6682dab1532cd6e1e5b423527,2022,torch.set_default_dtype
+https://github.com/pytorch/pytorch/commit/ad5a5a9794078a1bca00a1debd456677d93f313c,2022,torch.addmm
+https://github.com/pytorch/pytorch/commit/c4af6ba173fcc318503227699a4f31055385fe43,2022,<torch.cuda.reset_accumulated_memory_stats>
+https://github.com/pytorch/pytorch/commit/38ebb776a4b7aaf5c5dbb14f8151218aa1e0c331,2022,torch.cuda.synchronize
+https://github.com/pytorch/pytorch/commit/4a7e07e53e8aa99a1ca903d2b559dd8dbdf08cc1,2022,"torch.save, torch.detach"
+https://github.com/pytorch/pytorch/commit/b1897d6d99280f4e07a826bad1d70be10323517e,2022,<torch.expand>
+https://github.com/pytorch/pytorch/commit/66939e3b94fa033de57e5b7cfc3c106d8f736f81,2022,"<torch.reshape, tensor.reshape>"
+https://github.com/pytorch/pytorch/commit/6848e0dae5d5e0de66b05fc6bae0afcb4860f951,2022,<torch.nn.GRU>
+https://github.com/pytorch/pytorch/commit/ac26f8237cb10b643464fa3cb7273d07b09a5470,2022,torch._C._jit_set_nvfuser_enabled
+https://github.com/pytorch/pytorch/commit/b8679ee1fc53f3931e3fd415276f2854005fb46b,2022,"<torch.jit.trace, torch.jit.freeze, torch.fx.experimental.optimization.fuse>"
+https://github.com/pytorch/pytorch/commit/8d05174defd689cb1cb2346e0cde5b7fa572814a,2022,<torch.assert_close>
+https://github.com/pytorch/pytorch/commit/043e84b3d2cb5affee6373ebc95cbafb82fe0017,2022,torch.ops._test.leaky_relu
+https://github.com/pytorch/pytorch/commit/574dbb584d92f24e3abe28a140d06e2999216e64,2021,<torch.div>
+https://github.com/pytorch/pytorch/commit/00df885d4e0266b21675abf038d92207a5cd8d16,2021,<torch.tensor>
+https://github.com/pytorch/pytorch/commit/276253b16434fa13b2d0c7ea6b330c5cc512bb0d,2021,torch.nn.ModuleList
+https://github.com/pytorch/pytorch/commit/dc18048dd84854a91d95e7cb9893b6c8c6c3df43,2021,"<torch.distributed._sharded_tensor.api.sharded_embedding, torch.nn.functional.embedding>"
+https://github.com/pytorch/pytorch/commit/aa9fbb9ae9f10abdd509a5e81f07ec5dc0e4bc4f,2021,"<torch.jit.export, torch.mm, torch.nn.functional.gelu, torch.add, torch.std_mean>"
+https://github.com/pytorch/pytorch/commit/845a82b635c3e3deb54f2c8baf4f997731cea3ed,2021,"<torch.distributions.constraints.positive_definite, torch.linalg.cholesky_ex, torch.linalg.eig>"
+https://github.com/pytorch/pytorch/commit/d44e610efa2098462db696c76fc74f618edc8805,2021,<torch.randn>
+https://github.com/pytorch/pytorch/commit/b69155f754bb077acf0dc3e32251f0352234ed5c,2021,<torch.save>
+https://github.com/pytorch/pytorch/commit/be281fc597485929c406515a95fac2e2fc168528,2021,torch.jit.Graph.create
+https://github.com/pytorch/pytorch/commit/96d116fec234e965bc735bf6b62e17942cd268d4,2021,<torch.aten.add>
+https://github.com/pytorch/pytorch/commit/b07a11929d182a507b784d903e5fab10cb4bd998,2021,"<torch.cross, torch.linalg.cross>"
+https://github.com/pytorch/pytorch/commit/22afe82ce353589198c7cfdfb80dcfd73b8f9973,2021,<torch.distributed.rpc.init_rpc>
+https://github.com/pytorch/pytorch/commit/6900aacf54d86345943003cb92f7372f062d86e0,2021,torch.jit
+https://github.com/pytorch/pytorch/commit/23321ba7a3b634ee734455aab4a984689802cad0,2021,torch.is_floating_point
+https://github.com/pytorch/pytorch/commit/dc26f5eb65314b3c009bcaf0036439c72a1b8bd9,2021,<torch.fx.symbolic_trace>
+https://github.com/pytorch/pytorch/commit/12137db5e3df6d5b12f4fc6392afbe975c4f42c8,2021,torch.distributed.distributed_c10d._object_to_tensor
+https://github.com/pytorch/pytorch/commit/28bfdbb0663c3fd7884ef09cfc061886fa0dad1b,2021,<torch.batch_norm>
+https://github.com/pytorch/pytorch/commit/db134a6843473b71fc3c44f46aff2c2fd793cd11,2021,<torch.distributed.elastic>
+https://github.com/pytorch/pytorch/commit/2c258d91cc1dc11c338e97d6970ac77a4f8978ec,2021,torch.istft
+https://github.com/pytorch/pytorch/commit/6bb4b5d150ab51ed15d15ed270471848bb84d4e3,2021,torch.flatten
+https://github.com/pytorch/pytorch/commit/83e28a7d281c91a6d1a12b86bd5fb212dd424a85,2021,<torch.floor_divide>
+https://github.com/pytorch/pytorch/commit/6ab3a210983b7eee417e7cd92a8ad2677065e470,2021,torch.nn.Upsample
+https://github.com/pytorch/pytorch/commit/9d95d485679392774532d4c79a73b9c11b665e1b,2021,<torch.distributed.is_torchelastic_launched>
+https://github.com/pytorch/pytorch/commit/e7c4988b526afa73b8bae4b18daaa9a86dbfbff2,2021,"<torch.optim.lr_scheduler.WarmUpLR, torch.optim.lr_scheduler.ExponentialLR>"
+https://github.com/pytorch/pytorch/commit/72bc6dc8c31f977036195536292170ac9132751d,2021,torch.nn.LayerNorm
+https://github.com/pytorch/pytorch/commit/093495d3f0985fbe2aea58044798d588c0fe6889,2021,torch.fx.GraphModule
+https://github.com/pytorch/pytorch/commit/af0f083d427ed70ae543401a4b731723eef54295,2021,<torch.optim.functional>
+https://github.com/pytorch/pytorch/commit/26d17ddc9f4f765ac07d550f296b0b35340a3a34,2021,torch.linalg.norm
+https://github.com/pytorch/pytorch/commit/9c3346c8aac3147cadd00211fe2f0ebc9994f384,2021,"<torch.mean, torch.linalg.norm, torch.sum>"
+https://github.com/pytorch/pytorch/commit/ac6ec0efa127f5d7d35e829b97b3cdd383c4beef,2021,<torch.from_numpy>
+https://github.com/pytorch/pytorch/commit/5054cb893485890c99af404cf81c0d5d8fef28ae,2021,<torch.cat>
+https://github.com/pytorch/pytorch/commit/9979289037f556d65ca3bb85ada0771b1f67e7b9,2021,<torch.testing.assert_close>
+https://github.com/pytorch/pytorch/commit/546102e161c1c241c8acdd3d71b342ebb9998cf9,2021,<torch.quantize_per_tensor>
+https://github.com/pytorch/pytorch/commit/956faea585e8ae16b483918ceccd9a0e5e3f6225,2021,<torch.tan>
+https://github.com/pytorch/pytorch/commit/675cea1adb852db5c60ee3250e5b3ae3a5da7f11,2021,torch.backward
+https://github.com/pytorch/pytorch/commit/56481f97628e04e57fbd8f2f9958fd9f9b461af8,2021,"<torch.autograd.grad, torch.autograd.backward>"
+https://github.com/pytorch/pytorch/commit/79dc500a992b7d6f8eba96bc28ff856f2ea9e10d,2021,"torch.nn.RNN, torch.nn.GRU, torch.nn.LSTM"
+https://github.com/pytorch/pytorch/commit/4caca7a15b6edd9f99bba1fd0a5b8fb64ed991c3,2021,<torch.einsum>
+https://github.com/pytorch/pytorch/commit/5d00c374ddf03ec8784aec934b7ed28abd3af76f,2021,torch.sum
+https://github.com/pytorch/pytorch/commit/fa597ee17fbf8364e7ccae21bdc8a367efe48975,2021,"<torch.randperm, torch.randint>"
+https://github.com/pytorch/pytorch/commit/91b7bcf4c0f0247944ebeef4920c71138df9bea4,2021,"torch._C._load_for_lite_interpreter, torch.jit.mobile._save_for_lite_interpreter"
+https://github.com/pytorch/pytorch/commit/3efefc4016e042c8dfbda6c1178f9bcc457b2fb8,2021,torch.cuda.empty_cache
+https://github.com/pytorch/pytorch/commit/1aabb8f98c42ff262473ff1362e166b3fb2c9f25,2021,<torch.onnx.export>
+https://github.com/pytorch/pytorch/commit/1fca1545d43090273512ac3a097277abd72d732e,2021,<torch.addmm_out_sparse_csr_dense_cpu>
+https://github.com/pytorch/pytorch/commit/f6532468c877b5189c3756411a2be05e9b32b9c0,2021,"<torch.norm, torch.linalg_norm, torch.vector_norm>"
+https://github.com/pytorch/pytorch/commit/e8574b84bfa4dd132b6d451b05a9197856d7fda1,2021,torch.Tensor
+https://github.com/pytorch/pytorch/commit/8a45006765fe0a902cf5a369c8696235e93edbff,2021,<torch.index_copy_cuda>
+https://github.com/pytorch/pytorch/commit/1de3525ca8e141309791d34d5456ece771b3d045,2021,<torch.classes.quantized.Conv2dPackedParamsBase>
+https://github.com/pytorch/pytorch/commit/db13119fc493cfbfba76bbc4253cfde54caffaa0,2021,torch.symeig
+https://github.com/pytorch/pytorch/commit/f0f69c5dc104b2a433d582c5e8a71812b1a2ff6f,2021,torch.where
+https://github.com/pytorch/pytorch/commit/fea3824214837f9441b4f53661a74338344af2fb,2021,<torch.save>
+https://github.com/pytorch/pytorch/commit/db7b31358fa13c8735fa34912c64e481c291cb26,2021,torch.cuda.CUDACachingAllocator
+https://github.com/pytorch/pytorch/commit/4350d4af774fd5e6e8e6d1db5d2b30643907e0b8,2021,<torch.utils.dlpack.from_dlpack>
+https://github.com/pytorch/pytorch/commit/42b3fc29f4bf703910b63493d94a263a285f9829,2021,"<torch._C._jit_set_profiling_mode, torch._C._jit_set_profiling_executor, torch._C._jit_override_can_fuse_on_cpu, torch._C._jit_override_can_fuse_on_gpu, torch.jit.script>"
+https://github.com/pytorch/pytorch/commit/610c984d2e2d26ac72b404d168401acfd4431610,2021,torch.nn.LSTM
+https://github.com/pytorch/pytorch/commit/e8c268746b297efa988e03abc61ff22203bf3980,2021,torch.randperm
+https://github.com/pytorch/pytorch/commit/ecaa208fd63fe2ba4d4398d6c2e7e26a21bd514f,2021,<torch.sparse_csr_tensor>
+https://github.com/pytorch/pytorch/commit/f27513e9519085d08e7cf2a451aa7f0083f33bb3,2021,<torch.sparse.addmm>
+https://github.com/pytorch/pytorch/commit/1f0223d6bbb9d8c4aea5d30d4b85518296017add,2021,torch.nn.GaussianNLLLoss
+https://github.com/pytorch/pytorch/commit/7513455c743d3d644b45a804902c1a0d14b69f45,2021,<torch.tensordot>
+https://github.com/pytorch/pytorch/commit/e8faf697399ca91ea642128b0b5dd0a516c65e6f,2021,<torch.pow>
+https://github.com/pytorch/pytorch/commit/24f9a446c9ddb9442e41f254d0884d417e7fd76a,2021,<torch.empty>
+https://github.com/pytorch/pytorch/commit/1e70d217e7f7d8803fc4bf074bf77d0b30650063,2021,torch.rsub
+https://github.com/pytorch/pytorch/commit/f5675f8306d2e5609264088a01099cd186065934,2021,<torch.torchelastic>
+https://github.com/pytorch/pytorch/commit/e9c6a511005c2dead0f446de548e875c7fe86ae7,2021,<torch.torchelastic>
+https://github.com/pytorch/pytorch/commit/815bfad28c8dc7fd3bd89c5e5a821679f73702fc,2021,"<torch.sparse.sum, torch.sparse.coalesce>"
+https://github.com/pytorch/pytorch/commit/fd02fc5d715a7647631c5806db736794edc2a52f,2021,"<torch.put_, torch.take>"
+https://github.com/pytorch/pytorch/commit/6c235ef267c350225b7ca3f0caedb1a05c9df9ec,2021,torch.normal
+https://github.com/pytorch/pytorch/commit/4e110528bdaf102acf33df5da2e4caaf95bb1cf9,2021,"<torch.linalg.eigh, torch.linalg.eigvalsh>"
+https://github.com/pytorch/pytorch/commit/86b1f4e9f2ee61eafd646800daab79aa3d5250fa,2021,<torch.nn.functional.interpolate>
+https://github.com/pytorch/pytorch/commit/ba1f640928b115cd6b8d35a9b3871df0656493b8,2021,<torch.logsumexp>
+https://github.com/pytorch/pytorch/commit/1126d51de9d9b69fe727fd6b5f2c4ef0443cbc6c,2021,torch.matmul
+https://github.com/pytorch/pytorch/commit/267fc27d39743e8ee1ed82982cdc01fa9999113a,2021,torch.futures.wait_all
+https://github.com/pytorch/pytorch/commit/779cae9e42f2718e33315f89e20272a4da0141f6,2021,<torch.pow>
+https://github.com/pytorch/pytorch/commit/f2689b1e1302f784c822bbd6697f53e39df59bb1,2021,torch.set_num_threads
+https://github.com/pytorch/pytorch/commit/a7ddd15d150c22c11e5e41b46754c16383abae6f,2021,torch.redispatch
+https://github.com/pytorch/pytorch/commit/d30f4d1dfd5237d89834363ce2cff9de4ee92811,2021,<torch.nn.SyncBatchNorm>
+https://github.com/pytorch/pytorch/commit/b22b082cc8d0e59c651f6a886f59baee5590abd0,2021,torch.randperm
+https://github.com/pytorch/pytorch/commit/0b93974075844601913c6df50f6566418a35eee8,2021,<torch.mul_>
+https://github.com/pytorch/pytorch/commit/c871abecf5d7aab8b2068be5f85b43b188a0d318,2021,torch.no_grad()
+https://github.com/pytorch/pytorch/commit/39fa0b5d0a3b966a50dcd90b26e6c36942705d6d,2021,"torch.scatter_add  
+torch.scatter_add.dimname"
+https://github.com/pytorch/pytorch/commit/a39b1c42c184916ab0798fde7b23967702d003e9,2021,<torch.nn.MultiheadAttention>
+https://github.com/pytorch/pytorch/commit/ef8d17e112db88eb83fe6bfd8e58775bd17f788c,2021,<torch.nn.parallel.DistributedDataParallel>
+https://github.com/pytorch/pytorch/commit/578f0a04c7804f77b9401828fd4179479a2477e6,2021,torch.nn.parallel.scatter_gather.gather
+https://github.com/pytorch/pytorch/commit/35b3e160915e28124ddd18b934d389bb89398ea3,2021,torch.nn.functional.normalize
+https://github.com/pytorch/pytorch/commit/c941730b96c3bff1490086dc1989d6553b74b175,2021,torch.futures.Future
+https://github.com/pytorch/pytorch/commit/1829268e7ff859ee6613354277d88f3fdd7ea726,2021,<torch.onnx.export>
+https://github.com/pytorch/pytorch/commit/444203c52fe116a988bca8c71ab101aeabb88335,2021,torch.cdist
+https://github.com/pytorch/pytorch/commit/751c30038feee49308abd71252beb69387d961d2,2021,<torch.device>
+https://github.com/pytorch/pytorch/commit/5e09ec651822eac7dd359579aed295068b59b663,2021,"torch.svd, torch.linalg.svd"
+https://github.com/pytorch/pytorch/commit/a7cf04ec40e487286ad3f8068fa18321f3474dd2,2021,<torch.cholesky>
+https://github.com/pytorch/pytorch/commit/a66851a2ad76132d4b913ada21f1b3b20f83de28,2021,<torch.fx.wrap>
+https://github.com/pytorch/pytorch/commit/21c2542b6a9faafce0b6a3e1583a07b3fba9269d,2021,<torch.distributions.constraints>
+https://github.com/pytorch/pytorch/commit/98e291461472631829bddf40ae7e872455d1a1b0,2021,<torchvision.transforms.ToTensor>
+https://github.com/pytorch/pytorch/commit/3f052ba07b2da4801d8f52f4116357760d5b632d,2021,"<torch.clamp_max, torch.clamp_min, torch.min_stub, torch.max_stub>"
+https://github.com/pytorch/pytorch/commit/fc9f013cea7ef098ed4d12ccda3b039133818856,2021,torch.distributions.HalfCauchy
+https://github.com/pytorch/pytorch/commit/bf4fcab68104b333c81e39d142dccc7ae7a6f1d7,2021,<torch.batch_norm_gather_stats_with_counts>
+https://github.com/pytorch/pytorch/commit/968ad47b410b93d2600d163db50eb9fb45c24a2b,2021,<torch.nn.MaxPool2d>
+https://github.com/pytorch/pytorch/commit/113b7623d6bd406670b7e6c8f69f7441454c5fe7,2021,<torch.allclose>
+https://github.com/pytorch/pytorch/commit/010b9c52f41ed95aa7408bd91a2bd9d1e6703422,2020,<torch.jit.trace>
+https://github.com/pytorch/pytorch/commit/60b4c4010153059ad589f481d20a48fe53e2964b,2020,torch.utils.cpp_extension.is_ninja_available
+https://github.com/pytorch/pytorch/commit/c675727adf36bdbb60933c9c7529d3ee34462093,2020,torch.empty
+https://github.com/pytorch/pytorch/commit/ea2a568cca71aaf690051782c225ca9dd2e5e1f9,2020,<torch.einsum>
+https://github.com/pytorch/pytorch/commit/1c02be1b6a0f6d02d3a0ae19c13d51a3e59a55ae,2020,<torch.cuda.reset_peak_memory_stats>
+https://github.com/pytorch/pytorch/commit/ca880d77b81f5318d3941266a870a982d04b1db5,2020,torch.norm
+https://github.com/pytorch/pytorch/commit/ec256ab2f2f7c65c3fa25e16438a467f9959937c,2020,<torch.addr>
+https://github.com/pytorch/pytorch/commit/a1db5b0f2bcd96f1e884ff63ebcf2b01f543a77a,2020,<torch.inverse>
+https://github.com/pytorch/pytorch/commit/a5c65b86ce249f5f2d365169e6315593fbd47b61,2020,<torch.einsum>
+https://github.com/pytorch/pytorch/commit/ead86b2419af3053dfd1f7ee8919d1afad80ba07,2020,<torch.clone>
+https://github.com/pytorch/pytorch/commit/7bc8fdb6d725f7f07c115d48e4406e4b1596be46,2020,<torch.as_strided>
+https://github.com/pytorch/pytorch/commit/373246733d05b978eb29426c7b24132d4caf8793,2020,<torch.dot>
+https://github.com/pytorch/pytorch/commit/60fea510a1c6688367961e9f29c9d97932dcc19b,2020,<torch.comparison_ops>
+https://github.com/pytorch/pytorch/commit/2643800881a04f31d8f548a9abbdf1772d899a6a,2020,<torch.nn.functional.max_pool2d>
+https://github.com/pytorch/pytorch/commit/2249a293b73e1c5c9408c249d4e256f37b90f4ef,2020,torch.orgqr
+https://github.com/pytorch/pytorch/commit/810c68fb1d60a54c32a88b3e55db0717a5ac1775,2020,<torch.allclose>
+https://github.com/pytorch/pytorch/commit/f96cb9de79e3d3bb70ce18f35f6023339913cea2,2020,<torch.add_>
+https://github.com/pytorch/pytorch/commit/66505b64a5f26094b9b037c9777fec2706b2e5ad,2020,torch.nn.Embedding
+https://github.com/pytorch/pytorch/commit/e3112e3ed6397489d19235094b2736e38fb2824a,2020,<aten::set_grad_enabled>
+https://github.com/pytorch/pytorch/commit/ce82b522c8f343419a1fbb1bf2405b89121b0335,2020,torch.utils.data._utils.worker
+https://github.com/pytorch/pytorch/commit/5640b79bf8a5412a0209a919c05c811d5427cc12,2020,<torch.autograd.backward>
+https://github.com/pytorch/pytorch/commit/e154b36685330a819d96c2e4482ccf1cd06abba4,2020,<torch.clamp>
+https://github.com/pytorch/pytorch/commit/3a27fc966ab9129bc56a6ac03e8fffacafafccad,2020,torch.svd
+https://github.com/pytorch/pytorch/commit/81bb19c9f0a8bb32d53ab868ee626c101fa61cfe,2020,torch.jit.script
+https://github.com/pytorch/pytorch/commit/caea1adc35404b39fe4f2e3fa75f9a0b9e554bbc,2020,"<torch.stft, torch.istft>"
+https://github.com/pytorch/pytorch/commit/1694fde7ebff68c23141217879111ed2b57e5b64,2020,<torch.nn.GroupNorm>
+https://github.com/pytorch/pytorch/commit/24df3b7373a80fbccebfde72f70fdd045ec44430,2020,"torch.empty_like, torch.zeros_like"
+https://github.com/pytorch/pytorch/commit/551494b01d522c0b36a373f594c74dec3af408a5,2020,torch.tensor
+https://github.com/pytorch/pytorch/commit/70dfeb44bd1848d726ce5f50ee972dd731f2e5dd,2020,<torch.PerChannelMinMaxObserver>
+https://github.com/pytorch/pytorch/commit/b6b1c01adfdadf93a4a1d30c3661ff177412a876,2020,torch.view_as_complex
+https://github.com/pytorch/pytorch/commit/129d52aef21e2ef1f3f5dc9fd7e142ebbb6f6f0e,2020,torch.movedim
+https://github.com/pytorch/pytorch/commit/4bead6438a4271f154980dc242199c2f1b897bc1,2020,torch.autograd
+https://github.com/pytorch/pytorch/commit/cb90fef7705a5f396bf7096d4dfaea1ed1f58d5b,2020,<torch.range>
+https://github.com/pytorch/pytorch/commit/63d62d3e44a0a4ec09d94f30381d49b78cc5b095,2020,"<torch._foreach_addcmul, torch._foreach_addcmul_, torch.addcmul>"
+https://github.com/pytorch/pytorch/commit/caf23d110fa52b2664ed79a4da11cde7b3dddd09,2020,torch.jit.ScriptModule
+https://github.com/pytorch/pytorch/commit/bb861e1d69a0119d78dc07253ac80e5347b67e01,2020,"<torch.var, torch.std>"
+https://github.com/pytorch/pytorch/commit/74f18476a23bd192695768b5aaeb940bcaca22d4,2020,torch.jit.load
+https://github.com/pytorch/pytorch/commit/306eb3def7b883a401704c76e83b9b8ff32ca3b2,2020,torch.cuda.nccl
+https://github.com/pytorch/pytorch/commit/42f6c3b1f475c3c1cb1655a70b128fa5cf236860,2020,torch.addmm
+https://github.com/pytorch/pytorch/commit/c66ca7a48d4902e66bdb80931ff086438fadd8da,2020,<torch.vmap>
+https://github.com/pytorch/pytorch/commit/c8bc298d6c7850a1b33416eea56e4fc365d6af9a,2020,<torch.TensorIterator>
+https://github.com/pytorch/pytorch/commit/df7c0594285f3651272a6b924dffef66544b1622,2020,<torch.set_deterministic>
+https://github.com/pytorch/pytorch/commit/29700c009280ce63c113ad7300171af4cee26174,2020,<torch.jit.is_tracing>
+https://github.com/pytorch/pytorch/commit/b9e68e03c4f16c61886451c37f8051a84a0b9dce,2020,"<torch.THCTensor_(baddbmm), torch.addmm_cuda>"
+https://github.com/pytorch/pytorch/commit/91c80d122ab271d36ce37d60acf430fdbd54d249,2020,torch.gcd
+https://github.com/pytorch/pytorch/commit/e54f268a7a30866e47710d4b8ce955e4f90f3238,2020,torch.full
+https://github.com/pytorch/pytorch/commit/12cd083fd7a4a24f9c9e630d63b17f43626c569b,2020,"<torch.tensor, torch.as_tensor>"
+https://github.com/pytorch/pytorch/commit/2da69081d7d3aa6481aac691c05d2d1dd11229ba,2020,torch.dot
+https://github.com/pytorch/pytorch/commit/c6d0fdd21537a2c23f94e7a44ac552d24b447906,2020,torch.isreal
+https://github.com/pytorch/pytorch/commit/324c18fcad579b1afa63ae45528bf598ba8ec4ca,2020,torch.div
+https://github.com/pytorch/pytorch/commit/b2cc8a2617ccd72a11e500e2200ed130566bed91,2020,torch.full_like
+https://github.com/pytorch/pytorch/commit/15864d170384f584e9c8a06118781e9817ef8cc5,2020,<torch.allreduce>
+https://github.com/pytorch/pytorch/commit/9a3e16c773496b16e6c02f6e3e020be5bb485ea0,2020,<torch.distributed._distributed_c10d.all_reduce>
+https://github.com/pytorch/pytorch/commit/cb26661fe4faf26386703180a9045e6ac6d157df,2020,torch.full
+https://github.com/pytorch/pytorch/commit/6468bc46375e4cb73fe3b59c7b81dff559bb0967,2020,<torch.jit.script>
+https://github.com/pytorch/pytorch/commit/3b040c478a3061bf1dabd1032d466297089f1d3e,2020,<torch.cuda.amp.custom_fwd>
+https://github.com/pytorch/pytorch/commit/3fa0b1e3259391df11bb43740f422cca20eaebed,2020,torch.cumsum
+https://github.com/pytorch/pytorch/commit/766889b6bfeb9802f892fa0782d629554b2c71b4,2020,torch.bool
+https://github.com/pytorch/pytorch/commit/96057c00803d89488748e101006410d3e209dddc,2020,torch.nonzero
+https://github.com/pytorch/pytorch/commit/b803b4ce099ce38a7fdd1822ff6b0ebf5ce78b27,2020,<torch.distributed.rpc.localValue>
+https://github.com/pytorch/pytorch/commit/95489b590f00801bdee7f41783f30874883cf6bb,2020,<torch.div>
+https://github.com/pytorch/pytorch/commit/0aecbbb7625f8c5809b0a6ce7ca28c622404d8a2,2020,<torch.add>
+https://github.com/pytorch/pytorch/commit/338a1ccce508e4275ba8cb88ff1690c78fd4bdae,2020,"torch.rpc.remote  
+torch.futures.Future  
+torch.rpc.function.async_execution"
+https://github.com/pytorch/pytorch/commit/21ba3b4f40242eb8b758d0f507d68c8a7a412a02,2020,torch.backends.cudnn
+https://github.com/pytorch/pytorch/commit/b5cd3a80bbcf898ecb121fa3dbf9d94e03e6c968,2020,<torch.no_grad>
+https://github.com/pytorch/pytorch/commit/f7a8851e9e1a7920fb48baf86321e2190fdcfe4e,2020,<torch.argmax>
+https://github.com/pytorch/pytorch/commit/5e975cf8d651b3c06b869e85752c0e35506177bf,2020,<torch.TensorIterator>
+https://github.com/pytorch/pytorch/commit/4239416c72ccac1ef6a34102e2a43d2d0f9931c7,2020,<torch.addcdiv>
+https://github.com/pytorch/pytorch/commit/0d649efb811e6a95e8bf6bdb4b0887bb9a3f8bab,2020,<torch.div>
+https://github.com/pytorch/pytorch/commit/389e16c33be6d62b08490c0ab1e0e88883db28d3,2020,torch.pow
+https://github.com/pytorch/pytorch/commit/d363cf4639aacdaefbb8f69919f3c787a4519b7b,2020,torch.__torch_function__
+https://github.com/pytorch/pytorch/commit/9c88b23fa09c251d469163e618d06c0254fd7e45,2020,torch.distributions.Binomial
+https://github.com/pytorch/pytorch/commit/8c07a98adc4d0e8c79e204a3cb31afe7e78d915e,2020,torch.utils.data.default_collate
+https://github.com/pytorch/pytorch/commit/63b1ae69831cd21bc4d6059a5854bc1155a152c9,2020,<torch.remainder>
+https://github.com/pytorch/pytorch/commit/dd618216c526a78b6df85e006480250ee3ccb0f0,2020,<torch.indexing>
+https://github.com/pytorch/pytorch/commit/6133be31bde86543e9c173fb18b675bfb2db75c4,2020,torch.autograd.backward
+https://github.com/pytorch/pytorch/commit/4bfa51d40595d41d6bec6d4a9b1ade72adde4ebc,2020,torch.jit.trace
+https://github.com/pytorch/pytorch/commit/7aec364bdf9ed7297b77e8445a6a6d4116265dde,2020,<torch.gather>
+https://github.com/pytorch/pytorch/commit/a38c6e04549f13949b6ea27b5772e77cf8c3ae9a,2020,"<torch.addmv, torch.mv>"
+https://github.com/pytorch/pytorch/commit/4a2372bc9072fbec831603ae9d6c5fca4a50f97d,2020,<torch.isclose>
+https://github.com/pytorch/pytorch/commit/ced9edbaa414b70ecf8c7b8914be0c85f8f5d0e7,2020,torch.device
+https://github.com/pytorch/pytorch/commit/683246e5ead92503e1022418cab33c93bfbc77e3,2020,"<torch.linspace, torch.logspace>"
+https://github.com/pytorch/pytorch/commit/cd9a357f32c7548d444b6e97aa52ded531d68f38,2020,<torch.manual_seed>
+https://github.com/pytorch/pytorch/commit/8e8a37d7464638efef2bc0c372712b57e4b4f678,2020,<torch.baddbmm>
+https://github.com/pytorch/pytorch/commit/f5ee46f1cfea4bbdd9fbe00a1f50b4385c5e4faa,2020,<torch.Function>
+https://github.com/pytorch/pytorch/commit/3a4bac5c768eb198b50452d1245311a687ca903c,2020,torch.jit
+https://github.com/pytorch/pytorch/commit/b10761d8900af1dc48bee807ab39c80fd4334b79,2020,"<torch.nn.Linear>
+<torch.autograd.Variable>
+<torch.optim.AdamW>
+<torch.tensor>
+<torch.Tensor.cuda>
+<torch.Tensor.is_sparse>
+<torch.Tensor.is_quantized>
+<torch.Tensor.is_mkldnn>
+<torch.Tensor.size>
+<torch.nn.parallel>
+<torch.autograd.profiler>
+<torch.multiprocessing>
+<torch.sparse>
+<torch.onnx>
+<torch.jit>
+<torch.hub>
+<torch.random>
+<torch.distributions>
+<torch.quantization>
+<torch.__config__>
+<torch.__future__>
+<torch.ops>
+<torch.classes>
+<torch.is_grad_enabled>"
+https://github.com/pytorch/pytorch/commit/a836c4ca78b72ecc8e0664e1b684af64ce83be42,2020,torch.cdist
+https://github.com/pytorch/pytorch/commit/8908b62fb20adb6022386e3e12f5d63c2f37bdc6,2020,<torch.autograd.grad>
+https://github.com/pytorch/pytorch/commit/60339a38eded68eeef91f84734b4d665ddf4e080,2020,torch.FloatTensor
+https://github.com/pytorch/pytorch/commit/323b0e0a0f8a7531bb58780dbf8eacbf5ed882e6,2020,torch.normal
+https://github.com/pytorch/pytorch/commit/a64d0ffe81b250889a3e6670daa9c7d07d946e32,2020,<torch.pdist>
+https://github.com/pytorch/pytorch/commit/e7f0b15473d4dea3e202c98ccafe0d054cb0a204,2020,torch.optim.lr_scheduler._LRScheduler
+https://github.com/pytorch/pytorch/commit/3c17cbb6c8d62066c55b82c6a2c3609046327f63,2020,<torch.normal>
+https://github.com/pytorch/pytorch/commit/7ea6559658a6f650363f8b96f462bbc047e29124,2020,<torch.stack>
+https://github.com/pytorch/pytorch/commit/3bbb36e02d6a34c8dd5ac4abf7455d869c7800dc,2020,<torch.linspace>
+https://github.com/pytorch/pytorch/commit/a2641e6005d29d22e982a4525d64fd0f89cfaccf,2020,torch.Tensor.type
+https://github.com/pytorch/pytorch/commit/3c07eb33bb5be9ffaac310031c2b4725c7ddc882,2020,torch.jit.load
+https://github.com/pytorch/pytorch/commit/74d69e296e71896bbe29b92fd6dae41cbbee21e3,2020,torch.cat
+https://github.com/pytorch/pytorch/commit/22044c6f7cbdafdd340714bbe220b621e1927826,2020,torch.cuda.gather
+https://github.com/pytorch/pytorch/commit/ddff014b79303e5239d5cb876ba97143cad6405a,2020,<torch.utils.tensorboard.SummaryWriter>
+https://github.com/pytorch/pytorch/commit/1d7b40f1c416f18c50c789f2e4cc88fa1c8c14b4,2019,<torch.tensor>
+https://github.com/pytorch/pytorch/commit/a5272cb6433efe0bdaf76bff428ce961538daa25,2019,torch.tensor
+https://github.com/pytorch/pytorch/commit/23650671a88b8a24804fa470b76206d6e4bcca28,2019,<torch.utils.tensorboard.writer.add_hparams>
+https://github.com/pytorch/pytorch/commit/2367e71f55c8547a674b90912ffc95ca60687844,2019,<torch._adaptive_avg_pool2d_backward>
+https://github.com/pytorch/pytorch/commit/adfb8a4888c5c471aae0201f5a5a62ee1def8f0b,2019,torch.sparse_coo_tensor
+https://github.com/pytorch/pytorch/commit/38340f59fddb90b1c94eb6feff3f38981b71daef,2019,torch.randint
+https://github.com/pytorch/pytorch/commit/e1d13f4f8be656d21bfb95eb31ecc757df0400cf,2019,"<torch.NLLLoss, torch.CrossEntropyLoss>"
+https://github.com/pytorch/pytorch/commit/949d6ae184a15bbed3f30bb0427268c86dc4f5bb,2019,torch.autograd.function._nested_map
+https://github.com/pytorch/pytorch/commit/7fb2ccaed8e2727d1853b7158e028c4329a14683,2019,torch.nn.Identity
+https://github.com/pytorch/pytorch/commit/a0dc060682463f9ca16bb7afc174a15592bae193,2019,torch.nn.Identity
+https://github.com/pytorch/pytorch/commit/e8e7d9329389b93c6f106cb816f4166d93f21a17,2019,torch.distributed.autograd.backward()
+https://github.com/pytorch/pytorch/commit/3bba751cd68f89e66b104dd963870a9d5e844496,2019,torch.distributed.autograd.backward()
+https://github.com/pytorch/pytorch/commit/136bb07a93b779acbc84ff341bc397551a8cfcc2,2019,torch.histc
+https://github.com/pytorch/pytorch/commit/3fce612cb12c455d69803466cd18bd09a2e4613d,2019,torch.TensorIterator
+https://github.com/pytorch/pytorch/commit/ba59d720cd5c5c81601b53d2c3397c46c1f87883,2019,torch.linspace
+https://github.com/pytorch/pytorch/commit/c1c176d91bc7a7f47aecf01454548381f4c20e16,2019,<torch.record_stream>
+https://github.com/pytorch/pytorch/commit/f99bc714c7bacf9a74c85514ef70b677415d4f0c,2019,"torch.lt  
+torch.lt_  
+torch.lt(Tensor a, Tensor b)  
+torch.lt(Tensor a, Tensor b, out=c)  
+torch.lt(Tensor a, Scalar b)  
+torch.lt(Tensor a, Scalar b, out=c)  
+torch.lt_(Tensor a, Scalar b)"
+https://github.com/pytorch/pytorch/commit/5fc52482cf7984f10185bc35d6bc06924dbc13bd,2019,torch.load
+https://github.com/pytorch/pytorch/commit/567a1981a701f3682ab3c71b68ec45e965c8f279,2019,<torch.Tensor.align_to>
+https://github.com/pytorch/pytorch/commit/afa5d0823b749a134e85c57a611fef9f7cefaa83,2019,<torch.load>
+https://github.com/pytorch/pytorch/commit/babaac3e0853b1ddcd4f41641fdb656a8ff8aba0,2019,"torch.full, torch.tensor.sum"
+https://github.com/pytorch/pytorch/commit/d1e079e2e09fe811a1026d6b1372921a951a4247,2019,torch.cholesky
+https://github.com/pytorch/pytorch/commit/f88f9e13319ef278933f8f8523fc1601cd330b53,2019,<torch.ops.quantized.add>
+https://github.com/pytorch/pytorch/commit/6195aee2c6ef9d5d1f817ad68f0d5cc8dcb776d7,2019,<torch.randn>
+https://github.com/pytorch/pytorch/commit/f6daab56864c481fc87e8fc1f1db87e1c1be3ac4,2019,<torch.autograd.grad>
+https://github.com/pytorch/pytorch/commit/6100205eb8a88090581a905e595e7d1d2a8c232d,2019,"torch.add_  
+torch.add  
+torch.addcmul_  
+torch.addcdiv_  
+torch.copy_"
+https://github.com/pytorch/pytorch/commit/40be39e4c7063486fa82f4a7917041d985e13e6f,2019,<torch.index_put_>
+https://github.com/pytorch/pytorch/commit/08f7f27c6aab64f2c5b61456f74c0dfcc361495a,2019,"<torch.is_pinned, torch.clone>"
+https://github.com/pytorch/pytorch/commit/9130ab380a4af0c67036ea8fce937156cfd0a8c8,2019,<torch.CUDABlas>
+https://github.com/pytorch/pytorch/commit/06762b47212d1a217684d30927e1e14f7de7b057,2019,torch.distributions.Categorical.sample
+https://github.com/pytorch/pytorch/commit/0bc90194fb55c2978e62d14f7ee0a0c79e2fac14,2019,<torch.nn.parallel.parallel_apply>
+https://github.com/pytorch/pytorch/commit/2ac9abf7591894525dfc7e76507f332df632ef19,2019,"torch.Adam, torch.Adagrad, torch.RMSProp"
+https://github.com/pytorch/pytorch/commit/317cf7c87410b72373d76d7d4d046f23b72ba659,2019,"<torch.autograd.Variable, torch.nn.Parameter>"
+https://github.com/pytorch/pytorch/commit/8a233b99cbd914d09bf16ea333e9de24cfb21a09,2019,torch.jit.script
+https://github.com/pytorch/pytorch/commit/91ea2cd5a76172bf25b51b19fbd2191544ef3e45,2019,"torch.distributions.SigmoidTransform, torch.distributions.StickBreakingTransform"
+https://github.com/pytorch/pytorch/commit/f8cab38578a99ad04d23256c2da877db4814f76f,2019,torch.distributions.MultivariateNormal
+https://github.com/pytorch/pytorch/commit/793b3026534aa284f743886fc3c3ae936b5c1a98,2019,torch.add_
+https://github.com/pytorch/pytorch/commit/360e6d1b0b850a695382e8b7a75c39073b6bca74,2019,torch.quantize_linear
+https://github.com/pytorch/pytorch/commit/52d27890dc4bea72f58d7b861201ea5ab5986c29,2019,torch.jit.script_method
+https://github.com/pytorch/pytorch/commit/c46c6a4fe68a8ed6a8adb35837e87209cf020547,2019,<torch.from_numpy>
+https://github.com/pytorch/pytorch/commit/99b3f5cd705018c96b5559daa89aa71e66fc7e8a,2019,torch.utils.tensorboard.SummaryWriter
+https://github.com/pytorch/pytorch/commit/e4c7f59fbc2cb781fca0cafd52c7296a776c45c0,2019,torch.sparse_coo_tensor
+https://github.com/pytorch/pytorch/commit/c406bf20a00ba69e4336a8ff9df18ca33ce57af9,2019,<torch.FloatTensor>
+https://github.com/pytorch/pytorch/commit/fa6a00f3135ea641316040afc35daf92e443e515,2019,torch._dirichlet_grad()
+https://github.com/pytorch/pytorch/commit/444f792fa66efe485a77d1da724156eeab39c211,2019,torch.optim.Adagrad
+https://github.com/pytorch/pytorch/commit/36084908e4d31d70d1c8022fb979059e6984ecc6,2019,torch.optim.lr_scheduler.ExponentialLR
+https://github.com/pytorch/pytorch/commit/0916b5419a5703f7f81822b66f31642c0613ccad,2019,"<torch.nn.Embedding, torch.autograd.grad, torch.nn.functional.embedding>"
+https://github.com/pytorch/pytorch/commit/7be05b822c01e8db5e23c8a213ba2e83d17b0bd2,2019,<torch.sparse_coo_tensor>
+https://github.com/pytorch/pytorch/commit/e3da16a99eb4b475a90fe424eaf9156c3f7370f4,2019,<torch.exp>
+https://github.com/pytorch/pytorch/commit/11c89dde55c11b8571f130d72d8e8cf2a3b6d767,2019,torch.max
+https://github.com/pytorch/pytorch/commit/5ea6344c540597b8b53b3f0d0600d4070f0929d2,2019,torch.cuda.device
+https://github.com/pytorch/pytorch/commit/3618b52c748bbecb6ab1e5cee016bdcf9b71a2d0,2019,torch.nn.functional.max_pool2d
+https://github.com/pytorch/pytorch/commit/a9f1d2e3711476ba4189ea804488e5264a4229a8,2019,<torch.device>
+https://github.com/pytorch/pytorch/commit/a44826e6599b84fd16c95ed4e2dad8c34f91dee0,2019,<torch.utils.model_zoo.load_url>
+https://github.com/pytorch/pytorch/commit/c863a759a0caa13f10f639b66de43e0b3b0f9dd4,2019,torch.slogdet
+https://github.com/pytorch/pytorch/commit/fe4ae9dfe49dae800eab3585396a7458e42d691c,2019,"<torch.nn.Module.register_buffer>
+<torch.nn.Module.register_parameter>"
+https://github.com/pytorch/pytorch/commit/8f11147d43386acec2642a23cf08710ee0ab1af5,2019,"<torch.save, torch.load, torch.cuda.CUDAGuard>"
+https://github.com/pytorch/pytorch/commit/1e9a6d71921fc673d90699cd5230cf957f5f61cf,2019,<torch.cuda.current_stream>
+https://github.com/pytorch/pytorch/commit/d4712ee218cd6af3c2096ca7a76fef350173b703,2018,<torch.isinf>
+https://github.com/pytorch/pytorch/commit/6911ce19d7fcf06e7af241e6494b23acdc320dc4,2018,torch.finfo
+https://github.com/pytorch/pytorch/commit/c1c841a4e70d2d74db83db47165e32fc5aa3728a,2018,<torch.indexing>
+https://github.com/pytorch/pytorch/commit/be7c618fd7fadb9db58aae8bef16638912748cfa,2018,torch.sparse.sum()
+https://github.com/pytorch/pytorch/commit/b807970aeaf3bd26068f347a01196b66c0a21bb5,2018,"<torch.distributed.all_reduce, torch.distributed.all_gather>"
+https://github.com/pytorch/pytorch/commit/e4bb56570c7d6c7e17a85cbface4828c62a33564,2018,torch.nn.utils.rnn.pack_padded_sequence
+https://github.com/pytorch/pytorch/commit/e43fb1d26dac7a0d35b887cd9e7b4eed1ddea214,2018,"<torch.randn, torch.empty>"
+https://github.com/pytorch/pytorch/commit/6bfce168730985821687f6adfc643d424e60cb52,2018,torch.flip
+https://github.com/pytorch/pytorch/commit/11a16961a543a44ad7fc36d144888f5ddf070791,2018,torch.tensor
+https://github.com/pytorch/pytorch/commit/1e8064dec073c5b6305b6294a2e14c8fe231fdea,2018,"<torch.nn.functional.tanhshrink, torch.nn.functional.softsign>"
+https://github.com/pytorch/pytorch/commit/710191e292b39c6d26948454fcf1f4a30433d6a0,2018,torch.nn.Conv2d
+https://github.com/pytorch/pytorch/commit/cffeb03a2db7dd1b1f4542a0b7050cce370a9053,2018,<torch.norm>
+https://github.com/pytorch/pytorch/commit/25db86cca525f876573ed965d94136dd5d9eb9d4,2018,<torch.isfinite>
+https://github.com/pytorch/pytorch/commit/50c0aedbec4ee8fccde762c0b46791453267f1ce,2018,torch.Tensor.__delitem__
+https://github.com/pytorch/pytorch/commit/02695c11db939180f25bfbbc82a922a9c339d50a,2018,torch.masked_fill_
+https://github.com/pytorch/pytorch/commit/8734b174cadc8513bef177c57f1f8267898f34d0,2018,<torch.multinomial>
+https://github.com/pytorch/pytorch/commit/c3987a0fc3fdb87d591169f0e5289c37ce7ec700,2018,<torch.where>
+https://github.com/pytorch/pytorch/commit/807de9a1e3cff49dd23fb7df83aea38269ccdd23,2018,"torch.Tensor.register_hook  
+torch.Tensor.backward  
+torch.Tensor.unbind"
+https://github.com/pytorch/pytorch/commit/24e958a0a779e3dcd7bda19ef3fa702ee654e9dc,2018,<torch.bernoulli>
+https://github.com/pytorch/pytorch/commit/52472508e92f0820bd3b383dbcc9007909c8937a,2018,torch.distributed
+https://github.com/pytorch/pytorch/commit/407a9fee0c8fb172459ac9b3556419305e47f8a7,2018,torch.tensor
+https://github.com/pytorch/pytorch/commit/cda71e260026b84990650809b5b5eae3a201742f,2018,"<torch.Dirichlet, torch.Categorical>"
+https://github.com/pytorch/pytorch/commit/9abc66674559ac214dad31ca42bc0d981d5260db,2018,"torch.cuda.LongTensor, torch.tensor.new_zeros"
+https://github.com/pytorch/pytorch/commit/f60a2b682e4f4b11b4cf2ecac515e20632a43f16,2018,<torch.utils.cpp_extension>
+https://github.com/pytorch/pytorch/commit/beeec47041af866170deca350c89c2180b267c29,2018,torch.jit.trace
+https://github.com/pytorch/pytorch/commit/22c9bc31179443c6107a06efcf6ebd1223dd3287,2018,torch.add
+https://github.com/pytorch/pytorch/commit/ef44faece2cd4045f58cbbac6c74842b84ac6c45,2018,<torch.legacy.nn.SpatialFullConvolution>
+https://github.com/pytorch/pytorch/commit/fed05cf4cf1063df009fc2280a0b5040606fde89,2018,<prim::FusedConcat>
+https://github.com/pytorch/pytorch/commit/0b8a0125ab1c7af1d518c0018cf5596f24c1d55a,2018,"torch.log, torch.expand"
+https://github.com/pytorch/pytorch/commit/6a55238a3ff4ae3dfdfe5d87cf35d92fcd10bf2a,2018,<torch.grid_sampler>
+https://github.com/pytorch/pytorch/commit/aae37324cc66b80644631bcc8cadcfe741cab625,2018,"<torch.softmin, torch.softmax>"
+https://github.com/pytorch/pytorch/commit/7b9d8916e5dde83bb982e0950617738cbfc25f21,2018,torch.bincount
+https://github.com/pytorch/pytorch/commit/7d2a17876fc0b7b251f7e206d84aea13ae08ce3f,2018,"<torch.addcdiv, torch.fill>"
+https://github.com/pytorch/pytorch/commit/edb88b5f3af03718b443d015f195faa1832ce95b,2018,<torch.TensorInference>
+https://github.com/pytorch/pytorch/commit/c9b8d8566d550e46f03c922a95429bd6d31ed271,2018,torch.flip
+https://github.com/pytorch/pytorch/commit/c3e4b3c88be23698f833e539606bc5567b7a1162,2018,torch.load
+https://github.com/pytorch/pytorch/commit/115a494b5f00130e7b5ec396f620ca0290d90a07,2018,torch.sparse_coo_tensor
+https://github.com/pytorch/pytorch/commit/b5594ac7506daa97f9a1b4b232a21194f71abec9,2018,<torch.load>
+https://github.com/pytorch/pytorch/commit/f94ae3ba1d0e76add2239eb7d34eb8193af889bd,2018,"<torch.SumReduceDimsOp>
+<torch.async_scheduling>
+<torch.pad_packed_sequence>
+<torch.SparseSimdAdagradOp>
+<torch.ReduceFrontSumOp>
+<torch.DeferrableAsyncSchedulingNet>
+<torch.cuda_sparseLengthsMean>
+<torch.LengthsMean>"
+https://github.com/pytorch/pytorch/commit/56e7a2cde10b88f1df1137f3f146ed0e09ffb860,2018,torch.sparse.FloatTensor
+https://github.com/pytorch/pytorch/commit/eaa3f2e6139119bd4dcb7e9539ff1cb804854613,2018,torch.toCLong()
+https://github.com/pytorch/pytorch/commit/31c9b4f0d2cf3ec6233f070a34eb2864401d8c21,2018,"<torch.overlappingIndices, torch.maybeOverlappingIndices, torch.pointwiseApply, torch.scatter>"
+https://github.com/pytorch/pytorch/commit/d1a992a85ebce32b3aaa8efc520c35cbb17d97b0,2018,torch.chunk
+https://github.com/pytorch/pytorch/commit/e831ad62046da7c330b566a275242b77099b28a0,2018,torch.multiprocessing
+https://github.com/pytorch/pytorch/commit/0b17f4b87e2333e722ad4c1d0a50a21ce71ecf7e,2018,torch.distributions.AffineTransform
+https://github.com/pytorch/pytorch/commit/4563e190c4e5b18322a36064854409c0fb51f32e,2018,<torch.cuda.get_device_properties>
+https://github.com/pytorch/pytorch/commit/c9c978dff0747796b607b1b9f383bf6e33d4245e,2018,torch.permute
+https://github.com/pytorch/pytorch/commit/82777815f8013f881bd8f40171b29de92fa3c360,2018,<torch.THCTensor_(baddbmm)>
+https://github.com/pytorch/pytorch/commit/7b61b458b1ff46a62e7b2687ba4a694be674778c,2018,torch.arange
+https://github.com/pytorch/pytorch/commit/8ba8713f5d31beed7af6b9a003812aae52a0445a,2018,"<torch.load(), torch.save()>"
+https://github.com/pytorch/pytorch/commit/dac5e6568d7cc8b62be37d94fd9556c04b61c75e,2017,<torch.mm>
+https://github.com/pytorch/pytorch/commit/1c96809cf8b6ae04399858e9814fe614cca166db,2017,"torch.cauchy_
+torch.exponential_
+torch.normal_
+torch.uniform_
+torch._C.Generator
+torch.getRNGState
+torch.setRNGState
+torch.THRandom_initialSeed"

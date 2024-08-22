@@ -1,0 +1,677 @@
+https://github.com/tensorflow/tensorflow/commit/30e99c31cefc33a4024b47db1ef1db422ab83195,2024,tf.data
+https://github.com/tensorflow/tensorflow/commit/d013967a53b21905e745fc3804ded655b0da1d98,2024,tf.CustomAdd
+https://github.com/tensorflow/tensorflow/commit/c5cc2d720bc91d3622b1d9d955e1687db136e545,2024,"tf.ASSERT_OK, tf.TF_ASSERT_OK"
+https://github.com/tensorflow/tensorflow/commit/12dfa7e3d5b112df4b3dd81a5d779181996aca76,2024,tf.saved_model.save
+https://github.com/tensorflow/tensorflow/commit/1668cc3c7371287fdd17988eb0e218c8231fc10f,2024,tf.raw_ops.Substr
+https://github.com/tensorflow/tensorflow/commit/8c46d57af9505d552b27dcdb7d042d4e312bf637,2023,tf.Assert
+https://github.com/tensorflow/tensorflow/commit/985383ebfd658d2ea67e75d06244d5c67ca41c8b,2023,<tf.roll>
+https://github.com/tensorflow/tensorflow/commit/f54b6e2359b5b5df9b2c5531d72fedd16023b74e,2023,tf.CheckNumerics
+https://github.com/tensorflow/tensorflow/commit/f37fad4c3cad7e4eff186fb4f14ff096ae79f5d0,2023,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/6586360a3e898de43f3238ffa7120b702cc55248,2023,tf.signal.kaiser_window
+https://github.com/tensorflow/tensorflow/commit/28372efec3cc07a8e1db81f6b55b87ca4d87219b,2023,tf.TensorArray.gather
+https://github.com/tensorflow/tensorflow/commit/23b66e7885a717aae917e781be4d5d7d00416e91,2023,<tf.experimental.numpy.take_along_axis>
+https://github.com/tensorflow/tensorflow/commit/17daf42253d738a1fd243840ef82627a53dd4389,2023,tf.boolean_mask
+https://github.com/tensorflow/tensorflow/commit/473a6920394b979c62e2d6e5405a6030995b98d4,2023,tf.saved_model.load()
+https://github.com/tensorflow/tensorflow/commit/df325ff6597dc9a81a2139a3b11ec35cd34607bf,2023,"tf.nn.weighted_moments  
+tf.math.reciprocal  
+div_no_nan"
+https://github.com/tensorflow/tensorflow/commit/7c6aeadb3a5344242dca784eb31743a3256d188b,2023,"tf.DTensorLayout, tf.XlaSharding, tf2xla"
+https://github.com/tensorflow/tensorflow/commit/d467acc2d58cb239fb461fecf018dacb7d11bdf1,2023,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/b87512e5c2deb11b5f47029ada2d20736afa799a,2023,tf.resize_bilinear
+https://github.com/tensorflow/tensorflow/commit/3e496369130c7dc391616f02ad68926011d782e9,2023,tf.concat()
+https://github.com/tensorflow/tensorflow/commit/13563feabad131c6dcf6275a5f684d0ae0250182,2023,tf.function
+https://github.com/tensorflow/tensorflow/commit/25c9e23be4781b1b6ec96057818139b998506b5b,2023,tf.data.GetNext
+https://github.com/tensorflow/tensorflow/commit/b5018b6d12befcb9043a3b964f6b31eeb8cd29f8,2023,<tf.image.non_max_suppression_padded>
+https://github.com/tensorflow/tensorflow/commit/c9fefdddf90c32fbb0c70c5ffb19a883c64b3448,2023,<tf.functions>
+https://github.com/tensorflow/tensorflow/commit/c5c0d33a365df5d8a81d920a9aeb0c390b67ee35,2023,"<API(s) Name>
+tf.image.convert_image_dtype"
+https://github.com/tensorflow/tensorflow/commit/f5a10d3bac60b9808843b8bcfba62d59276dbd05,2023,<tf.cond>
+https://github.com/tensorflow/tensorflow/commit/43d467a7118ef5e5ee912f3557e086537614e47c,2023,<tf.cond>
+https://github.com/tensorflow/tensorflow/commit/c6fcfde6299e553c2412896445700db6fd24f07a,2023,tf.tanh
+https://github.com/tensorflow/tensorflow/commit/a446a9c56195ba4f9eb4051a714e8c70e57d3463,2023,tf.numpy.lcm
+https://github.com/tensorflow/tensorflow/commit/b3a90bdebd8efbe09263430a8885c63fc1d35c24,2023,"<tf.depth_to_space, tf.nn.depth_to_space, tf.saved_model.load, compat.v1.saved_model.load>"
+https://github.com/tensorflow/tensorflow/commit/0b74deeb3a1aa46d13b6a322d0e7b8f3eb54d56d,2022,<tf.lookup.StaticHashTable>
+https://github.com/tensorflow/tensorflow/commit/cb420603c01f83013b2aafcf2a5d11a050777830,2022,<tf.floormod>
+https://github.com/tensorflow/tensorflow/commit/d2e319ca1caa35c9f8287a1932658523040f5eb7,2022,tf.variable
+https://github.com/tensorflow/tensorflow/commit/4eac0efea5fc5d1d24deb062a5f4096175ead812,2022,<tf.gather>
+https://github.com/tensorflow/tensorflow/commit/bdf0934be81260b2e85aab9cba09bb77430f321c,2022,"<tf.custom_gradient, tf.gradients, tf.GradientTape>"
+https://github.com/tensorflow/tensorflow/commit/f1e2961e1864e240c4019d601268ce9fe9c652c9,2022,tf.function
+https://github.com/tensorflow/tensorflow/commit/16ea0f8995a9b087ff7e50bbf5a03e58e3c5002e,2022,<tf.Checkpoint> <tf.function> <tf.experimental_io_device>
+https://github.com/tensorflow/tensorflow/commit/fc33f3dc4c14051a83eec6535b608abe1d355fde,2022,tf.raw_ops.TensorListConcat
+https://github.com/tensorflow/tensorflow/commit/f5ab7f552a88dba5150675c008390bc5edd78af8,2022,"<tf.SaveOp, tf.ShardedFilename>"
+https://github.com/tensorflow/tensorflow/commit/6d2a2277a167c58177f25f18884ade131e0daa5b,2022,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/ca6803eccdbb23a0fddc17c4739091ffdf571da0,2022,"tf.norm, tf.math.reduce_euclidean_norm"
+https://github.com/tensorflow/tensorflow/commit/26e6f36f5f84c0ac387b42a17a32207e0edb3daf,2022,<tf.entry_function>
+https://github.com/tensorflow/tensorflow/commit/02e2ec94d1c50e4109f8384a55b941aeadb0f91b,2022,tf.concat
+https://github.com/tensorflow/tensorflow/commit/f7b45bcac6cdbf3f5c76bf9a9a5261811bf6adf3,2022,<tf.quantize_model.quantize>
+https://github.com/tensorflow/tensorflow/commit/2823744fdabbdec95b95a6d0f5b81b3b5e0b6070,2022,<tf.concat>
+https://github.com/tensorflow/tensorflow/commit/9b1d305aa03d972896c69e745f3f52a10b604133,2022,tf.concat
+https://github.com/tensorflow/tensorflow/commit/ec5717a20dcfcd483a755aad540534e2c0267d1b,2022,tf.function
+https://github.com/tensorflow/tensorflow/commit/5dd7b86b84a864b834c6fa3d7f9f51c87efa99d4,2022,<tf.raw_ops.SaveSlices>
+https://github.com/tensorflow/tensorflow/commit/9eecdf738912edc80a1b4b33057ea5bd6e0794a4,2022,tf.experimental.BatchableExtensionType
+https://github.com/tensorflow/tensorflow/commit/510c547bf148c13524832754f101de9eeb7e17cb,2022,tf.linalg.eigvalsh
+https://github.com/tensorflow/tensorflow/commit/2f006a44cfa1fd9d14f6b55bf594d2369bffec7e,2022,tf.data.ParallelFilter
+https://github.com/tensorflow/tensorflow/commit/7272e9f1f52ffe1b5aee67d1af3c2127634ab47d,2022,<tf.range>
+https://github.com/tensorflow/tensorflow/commit/4510c68b7a32547e14f7b88c2bd5a59640380073,2022,tf.raw_ops.EditDistance
+https://github.com/tensorflow/tensorflow/commit/5db6a9a8aa4832c75288a9681a82619a4141f886,2022,<tf.range>
+https://github.com/tensorflow/tensorflow/commit/881676cfd6264a12eb32bafa3db5f63cf6c40970,2022,tf.math.bincount
+https://github.com/tensorflow/tensorflow/commit/c42158d8a854cc68f6c441ca619f71e1cbf0813f,2022,<tf.range>
+https://github.com/tensorflow/tensorflow/commit/30721cf564cb029d34535446d6a5a6357bebc8e7,2022,<tf.raw_ops.EditDistance>
+https://github.com/tensorflow/tensorflow/commit/237822b59fc504dda2c564787f5d3ad9c4aa62d9,2022,<tf.compat.v1.placeholder_with_default>
+https://github.com/tensorflow/tensorflow/commit/3796cc4fcd93ae55812a457abc96dcd55fbb854b,2022,<tf.raw_ops.DepthwiseConv2dNativeBackpropInput>
+https://github.com/tensorflow/tensorflow/commit/bd4d5583ff9c8df26d47a23e508208844297310e,2022,tf.ragged.constant
+https://github.com/tensorflow/tensorflow/commit/dbdd98c37bc25249e8f288bd30d01e118a7b4498,2022,tf.summary.flush()
+https://github.com/tensorflow/tensorflow/commit/198242876385583b01ba863d4bc085020ecc09f7,2022,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/abc6f6ec7869d846b33b3d8e5e33284aac1600dc,2022,tf.matmul
+https://github.com/tensorflow/tensorflow/commit/e8afdf08ededab96cc838f6a894c345d24901a81,2022,<tf.IRFFT>
+https://github.com/tensorflow/tensorflow/commit/8e3b32d37ce22c07c21f508b2835456f3ca97531,2022,"tf.compat.as_bytes
+tf.compat.as_text"
+https://github.com/tensorflow/tensorflow/commit/a1651a561a85b5e748adcaa7074266da66912a6b,2022,tf.function
+https://github.com/tensorflow/tensorflow/commit/b0e999cb1bc4b9fd4af3db4c804d33da8571c823,2022,tf.histogram_fixed_width_bins
+https://github.com/tensorflow/tensorflow/commit/86abddb56350bccd95d1b7140b003fb03525b890,2022,<tf.histogram_fixed_width_bins>
+https://github.com/tensorflow/tensorflow/commit/a1e9ebecb924d8d049e062f8427be0fc03c31161,2022,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/c910eaaa2b48cf947afa853aaaacaf1818f2585a,2022,tf.data
+https://github.com/tensorflow/tensorflow/commit/a655b8541421f7094ca0716ff8164df5cee21d02,2022,tf.debugging.assert_type
+https://github.com/tensorflow/tensorflow/commit/4305f3686bfd0d306e9b3720cd6a63c1c989b77c,2022,<tf.Variable>
+https://github.com/tensorflow/tensorflow/commit/9292e3d3f31ad2b84cfe988411a3b19c8988121d,2022,tf.debugging.assert_type
+https://github.com/tensorflow/tensorflow/commit/e135db14e4fd173a0ff2dd4673f301abfe0c8e1a,2022,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/0252f5d6f641fa414732646d07bdbbfa90578ffe,2022,tf.debugging.assert_type
+https://github.com/tensorflow/tensorflow/commit/3bc89548b047fc89521d5d3e715e58d67b7c5169,2021,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/c41e88b59209906b224c879a1e20db65d97c65fb,2021,<tf.data.experimental.load>
+https://github.com/tensorflow/tensorflow/commit/e560136d757867482a93be74e108ef516920bcfc,2021,<tf.stack>
+https://github.com/tensorflow/tensorflow/commit/24a965257afa9f870225c8dee7fe2fbe87bc14bc,2021,"tf.Checkpoint.write, tf.convert_to_tensor, tf.constant"
+https://github.com/tensorflow/tensorflow/commit/f312bdc59ccbacba236f8cfada4adc12d206f9a2,2021,<tf.data.Dataset.range>
+https://github.com/tensorflow/tensorflow/commit/9f1a57f04bb3b6df293532f7947e199b6557b548,2021,tf.where
+https://github.com/tensorflow/tensorflow/commit/6381a7b127bd276a3817a93e5423b15a06c33419,2021,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/bb42c1c121cca7259c6801afd047b94e09a7a603,2021,"tf.estimator.WarmStartSettings, tf.compat.v1.train.init_from_checkpoint"
+https://github.com/tensorflow/tensorflow/commit/134ea75424d05c69f6f5b5e35e1f19a5c926a2c4,2021,tf.lookup.TextFileInitializer
+https://github.com/tensorflow/tensorflow/commit/701cfaca222a82afbeeb17496bd718baa65a67d2,2021,tf.raw_ops.SparseCountSparseOutput
+https://github.com/tensorflow/tensorflow/commit/0b67dee3f02e2e055230ca6dd6cc7d090af72baa,2021,tf.Squeeze
+https://github.com/tensorflow/tensorflow/commit/295271247ebc6ee6169c4a17de4aaf7b53828e61,2021,tf.data
+https://github.com/tensorflow/tensorflow/commit/afac8158d43691661ad083f6dd9e56f327c1dcb7,2021,tf.function
+https://github.com/tensorflow/tensorflow/commit/92e84b48f6e2bed5be6088192216048fea63cba8,2021,tf.ragged.cross
+https://github.com/tensorflow/tensorflow/commit/f29ef287148d2912e941c70891866d57de2fae04,2021,tf.gather
+https://github.com/tensorflow/tensorflow/commit/7c794ca526a61d9989ebd272155f3c76005e6e71,2021,tf.py_function
+https://github.com/tensorflow/tensorflow/commit/67b6c880e39ba02ba53c7d499e45fd136090ee32,2021,tf.map_fn
+https://github.com/tensorflow/tensorflow/commit/a91f9e2fbfe63a70e0943fd959f4840fd30cadb9,2021,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/3e8a7c649efeaf99cbd2726d48fe857562d4720f,2021,tf.cond
+https://github.com/tensorflow/tensorflow/commit/db989ffa478a03c39d432d233e6017cfb10e0c45,2021,tf.image.extract_glimpse
+https://github.com/tensorflow/tensorflow/commit/25e731a020a1768ce8bea952180b9e35d081c6ff,2021,tf.data.to_tf_record_op
+https://github.com/tensorflow/tensorflow/commit/9345aee6988f50b7c571295a9e70e40e47221a64,2021,tf.Variable.__iter__
+https://github.com/tensorflow/tensorflow/commit/9a33b86eaab87af353e8c5a11d193667a4830b24,2021,<tf.cond>
+https://github.com/tensorflow/tensorflow/commit/bb588f4b89355d46b10955922bdcf385075d286e,2021,"tf.GradientTape, tf.stop_gradient, tf.autodiff.stop_recording"
+https://github.com/tensorflow/tensorflow/commit/ba44ed82dbc017d09a54d74beb7924745923503e,2021,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/223006f2b32ec3a6e57753e3f1b69001c7123de9,2021,tf.data.from_tensor_slices
+https://github.com/tensorflow/tensorflow/commit/67a80685a5fd9fab33e3d68d938b05b22080cc27,2021,<tf.train.Checkpoint>
+https://github.com/tensorflow/tensorflow/commit/cc0620d64e3c6b3d1abbfc86644eb874b61e0b9b,2021,tf.data.ParallelInterleaveDataset
+https://github.com/tensorflow/tensorflow/commit/a43f1c5e4dc3bd2955df13c844d0d7a6e8eac628,2021,tf.timestamp
+https://github.com/tensorflow/tensorflow/commit/caf7d989376067ca218db5f34120d1c38934e702,2021,tf.data
+https://github.com/tensorflow/tensorflow/commit/6f2ce60b5adb33706464d951bc59f61a3d2d1a22,2021,tf.data.experimental.service.distribute
+https://github.com/tensorflow/tensorflow/commit/c6bae98564729e6f1f558e51636116890f733399,2021,tf.Variable
+https://github.com/tensorflow/tensorflow/commit/246c1fab4668b85ab059d5c734be15cb1db4f1d1,2021,"<tf.array, tf.asarray, tf.zero_like, tf.empty_like, tf.ones_like>"
+https://github.com/tensorflow/tensorflow/commit/660ad5e76d8df64d855f77b5e2e39d8ddb40cab5,2021,"<tf.image.resize, tf.keras.layers.UpSampling2D>"
+https://github.com/tensorflow/tensorflow/commit/a4b53af710f1e1dc41279e2de7cf6ec8b092f28b,2021,tf.compat.v1.get_seed
+https://github.com/tensorflow/tensorflow/commit/bff2f49a6d5e1d2f6eac55db42105b24a76badc2,2021,<tf.range>
+https://github.com/tensorflow/tensorflow/commit/a78258bbd5ee0f2d31fa0a8ea9d2ce43d1a6e708,2021,tf.string.format()
+https://github.com/tensorflow/tensorflow/commit/d1f3ce8b2bc17e7c885266058dd9a4b74dc8e5e5,2021,<tf.keras.metrics.Precision>
+https://github.com/tensorflow/tensorflow/commit/0dda82b656c6b54e2a913d1c417c67bf8d18d8c6,2021,"tf.data.experimental.service.distribute, tf.data.experimental.service.from_dataset_id"
+https://github.com/tensorflow/tensorflow/commit/ed69b53f850213a16689d6b2dcba39983340b11b,2021,tf.random.uniform()
+https://github.com/tensorflow/tensorflow/commit/102d86a2f917eb565f053a15dd810fcc41563951,2021,tf.data service
+https://github.com/tensorflow/tensorflow/commit/d9b27593638f2ae356c6205517f28ff9b21ae34c,2021,<tf.tile>
+https://github.com/tensorflow/tensorflow/commit/b4ca6420fa5fa79c70981899083b53488d0be064,2021,"tf.data.RecordBufferDequeue, tf.data.RecordBufferEnqueue"
+https://github.com/tensorflow/tensorflow/commit/4aacb30888638da75023e6601149415b39763d76,2021,tf.raw_ops.ResourceScatterDiv
+https://github.com/tensorflow/tensorflow/commit/a2b743f6017d7b97af1fe49087ae15f0ac634373,2021,tf.raw_ops.RaggedGather
+https://github.com/tensorflow/tensorflow/commit/d966b6a9600e64ebbde9c982e85c8ef2fc7e36f5,2021,tf.data.Dataset.snapshot
+https://github.com/tensorflow/tensorflow/commit/99002d4a4336e2c5a9d6fd64e64dda5325af0827,2021,"<tf.zeros, tf.ones, tf.fill>"
+https://github.com/tensorflow/tensorflow/commit/b2ac24daa7fde93fb138e0bc53164684be00fad7,2021,tf.UnconnectedGradients
+https://github.com/tensorflow/tensorflow/commit/6bdec787aa1e31cce712f8fd31a91b8902988f52,2021,"<tf.E, tf.F, tf.G>"
+https://github.com/tensorflow/tensorflow/commit/8671b58c95bd293122e0361a43f0745a02be2d88,2021,tf.data
+https://github.com/tensorflow/tensorflow/commit/2c88a0a26638b0ff757fbc3118fc6d99ae1ada8f,2021,tf.function
+https://github.com/tensorflow/tensorflow/commit/e185d5bb9c536ae5cd87d64f875deb8522d66fc7,2021,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/ae2ec43d674e8e8e6160c562f0b29e1a018e9118,2021,"tf.data, tf.function"
+https://github.com/tensorflow/tensorflow/commit/d9204be9f49520cdaaeb2541d1dc5187b23f31d9,2021,tf.raw_ops.SparseDenseCwiseDiv
+https://github.com/tensorflow/tensorflow/commit/230b7d767463012db780fa2c522ade31b548ce9c,2021,tf.data
+https://github.com/tensorflow/tensorflow/commit/0547c481e5981e1a43b8e4010a96c23fd3967978,2021,"```
+tf.py_function
+tf.constant
+tf.matmul
+```"
+https://github.com/tensorflow/tensorflow/commit/08bdda50bc308f41fcf7ef8fdae3524476130f52,2021,<tf.summary.should_record_summaries>
+https://github.com/tensorflow/tensorflow/commit/74b7679294550c2434e901cebd3f2ee64a8787d6,2021,"<tf.Transpose, tf.AddV2>"
+https://github.com/tensorflow/tensorflow/commit/4878ad9bb9a33637e62e340040b7bb0ed4506e4f,2021,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/a0360b0b24f5c20d3a654a968ebc5d561c2397c3,2021,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/228ecc7c0e77ab2eb90f44b76266ba0cefef4cc4,2021,tf.sort
+https://github.com/tensorflow/tensorflow/commit/401dc1b3db4e7412f4fc50f96c25fd564d593f4c,2021,tf.sort
+https://github.com/tensorflow/tensorflow/commit/03de0711c95406fb4b941114e05326e8f3e58c0d,2021,<tf.sort>
+https://github.com/tensorflow/tensorflow/commit/288d90e4c55087749d71becf7fd2e0706ebe4342,2021,tf.data.experimental.load()
+https://github.com/tensorflow/tensorflow/commit/9bafb1d2937ca6b4a65ad3f40e1495633030731e,2021,tf.reverse
+https://github.com/tensorflow/tensorflow/commit/aa6d441cacf140b929045a13efc5f43840829616,2021,<tf.GeneratorDataset>
+https://github.com/tensorflow/tensorflow/commit/242a05ca7d336fab23321d4bc7e46e9a202fab37,2021,tf.linalg.diag_part
+https://github.com/tensorflow/tensorflow/commit/f862ede4402cedad052bb72e6a7a025f00a5188e,2021,<tf.data.experimental.save>
+https://github.com/tensorflow/tensorflow/commit/4504a081af71514bb1828048363e6540f797005b,2021,tf.raw_ops.CTCLoss
+https://github.com/tensorflow/tensorflow/commit/7ae2af34087fb4b5c8915279efd03da3b81028bc,2021,tf.raw_ops.SparseDenseCwiseMul
+https://github.com/tensorflow/tensorflow/commit/faa76f39014ed3b5e2c158593b1335522e573c7f,2021,tf.raw_ops.SparseFillEmptyRows
+https://github.com/tensorflow/tensorflow/commit/a84358aa12f0b1518e606095ab9cfddbf597c121,2021,tf.raw_ops.RaggedTensorToTensor
+https://github.com/tensorflow/tensorflow/commit/7d750b3d0e450817b9b616cfdee734a6e9ebf2d2,2021,<tf.Variable>
+https://github.com/tensorflow/tensorflow/commit/51300ba1cc2f487aefec6e6631fef03b0e08b298,2021,tf.raw_ops.UnicodeEncode
+https://github.com/tensorflow/tensorflow/commit/88eb45308ab4d0af3e627eb8f84d4b3122aabbd3,2021,tf.train.init_from_checkpoint
+https://github.com/tensorflow/tensorflow/commit/698e01511f62a3c185754db78ebce0eee1f0184d,2021,tf.io.decode_raw
+https://github.com/tensorflow/tensorflow/commit/8ba6fa29cd8bf9cef9b718dc31c78c73081f5b31,2021,tf.raw_ops.SparseSplit
+https://github.com/tensorflow/tensorflow/commit/1d04d7d93f4ed3854abf75d6b712d72c3f70d6b6,2021,tf.raw_ops.SparseReshape
+https://github.com/tensorflow/tensorflow/commit/ba6822bd7b7324ba201a28b2f278c29a98edbef2,2021,tf.raw_ops.SparseSparseMinimum
+https://github.com/tensorflow/tensorflow/commit/704866eabe03a9aeda044ec91a8d0c83fc1ebdbe,2021,tf.raw_ops.UnsortedSegmentJoin
+https://github.com/tensorflow/tensorflow/commit/4214d79ab9efb89fbdacb417b28688da9092727b,2021,tf.zeros
+https://github.com/tensorflow/tensorflow/commit/7614c80dc9ad1798d83de17c80e1982c3cb9bdb6,2021,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/87cf4d3ea9949051e50ca3f071fc909538a51cd0,2021,tf.raw_ops.AddManySparseToTensorsMap
+https://github.com/tensorflow/tensorflow/commit/b432a38fe0e1b4b904a6c222cbce794c39703e87,2021,tf.raw_ops.DrawBoundingBoxes
+https://github.com/tensorflow/tensorflow/commit/87d2b9751513253058be671313db3e32cc13842a,2021,tf.raw_ops.AddManySparseToTensorsMap
+https://github.com/tensorflow/tensorflow/commit/b2f28169810ab41e7b18aaca0cf607516515aee2,2021,tf.raw_ops.AddManySparseToTensorsMap
+https://github.com/tensorflow/tensorflow/commit/8e55a917c06635a4005da4f42da286117741f4a8,2021,tf.raw_ops.AddManySparseToTensorsMap
+https://github.com/tensorflow/tensorflow/commit/26af5c3fb290cda49bd83928efe3846f297b0af9,2021,tf.raw_ops.AddManySparseToTensorsMap
+https://github.com/tensorflow/tensorflow/commit/69c68ecbb24dff3fa0e46da0d16c821a2dd22d7c,2021,tf.raw_ops.AddManySparseToTensorsMap
+https://github.com/tensorflow/tensorflow/commit/c57c0b9f3a4f8684f3489dd9a9ec627ad8b599f5,2021,tf.raw_ops.SparseCountSparseOutput
+https://github.com/tensorflow/tensorflow/commit/030af767d357d1b4088c4a25c72cb3906abac489,2021,tf.raw_ops.ResourceCountUpTo
+https://github.com/tensorflow/tensorflow/commit/7fa7874186238ee7f1d2082f25b523e9c01cd4db,2021,<tf.float32>
+https://github.com/tensorflow/tensorflow/commit/ea4cf3c25175b09727a52e37b044dd92b03dc3b0,2021,<tf.data.service>
+https://github.com/tensorflow/tensorflow/commit/89e28d82cd255133cd72f109c72359bae330791f,2021,tf.nest.pack_sequence_as
+https://github.com/tensorflow/tensorflow/commit/0029a3c377e9e0e05d6a381dda1ac418f4357e9f,2021,<tf.distribute.Strategy>
+https://github.com/tensorflow/tensorflow/commit/572acef655c81a12fb68b3f9beec4e390f0b53f5,2021,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/82e6203221865de4008445b13c69b6826d2b28d9,2021,tf.raw_ops.SparseCountSparseOutput
+https://github.com/tensorflow/tensorflow/commit/a41733ae0a093040cacf3aad010786fa6bed5f1b,2021,tf.reshape
+https://github.com/tensorflow/tensorflow/commit/7133856f198068e991e1f3c9b2c0dea3d92cb8d0,2021,tf.data
+https://github.com/tensorflow/tensorflow/commit/67c0025c18540134a8fd86a7ea5d713a13b4cd23,2021,tf.data
+https://github.com/tensorflow/tensorflow/commit/5f775be482f4201c487a7a69afe90a512d9de8b9,2021,<tf.summary.record_if>
+https://github.com/tensorflow/tensorflow/commit/79cd2fd4ac45ab4304b7762d6c17db5774c30cf9,2021,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/72d0c2ad78ead466c39edf17dc1333ab47dd62d1,2021,tf.RngReadAndSkip
+https://github.com/tensorflow/tensorflow/commit/0376b33c9e41880ad50841c1751357c7cd72ce9c,2021,tf.keras.applications.densenet.preprocess_input
+https://github.com/tensorflow/tensorflow/commit/14dae44e4050ea3e44d1ca7124fd99899eb24879,2021,tf.nn.relu
+https://github.com/tensorflow/tensorflow/commit/aa9bd19fe3f0b74d48ba8cf8472bf48ae714aac0,2021,<tf.constant>
+https://github.com/tensorflow/tensorflow/commit/84377fe862a0bf36bb3c27166b766bc1097954ae,2021,tf.Pad
+https://github.com/tensorflow/tensorflow/commit/8981e41c2b3db99d10721e6d419241d98c5caa70,2021,tf.Transpose
+https://github.com/tensorflow/tensorflow/commit/4c01f5d82f0eb3f8f585d87676d759c78a7fa5cf,2021,tf.data.ParallelInterleaveDataset
+https://github.com/tensorflow/tensorflow/commit/510819825fda28972eff99cc8cf68ecbe607927c,2021,"tf.data.ParallelBatch  
+tf.data.ParallelMap  
+tf.data.Prefetch  
+tf.data.MapAndBatch"
+https://github.com/tensorflow/tensorflow/commit/5350da6b746f076fdd1568d2ac2dd2c86f7d2512,2021,tf.keras.layers.LeakyReLU
+https://github.com/tensorflow/tensorflow/commit/7edb8c9b83ad583616406af61e0de61393996a3e,2021,tf.strings.substr
+https://github.com/tensorflow/tensorflow/commit/cf18ba2332fa5cd561803e7425b67c8fd008c44f,2021,<tf.shape>
+https://github.com/tensorflow/tensorflow/commit/8b542c43041467e81b2a0ab875302431a2276fac,2021,tf.nn.depthwise_conv2d
+https://github.com/tensorflow/tensorflow/commit/081098ee7639211687db7d369aa172029572e7dd,2021,"<tf.IfRegion, tf.AssignVariableOp, tf.Const, tf.B, tf.D, tf.E, tf.F>"
+https://github.com/tensorflow/tensorflow/commit/6cfa6dd50ad92841d1f547138480b2b1382ff0d9,2021,tf.ResourceScatterUpdate
+https://github.com/tensorflow/tensorflow/commit/5f457f704022b08c5592481bf79d03adcf6450db,2021,<tf.math.reduce_prod>
+https://github.com/tensorflow/tensorflow/commit/4fd26310d2d245444899f47627a7ff5625e69e97,2021,tf.summary.scalar
+https://github.com/tensorflow/tensorflow/commit/9698751aa4c36732c8a4a539350c0f66ca2699b2,2021,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/3a06f0d4754c7b146af5a071ac2cbb419ef58e81,2021,tf.lite
+https://github.com/tensorflow/tensorflow/commit/3c80be9f2cfece929f5858e7df0e7f4503c9baec,2021,tf.data
+https://github.com/tensorflow/tensorflow/commit/3d21db1f00fe9b0aaf0b2a5a9957cfe31124d816,2021,<tf.lite>
+https://github.com/tensorflow/tensorflow/commit/febd380da9219e08ea493b5baff765e2ef2d99d5,2021,tf.math.pow
+https://github.com/tensorflow/tensorflow/commit/6ae54f7c588862a3b9bf4eae09c3d61656716ea6,2021,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/1a99f30ec75c9a851af3ddde8eb954d9c6920af3,2021,"<tf.keras.Attention, tf.keras.AdditiveAttention>"
+https://github.com/tensorflow/tensorflow/commit/708ffb11f6b237cf1375459f4bc31f2e8f761026,2021,tf.lite
+https://github.com/tensorflow/tensorflow/commit/9aae97c55cb049195268ac55d7490aef456ce12d,2021,tf.lite
+https://github.com/tensorflow/tensorflow/commit/7b31eb3cf8f2f723cb937fd379264eb573cd3b97,2020,<tf.data.Dataset.repeat>
+https://github.com/tensorflow/tensorflow/commit/73c5ff37f15e385eb3541089b183a3a66907842d,2020,tf.debugging.assert_type
+https://github.com/tensorflow/tensorflow/commit/59f5abfbc8dc5559c361f80f4fa4a006db825e40,2020,"tf.data.experimental.assert_cardinality  
+tf.data.experimental.INFINITE_CARDINALITY"
+https://github.com/tensorflow/tensorflow/commit/b6be9714e878a7dd0d1405bd7a83e021ba4b561a,2020,"<tf.image.per_image_standardization, tf.image.convert_image_dtype>"
+https://github.com/tensorflow/tensorflow/commit/45370f0d3ba3eb8843a3a255ed60e22b3c132eb2,2020,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/8600972d6a9eb5abe0741db9de5697583f683176,2020,tf.lite.OpsSet.TFLITE_BUILTINS_INT8
+https://github.com/tensorflow/tensorflow/commit/28c7e4d9f28f71abdc113d93f6dc270c1a61ea52,2020,tf.keras.losses.BinaryCrossEntropy
+https://github.com/tensorflow/tensorflow/commit/3c1e3724fbd2409d97e72137f944142135e9f983,2020,<tf.image.central_crop>
+https://github.com/tensorflow/tensorflow/commit/12217d1a5e266b5ac9214fca755e67bd349d0b5f,2020,<tf.conv2D>
+https://github.com/tensorflow/tensorflow/commit/d17333a37d45b373bfcb2ca8b759c777c8c0e902,2020,"tf.Conv2DOp, tf.Conv3DOp"
+https://github.com/tensorflow/tensorflow/commit/6b4ba7fb16b3b776303ffe2f116d3f6fc85ef2ae,2020,tf.cond
+https://github.com/tensorflow/tensorflow/commit/abe233392e233627cab86c1b0dbdeac118885ac8,2020,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/c33f9482309289ba457d7f2a1b8f7ea76b8b587b,2020,tf.Conv2DOp
+https://github.com/tensorflow/tensorflow/commit/07b75ffa453b1ec9189371244d21b6684503340b,2020,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/1e98f53e0aa265ec6903e195fb01d42b6ab82ac4,2020,<tf.data.ForeverRepeat>
+https://github.com/tensorflow/tensorflow/commit/68b74a30fae55a04570fbd3810d28a0fcf44ab17,2020,<tf.data.service>
+https://github.com/tensorflow/tensorflow/commit/7d57263720c7d2c88861f2f325e8ca1bd02deb38,2020,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/e203dad0298792bbb5b3aa21fb6bc1a5629cda67,2020,tf.config.experimental.enable_tensor_float_32_execution
+https://github.com/tensorflow/tensorflow/commit/833b3a49a9d77cf5b04990d003c91cc9810b40d8,2020,"tf.data.PrefetchDataset, tf.data.RecordBufferEnqueue, tf.data.RecordBufferDequeue"
+https://github.com/tensorflow/tensorflow/commit/9cd33d0a815fdad158f9e3b15127f109c5e5aedb,2020,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/eccb7ec454e6617738554a255d77f08e60ee0808,2020,<tf.quantization.quantize_and_dequantize>
+https://github.com/tensorflow/tensorflow/commit/0e580aa54adac101d8d1d9199cc2055a26519396,2020,"tf.math.efrcinv, tf.math.ndtri"
+https://github.com/tensorflow/tensorflow/commit/041309af72c5805d3fb4feb5ab1c9b2d4e6fa790,2020,tf.data
+https://github.com/tensorflow/tensorflow/commit/fe651f125271264aa13a415932fd7061621aba40,2020,tf.lite.Interpreter.set_tensor()
+https://github.com/tensorflow/tensorflow/commit/cafb4f6575f8e281908b38ceaa56cdca7980cab6,2020,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/58febb45007198e979ce96e82ea8a10fe957f292,2020,tf.saved_model.save
+https://github.com/tensorflow/tensorflow/commit/bde6a9cfeee634889e8e844cf8e30cf012a734ae,2020,tf.data.ParallelMap
+https://github.com/tensorflow/tensorflow/commit/912096b548aff3196dd46c6e2f176d1ff89b79bc,2020,"tf.StatelessMultinomial, tf.StatelessParameterizedTruncatedNormal, tf.StatelessRandomBinomial, tf.StatelessRandomGammaV2, tf.StatelessRandomNormal, tf.StatelessRandomPoisson, tf.StatelessRandomUniform, tf.StatelessRandomUniformFullInt, tf.StatelessRandomUniformInt, tf.StatelessTruncatedNormal"
+https://github.com/tensorflow/tensorflow/commit/9e1ee89c7f1cfdc899cabf1503bae754bff9847e,2020,tf.data.Dataset.window
+https://github.com/tensorflow/tensorflow/commit/75826308def1ba8c00b44013a137157869eee306,2020,"<tf.distribute.experimental.ParameterServerStrategy, tf.compat.v1.distribute.experimental.ParameterServerStrategy>"
+https://github.com/tensorflow/tensorflow/commit/16135100ddd9d74ac0ddfd56d187299535a25acb,2020,<tf.data.autotune_buffer_sizes>
+https://github.com/tensorflow/tensorflow/commit/e38e718a08182ccda45905ed390ef7f7bf1b2e0d,2020,<tf.data.kBufferSizeMin>
+https://github.com/tensorflow/tensorflow/commit/568e2bef00f24af1159a0846abf67c099ca78a21,2020,<tf.DenseHashTable>
+https://github.com/tensorflow/tensorflow/commit/7a2e7af955eb0e5b4f4c6c6524a7812c66785c2b,2020,tf.raw_ops.Switch
+https://github.com/tensorflow/tensorflow/commit/42afb8a459897e59e9f050c730923216be781e7c,2020,tf.raw_ops.Switch
+https://github.com/tensorflow/tensorflow/commit/da8558533d925694483d2c136a9220d6d49d843c,2020,tf.raw_ops.Switch
+https://github.com/tensorflow/tensorflow/commit/22e07fb204386768e5bcbea563641ea11f96ceb8,2020,tf.experimental.dlpack.to_dlpack
+https://github.com/tensorflow/tensorflow/commit/390611e0d45c5793c7066110af37c8514e6a6c54,2020,tf.raw_ops.SparseFillEmptyRowsGrad
+https://github.com/tensorflow/tensorflow/commit/0462de5b544ed4731aa2fb23946ac22c01856b80,2020,<tf.StringNGrams>
+https://github.com/tensorflow/tensorflow/commit/0c7876b6455706c9a34904914d1211458fb650a3,2020,tf.sequence_mask
+https://github.com/tensorflow/tensorflow/commit/91092cacbdb98e8b7a231bd7755011a209d77d28,2020,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/316df75a22af3d1a68c6b8ec312da05e66d0080b,2020,tf.Min
+https://github.com/tensorflow/tensorflow/commit/1a8805d3ed91f97aef068121778a9fd3ea4bf106,2020,<tf.data.service>
+https://github.com/tensorflow/tensorflow/commit/71d09fe58c93dcff3cbcdd75426e033d13b97488,2020,"<tf.data.OutputTimeLocked, tf.data.MapAndBatchDatasetOp>"
+https://github.com/tensorflow/tensorflow/commit/0824c3e1b6671d641d495ff736d83dd8bd53ad96,2020,tf.nest.assert_same_structure
+https://github.com/tensorflow/tensorflow/commit/ebfe3af239f8ee3bd45148ad2da9ff9e9db4edfa,2020,tf.linalg.expm
+https://github.com/tensorflow/tensorflow/commit/9b4f994681a00f741bf6dc1f033b588099064fc0,2020,tf.ragged.map_flat_values
+https://github.com/tensorflow/tensorflow/commit/5b35196035427b1a5a20a00bad40b710b3a9f1be,2020,tf.data
+https://github.com/tensorflow/tensorflow/commit/628954a351df5f286b9339b6b04eacd3e5d23230,2020,tf.sign
+https://github.com/tensorflow/tensorflow/commit/cc7e68b611392174c95e13fa8efa9d7bd21832df,2020,tf.math.segment_[*]
+https://github.com/tensorflow/tensorflow/commit/427df02dbbdcc8806c15325aa277c6891abcfd73,2020,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/ff95948cebdadc82e101aa7232f073390304e682,2020,tf.distribute
+https://github.com/tensorflow/tensorflow/commit/0f3763e26dea978bf51c8e5170f2dbe03a973d3c,2020,"<tf.ones, tf.quint8, tf.quint16>"
+https://github.com/tensorflow/tensorflow/commit/bcbe3dc2bb8d88d35c99d9ad02fa516e1e6af962,2020,<tf.BroadcastTo>
+https://github.com/tensorflow/tensorflow/commit/268838c2302738e42355387ee1786e03c5dd3596,2020,<tf.convert_to_tensor>
+https://github.com/tensorflow/tensorflow/commit/34f2782a79d339d2f59114210a0250ed6cdf8b7e,2020,tf.keras.Model
+https://github.com/tensorflow/tensorflow/commit/f6940f2195b5f3e017ab5b8618d1a6fd5d6671ac,2020,tf.constant
+https://github.com/tensorflow/tensorflow/commit/3acb88ed27b589449648b680c56c004b5ae9db86,2020,<tf.math.acos>
+https://github.com/tensorflow/tensorflow/commit/6e69fc67a04d80dcf79091440b2fb40c65910f3a,2020,<tf.custom_gradient>
+https://github.com/tensorflow/tensorflow/commit/fb6fbb469bf9b5999744d145c36b6e56931e50fe,2020,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/7eed107f52cde76a44a0e1f66896d259af1051bf,2020,<tf.image.flip_left_right>
+https://github.com/tensorflow/tensorflow/commit/171d688aaa9d2a88d4f1f90167943b6df515c00d,2020,tf.debugging.experimental.enable_dump_debug_info
+https://github.com/tensorflow/tensorflow/commit/e41091594526def265e8f77ca757e5059df90e5c,2020,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/61a0c3bccd0bf236f469203cf6e641d466e26c61,2020,<tf.data.group_by_window>
+https://github.com/tensorflow/tensorflow/commit/f6bf10607fc0bd00e94704e1ae20f06f34b81df3,2020,tf.data
+https://github.com/tensorflow/tensorflow/commit/426869b50f88fb3efccaa3553ec86ba1eedb6aa6,2020,"<tf.random.uniform, tf.math_ops.add>"
+https://github.com/tensorflow/tensorflow/commit/7bfbd3f7be0725ee9c220047fe85032cf126d92b,2020,tf.io.gfile.glob
+https://github.com/tensorflow/tensorflow/commit/e234c0a44e526dd79d782ad5623ea9f3f3298139,2020,tf.data
+https://github.com/tensorflow/tensorflow/commit/583b37ffc350ebc01312ccccc32895f0f9d1725e,2020,<tf.data.Dataset.padded_batch>
+https://github.com/tensorflow/tensorflow/commit/1afe51a60cbda6fc42b157f6393063052208da70,2020,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/c00af599966359e4e0090cfd5191441354052068,2020,tf.compat.v1.image.extract_glimpse
+https://github.com/tensorflow/tensorflow/commit/3b46518b3acafd8233f81bf4a46bbfc7e00ea3f7,2020,tf.data.service
+https://github.com/tensorflow/tensorflow/commit/e169cc55c714583d1c7fa25e4e8eeea5ad9f5a9c,2020,"<tf.GatherV2, tf.ApplyFtrl, tf.ApplyFtrlV2, tf.SparseApplyFtrlV2>"
+https://github.com/tensorflow/tensorflow/commit/0ee6b3a69da0f17d14d40e34b7008651012638da,2020,<tf.map_fn>
+https://github.com/tensorflow/tensorflow/commit/469de83a9c485563bfda0006f0dbc0673ee75f14,2020,tf.Rsqrt; tf.SoftmaxCrossEntropyWithLogits; tf.Sqrt
+https://github.com/tensorflow/tensorflow/commit/10396ff82a9216a3ce5c5770eefa85bc0a973d38,2020,<tf.BatchNormalization>
+https://github.com/tensorflow/tensorflow/commit/b620b4dfcb3679c6cc5caf847246f18dd7be650b,2020,tf.data
+https://github.com/tensorflow/tensorflow/commit/6044647af404b492a23328a1380295db34e16d23,2020,tf.data
+https://github.com/tensorflow/tensorflow/commit/3682620d2a85e622c7bb3af79e2f431e1f8f5938,2020,<tf.mlir_passthrough_op>
+https://github.com/tensorflow/tensorflow/commit/3f3ab6a249054b89947f33cadf308d685b0aff31,2020,<tf.data.assert_cardinality>
+https://github.com/tensorflow/tensorflow/commit/074b77f519c79c360b64feae028254eb7a1d2ce0,2020,"tf.Model.fit
+tf.Model.evaluate
+tf.Model.predict
+tf.data.Dataset.on_batch"
+https://github.com/tensorflow/tensorflow/commit/492e9304644dc3c1c34f895e067f82ac58c5efb5,2020,<tf.__init__>
+https://github.com/tensorflow/tensorflow/commit/aa103f369cbe29c4a985ed7c30eb614897c5919c,2020,tf.nest
+https://github.com/tensorflow/tensorflow/commit/4ad6716cf6759432421e27181ee024897fbacc20,2020,<tf.int64>
+https://github.com/tensorflow/tensorflow/commit/2c47fddbb807233ee491eea981365839effede00,2020,tf.data
+https://github.com/tensorflow/tensorflow/commit/ae1b33096400134dd7b7dfe768eb8998018cbcf5,2020,tf.data
+https://github.com/tensorflow/tensorflow/commit/be017d40cc835cdd5c7e03a982afb600f305d83c,2020,tf.data
+https://github.com/tensorflow/tensorflow/commit/1f3620eccfe10d2ed98211534c70972ea2e83afc,2020,"<tf.MergeOp, tf.SwitchOp, tf.SwitchNOp, tf.EnterOp, tf.ExitOp>"
+https://github.com/tensorflow/tensorflow/commit/20fbcbbf97a90b604ad197e2f52311a02e7fe592,2020,tf.linspace
+https://github.com/tensorflow/tensorflow/commit/9c0cd5cf893c56b8411f2bb6f62110f951106acf,2020,tf.function
+https://github.com/tensorflow/tensorflow/commit/56f4edbb5a78ae9d29d797f39e107a28c9bcf6e5,2020,<tf.io.gfile.glob>
+https://github.com/tensorflow/tensorflow/commit/01641aee30175224e14ff1bdccec749a260f1698,2020,<tf.cond>
+https://github.com/tensorflow/tensorflow/commit/88ba403d7f68385d96d102657f30826e56c9279c,2020,tf.strings.unicode_decode
+https://github.com/tensorflow/tensorflow/commit/90d563c8b7059f6fc6bfba9ec99f2337f04f5921,2020,tf.one_hot
+https://github.com/tensorflow/tensorflow/commit/8913c40a2cc4555dd15b603d49ff912796316d0d,2020,tf.slice
+https://github.com/tensorflow/tensorflow/commit/71389a324ac07fc068bb0aaa4c336dd25707fde0,2020,tf.sparse.cross
+https://github.com/tensorflow/tensorflow/commit/5f1ee72e97e09da9171b2c226d4f10f05e89a38a,2020,<tf.CategoricalCrossentropy>
+https://github.com/tensorflow/tensorflow/commit/ef5d540aaf43359580cdc23e0d007e30e0cc884e,2020,"tf.keras.optimizers.Blah  
+tf.keras.metrics.BinaryAccuracy"
+https://github.com/tensorflow/tensorflow/commit/5e15d37d4d1c092f1ff18ad340b7955c58e14a66,2020,tf.Optimizer.apply_gradients
+https://github.com/tensorflow/tensorflow/commit/9553f81edfd2b4f670ee2d05ca42132dc4d93f3c,2020,tf.identity
+https://github.com/tensorflow/tensorflow/commit/87c225ef0e8b1eac47dac471c8b6307ebd1f79be,2020,tf.RandomShuffle
+https://github.com/tensorflow/tensorflow/commit/0085ae0f6089bb04fc437eb79dd34bd0d19e3bda,2020,tf.SparseTensor
+https://github.com/tensorflow/tensorflow/commit/e52ccb7174ecfc04ccbb12b839beea2f95090970,2020,tf.stack
+https://github.com/tensorflow/tensorflow/commit/6e279f39ddc93fce138c22a61b4f1017fe484769,2020,<tf.ShapeOrHandleShape>
+https://github.com/tensorflow/tensorflow/commit/e6983d538f140552d18fff6377a80c45236f1e36,2020,<tf.strings.ngrams>
+https://github.com/tensorflow/tensorflow/commit/42b4b376f5f184cd0ab52b25255808f70e321a1f,2020,<tf.nn.relu>
+https://github.com/tensorflow/tensorflow/commit/6432ab596d5d39ac6b3172aef0471562717a081b,2020,<tf.SparseTensor>
+https://github.com/tensorflow/tensorflow/commit/34b72b3120e94224fe81dfa134fe7d99fc0fa29e,2020,tf.sparse.expand_dims
+https://github.com/tensorflow/tensorflow/commit/617297e60a2215be55f72037884dd479b227efdd,2020,"<tf.MaxPool, tf.MaxPoolGrad>"
+https://github.com/tensorflow/tensorflow/commit/2321f85910f63670b681496f6cfeb629e0f1a727,2019,tf.math.polyval
+https://github.com/tensorflow/tensorflow/commit/792efc53cb091fcb5229202290cc51505bcb9634,2019,tf.FIFOQueue
+https://github.com/tensorflow/tensorflow/commit/0e939c6fc766423aa958e021b914450665638c56,2019,"<tf.keras.Input, tf.keras.Model>"
+https://github.com/tensorflow/tensorflow/commit/4198b1c7315aef7b86b2c07c8b29d5c42791aaf1,2019,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/b6aa8ab5405a031aa43bb798770a18d098416b40,2019,"tf.RsqrtGrad, tf.Mul, tf.Div, tf.Constant"
+https://github.com/tensorflow/tensorflow/commit/93a68feb340aca45b3c30fddc02229fc1d667993,2019,"tf.data.Prefetch  
+tf.data.ParallelMap"
+https://github.com/tensorflow/tensorflow/commit/de014ee62647d05e7ecb603929682832b6d82624,2019,"tf.linalg.MatrixDiagV2  
+tf.linalg.matrix_diag_part_v2"
+https://github.com/tensorflow/tensorflow/commit/e5ca3f164ead9dc0f197e9f3cd5395209d2b968a,2019,tf.function
+https://github.com/tensorflow/tensorflow/commit/ec6dbd56d951fd719075dd661f709a9331a3bad3,2019,tf.config.experimental_connect_to_cluster
+https://github.com/tensorflow/tensorflow/commit/009aeece67b5580fe7f46a820b086fb23fa44abb,2019,tf.config.experimental_connect_to_cluster
+https://github.com/tensorflow/tensorflow/commit/e54ba169a1a593541fc79dd06228f3fd807c558b,2019,<tf.Tensor>
+https://github.com/tensorflow/tensorflow/commit/8ad07e25b1bcd8e3b4e241147dd97e073b058941,2019,<tf.data.Dataset.zip>
+https://github.com/tensorflow/tensorflow/commit/83569dfad98f7137dcf38593722fd16674ae632e,2019,<tf.compat.v1.optimizers.Optimizer>
+https://github.com/tensorflow/tensorflow/commit/75066fc6dbfd97029bca204af9395f2c179b686b,2019,<tf.distribute.Strategy>
+https://github.com/tensorflow/tensorflow/commit/268229dfedd5ee95ddb8028625a3b27ae5361a50,2019,<tf.compat.v1.optimizers.Optimizer>
+https://github.com/tensorflow/tensorflow/commit/eebc5e7bf8e2113ee5417bbc03f61f4027ec981b,2019,<tf.keras.losses.SparseCategoricalCrossentropy>
+https://github.com/tensorflow/tensorflow/commit/c24e01b57f3a96dbfaff273c0e4154d413a35bbc,2019,tf.linalg.eigvalsh
+https://github.com/tensorflow/tensorflow/commit/95520a9fa608d48778108c4b2d3439b2f0539658,2019,"<tf.gradient, tf.watched_variables>"
+https://github.com/tensorflow/tensorflow/commit/6d02d5ce80c6d6370d132867b06b3b9910fc7461,2019,<tf.data.experimental.parallel_interleave>
+https://github.com/tensorflow/tensorflow/commit/8ef501423b13af6cfb903c2f9e6dc020a2f18076,2019,"tf.function, tf.RaggedTensor, tf.SparseTensor"
+https://github.com/tensorflow/tensorflow/commit/5b9891f87af36dec40a480685a7f0f05925ae7e4,2019,tf.function
+https://github.com/tensorflow/tensorflow/commit/ab0a5278d81ef34096775d5d56f11694cca2a785,2019,tf.assert_equal
+https://github.com/tensorflow/tensorflow/commit/261fef924c12b8b0e7e95d1197cd8d50f4c641ec,2019,tf.data.Dataset.from_tensor_slices
+https://github.com/tensorflow/tensorflow/commit/a5afbfbd7a03596d74e99e6f65c1809a0561732b,2019,"<tf.function, tf.function(f), call_for_each_replica>"
+https://github.com/tensorflow/tensorflow/commit/d4ee1751242f5ab877abe9407da76c1098a4297c,2019,<tf.functions>
+https://github.com/tensorflow/tensorflow/commit/ccfd3d9cad5f7a2ce85f30a09d14331fca8d8218,2019,tf.ragged.stack()
+https://github.com/tensorflow/tensorflow/commit/11fbea06817c761bc4f9dc3deec7bb127d5e14eb,2019,"tf.data.MultiDeviceIterator  
+tf.data.MultiDeviceIteratorGetNextFromShardOp  
+tf.data.IteratorGetNextOp"
+https://github.com/tensorflow/tensorflow/commit/e5198d4c0374c61dec7f513b5ad068955f332368,2019,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/804f02c0eed678936f3b6fc3c1295583075d5240,2019,tf.data.MultiDeviceIterator
+https://github.com/tensorflow/tensorflow/commit/f57090f0ee60b76c1a08933e3f78850abe5a7330,2019,tf.data
+https://github.com/tensorflow/tensorflow/commit/a2880ea4e098fdd5b0a1dbe9d4be9631a6e4dcd9,2019,tf.data
+https://github.com/tensorflow/tensorflow/commit/8bbc0392bc2e843df07de38d8ab66414fbfa3e82,2019,"tf.contrib.seq2seq.dynamic_decode
+tf.contrib.seq2seq.BeamSearchDecoder"
+https://github.com/tensorflow/tensorflow/commit/18c2cf989a2263ee212fbd5ac0b3085d9450b80a,2019,"tf.keras, tf.estimator"
+https://github.com/tensorflow/tensorflow/commit/8f7ccaf675ab44d1add3e336f5884af6e8d7329f,2019,"<API(s) Name>
+tf.assert_none_equal
+tf.assert_less
+tf.assert_less_equal
+tf.assert_greater
+tf.assert_greater_equal
+tf.assert_negative
+tf.assert_non_negative
+tf.assert_positive
+tf.assert_non_positive
+tf.assert_equal"
+https://github.com/tensorflow/tensorflow/commit/205e2479ac059b0404e68855e84278569dbdf79e,2019,tf.SparseCategoricalCrossentropy
+https://github.com/tensorflow/tensorflow/commit/516b1dedf586acd5fb117f19596a6dad2b5c18b5,2019,<tf.identity>
+https://github.com/tensorflow/tensorflow/commit/eb625fb51a302dc812c97879697642db9aa8cfc1,2019,tf.sparse.reorder
+https://github.com/tensorflow/tensorflow/commit/a9ee94137705eed8cbbdde1b9d7c38e6f992f433,2019,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/fca2509e3b3d6252fa34f6e35d8a359c0e5cbf64,2019,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/02874a2e4272733cd2148ab9498f3ee4a06dc2da,2019,<tf.data.TFRecordWriter>
+https://github.com/tensorflow/tensorflow/commit/9770648bd385639feeaebfbb9b38fb6da9d50914,2019,<tf.range>
+https://github.com/tensorflow/tensorflow/commit/1bacd3b540f9701935c47f3d6f03ca5b3e98e93e,2019,tf.saved_model.load_v2
+https://github.com/tensorflow/tensorflow/commit/2b681a72d1e785b3d3cbdc9f3f4fded627665f40,2019,tf.sparse.to_dense
+https://github.com/tensorflow/tensorflow/commit/98b3e77f5b2dce69290bdf082a37193755447023,2019,<tf.data.Dataset.window>
+https://github.com/tensorflow/tensorflow/commit/7efc61175c540a56b03e829ec917ce9efc1f06f9,2019,<tf.sysconfig.get_link_flags>
+https://github.com/tensorflow/tensorflow/commit/943a1757d523bfe46d54ee4f51e67d948ee06bb6,2019,tf.summary.create_file_writer
+https://github.com/tensorflow/tensorflow/commit/15a56964c839ab9723550111a8d4a90477345e51,2019,"tf.strings.bytes_split, tf.strings.to_bytes"
+https://github.com/tensorflow/tensorflow/commit/467730fe90282a75f15f67d701b278e86cfad65e,2019,<tf.keras.losses.BinaryCrossentropy>
+https://github.com/tensorflow/tensorflow/commit/68d592a82323ac3c857a146ba5b49a169abc53ef,2019,<API(s) Name> tf.while_loop
+https://github.com/tensorflow/tensorflow/commit/53a684afedeb5c7cdcd609e52da7833f0eb3f506,2019,<tf.saved_model.load>
+https://github.com/tensorflow/tensorflow/commit/b8b7f916f79dce0f6d7c65aabf7f6b0c8092574a,2019,<tf.linalg.band_part>
+https://github.com/tensorflow/tensorflow/commit/5228dca4f7d4fcb4fb04cbc93630756aee61ed98,2019,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/003e400902b85626d32727589142d12269306703,2019,tf.data.GetNext
+https://github.com/tensorflow/tensorflow/commit/b136fa200189704d969da4b99f2c7b9cb843e80f,2019,tf.data.scan
+https://github.com/tensorflow/tensorflow/commit/b11b1b11f31f44d04ddc7dbd0f48abfdec5ef6bd,2019,<tf.histogram_fixed_width_bins>
+https://github.com/tensorflow/tensorflow/commit/14f0c841dc5e670e392621d3e2092b45600070ba,2019,tf.dtypes.as_dtype
+https://github.com/tensorflow/tensorflow/commit/51f8f449980797a53a8e9e9b25a14f6f7a5979ba,2019,"tf.partial, tf.function"
+https://github.com/tensorflow/tensorflow/commit/5085774f0f4821399f7b245c8044ba6e206116f4,2019,"<tf.data.experimental_slack, tf.data.optimize_dataset_op>"
+https://github.com/tensorflow/tensorflow/commit/bebe84b41b01f94cbd293560280ce964e814b9ed,2019,tf.data.Datasets
+https://github.com/tensorflow/tensorflow/commit/e4e7043cefd543168c78c46f770a32aa90ce25de,2019,tf.sparse.segment_sum
+https://github.com/tensorflow/tensorflow/commit/2c0e78a92528b1a66419591d3f1c8fc8dd1e2a34,2019,tf.distribute.MirroredStrategy
+https://github.com/tensorflow/tensorflow/commit/30e14580317ef681f08ee8e65ade9faf373f5269,2019,tf.data.Dataset.__iter__
+https://github.com/tensorflow/tensorflow/commit/0b0bc908dffed711e59c0676d6dcbf8c90f721a0,2019,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/dc563ad0fcee078ad1057b493bf44a75886dd712,2019,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/ba63891c8b2eb4776a0a2cac65df844bb141c37b,2019,<tf.py_function>
+https://github.com/tensorflow/tensorflow/commit/7d26b003be9b5fb1e04baa4437fc1aa37d53af18,2019,<tf.saved_model.load>
+https://github.com/tensorflow/tensorflow/commit/4224db98ef70e417663ae8c0330f069db33f6108,2019,"tf.GradientTape  
+tf.gradients  "
+https://github.com/tensorflow/tensorflow/commit/7787d7f06c78b358289066a758441d79d496eeb9,2019,tf.data
+https://github.com/tensorflow/tensorflow/commit/5b0b71cb83e9091b5af9d5c3e209d761710333c7,2019,tf.nest
+https://github.com/tensorflow/tensorflow/commit/5c4d1c87a2794ed80d8c1da8bb6fe8b6eb86242a,2019,<tf.reduce_prod> <tf.shape> <tf.size>
+https://github.com/tensorflow/tensorflow/commit/52c7b0d5972082b60464dc4cde5897771ff2a834,2019,<tf.where>
+https://github.com/tensorflow/tensorflow/commit/6c3cbe44344e7dfed21872b5effcec4a48f4cff3,2019,tf.image.ssim_multiscale
+https://github.com/tensorflow/tensorflow/commit/4fcf0090a739951d52d30cd91deee4cf60ce3a8b,2019,<tf.matmul>
+https://github.com/tensorflow/tensorflow/commit/f54bc43f1117004208df6da34e422bf628fc3c23,2019,<tf.functions>
+https://github.com/tensorflow/tensorflow/commit/7fceb88614cc84eba27e3a9473173951c901b496,2019,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/7ae75b2cd126f17fe27d3104d5e5629bf0805251,2019,<tf_logging.warn>
+https://github.com/tensorflow/tensorflow/commit/fd38a8e44d036a0e051a7f5846b6b631948db77a,2019,tf.test.is_gpu_available
+https://github.com/tensorflow/tensorflow/commit/abff184efa9e121ceff957927e3c0feb6f2521f3,2019,tf.gather_nd
+https://github.com/tensorflow/tensorflow/commit/31ab70da80d36cffada40371af6e85b1aab5dc1e,2019,<tf.data.shuffle>
+https://github.com/tensorflow/tensorflow/commit/097fc1cdef5c56d4bb239a5a44bf950f0b1c4d37,2019,<tf.contrib.summary.summary_writer_initializer_op>
+https://github.com/tensorflow/tensorflow/commit/29080afcfefb2fec95c211418c6a59bc65a5291e,2019,"<tf.FusedBatchNorm, tf.Shape>"
+https://github.com/tensorflow/tensorflow/commit/5770e124af377ec9762f23fb5d648233b4c71aca,2019,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/5f1148a30d3164dc2a47eba57f685aa5030f099e,2019,tf.function
+https://github.com/tensorflow/tensorflow/commit/1fe3db7e018a7f36aea5388a3f33348b0cb76f57,2019,tf.distribute.Strategy.update
+https://github.com/tensorflow/tensorflow/commit/3054d0086cca1b0f0ff669396856ad296095b247,2019,"<tf.numpy_function, tf.py_func>"
+https://github.com/tensorflow/tensorflow/commit/6c4cccfc96a537c04ee58f5035ff214c7c7ae366,2019,tf_inspect
+https://github.com/tensorflow/tensorflow/commit/7a056bf82591cd92a0e918e444b2e44e076840c1,2019,"tf.resize_images_v2, tf.ScaleAndTranslateOp, tf.ScaleAndTranslateOpGrad"
+https://github.com/tensorflow/tensorflow/commit/728c05d18185956c63f1acb9c496dd0abf276736,2019,tf.cond
+https://github.com/tensorflow/tensorflow/commit/6108cbd1dbfbb0ac9dd9d88ada1064925b7f5b19,2019,"tf.rnn.reset_states, tf.gather"
+https://github.com/tensorflow/tensorflow/commit/add7a1a911b430ed14f8b6a1609dd3796587d131,2019,<tf.contrib.proto.*>
+https://github.com/tensorflow/tensorflow/commit/d3cb711adaafd24005ae3de2009bd24769da3d71,2019,<tf.summary.create_file_writer>
+https://github.com/tensorflow/tensorflow/commit/ebcc4f6887df1ad1a2ffdb2dc2da1f541e24e2af,2019,tf.saved_model.load()
+https://github.com/tensorflow/tensorflow/commit/135fee16857a216e47add40fa106b9f7141891fb,2019,tf.gradients
+https://github.com/tensorflow/tensorflow/commit/826027dbd4277a2636fc2935ed245700fd01e7cd,2019,"<tf.summary.SummaryWriter, tf.summary.create_file_writer, tf.contrib.summary.create_file_writer>"
+https://github.com/tensorflow/tensorflow/commit/78e5608e0580a591b1917a54b57177c7eead4437,2019,tf.dtypes.as_dtypes()
+https://github.com/tensorflow/tensorflow/commit/9d508106b32eb6518912501d29a80ff9967dfe05,2019,<tf.split>
+https://github.com/tensorflow/tensorflow/commit/27810c92b711afa119311ed63a66a14babe871c4,2019,tf.contrib.cudnn_rnn.CudnnCompatibleLSTMCell
+https://github.com/tensorflow/tensorflow/commit/384312df9e39c8935fdbaca1fc08df8f271aaf35,2019,<tf.contrib.summary.create_file_writer>
+https://github.com/tensorflow/tensorflow/commit/ec045be24932647216944801fd355ea252690126,2019,<tf.Variable>
+https://github.com/tensorflow/tensorflow/commit/a87d55579284038602c21a3cfebb04e394d3ba76,2019,<tf.get_static_value>
+https://github.com/tensorflow/tensorflow/commit/4f787752f93e171cf8554957e40f29667471275a,2019,tf.contrib.summary
+https://github.com/tensorflow/tensorflow/commit/745028b1fba059062128647ea6dfa8cd8021dfea,2019,tf.function
+https://github.com/tensorflow/tensorflow/commit/cc83184cad45f5ccf55d501a5217377e8b5de044,2019,<tf.function>
+https://github.com/tensorflow/tensorflow/commit/6617f31d511aa1ed1d868d96bd4c3da47e0e78ae,2019,<tf.TFRecordDataset>
+https://github.com/tensorflow/tensorflow/commit/a3d38e4805ab9b3d7c0d4e8ceef8f90dbaca5e78,2019,tf.train.Checkpoint
+https://github.com/tensorflow/tensorflow/commit/c639c153a093a24c382b8fdff56d8b3ee77cfd53,2019,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/ebb2e9f4efe0eb3ff54d159b536ad99b06c8a6fe,2019,"tf.device()  
+tf.colocate_with()"
+https://github.com/tensorflow/tensorflow/commit/9f75ff921b59d12b17afdc33597f190b646e6c01,2019,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/a2652de97e2f38dde953c406b63d10e6f5047769,2019,tf.constant
+https://github.com/tensorflow/tensorflow/commit/5b16e7079aa7bb8ae6b6db9d74f21afa92bfccbf,2019,<tf.while_loop>
+https://github.com/tensorflow/tensorflow/commit/55f469ec29bb7f0a019df6043baca47a5f9511fe,2019,tf.function
+https://github.com/tensorflow/tensorflow/commit/21734ca1e7f61ab8d62119b5a99be2926da58a7c,2019,tf.data
+https://github.com/tensorflow/tensorflow/commit/fe342218ad5d083b825f9347f5c35d929a8d745b,2019,tf.data
+https://github.com/tensorflow/tensorflow/commit/ea84f664dd7d4405240da8797bfd21b7bd860aa1,2019,tf.data.MultiDeviceIterator
+https://github.com/tensorflow/tensorflow/commit/a6de72009482036ef3c367e59a267ca30d0903ee,2019,"tf.distribute.Strategy, tf.make_input_fn_iterator"
+https://github.com/tensorflow/tensorflow/commit/5cfd3b3876ea52608b3a64740d71eeef5ffbbec8,2019,tf.data
+https://github.com/tensorflow/tensorflow/commit/3e85e82fd5cd6b3100967cae899c2229636c2e95,2019,<tf.ragged.constant>
+https://github.com/tensorflow/tensorflow/commit/563ff22e7f6c9431072d2d9af6e876b3b4843920,2019,tf.distribute.Strategy
+https://github.com/tensorflow/tensorflow/commit/d7e56c9b27d0e712bd268e1c06d57beb481083e0,2019,tf.print
+https://github.com/tensorflow/tensorflow/commit/5a02334ec90f2c6a91418ae14f3f28428fd52249,2018,<tf.Variable>
+https://github.com/tensorflow/tensorflow/commit/323f3eb4c2f15c713e992881ea8854069f2433f4,2018,tf.data.MapAndBatchDataset
+https://github.com/tensorflow/tensorflow/commit/3951cc626a924b3ebddfce7cfbb08c5d513c08d6,2018,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/e468989d1735d16850a34335aaff13b117660fed,2018,tf.data.PrivateThreadPoolDatasetOp
+https://github.com/tensorflow/tensorflow/commit/bb425754adacc784c2ad50ed94307eaa03626b41,2018,tf.data.experimental.unbatch()
+https://github.com/tensorflow/tensorflow/commit/1d8c26069ce359be3d36f0a323993e919c0f6d73,2018,tf.get_variable
+https://github.com/tensorflow/tensorflow/commit/c1399d6459f989740dcbce96582fb380716c0f1f,2018,tf.data
+https://github.com/tensorflow/tensorflow/commit/fd8ef0d3e66d2a3321b0d4e345b2f103b0c1f29f,2018,tf.constant
+https://github.com/tensorflow/tensorflow/commit/61a1032a6920c948671c6b6d698dda8605af079c,2018,tf.enable_eager_execution()
+https://github.com/tensorflow/tensorflow/commit/48ad58002361d08c3cc9bbcfeda68de669f22fad,2018,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/f36951ea5686f6ecc975655a950d0d512eb9d691,2018,tf.data
+https://github.com/tensorflow/tensorflow/commit/6695dab0104e311c9221cd47bb8685d840709da2,2018,tf.nn.zero_fraction
+https://github.com/tensorflow/tensorflow/commit/670ecb73f4e2c99ff7804760ac66051319dece74,2018,tf.data
+https://github.com/tensorflow/tensorflow/commit/4513f1910bf435c4cc46d0f0dfb3e0641286ce21,2018,tf.einsum
+https://github.com/tensorflow/tensorflow/commit/ead4fda06535ce547d014fba1656ae53f0b64996,2018,tf.train.Saver()
+https://github.com/tensorflow/tensorflow/commit/19d8dbb7df90a2caf8f07e407a658640be4a99c2,2018,<tf.train.init_from_checkpoint>
+https://github.com/tensorflow/tensorflow/commit/c1093a3757224257fed0f7a1959d0fc99d5c757f,2018,tf.train.init_from_checkpoint
+https://github.com/tensorflow/tensorflow/commit/775188c321335b1053fd1fb174efd607e5173d59,2018,"<tf.nn.softmax, tf.argmax>"
+https://github.com/tensorflow/tensorflow/commit/09b0fc199129e0f487a39741bdf674cf09035cbc,2018,"<tf.data.Dataset.shuffle(), tf.data.experimental.shuffle_and_repeat(), tf.data.experimental.RandomDataset>"
+https://github.com/tensorflow/tensorflow/commit/1c278d84421c9abac9b52f179cdb4ce397be83db,2018,<tf.data.experimental.unbatch>
+https://github.com/tensorflow/tensorflow/commit/54cde61fbf473270ce19f8b40e9511373fbc12c7,2018,tf.data.experimental.unbatch()
+https://github.com/tensorflow/tensorflow/commit/9f42ebd5982688511ecc0ef7d23de02b64d8dd1e,2018,"tf.keras.Model.fit(), tf.data"
+https://github.com/tensorflow/tensorflow/commit/0e926947421cc47546efb7f7e2dd8505fbe0ac45,2018,tf.data
+https://github.com/tensorflow/tensorflow/commit/72b927960625cd2920fea06e242df1ff0d220c77,2018,<tf.convert_to_tensor>
+https://github.com/tensorflow/tensorflow/commit/cb926e1ed73d6d8f7158cdabf5c4265a921a407b,2018,tf.train.Saver()
+https://github.com/tensorflow/tensorflow/commit/88cfc00ad2a33ef1440d8474fa830bce44c13056,2018,"<tf.data.ParallelMapIterator, tf.data.CapturedFunction.RunAsync>"
+https://github.com/tensorflow/tensorflow/commit/eeb477cf661a16ee39e0621fd225d1f15859ffc8,2018,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/e179c17b96bcb855b2056f60851a24551b4189a6,2018,<tf.Variable>
+https://github.com/tensorflow/tensorflow/commit/d3458112ad5a1612ec6c77f7de4a0e0ec801e882,2018,"tf.contrib.data.CsvDataset, tf.decode_csv"
+https://github.com/tensorflow/tensorflow/commit/97d7281354af43ed5fd53ebf729cea76de84acdb,2018,"tf.split  
+tf.dynamic_partition  
+tf.unstack"
+https://github.com/tensorflow/tensorflow/commit/72bbefcf1f80cd64cf873b69953a90657dabab18,2018,tf.Variables
+https://github.com/tensorflow/tensorflow/commit/2007f9752e116c46cb82c08a54f5c5e711a7c59d,2018,<tf.nn.depthwise_conv2d>
+https://github.com/tensorflow/tensorflow/commit/8e5c118ce835e0b8625ef073e2f4d978c70498ae,2018,<tf.while_loop>
+https://github.com/tensorflow/tensorflow/commit/6e26dde0d193a8d21909b7b6c32953fae375093e,2018,tf.data.Dataset.concatenate()
+https://github.com/tensorflow/tensorflow/commit/9158b1b83a0128fc41bfccd80fe26d8231fe958b,2018,tf.data.Dataset.map
+https://github.com/tensorflow/tensorflow/commit/c632892f722eda3de923850e23bfc371f898a8d1,2018,tf.while_loop
+https://github.com/tensorflow/tensorflow/commit/35535e6313c7c35a851466efd67be0ec1df14c9e,2018,tf.contrib.lookup
+https://github.com/tensorflow/tensorflow/commit/cea293f00cd8710e439937b048745c14ac52b3ff,2018,<tf.matching_files>
+https://github.com/tensorflow/tensorflow/commit/fd7c6bd68d9c333b457b3692eef102088fbb5874,2018,<tf.nn.relu6>
+https://github.com/tensorflow/tensorflow/commit/66dd14547dd9edb4eba13d22361ddad4a1cd3353,2018,tf.data.Dataset.list_files
+https://github.com/tensorflow/tensorflow/commit/f0b3a02cb76be13364d0247b0162c23482778f9c,2018,<tf.exp>
+https://github.com/tensorflow/tensorflow/commit/2ff8c85dfca8afb2a4129e8fa86802bd5f25a1c6,2018,<tf.Print>
+https://github.com/tensorflow/tensorflow/commit/a398d1c1a47ad58ab642dc70d1d281f5b77b07de,2018,<tf.app.run>
+https://github.com/tensorflow/tensorflow/commit/2bd9b11055c2ca5120a1ab94c3d6d94ee63c6215,2018,tf.Print
+https://github.com/tensorflow/tensorflow/commit/92f13f24d95360806c31983877f556834d155cbb,2018,"<tf.convert_to_tensor, tf.constant>"
+https://github.com/tensorflow/tensorflow/commit/498447e84cab4e8fbfa4e4b8288144f41650c6c9,2018,tf.data.contrib.get_single_element
+https://github.com/tensorflow/tensorflow/commit/6bd07b74e0129d985950ff034f8eb17fd6455669,2018,tf.HParams
+https://github.com/tensorflow/tensorflow/commit/cb401f09be5b816e704a70babc0facad63e84636,2018,tf.tile
+https://github.com/tensorflow/tensorflow/commit/b653d1ace6e1a7d9e063d1793b6cde36579426a2,2018,<tf.matmul>
+https://github.com/tensorflow/tensorflow/commit/4d8a66c5b29428b709f4f54b566a44902ea8173e,2018,tf.contrib.eager.py_func
+https://github.com/tensorflow/tensorflow/commit/da68f5f45b6b568fecffd53cba0ce382f0d034f9,2018,tf.image.decode_image
+https://github.com/tensorflow/tensorflow/commit/ef1555172d452539d749340cdb076f0a24f6c505,2018,<tf.data.Dataset.padded_batch>
+https://github.com/tensorflow/tensorflow/commit/e86d969c07c14f8790f364d0b48724848db48d4e,2018,tf.keras.Models
+https://github.com/tensorflow/tensorflow/commit/d7c971c1563cb61f0df6dc6ce3c89641ca0a5d8a,2018,"tf.losses.sparse_softmax_cross_entropy  
+tf.losses.softmax_cross_entropy"
+https://github.com/tensorflow/tensorflow/commit/59cdb17757a66cd328dd71048ddcd9237218f53a,2018,<tf.image.random_flip_*>
+https://github.com/tensorflow/tensorflow/commit/44311bc337f88547722f2c8bc8158cc1b8ae2923,2018,tf.contrib.summary.create_file_writer()
+https://github.com/tensorflow/tensorflow/commit/92416e64f1a33e2bb65dd65b61f4544d1cdd9704,2018,tf.pad
+https://github.com/tensorflow/tensorflow/commit/b02c0b2046ade2900a17640475ca7687311c52fe,2018,tf.data.map_and_batch
+https://github.com/tensorflow/tensorflow/commit/fdf36165090f465cc2464de26c939237c45155a3,2018,tf.keras
+https://github.com/tensorflow/tensorflow/commit/5828842e5956825a65a5423b1ca503f72b084e62,2018,<tf.make_template>
+https://github.com/tensorflow/tensorflow/commit/1744b8c0519cec31764d205b813bd4fd6028cbf9,2018,<tf.reduce_sum>
+https://github.com/tensorflow/tensorflow/commit/ed325becde6bf8f8c86cc39c977ac32b1ea7ef5d,2018,"tf.nn.avg_pool, tf.nn.max_pool"
+https://github.com/tensorflow/tensorflow/commit/090d21c18f16303e740136e8a4e0f62c63df4e10,2018,<tf.layers>
+https://github.com/tensorflow/tensorflow/commit/f63750645826df65b05cad505546a86f0e347674,2018,"<tf.gradients(), tf.while_loop>"
+https://github.com/tensorflow/tensorflow/commit/e31dc1c13994d85a95689f0f61092489ebaa83cf,2018,tf.while_loop
+https://github.com/tensorflow/tensorflow/commit/eb31cf8a62739d4df4c84b8edeccbe756b70616d,2018,<tf.train.Checkpoint>
+https://github.com/tensorflow/tensorflow/commit/f185600509b46414f05dec70df080c7a3d62c58c,2018,tf.nn.conv3d_transpose
+https://github.com/tensorflow/tensorflow/commit/0c2ca00e1082ab2692af68af183083e41393f6c4,2018,tf.constant
+https://github.com/tensorflow/tensorflow/commit/9a9a90e9f170045e752805b390064c25fcc69573,2018,<tf.contrib.signal.linear_to_mel_weight_matrix>
+https://github.com/tensorflow/tensorflow/commit/9c2e04411ec1dbcf7aaf604dbc218489928bb2cc,2018,"<tf.contrib.layers.conv2d, tf.contrib.layers.conv3d, tf.contrib.slim.conv2d, tf.contrib.slim.conv3d>"
+https://github.com/tensorflow/tensorflow/commit/6accb84d8437cb915e23d83673c233f5084aad68,2018,"tf.contrib.summary.create_file_writer  
+tf.contrib.summary.SummaryWriter  
+tf.contrib.summary.flush"
+https://github.com/tensorflow/tensorflow/commit/b874783ccdf4cc36cb3546e6b6a998cb8f3470bb,2018,"tf.Dimension, tf.DType"
+https://github.com/tensorflow/tensorflow/commit/f654b0d15af364d6f43d22a179fa05d20650fe9a,2018,tf.map_fn
+https://github.com/tensorflow/tensorflow/commit/789e442513e85ab1caeb1e03997b0aafa3cd76d7,2018,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/ef6552b544b3c3bf6808be807b30dd9bd4f19669,2018,<tf.data.FunctionBufferingResource>
+https://github.com/tensorflow/tensorflow/commit/5baa43999877aeb7ec070374e579b291b1efe0cf,2018,<tf.layers.conv3d>
+https://github.com/tensorflow/tensorflow/commit/6bb4f7abb03a7904fecc5b61e3ed37e9b663d6b0,2018,tf.contrib.data.group_by_window
+https://github.com/tensorflow/tensorflow/commit/c7334fef9d1173525f6111b8ab50360b6531d76b,2018,"tf.data.cache  
+tf.data.take  
+tf.data.repeat"
+https://github.com/tensorflow/tensorflow/commit/259525189f41eaa1c08e0baa0dbac8d2cf3a15ef,2018,tf.gather
+https://github.com/tensorflow/tensorflow/commit/198bf16225b3224e9af6bafd9f1b4c1433557281,2018,<tf.gather>
+https://github.com/tensorflow/tensorflow/commit/48178e04e3ef764cda5c9746637e978b080fabf2,2018,tf.keras.utils.plot_model
+https://github.com/tensorflow/tensorflow/commit/42e9736390fe9887ae3f3445ecc06ec0a4693193,2018,tf.contrib.data.map_and_batch
+https://github.com/tensorflow/tensorflow/commit/10be1f2377bf7aad1a4cfa306277c53e44493a57,2018,<tf.gfile.Exists>
+https://github.com/tensorflow/tensorflow/commit/4b0bb6d5d01c0b2aa89df11b45ff8d728d4c2059,2018,<tf.keras.utils.plot_model>
+https://github.com/tensorflow/tensorflow/commit/cb19a43c0510b36b7f95886650f537303700404b,2018,tf.data.IteratorGetNext
+https://github.com/tensorflow/tensorflow/commit/ab1cab51265f8b0fb38d007a1d3d93a857ca864d,2018,tf.strided_slice()
+https://github.com/tensorflow/tensorflow/commit/c3206ba3f331f135e26156c72eaabdaa5c8c2883,2018,<tf.nn.sparse_softmax_cross_entropy_with_logits>
+https://github.com/tensorflow/tensorflow/commit/7129d6a0746d0798e0a3015f645697b0fee12c37,2018,tf.reduce_sum
+https://github.com/tensorflow/tensorflow/commit/6006f46dd7531b112360b831aa61de6c46618166,2018,tf.data.ParallelMapDataset
+https://github.com/tensorflow/tensorflow/commit/2a104e284c455615ba68c714e60a69f458be56ba,2018,<tf.metrics.mean_tensor>
+https://github.com/tensorflow/tensorflow/commit/be862d5b91e9b9044f4e028dcdae0b6ad283e8b4,2018,tf.data.Dataset.from_generator
+https://github.com/tensorflow/tensorflow/commit/a805116366eddcaa8eb6a602398f8efae076e0b5,2018,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/c829c71afb14cd41079231b3c3f33fad5e119679,2018,tf.data
+https://github.com/tensorflow/tensorflow/commit/1eca578242eda2db93cdb2509413996e9294751e,2018,<tf.data>
+https://github.com/tensorflow/tensorflow/commit/75009033eafdc63b649fb65c701e5770d98eda58,2018,tf.keras
+https://github.com/tensorflow/tensorflow/commit/24134b189e9846ab222ef9723d9b030dfd665ed7,2018,tf.data
+https://github.com/tensorflow/tensorflow/commit/1bbfc0c9cebd1808fa46024f738e56d10d57d97e,2018,tf.data
+https://github.com/tensorflow/tensorflow/commit/77e6a452188e83ae4498cc3ae23e20e60061b367,2018,tf.data
+https://github.com/tensorflow/tensorflow/commit/4ab2d8531c461169cd6a33bc0fef1129b419e9df,2018,<tf.manip>
+https://github.com/tensorflow/tensorflow/commit/e2b93e6c45fc9e0745ec4b70a7ba0d1b86f42c94,2018,<tf.sample_distorted_bounding_box>
+https://github.com/tensorflow/tensorflow/commit/aa0f7fabfcfa43c2a95deb8b9b73bccd9ad7531d,2018,tf.metrics.mean_per_class_accuracy
+https://github.com/tensorflow/tensorflow/commit/7c53bc7fbec18e8c6157832d89737bcc881ecfed,2018,<tf.decode_gif>
+https://github.com/tensorflow/tensorflow/commit/a73a6cff9aa1ee3a6db00cbeccbebe192372b05a,2018,tf.pow
+https://github.com/tensorflow/tensorflow/commit/c9096fd166a9d7fdb62c6cb747a74edb73630b0c,2018,tf.while_loop
+https://github.com/tensorflow/tensorflow/commit/6e56e195d29f33c42b4b58f83c508544e2bb59a7,2018,tf.contrib.ffmpeg.decode_video
+https://github.com/tensorflow/tensorflow/commit/6be3f1328f4dfaf09dbc92ac45df1d5d1b83b33e,2018,tf.while_loop()
+https://github.com/tensorflow/tensorflow/commit/40d1b257636a0b510dba59aff0af54e42d602313,2017,<tf.bitwise.bitwise_and>
+https://github.com/tensorflow/tensorflow/commit/489710701b1cded21ed4bf67e556aceea3bce340,2017,<tf.reverse>
+https://github.com/tensorflow/tensorflow/commit/3d854a744d1236944eb0ecdc172b1825ace565e1,2017,tf.contrib.data.get_single_element
+https://github.com/tensorflow/tensorflow/commit/b7308e3bd69349e9023497948a6bf55d3b0895d9,2017,<tf.cond> <tf.contrib.summary> <tf.layers.util.smart_cond>
+https://github.com/tensorflow/tensorflow/commit/60af864e46c207d136dd241c0705210ca5a4dbc7,2017,tf.data
+https://github.com/tensorflow/tensorflow/commit/2013b330b3c8bf79a4fbab7c49b8fef30411b6d0,2017,"tf.decode_jpeg  
+tf.image.decode_jpeg"
+https://github.com/tensorflow/tensorflow/commit/d8d43898b972a1224db50035a771e82985f60035,2017,"tf.Tensor, tf.Session"
+https://github.com/tensorflow/tensorflow/commit/87f7aa9b1da2614b225e3e457aed10485f05297a,2017,"<tf.data.DeserializeSparse, tf.data.DeserializeSparseMany, tf.data.TakeManySparseFromTensorsMap, tf.SparseTensor, tf.parse_single_example>"
+https://github.com/tensorflow/tensorflow/commit/c154d4719eea88e694f4c06bcb1249dbac0f7877,2017,tf.py_func
+https://github.com/tensorflow/tensorflow/commit/a09c68eafb47e8f26c4f88ee36b03f5c916d967d,2017,"<tf.import_graph_def, tensorflow::ImportGraphDef>"
+https://github.com/tensorflow/tensorflow/commit/dd58a908333de37b09372acb80c0c412d90a7125,2017,"tf.data.Dataset.make_one_shot_iterator  
+tf.data.Dataset.make_initializable_iterator"
+https://github.com/tensorflow/tensorflow/commit/3aaa1d3a0dcc52dd83aa9f1ad308e9da47556583,2017,"<tf.keras, tf.layers>"
+https://github.com/tensorflow/tensorflow/commit/2d0a506db7cd089fd9b7c59a6ed0b05ab65149f0,2017,"<tf.nn.softmax, tf.nn.log_softmax, tf.nn.l2_normalize>"
+https://github.com/tensorflow/tensorflow/commit/c43d777b56a17832f7de288d0fe966bf537ffeb7,2017,<tf.float16>
+https://github.com/tensorflow/tensorflow/commit/6488286b2678dddd7c8ed534d92f228bd4c532c9,2017,"<tf.keras, tf.layers>"
+https://github.com/tensorflow/tensorflow/commit/0b44f04ccfc2cdde66191cdd0de00966979ddec1,2017,<tf.data.Dataset.from_generator>
+https://github.com/tensorflow/tensorflow/commit/25bd6f7a6717f5253b6f015bfab93c7e12426397,2017,tfcompile_flags
+https://github.com/tensorflow/tensorflow/commit/4e69e02241067129379f73dd4fefe57f0a12bdc9,2017,<tf.import_graph_def>
+https://github.com/tensorflow/tensorflow/commit/83dbec4a24d0baae66e1652c35729d9d0de09c6a,2017,"tf.constant, tf.placeholder, tf.Variable, tf.complex64"
+https://github.com/tensorflow/tensorflow/commit/88917888f509e3e61ffe632534476e7b09d3326a,2017,tf.decode_csv
+https://github.com/tensorflow/tensorflow/commit/e6faa845c51bb69465146d93646947fd2ba53efa,2017,"tf.data.Dataset.from_generator  
+tf.contrib.data.Dataset.from_generator"
+https://github.com/tensorflow/tensorflow/commit/f13b76a52886e39d8e97c9256c383eb3b79748d8,2017,tf.cond
+https://github.com/tensorflow/tensorflow/commit/2b95f70b25101a02befd6495370cb16aaa722f6a,2017,tf.einsum
+https://github.com/tensorflow/tensorflow/commit/48591e00fe917bfeecc31e501ef133447b81e161,2017,tf.group()
+https://github.com/tensorflow/tensorflow/commit/fc56349b7f1afec33c88358a06dab12dda5736a4,2017,tf.data.Dataset.batch
+https://github.com/tensorflow/tensorflow/commit/df8bce63d6de6e728e69eb9f45862b816f88a0db,2017,<tf.reduce_sum>
+https://github.com/tensorflow/tensorflow/commit/513f7df42e4eadfcd241a3be695af6fd426b734e,2017,"<tf.listdiff, tf.list_diff, tf.setdiff1d, tf.setdiff1d>"
+https://github.com/tensorflow/tensorflow/commit/47e92cfd08a230034268a1eeca625fd1e9908616,2017,"tf.py_func, tf.data.Dataset.from_generator"
+https://github.com/tensorflow/tensorflow/commit/17ba3a69f4c3509711a3da5eff3cb6be99e0936d,2017,"tf.py_func, tf.data.Dataset.from_generator"
+https://github.com/tensorflow/tensorflow/commit/eeabcaffd502a5e9fb3664eaa89134c855a86148,2017,"tf.py_func, tf.data.Dataset.from_generator"
+https://github.com/tensorflow/tensorflow/commit/18f89c81d288f191abd56501ec6f86fe29265bdd,2017,"tf.contrib.seq2seq.BeamSearchDecoder, tf.contrib.seq2seq.GatherTree"
+https://github.com/tensorflow/tensorflow/commit/cc5268be7d251e5116229f83aacab80ae6dd917f,2017,"tf.data.Dataset.from_generator()  
+tf.contrib.data.Dataset.from_generator()"
+https://github.com/tensorflow/tensorflow/commit/2ebbce8e82d8d07bee6b8be14a3961ebdef977a0,2017,tf.truncatediv
+https://github.com/tensorflow/tensorflow/commit/091504af57f70df13ebf1db9946dc59482e1190a,2017,"tf.stop_gradient
+tf.scan"
+https://github.com/tensorflow/tensorflow/commit/07d78ddeafe41bc0363ac92efd7ca8ea60478989,2017,tf.cond
+https://github.com/tensorflow/tensorflow/commit/b1c095a28a7aa9bbee4af4d9a7e9d0c60567765b,2017,tf.distributions.Multinomial
+https://github.com/tensorflow/tensorflow/commit/76eb8726160a192ebe6ac5e61d0a0a539cc0dc1a,2017,<tf.reverse>
+https://github.com/tensorflow/tensorflow/commit/c57a4ace4a9a9a5cf871e6a090a4252f0c9ef2ad,2017,<tf.load_file_system_library>
+https://github.com/tensorflow/tensorflow/commit/3c00952c6680d77ee2f10def35fbc7cbd138aea3,2017,tf.data.Dataset.zip
+https://github.com/tensorflow/tensorflow/commit/0376699953f5281be2e4a26387ed4ed5d83a87c5,2017,tf.add_check_numerics_ops
+https://github.com/tensorflow/tensorflow/commit/2a5fb08bf2885cba29065d7269c5f6a32614b89a,2017,tf.gradients
+https://github.com/tensorflow/tensorflow/commit/f2a6408b1bebf18f9264c8e6cb74f83fd2ea00bb,2017,tf.nn.conv2d_transpose
+https://github.com/tensorflow/tensorflow/commit/51259697f7b149c9fffaace5f0d343572dc682c9,2017,tf.is_variable_initialized
+https://github.com/tensorflow/tensorflow/commit/18f36927160d05b941c056f10dc7f9aecaa05e23,2017,"<tf.contrib.metrics.streaming_auc, tf.sparse_add, tf.estimator.Estimator, tfdbg>"
+https://github.com/tensorflow/tensorflow/commit/d001b58de9d0d99ef34637b9a9bed5763875f655,2017,<tf.py_func>
+https://github.com/tensorflow/tensorflow/commit/9e6183e4acbb1b795069947faf778a47709d2029,2017,tf.train.MonitoredTrainingSession
+https://github.com/tensorflow/tensorflow/commit/92111fdd1a9baa113264149413105f700f9ee310,2017,<tf.tile>
+https://github.com/tensorflow/tensorflow/commit/0ffefe178f71ddb595471ddfc43edb8d702155ca,2017,<tf.einsum>
+https://github.com/tensorflow/tensorflow/commit/d629a831652e8ce8f33d15d63bc73d40e5711124,2017,tf.contrib.signal.inverse_stft
+https://github.com/tensorflow/tensorflow/commit/62de0b94797a179ec7851354015e99e9a7ae57e6,2017,"<tf.rank, tf.contrib.signal, TF_OperationGetAttrTensor, tf2xla>"
+https://github.com/tensorflow/tensorflow/commit/958812c60d90974b54fa37015215e65d82822964,2017,<tf.layers>
+https://github.com/tensorflow/tensorflow/commit/ad20e176e0c5fb36f142b739c823a00cb89225c3,2017,tf.layers
+https://github.com/tensorflow/tensorflow/commit/fa867b0e3fe5f6c36405a7019ec6b8b0e001bed5,2017,<tf.sparse_placeholder>
+https://github.com/tensorflow/tensorflow/commit/9b11f458196f6f0528c9974238497a6c8b6da547,2017,"tf.contrib.data, tf.nest.flatten_up_to, tf.data.Dataset.padded_batch"
+https://github.com/tensorflow/tensorflow/commit/c1e0d6067c23b0e87c97b17fd0052f438bff76c5,2017,tf.train.latest_checkpoint
+https://github.com/tensorflow/tensorflow/commit/f5fcd1fdcf896f46aed03c7e61525b48b75d1acc,2017,tf.contrib.data.OneShotIteratorOp
+https://github.com/tensorflow/tensorflow/commit/4f52ce514bc83c5adbfdcd8a342a0fa0f42e55d0,2017,"tf.learn, tf.contrib.learn"
+https://github.com/tensorflow/tensorflow/commit/1b5235fd897f7ea5cffc715300f67b4dc852fa27,2017,tf.softmax()
+https://github.com/tensorflow/tensorflow/commit/7b4c01794fbc2e6dc46e93a42416dd80929ce1e5,2017,"tf.spectral.rfft, tf.spectral.irfft"
+https://github.com/tensorflow/tensorflow/commit/d5b89b184c58da9be8f3507db47b7495385ed934,2017,tf.contrib.data.IteratorGetNext
+https://github.com/tensorflow/tensorflow/commit/807e0ed46aa3b47f6f8863205cd2d3f35864a283,2017,"tf.Session, tf.MonitoredSession"
+https://github.com/tensorflow/tensorflow/commit/8939b8562027189b24e7609b77e17122dc3a21d4,2017,<tf.contrib.data.IteratorGetNext>
+https://github.com/tensorflow/tensorflow/commit/7ad0d0698ab443324bbe68dd5d6476111c6b229a,2017,tf.Session
+https://github.com/tensorflow/tensorflow/commit/2994444bf6a859e1eba656b8a62e75e1bcbf2bb3,2017,"tf.cond  
+tf.while_loop"
+https://github.com/tensorflow/tensorflow/commit/0fa3799d83933ebf66e0817abcccd9182a3bc6e0,2017,tf.Tensor
+https://github.com/tensorflow/tensorflow/commit/deb1e2e7df6fa46806510ce8cf828e1f6d46a5a1,2017,"tf.cond()  
+tf.while_loop()"
+https://github.com/tensorflow/tensorflow/commit/faf55ee67c1efc25507402820cb7af6b2b57c446,2017,<tf.gradients>
+https://github.com/tensorflow/tensorflow/commit/d87007ac1c765874fefceafe672ee6024e12c2d9,2017,<tf.Tensor>
+https://github.com/tensorflow/tensorflow/commit/e7a0308e61121338b5a86998b610abbaa2d8c372,2017,tf.concat
+https://github.com/tensorflow/tensorflow/commit/04891087aa887ac744c5ec2d991314b5b3c4f78e,2017,"<tf.image.decode_image, tf.image.decode_jpeg, tf.image.decode_png, tf.image.decode_gif>"
+https://github.com/tensorflow/tensorflow/commit/96980d5f7a8e5f4ae0d06c23663e2f7fecc2e7ba,2017,"tf.stop_gradient, tf.gradients"
+https://github.com/tensorflow/tensorflow/commit/a6fb4cc4338e4e947e9bff8fcbffaf072d14aa3e,2017,<tf.argmax>
+https://github.com/tensorflow/tensorflow/commit/a462e0f1911ecbf0650faf5ef7ec543801848c54,2017,tf.log_sigmoid
+https://github.com/tensorflow/tensorflow/commit/3e6a22f0d1227cc24f0394a3e920c10bfce1e9c3,2017,tf.assign
+https://github.com/tensorflow/tensorflow/commit/348b3b114021c06d90dcf0f0efd3f22642d64929,2017,tf.cond
+https://github.com/tensorflow/tensorflow/commit/24a95ae389e1c76e771ac33d66e0ec40a236260f,2017,tf.placeholder
+https://github.com/tensorflow/tensorflow/commit/9e7bf403817a3acd4e8d865b041f37609564076e,2017,<tf.import_graph_def>
+https://github.com/tensorflow/tensorflow/commit/52dcb2590bb9274262656c958c105cb5e5cc1300,2017,<tf.gather>
+https://github.com/tensorflow/tensorflow/commit/e2177df4fc3000fcab237bebaf6900693904ad26,2017,"<tf.ProximalAdagrad, tf.ProximalGradientDescent, tf.while_loops>"
+https://github.com/tensorflow/tensorflow/commit/004692ba538ec48d3b937f95d055e1935d9a2133,2017,tf.while_loops
+https://github.com/tensorflow/tensorflow/commit/7b410ebea68bb26b3166a357cf7c1e8946a1b35b,2017,<tf.while_loops>
+https://github.com/tensorflow/tensorflow/commit/99559a3455d7c3b3663968a55bf56801743201d0,2017,<tf.while_loops>
+https://github.com/tensorflow/tensorflow/commit/e8ee5286a686c6fc3057ba7cf9ba9ef7003789a6,2017,tf.gather
+https://github.com/tensorflow/tensorflow/commit/81761d7d07018af6665a20afe74b99b18ba02728,2017,<tf.layers._Layer>
+https://github.com/tensorflow/tensorflow/commit/039c74293abfc8e9263ca80ab4facdde658dfb03,2017,tfdbg.LocalCLIDebugWrapperSession
+https://github.com/tensorflow/tensorflow/commit/b35a22c36a2500bf00d14fab16276ba75cc7af2f,2017,tf.clip_by_value
+https://github.com/tensorflow/tensorflow/commit/258d0a92c2816ec8850fb6460ed04e87dbcc44c8,2017,tf.cond
+https://github.com/tensorflow/tensorflow/commit/d483997d026fa261b76b8328938064781a17f9ac,2017,tf.add_n()
+https://github.com/tensorflow/tensorflow/commit/2bfb700080d6b3aa5b4ec00c5928e87db0d56677,2017,<tf.gradients>
+https://github.com/tensorflow/tensorflow/commit/6a04c105a2cf5ecc6981040b3943668edd0dc2e4,2017,tf.while_loop
+https://github.com/tensorflow/tensorflow/commit/c82cf616509b7ea089ab3f14670d94755051f694,2016,"<tf.select, tf.where>"
+https://github.com/tensorflow/tensorflow/commit/5462618b916cad9aec46a9d1fd04ef353e9696b9,2016,"<tf.learn.fit, tf.learn.estimate, tf.learn.predict>"
+https://github.com/tensorflow/tensorflow/commit/30d2a2235a66e158757b13b6dd0bab7bf5e60492,2016,tf.einsum()
+https://github.com/tensorflow/tensorflow/commit/e3209bd34e12238f6993f104ef55d2aef618fe1a,2016,tf.py_func()
+https://github.com/tensorflow/tensorflow/commit/3c44556cebd836be2bef54d6deaeb63fbd893842,2016,<tf.sqrt>
