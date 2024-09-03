@@ -1,6 +1,6 @@
 import pymongo
 import os
-import re
+import re, shutil
 import subprocess
 import logging
 from pymongo import MongoClient
@@ -24,7 +24,6 @@ myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 """
 Constants
 """
-
 
 def write_list_to_txt4(data, filename):
     with open(filename, "a", encoding="utf-8") as file:
@@ -172,25 +171,28 @@ def get_all_databases():
     print(myclient.list_database_names())
 
 
-def get_overlap_docter(tool_name, libname):
-    files = os.listdir(f"/home/nimashiri/code/docter/all_constr/{libname}")
+def get_overlap_docter(libname):
+    files = os.listdir(f"/home/nima/code/docter/all_constr/{libname}")
     i = 0
     for api in files:
+        dst_path = os.path.join(f"/home/nima/code/docter/all_constr/{libname}", api)
         api_split = api.split(".")
         new_api = ".".join(api_split[0:-1])
-        flag = search_in_dataset(tool_name, new_api, libname)
+        flag = search_in_dataset(new_api, libname)
         if flag:
-            i = i + 1
-            print(f"Found {new_api}:{i}")
+            if not os.path.exists(f'/home/nima/code/docter/nima_constr/{libname}'):
+                os.makedirs(f'/home/nima/code/docter/nima_constr/{libname}')
+            shutil.copy(dst_path, f'/home/nima/code/docter/nima_constr/{libname}')
+                
 
 
-def remove_overlap_docter(tool_name, libname):
+def remove_overlap_docter(libname):
     files = os.listdir(f"/home/nimashiri/Desktop/nima_constr/{libname}")
     i = 0
     for api in files:
         api_split = api.split(".")
         new_api = ".".join(api_split[0:-1])
-        flag = search_in_dataset(tool_name, new_api, libname)
+        flag = search_in_dataset(new_api, libname)
         if not flag:
             os.remove(
                 os.path.join(f"/home/nimashiri/Desktop/nima_constr/{libname}", api)
@@ -199,42 +201,19 @@ def remove_overlap_docter(tool_name, libname):
             print(f"Found non overlapping api{new_api}:{i}")
 
 
-def search_in_dataset(tool_name, api_name, lib):
+def search_in_dataset(api_name, lib):
     flag = False
     if lib == "pt":
-        data = pd.read_csv(
-            "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/data/torch_data.csv"
+        data = read_txt(
+            "data/torch_apis.txt"
         )
     else:
-        data = pd.read_csv(
-            "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/data/tf_data.csv"
+        data = read_txt(
+            "data/tf_apis.txt"
         )
-    for idx, row in data.iterrows():
-        if api_name == row["Buggy API"]:
+    for item in data:
+        if api_name == item:
             flag = True
-            # if lib == "pt":
-            #     common_data_out = [
-            #         tool_name,
-            #         "torch",
-            #         row["Issue link"],
-            #         api_name,
-            #         row["Release"],
-            #     ]
-            # else:
-            #     common_data_out = [
-            #         tool_name,
-            #         "tf",
-            #         row["Issue link"],
-            #         api_name,
-            #         row["Release"],
-            #     ]
-            # with open(
-            #     "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/data/overlap_data_all.csv",
-            #     mode="a",
-            #     newline="\n",
-            # ) as fd:
-            #     writer_object = writer(fd)
-            #     writer_object.writerow(common_data_out)
     return flag
 
 
@@ -251,7 +230,8 @@ def get_overlap_freefuzz(tool_name, dbname, lib):
 
 
 def main():
-    remove_overlap_docter("DocTer", "tf2")
+    get_overlap_docter('tf2')
+    # remove_overlap_docter("DocTer", "tf2")
     # get_overlap_freefuzz("mongo_based_tools", "deeprel-torch", "pt")
     # get_overlap_freefuzz("mongo_based_tools", "freefuzz-tf", "tf2")
     # get_overlap_docter("DocTer", "pt")

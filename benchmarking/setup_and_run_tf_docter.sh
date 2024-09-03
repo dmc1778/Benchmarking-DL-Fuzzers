@@ -39,14 +39,15 @@ conda create --name $env_name python=${pyversion[$tf_version]} -y
 source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
 conda activate "$env_name"
 
-conda install -c conda-forge cudatoolkit=${dict[$tf_version]} -y  
-pip install nvidia-cudnn-cu11==8.6.0.163
+# conda install -c conda-forge cudatoolkit=${dict[$tf_version]} -y  
+# pip install tensorflow==$tf_version
 
+conda install -c conda-forge cudatoolkit=11.8 -y 
+pip install nvidia-cudnn-cu11==8.6.0.163
 CUDNN_PATH=$(dirname $(python -c "import nvidia.cudnn;print(nvidia.cudnn.__file__)"))
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/:$CUDNN_PATH/lib
-
-pip install tensorflow==$tf_version
-
+pip install tensorflow==2.14.0
+pip install numpy==1.22.4
 pip install protobuf==3.20.*
 pip install pandas
 pip install numpy

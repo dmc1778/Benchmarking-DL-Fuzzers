@@ -5,5 +5,3 @@ bash run_fuzzer.sh pytorch ./all_constr/pt ./configs/ci.config | tee /home/workd
 to run orion or freefuzz from orion directory, please run:
 
 python run_fuzzer.py --database=freefuzz-torch --library=torch --tool=FreeFuzz --experiment_round=1 --config_dir=/media/nimashiri/SSD/FSE23_2/fuzzing/config/expr.conf
-
-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
