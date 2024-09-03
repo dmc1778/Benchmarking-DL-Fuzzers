@@ -126,6 +126,11 @@ def extractVersion(title, body, libname):
     prompt_ = f"""
     Identify the version of {libname} that is reported to be affected 
     by the bug in the following GitHub issue description:
+    
+    Please only extract the following versions for PyTorch:
+    2.0.0, 2.0.1, 2.1.0
+    Please only extract the following versions for TensorFlow:
+    2.11.0, 2.12.0, 2.13.0, 2.14.0
 
     Here is the issue description:
     Issue body: {body}
@@ -177,9 +182,9 @@ def main(libname):
     
     data = pd.read_csv(f'issues/phase1/{libname}.csv')
     for idx, row in data.iterrows():
-        if not row['Related Checks']:
-            print('This issue is already labeled as not related.')
-            continue
+        # if not row['Related Checks']:
+        #     print('This issue is already labeled as not related.')
+        #     continue
         issue_link = row.iloc[1]
         print(f"Issue::{idx}/{data.shape[0]}")
         issue_link = f"https://api.github.com/repos/{libname}/{libname}/issues/{issue_link.split('/')[-1]}"
@@ -222,13 +227,20 @@ def main(libname):
             )
 
         json_response = response.json()
-        bug_label = issueIdentifier(json_response["title"], json_response["body"], libname)
-        if is_buggy(bug_label):
-            api_name = extractAPIName(json_response["title"], json_response["body"], libname)
-            lib_version = extractVersion(json_response["title"], json_response["body"], libname)
-            cuda_version = cudaVersion(json_response["title"], json_response["body"], libname)
-            output_data = [libname, json_response["html_url"],json_response["created_at"], json_response['title'], bug_label, api_name, lib_version, cuda_version]
-            write_to_csv('issues/phase2', f'{libname}', output_data)
+
+        if re.findall(r'(2\.11\.0|2\.12\.0|2\.13\.0|2\.14\.0)', json_response["body"]):
+        #if re.findall(r'(PyTorch|torch)\s+version:\s*(2\.0\.0|2\.0\.1|2\.1\.0|2\.11\.0|2\.12\.0|2\.13\.0|2\.14\.0)(\+\S*)?|torch==\s*(2\.0\.0|2\.0\.1|2\.1\.0|2\.11\.0|2\.12\.0|2\.13\.0|2\.14\.0)', json_response["body"]):
+            bug_label = issueIdentifier(json_response["title"], json_response["body"], libname)
+            if is_buggy(bug_label):
+                api_name = extractAPIName(json_response["title"], json_response["body"], libname)
+                lib_version = extractVersion(json_response["title"], json_response["body"], libname)
+                cuda_version = cudaVersion(json_response["title"], json_response["body"], libname)
+                print(lib_version)
+                #if libname == 'pytorch' and lib_version in ['2.0.0', '2.0.1', '2.1.0'] or libname == 'tensorflow' and lib_version in ['2.11.0', '2.12.0', '2.13.0', '2.14.0']:
+                output_data = [libname, json_response["html_url"],json_response["created_at"], json_response['title'], bug_label, api_name, lib_version, cuda_version]
+                write_to_csv('issues/phase2', f'{libname}', output_data)
+        else:
+            print('This is not a valid bug version!')
 
 if __name__ == "__main__":
     libname = sys.argv[1]

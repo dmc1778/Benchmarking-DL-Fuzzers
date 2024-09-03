@@ -11,7 +11,6 @@ from csv import writer
 import csv
 from openai import OpenAI
 import backoff, time, openai
-
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -180,7 +179,6 @@ def get_commits(
     if len(first_100_commits) == 1:
         return None
     for i, commit in enumerate(first_100_commits):
-
         title = commit['title'].lower()
         body = commit['body'].lower() if commit['body'] else ""
         
@@ -204,6 +202,10 @@ def get_commits(
             _date = commit["created_at"]
             sdate = _date.split("-")
 
+            timestamp = datetime.datetime.strptime(_date, '%Y-%m-%dT%H:%M:%SZ')
+            october_2023 = datetime.datetime(2023, 10, 31, 23, 59, 59)
+            is_after_october_2023 = timestamp > october_2023
+
             if memory_matches:
                 print(f"Memory-related issue found: {commit['html_url']}")
                 print(f"Matched keywords: {memory_matches}")
@@ -219,15 +221,19 @@ def get_commits(
                 print(f"Matched keywords: {performance_matches}")
                 match_flag = True
                 
-            gpt_response = stage_1_prompting(commit["title"], commit["body"])
+            # gpt_response = stage_1_prompting(commit["title"], commit["body"])
 
-            if match_flag and is_buggy(gpt_response):
+            if match_flag and 'pull' not in commit['html_url']: #and is_buggy(gpt_response):
+                if 'bug' in commit['body']:
+                    label = 'bug'
+                else:
+                    label = 'no bug'
                 _date = commit["created_at"]
                 sdate = _date.split("-")
 
-                with open(f"./issues/{currentRepo}.csv", "a", newline="\n", ) as fd:
+                with open(f"./issues/phase1/{currentRepo}.csv", "a", newline="\n", ) as fd:
                     writer_object = csv.writer(fd)
-                    writer_object.writerow([currentRepo, commit["html_url"], commit["created_at"]])
+                    writer_object.writerow([currentRepo, commit["html_url"], commit["created_at"], label])
 
         if i == len(first_100_commits) - 1:
             if page_number == 53:
@@ -427,14 +433,14 @@ def main():
 
             for i, commit in enumerate(first_100_commits):
                 if isinstance(commit["body"], str):
-
+                    
                     memory_matches = find_matches(memory_related_rules_strict, title) or find_matches(memory_related_rules_strict, body)
                     logical_matches = find_matches(logical_bugs_rules, title) or find_matches(logical_bugs_rules, body)
                     performance_matches = find_matches(performance_bugs_rules, title) or find_matches(performance_bugs_rules, body)
                                                 
                     _date = commit["created_at"]
                     sdate = _date.split("-")
-
+                    
                     if memory_matches:
                         print(f"Memory-related issue found: {commit['html_url']}")
                         print(f"Matched keywords: {memory_matches}")
@@ -449,13 +455,22 @@ def main():
                         print(f"Performance bug found: {commit['html_url']}")
                         print(f"Matched keywords: {performance_matches}")
                         match_flag = True
+                        
                     time.sleep(2)
-                    gpt_response = stage_1_prompting(commit["title"], commit["body"])
+                    # gpt_response = stage_1_prompting(commit["title"], commit["body"])
 
                     _date = commit["created_at"]
                     sdate = _date.split("-")
+                    timestamp = datetime.datetime.strptime(_date, '%Y-%m-%dT%H:%M:%SZ')
+                    october_2023 = datetime.datetime(2023, 10, 31, 23, 59, 59)
+                    is_after_october_2023 = timestamp > october_2023
                     print(sdate[0])
-                    if match_flag and is_buggy(gpt_response):
+                    # if True:
+                    if match_flag and 'pull' not in commit['html_url']:
+                            if 'bug' in commit['body']:
+                                label = 'bug'
+                            else:
+                                label = 'no bug'
                             _date = commit["created_at"]
                             sdate = _date.split("-")
 
@@ -470,6 +485,7 @@ def main():
                                         r_prime[4],
                                         commit["html_url"],
                                         commit["created_at"],
+                                        label
                                     ]
                                 )
             potential_commits = []
