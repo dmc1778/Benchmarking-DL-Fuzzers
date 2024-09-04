@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.INFO)
 MongoDB configurations
 """
 
-DB = pymongo.MongoClient(host="localhost", port=27017)["TF-Unique"]
+# DB = pymongo.MongoClient(host="localhost", port=27017)["TF-Unique"]
 client = MongoClient(
     "mongodb://localhost:27017/", serverSelectionTimeoutMS=10, connectTimeoutMS=300
 )
@@ -98,18 +98,6 @@ def drop_database(dbname):
     myclient.drop_database(dbname)
 
 
-"""
-Delete all documents in a collection based on the field source.
-"""
-
-
-def drop_document(dbname):
-    mydb = myclient[dbname]
-    for name in mydb.list_collection_names():
-        print(name)
-        mycol = mydb[name]
-        mycol.delete_many({"source": "docs"})
-
 
 """
 Count the number of APIs based on the source they have been collected. 
@@ -156,15 +144,6 @@ def count_all_apis(dbname):
     for name in DB.list_collection_names():
         counter = counter + 1
     print(counter)
-
-
-def get_single_api(api, dbname):
-    mydb = myclient[dbname]
-    try:
-        mydb.validate_collection(api)
-        print("This collection exist")
-    except pymongo.errors.OperationFailure:
-        print("This collection doesn't exist")
 
 
 def get_all_databases():
@@ -229,13 +208,49 @@ def get_overlap_freefuzz(tool_name, dbname, lib):
             print(f"Found {api_name}:{i}")
 
 
-def main():
-    get_overlap_docter('tf2')
-    # remove_overlap_docter("DocTer", "tf2")
-    # get_overlap_freefuzz("mongo_based_tools", "deeprel-torch", "pt")
-    # get_overlap_freefuzz("mongo_based_tools", "freefuzz-tf", "tf2")
-    # get_overlap_docter("DocTer", "pt")
-    # get_overlap_docter("DocTer", "tf2")
+"""
+Delete all documents in a collection based on the field source.
+"""
+
+def drop_document(apiName, dbname):
+    client = MongoClient('mongodb://localhost:27017/')
+    db = client[dbname]
+    result = db.drop_collection(apiName)
+    if result:
+        print("Collection dropped successfully.")
+    else:
+        print("Collection does not exist.")
+
+def get_single_api(api, dbname):
+    client = MongoClient('mongodb://localhost:27017/')
+    db = client[dbname]
+    try:
+        db.validate_collection(api)
+        return True
+    except pymongo.errors.OperationFailure:
+        return False
+
+def remove_non_overlap_mongodb(libname):
+    if libname == "torch":
+        data = read_txt(
+            "data/torch_apis.txt"
+        )
+    else:
+        data = read_txt(
+            "data/tf_apis.txt"
+        )
+    client = MongoClient('mongodb://localhost:27017/')
+    db = client[libname]
+    for api_name in db.list_collection_names():
+        if api_name in data:
+            print(f'API {api_name} exists, so I keep it!')
+        else:
+            drop_document(api_name, libname)
+        
+
+def main():    
+    # get_overlap_docter('tf2')
+    # remove_non_overlap_mongodb('tf')
 
 
 if __name__ == "__main__":
