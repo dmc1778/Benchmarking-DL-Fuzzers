@@ -11,7 +11,7 @@ for env_name in "${env_names[@]}"; do
 
     conda create --name "$env_name" python=3.9 -y 
 
-    source /home/nima/anaconda3/etc/profile.d/conda.sh
+    source /home/ubuntu/anaconda3/etc/profile.d/conda.sh
     conda activate "$env_name"
 
     conda install -c conda-forge cudatoolkit=11.8 -y 
@@ -33,7 +33,8 @@ for env_name in "${env_names[@]}"; do
     pip install ruamel-yaml 
     pip install scikit-learn 
     pip install networkx
-
+    pip install transformers==4.26.0
+    pip install torch==2.0.0 torchvision==0.15.1 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu118
     conda deactivate
 
     echo "Completed setup for: $env_name"

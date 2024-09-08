@@ -230,7 +230,17 @@ def get_single_api(api, dbname):
     except pymongo.errors.OperationFailure:
         return False
 
-def remove_non_overlap_mongodb(libname):
+def remove_object_files(api_name, libname):
+    if libname == 'torch':
+        libnameBig = 'PyTorch'
+        os.remove(f"~/NablaFuzz/NablaFuzz-{libnameBig}-Jax/dump/{libname}/{api_name}.metadata.json")
+        os.remove(f"~/NablaFuzz/NablaFuzz-{libnameBig}-Jax/dump/{libname}/{api_name}.bson")
+    if libname == 'tf':
+        libnameBig = 'TensorFlow'
+        os.remove(f"~/NablaFuzz/NablaFuzz-{libnameBig}/dump/{libname}/{api_name}.metadata.json")
+        os.remove(f"~/NablaFuzz/NablaFuzz-{libnameBig}/dump/{libname}/{api_name}.bson")  
+    
+def remove_non_overlap_from_mongodb(libname):
     if libname == "torch":
         data = read_txt(
             "data/torch_apis.txt"
@@ -245,12 +255,15 @@ def remove_non_overlap_mongodb(libname):
         if api_name in data:
             print(f'API {api_name} exists, so I keep it!')
         else:
-            drop_document(api_name, libname)
+            if get_single_api(api_name, libname):
+                drop_document(api_name, libname)
+                # remove_object_files(api_name, libname)
         
 
 def main():    
     # get_overlap_docter('tf2')
-    # remove_non_overlap_mongodb('tf')
+    remove_non_overlap_from_mongodb('tf')
+    
 
 
 if __name__ == "__main__":

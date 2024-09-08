@@ -12,7 +12,7 @@ for env_name in "${env_names[@]}"; do
 
     conda create --name "$env_name" python=3.9 -y 
 
-    source /home/nima/anaconda3/etc/profile.d/conda.sh
+    source /home/ubuntu/anaconda3/etc/profile.d/conda.sh
     conda activate "$env_name"
 
     ${torchVersions[$env_name]}
@@ -29,7 +29,7 @@ for env_name in "${env_names[@]}"; do
     pip install ruamel-yaml 
     pip install scikit-learn 
     pip install networkx
-
+    pip install transformers==4.26.0
     conda deactivate
 
     echo "Completed setup for: $env_name"

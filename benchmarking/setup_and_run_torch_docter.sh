@@ -41,7 +41,7 @@ pip install scikit-learn
 pip install networkx
 
 cd /home/nimashiri/code/docter/
-bash run_fuzzer.sh $library ./all_constr/pt ./configs/ci.config $pt_version | tee /home/workdir/ci.log
+bash run_fuzzer.sh $library ./nima_constr/pt ./configs/ci.config $pt_version | tee /home/workdir/ci.log
 
 source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
 conda deactivate
