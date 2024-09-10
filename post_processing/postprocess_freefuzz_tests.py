@@ -43,15 +43,34 @@ def read_txt(_path):
         lines = [line.strip() for line in f.readlines()]
     return lines
 
-def save_freefuzz_results(lib, tool, release):
-    
+def capture_output(lib, iteration,_version, env_name, tool) -> None:
+    _path_to_logs_old = f"/media/nimashiri/DATA/testing_results/tosem/{tool}/{lib}/{iteration}/{_version}"
     if lib == 'torch':
-        target_data = read_txt('/home/nimashiri/torch_test_apis_1.txt')
+        target_data = read_txt('data/tf_apis.txt')
     else:
-        target_data = read_txt('/home/nimashiri/tf_test_apis_1.txt')
+        target_data = read_txt('data/tf_apis.txt')
 
-    log_data_old = f"/media/nimashiri/DATA/testing_results/{tool}/{lib}/{release}/{release}.txt"
-    output_dir = f"/media/nimashiri/DATA/testing_results/{tool}/{lib}/{release}/"
+    directory_path = os.listdir(_path_to_logs_old)
+    directories = [item for item in directory_path if os.path.isdir(os.path.join(_path_to_logs_old, item))]
+    for dir_ in directories:
+        current_dir = os.path.join(_path_to_logs_old, dir_)
+        oracles_ = os.listdir(current_dir)
+        for oracle in ['potential-bug']:
+            current_oracle = os.path.join(current_dir, oracle)
+            current_apis = os.listdir(current_oracle)
+            for api in current_apis:
+                if api in target_data:
+                    shell_command = ["post_processing/capture_log.sh",lib, _version, tool, env_name, dir_, oracle, api, str(iteration)]
+                    subprocess.call(shell_command,shell=False)
+
+def save_freefuzz_logs(lib, tool, release):
+    if lib == 'torch':
+        target_data = read_txt('/home/nimashiri/torch_apis.txt')
+    else:
+        target_data = read_txt('/home/nimashiri/tf_apis.txt')
+    
+    log_data_old = f"/media/nimashiri/DATA/testing_results/tosem/{tool}/{lib}/{release}/{release}.txt"
+    output_dir = f"/media/nimashiri/DATA/testing_results/tosem/{tool}/{lib}/{release}/"
     log_data_latest = read_txt(log_data_old)
     log_decomposed = decompose_detections(log_data_latest)
     for log in log_decomposed:
@@ -83,21 +102,24 @@ def main():
     # tool = "FreeFuzz"
     # lib = "tf"
     # source_version = "2.11.0"
-
+    
     releases_tf = ["2.11.0", "2.12.0", "2.13.0", "2.14.0"]
     releases_torch = ["2.0.0", "2.0.1", "2.1.0"]
     libs = ["tf","torch"]
-    tools = ['FreeFuzz']
-    for tool in tools:
-        for lib in libs:
+    task = 'capture'
+    
+    for lib in libs:
+        for iteration in range(1, 5):
             if lib == "tf":
                 releases = releases_tf
             else:
                 releases = releases_torch
             for release in releases:
-                count_additional_success(release, lib, tool)
-                # save_freefuzz_results(lib, tool, release)
+                env_name = f"{lib}_{release}"
+                if task == 'capture':
+                    capture_output(lib, iteration, release, env_name, 'FreeFuzz')
+                else:
+                    save_freefuzz_logs(lib, 'FreeFuzz', release)
     
-
 if __name__ == '__main__':
     main()
