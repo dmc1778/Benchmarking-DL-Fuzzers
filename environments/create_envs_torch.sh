@@ -29,8 +29,10 @@ for env_name in "${env_names[@]}"; do
     pip install ruamel-yaml 
     pip install scikit-learn 
     pip install networkx
+    pip install openai
     pip install transformers==4.26.0
     conda deactivate
 
     echo "Completed setup for: $env_name"
 done
+

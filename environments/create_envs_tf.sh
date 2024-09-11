@@ -33,9 +33,11 @@ for env_name in "${env_names[@]}"; do
     pip install ruamel-yaml 
     pip install scikit-learn 
     pip install networkx
+    pip install openai
     pip install transformers==4.26.0
     pip install torch==2.0.0 torchvision==0.15.1 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu118
     conda deactivate
 
     echo "Completed setup for: $env_name"
 done
+
