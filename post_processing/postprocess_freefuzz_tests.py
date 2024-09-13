@@ -46,7 +46,7 @@ def read_txt(_path):
 def capture_output(lib, iteration,_version, env_name, tool) -> None:
     _path_to_logs_old = f"/media/nimashiri/DATA/testing_results/tosem/{tool}/{lib}/{iteration}/{_version}"
     if lib == 'torch':
-        target_data = read_txt('data/tf_apis.txt')
+        target_data = read_txt('data/torch_apis.txt')
     else:
         target_data = read_txt('data/tf_apis.txt')
 
@@ -60,14 +60,14 @@ def capture_output(lib, iteration,_version, env_name, tool) -> None:
             current_apis = os.listdir(current_oracle)
             for api in current_apis:
                 if api in target_data:
-                    shell_command = ["post_processing/capture_log.sh",lib, _version, tool, env_name, dir_, oracle, api, str(iteration)]
+                    shell_command = ["post_processing/capture_log_freefuzz.sh",lib, _version, tool, env_name, dir_, oracle, api, str(iteration)]
                     subprocess.call(shell_command,shell=False)
 
 def save_freefuzz_logs(lib, tool, release):
     if lib == 'torch':
-        target_data = read_txt('/home/nimashiri/torch_apis.txt')
+        target_data = read_txt('data/torch_apis.txt')
     else:
-        target_data = read_txt('/home/nimashiri/tf_apis.txt')
+        target_data = read_txt('data/tf_apis.txt')
     
     log_data_old = f"/media/nimashiri/DATA/testing_results/tosem/{tool}/{lib}/{release}/{release}.txt"
     output_dir = f"/media/nimashiri/DATA/testing_results/tosem/{tool}/{lib}/{release}/"
@@ -95,31 +95,30 @@ def save_freefuzz_logs(lib, tool, release):
 
 
 def main():
-    # tool = sys.argv[1]
-    # lib = sys.argv[2]
-    # source_version = sys.argv[3]
+    lib = sys.argv[1]
+    iteration = sys.argv[2]
+    release = sys.argv[3]
+    env_name = sys.argv[4]
 
-    # tool = "FreeFuzz"
-    # lib = "tf"
-    # source_version = "2.11.0"
+    capture_output(lib, iteration, release, env_name, 'FreeFuzz')
     
-    releases_tf = ["2.11.0", "2.12.0", "2.13.0", "2.14.0"]
-    releases_torch = ["2.0.0", "2.0.1", "2.1.0"]
-    libs = ["tf","torch"]
-    task = 'capture'
+    # releases_tf = ["2.11.0", "2.12.0", "2.13.0", "2.14.0"]
+    # releases_torch = ["2.0.0", "2.0.1", "2.1.0"]
+    # libs = ["tf","torch"]
+    # task = 'capture'
     
-    for lib in libs:
-        for iteration in range(1, 5):
-            if lib == "tf":
-                releases = releases_tf
-            else:
-                releases = releases_torch
-            for release in releases:
-                env_name = f"{lib}_{release}"
-                if task == 'capture':
-                    capture_output(lib, iteration, release, env_name, 'FreeFuzz')
-                else:
-                    save_freefuzz_logs(lib, 'FreeFuzz', release)
+    # for lib in libs:
+    #     for iteration in range(1, 5):
+    #         if lib == "tf":
+    #             releases = releases_tf
+    #         else:
+    #             releases = releases_torch
+    #         for release in releases:
+    #             env_name = f"{lib}_{release}"
+    #             if task == 'capture':
+    #                 capture_output(lib, iteration, release, env_name, 'FreeFuzz')
+    #             else:
+    #                 save_freefuzz_logs(lib, 'FreeFuzz', release)
     
 if __name__ == '__main__':
     main()

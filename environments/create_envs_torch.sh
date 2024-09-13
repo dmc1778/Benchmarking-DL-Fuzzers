@@ -15,6 +15,11 @@ for env_name in "${env_names[@]}"; do
     source /home/ubuntu/anaconda3/etc/profile.d/conda.sh
     conda activate "$env_name"
 
+    conda install -c conda-forge cudatoolkit=11.8 -y 
+    pip install nvidia-cudnn-cu11==8.6.0.163
+    CUDNN_PATH=$(dirname $(python -c "import nvidia.cudnn;print(nvidia.cudnn.__file__)"))
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/:$CUDNN_PATH/lib
+
     ${torchVersions[$env_name]}
 
     pip install pymongo
@@ -30,9 +35,9 @@ for env_name in "${env_names[@]}"; do
     pip install scikit-learn 
     pip install networkx
     pip install openai
+    pip install astunparse==1.6.3
     pip install transformers==4.26.0
     conda deactivate
 
     echo "Completed setup for: $env_name"
 done
-

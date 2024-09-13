@@ -25,7 +25,7 @@ for env_name in "${env_names[@]}"; do
     pip install textdistance
     pip install munkres 
     pip install protobuf==3.20.*
-    pip install numpy==1.22.4
+    pip install numpy==1.23.5
     pip install pandas
     pip install configparser
     pip install termcolor
@@ -34,10 +34,10 @@ for env_name in "${env_names[@]}"; do
     pip install scikit-learn 
     pip install networkx
     pip install openai
+    pip install astunparse==1.6.3
     pip install transformers==4.26.0
     pip install torch==2.0.0 torchvision==0.15.1 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu118
     conda deactivate
 
     echo "Completed setup for: $env_name"
 done
-
