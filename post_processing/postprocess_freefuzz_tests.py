@@ -101,24 +101,6 @@ def main():
     env_name = sys.argv[4]
 
     capture_output(lib, iteration, release, env_name, 'FreeFuzz')
-    
-    # releases_tf = ["2.11.0", "2.12.0", "2.13.0", "2.14.0"]
-    # releases_torch = ["2.0.0", "2.0.1", "2.1.0"]
-    # libs = ["tf","torch"]
-    # task = 'capture'
-    
-    # for lib in libs:
-    #     for iteration in range(1, 5):
-    #         if lib == "tf":
-    #             releases = releases_tf
-    #         else:
-    #             releases = releases_torch
-    #         for release in releases:
-    #             env_name = f"{lib}_{release}"
-    #             if task == 'capture':
-    #                 capture_output(lib, iteration, release, env_name, 'FreeFuzz')
-    #             else:
-    #                 save_freefuzz_logs(lib, 'FreeFuzz', release)
-    
+
 if __name__ == '__main__':
     main()
