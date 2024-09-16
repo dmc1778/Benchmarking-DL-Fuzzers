@@ -1,3 +1,0 @@
-1 - Create conda environment for each release of PyTorch and TensorFlow
-    The details are under benchmarking directory
-2 - 
