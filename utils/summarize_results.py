@@ -79,6 +79,15 @@ class SummarizeTestCases:
             'timeout': 0,
             'OOM': 0,
         }
+
+        self.titanfuzz_test_counter = {
+            'crash': 0,
+            'exception': 0,
+            'hangs': 0,
+            'flaky': 0,
+            'notarget': 0,
+            'valid': 0
+        }
         
     def count_freefuzz_test_cases(self):
         if self.lib_name == 'torch':
@@ -205,6 +214,37 @@ class SummarizeTestCases:
         output_data = [self.lib_name, self.iteration, self.release] + list(self.ace_test_counter.values())
         write_to_csv(output_data, self.tool_name)
         self.ace_test_counter = {key: 0 for key in self.ace_test_counter}
+    
+    def count_titanfuzz_test_cases(self):
+        if self.lib_name== 'torch':
+            target_data = read_txt('data/torch_apis.txt')
+        else:
+            target_data = read_txt('data/tf_apis.txt')
+
+        target_dirs = ['crash', 'exception', 'hangs', 'flaky', 'notarget', 'valid']
+        counter = 0
+        try:
+            for dir_ in target_dirs:
+                current_target_dir = os.path.join(self.titanfuzz_root_path, dir_)
+                py_files = os.listdir(current_target_dir)
+                if py_files:
+                    for j, file_ in enumerate(py_files):
+                        api_name = file_.split('_')[0]
+                        if api_name in target_data:
+                            self.titanfuzz_test_counter[dir_] += 1
+                else:
+                    self.titanfuzz_test_counter[dir_] += len(py_files)
+                        
+            output_data = [self.lib_name, self.iteration, self.release] + list(self.titanfuzz_test_counter.values())
+            write_to_csv(output_data, self.tool_name)
+            self.titanfuzz_test_counter = {key: 0 for key in self.titanfuzz_test_counter}
+        
+        except Exception as e:
+            print(e)
+    
+    def count_atlasfuzz_test_cases(self):
+        pass
+
 
 if __name__ == '__main__':
     
@@ -216,5 +256,5 @@ if __name__ == '__main__':
         for iteration in range(1, 6):
             for release in v:
                 print(f'Library: {k}, Iteration: {iteration}, Release: {release}')
-                obj_= SummarizeTestCases('ACETest', k, iteration, release)
-                obj_.count_ace_test_cases()
+                obj_= SummarizeTestCases('titanfuzz', k, iteration, release)
+                obj_.count_titanfuzz_test_cases()
