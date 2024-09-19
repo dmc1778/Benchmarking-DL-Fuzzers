@@ -138,7 +138,7 @@ def capture_output(lib, iteration,_version, env_name, tool) -> None:
     directory_path = os.listdir(_path_to_logs_old)
     directories = [item for item in directory_path if os.path.isdir(os.path.join(_path_to_logs_old, item))]
     for dir_ in directories:
-        if 'torch.' in dir_:
+        if 'torch.' in dir_ or 'tf.' in dir_:
             if dir_ in target_data:
                 all_test_files = os.path.join(_path_to_logs_old, dir_, 'all')
                 for test_file in os.listdir(all_test_files):

@@ -1,4 +1,5 @@
 import os, csv
+import pandas as pd
 
 def read_txt(_path):
     with open(_path, "r") as f:
@@ -24,7 +25,10 @@ class SummarizeTestCases:
     def __init__(self, tool_name, lib_name, iteration, release) -> None:
         self.tool_name = tool_name
         self.lib_name = lib_name
-        self.iteration = iteration
+        if tool_name == 'ACETest':
+            self.iteration = iteration - 1
+        else:
+            self.iteration = iteration
         self.release = release
         self.freefuzz_root_path  = f"/media/nimashiri/DATA/testing_results/tosem/{self.tool_name}/{self.lib_name}/{self.iteration}/{self.release}"
         self.deeprel_root_path = f"/media/nimashiri/DATA/testing_results/tosem/{self.tool_name}/{self.lib_name}/{self.iteration}/{self.release}/expr"
@@ -60,6 +64,20 @@ class SummarizeTestCases:
             'fail': 0,
             'neq': 0,
             'success': 0
+        }
+        
+        self.docter_test_counter = {
+            'crash': 0,
+            'exception': 0,
+            'fail': 0,
+            'timeout': 0,
+        }
+
+        self.ace_test_counter = {
+            'invalid': 0,
+            'crash': 0,
+            'timeout': 0,
+            'OOM': 0,
         }
         
     def count_freefuzz_test_cases(self):
@@ -118,7 +136,76 @@ class SummarizeTestCases:
         output_data = [self.lib_name, self.iteration, self.release] + list(self.deeprel_test_counter.values())
         write_to_csv(output_data, self.tool_name)
         self.deeprel_test_counter = {key: 0 for key in self.deeprel_test_counter}
-                        
+    
+    def count_nabla_test_cases(self):
+        if self.lib_name == 'torch':
+            target_data = read_txt('data/torch_apis.txt')
+        else:
+            target_data = read_txt('data/tf_apis.txt')
+
+        directory_path = os.listdir(self.nablafuzz_root_path)
+        directories = [item for item in directory_path if os.path.isdir(os.path.join(self.nablafuzz_root_path, item))]
+        for dir_ in directories:
+            if 'torch.' in dir_ or 'tf.' in dir_:
+                if dir_ in target_data:
+                    all_test_files = os.path.join(self.nablafuzz_root_path, dir_, 'all')
+                    for test_file in os.listdir(all_test_files):
+                        t = os.path.join(self.nablafuzz_root_path, dir_, 'all', test_file)
+    
+    def count_docter_test_cases(self):
+        def count_docTer_crash(crash_records):
+            count = 0
+            for j in range(1, len(crash_records)):
+                split_records = crash_records[j].split(',')
+                count += int(split_records[2])
+            return count
+        if self.lib_name == 'torch':
+            target_data = read_txt('data/torch_apis.txt')
+        else:
+            target_data = read_txt('data/tf_apis.txt')
+            
+        directory_path = os.listdir(self.docter_root_path)
+        crash_records = read_txt(os.path.join(self.docter_root_path, 'bug_list'))
+        
+        directories = [item for item in directory_path if os.path.isdir(os.path.join(self.docter_root_path, item))]
+        for dir_ in directories:
+            current_dir = os.path.join(self.docter_root_path, dir_)
+            if os.path.isdir(current_dir):
+                if os.path.isfile(os.path.join(current_dir, 'failure_record')):
+                    fail_records = read_txt(os.path.join(current_dir, 'failure_record'))
+                    self.docter_test_counter['fail'] += len(fail_records)
+                if os.path.isfile(os.path.join(current_dir, 'exception_record')):
+                    exception_records = read_txt(os.path.join(current_dir, 'exception_record'))
+                    self.docter_test_counter['exception'] += len(exception_records)
+                if os.path.isfile(os.path.join(current_dir, 'timeout_record')):
+                    timeout_record = read_txt(os.path.join(current_dir, 'timeout_record'))
+                    self.docter_test_counter['timeout'] += len(timeout_record)
+                
+        self.docter_test_counter['crash'] += count_docTer_crash(crash_records)
+ 
+        output_data = [self.lib_name, self.iteration, self.release] + list(self.docter_test_counter.values())
+        write_to_csv(output_data, self.tool_name)
+        self.docter_test_counter = {key: 0 for key in self.docter_test_counter}
+        
+    def count_ace_test_cases(self):
+        if self.lib_name== 'torch':
+            target_data = read_txt('data/torch_apis.txt')
+        else:
+            target_data = read_txt('data/tf_apis.txt')
+
+
+        results = pd.read_csv(os.path.join(self.acetest_root_path, 'res.csv'), encoding='utf-8', sep=',')
+        filtered_results = results[results['api'].isin(target_data)]
+        
+        self.ace_test_counter['invalid'] = filtered_results.iloc[:, 5].sum()
+        self.ace_test_counter['crash'] = filtered_results.iloc[:, 6].sum()
+        self.ace_test_counter['timeout'] = filtered_results.iloc[:, 7].sum()
+        self.ace_test_counter['OOM'] = filtered_results.iloc[:, 8].sum()
+
+        output_data = [self.lib_name, self.iteration, self.release] + list(self.ace_test_counter.values())
+        write_to_csv(output_data, self.tool_name)
+        self.ace_test_counter = {key: 0 for key in self.ace_test_counter}
+
 if __name__ == '__main__':
     
     lib = {
@@ -129,5 +216,5 @@ if __name__ == '__main__':
         for iteration in range(1, 6):
             for release in v:
                 print(f'Library: {k}, Iteration: {iteration}, Release: {release}')
-                obj_= SummarizeTestCases('DeepRel', k, iteration, release)
-                obj_.count_deeprel_test_cases()
+                obj_= SummarizeTestCases('ACETest', k, iteration, release)
+                obj_.count_ace_test_cases()
