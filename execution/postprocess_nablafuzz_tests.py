@@ -126,7 +126,7 @@ def capture_output(lib, iteration,_version, env_name, tool) -> None:
     if lib == "torch":
         _path_to_logs_old = f"/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/{iteration}/{_version}/torch/union/"
     else:
-        _path_to_logs_old = f"/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-TensorFlow-Jax/output-ad/{iteration}/{_version}/torch/union/"
+        _path_to_logs_old = f"/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-TensorFlow/output-ad/{iteration}/{_version}/torch/union/"
         
     if lib == 'torch':
         target_data = read_txt('data/torch_apis.txt')
