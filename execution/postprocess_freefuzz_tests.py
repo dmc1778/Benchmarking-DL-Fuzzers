@@ -1,7 +1,7 @@
 import re, csv, sys, subprocess, os, glob, shutil
 import pandas as pd
 sys.path.insert(0, '/home/nimashiri/Benchmarking-DL-Fuzzers/')
-# from execution.decompose_log import decompose_detections
+from execution.decompose_log import decompose_detections
 
 REG_PTR = re.compile('Processing file')
 REG_PTR_ORION = re.compile('Running')
@@ -10,41 +10,6 @@ def read_txt(_path):
     with open(_path, "r") as f:
         lines = [line.strip() for line in f.readlines()]
     return lines
-
-def decompose_detections(splitted_lines):
-    super_temp = []
-    j = 0
-    indices = []
-    while j < len(splitted_lines):
-        if REG_PTR.search(splitted_lines[j]):
-            indices.append(j)
-        if REG_PTR_ORION.search(splitted_lines[j]):
-            indices.append(j)
-        j += 1
-
-    if len(indices) == 1:
-        for i, item in enumerate(splitted_lines):
-            if i != 0:
-                super_temp.append(item)
-        super_temp = [super_temp]
-    else:
-        i = 0
-        j = 1
-        while True:
-            temp = [] 
-            for row in range(indices[i], indices[j]):
-                temp.append(splitted_lines[row])
-            super_temp.append(temp)
-            if j == len(indices)-1:
-                temp = [] 
-                for row in range(indices[j], len(splitted_lines)):
-                    temp.append(splitted_lines[row])
-                super_temp.append(temp)
-                break
-            i+= 1
-            j+= 1
-
-    return super_temp
 
 def capture_output(lib, iteration,_version, env_name, tool) -> None:
     _path_to_logs_old = f"/media/nimashiri/DATA/testing_results/tosem/{tool}/{lib}/{iteration}/{_version}"
