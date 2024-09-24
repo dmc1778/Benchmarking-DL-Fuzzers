@@ -1,28 +1,9 @@
 import re, csv, sys, subprocess, os, glob, shutil
 sys.path.insert(0, '/home/nimashiri/Benchmarking-DL-Fuzzers/')
 # from utils.log_similarity import calculate_similarity
-from execution.decompose_log import decompose_detections
+from utils.decompose_log import decompose_detections
 import pandas as pd
-def read_txt(_path):
-    with open(_path, "r") as f:
-        lines = [line.strip() for line in f.readlines()]
-    return lines
-
-def find_apis(x, target_data):
-    flag = False
-    for api in x:
-        flag = True
-    return flag
-
-def list_python_files(directory):
-    python_files = []
-    
-    for root, dirs, files in os.walk(directory):
-        for file in files:
-            if file.endswith('.py'):
-                python_files.append(os.path.join(root, file))
-
-    return python_files
+from utils.fileUtils import read_txt, list_python_files, find_apis
 
 def capture_output(lib, iteration, release, env_name, tool) -> None:
     _path_to_logs_old = f"/media/nimashiri/DATA/testing_results/tosem/{tool}/{lib}/{iteration}/{release}/expr"

@@ -1,14 +1,10 @@
 import re, csv, sys, subprocess, os, glob, shutil
 sys.path.insert(0, '/home/nimashiri/Benchmarking-DL-Fuzzers/')
-# from utils.log_similarity import calculate_similarity
+
 import sys
 import pandas as pd
-from execution.decompose_log import decompose_detections
-
-def read_txt(_path):
-    with open(_path, "r") as f:
-        lines = [line.strip() for line in f.readlines()]
-    return lines
+from utils.decompose_log import decompose_detections
+from utils.fileUtils import read_txt
 
 def capture_output(lib, iteration,_version, env_name, tool) -> None:
     iteration = iteration - 1

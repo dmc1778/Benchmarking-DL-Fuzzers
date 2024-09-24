@@ -1,7 +1,6 @@
 import re, csv, sys, subprocess, os, glob, shutil
 import pandas as pd
-# REG_PTR = re.compile('Processing file')
-# REG_PTR_ORION = re.compile('Running')
+from utils.fileUtils import read_txt
 
 REG_PTR = re.compile('"""')
 REG_PTR_ORION = re.compile('"""')
@@ -71,11 +70,6 @@ def decompose_detections(splitted_lines):
 def capture_output(_version, lib, tool, env_name) -> None:
     shell_command = ["/media/nimashiri/SSD/testing_results/capture_stderr.sh",lib, _version, tool, env_name]
     subprocess.call(shell_command,shell=False)
-
-def read_txt(_path):
-    with open(_path, "r") as f:
-        lines = [line.strip() for line in f.readlines()]
-    return lines
 
 
 def find_api_in_target(log_data_latest, target_api):

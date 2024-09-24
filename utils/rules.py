@@ -1,4 +1,0 @@
-RULES = [
-    'received an invalid',
-    
-]

@@ -13,7 +13,7 @@ import csv
 from openai import OpenAI
 import backoff, time, openai
 sys.path.insert(0, '/home/nima/repository/Benchmarking-DL-Fuzzers')
-from utils.io import write_to_csv
+from utils.fileUtils import write_to_csv
 
 client = OpenAI(
     api_key=os.environ.get("OPENAI_API_KEY")

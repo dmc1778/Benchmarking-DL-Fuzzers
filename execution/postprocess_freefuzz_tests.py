@@ -1,15 +1,10 @@
 import re, csv, sys, subprocess, os, glob, shutil
 import pandas as pd
 sys.path.insert(0, '/home/nimashiri/Benchmarking-DL-Fuzzers/')
-from execution.decompose_log import decompose_detections
-
+from utils.decompose_log import decompose_detections
+from utils.fileUtils import read_txt
 REG_PTR = re.compile('Processing file')
 REG_PTR_ORION = re.compile('Running')
-
-def read_txt(_path):
-    with open(_path, "r") as f:
-        lines = [line.strip() for line in f.readlines()]
-    return lines
 
 def capture_output(lib, iteration,_version, env_name, tool) -> None:
     _path_to_logs_old = f"/media/nimashiri/DATA/testing_results/tosem/{tool}/{lib}/{iteration}/{_version}"
