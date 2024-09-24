@@ -94,8 +94,8 @@ AssertionError",Test Case Context,Supporting External Library,,,,
 ,https://github.com/pytorch/pytorch/issues/106556,yes,torch.autograd.grad,2023-08-03T16:41:36Z,2.0.0,CPU,NoneType,bad operand,bad operand type for unary -: 'NoneType',Test Case Context,Modeling Complex Tensor Operations and Layer Interactions,,,,
 ,https://github.com/pytorch/pytorch/issues/94590,yes,torch.affine_grid_generator,2023-02-10T13:28:31Z,2.0.0,cu118,Segmentation fault,Segmentation fault (core dumped),Segmentation fault (core dumped),API Input Context,Large Input Tensor,,,,
 ,https://github.com/pytorch/pytorch/issues/92742,yes,torch.Tensor.addmm,2023-01-21T03:55:09Z,2.0.0,cu117,RuntimeError,The size of tensor a,RuntimeError:  The size of tensor a (64) must match the size of tensor b (32) at non-singleton dimension 0,API Usage Context,Modeling Multiple API Usage Pattern,,,,
-,https://github.com/pytorch/pytorch/issues/94593,yes,torch._remove_batch_dim,2023-02-10T13:46:52Z,2.0.0,cu118,invalid pointer,Aborted (core dumped),"free(): invalid pointer
-Aborted (core dumped)",API Input Context,Negative Integer Argument,,,,
+,https://github.com/pytorch/pytorch/issues/94593,yes,torch._remove_batch_dim,2023-02-10T13:46:52Z,2.0.0,cu118,invalid pointer,Aborted,"free(): invalid pointer
+Aborted",API Input Context,Negative Integer Argument,,,,
 ,https://github.com/pytorch/pytorch/issues/90923,yes,torch._dynamo.optimizations.training.aot_autograd,2022-12-15T15:11:28Z,2.0.0,CPU,Inconsistent results,Inconsistent results,Inconsistent results,Test Case Context,Modeling Decorators for DL Execution Mode,,,,
 ,https://github.com/pytorch/pytorch/issues/97084,no,torch._dynamo.explain,2023-03-18T08:34:15Z,2.0.0,cu117,Graph break, missing:,torch._dynamo.exc.Unsupported: missing: POP_FINALLY,Test Case Context,Supporting External Library,,,,
 ,https://github.com/pytorch/pytorch/issues/94591,yes,torch._C._nn.upsample_nearest2d,2023-02-10T13:37:37Z,2.0.0,cu116,IndexError,out of bounds for,IndexError: index 2 is out of bounds for dimension 0 with size 2,Test Case Context,Modeling Complex Tensor Operations and Layer Interactions,,,,

@@ -1,5 +1,5 @@
 import re, csv, sys, subprocess, os, glob, shutil
-
+import pandas as pd
 REG_PTR = re.compile('Processing file')
 REG_PTR_ORION = re.compile('Running')
 
@@ -90,53 +90,59 @@ def insert_dependency(lib, iteration,_version, env_name, tool):
                         for line in code_:
                             out_file.write(line + "\n")
                         
-def save_atlasfuzz_results(lib, tool, release):
+def detect_bugs(lib, iteration, release, tool):
 
     if lib == 'torch':
-        target_data = read_txt('/home/nimashiri/torch_test_apis_1.txt')
+        target_data = read_txt('data/torch_apis.txt')
+        ground_truth = pd.read_csv(f'data/{lib}_groundtruth.csv')
     else:
-        target_data = read_txt('/home/nimashiri/tf_test_apis_1.txt')
+        target_data = read_txt('data/tf_apis.txt')
+        ground_truth = pd.read_csv(f'data/{lib}_groundtruth.csv')
 
-
-    log_data_old = f"/media/nimashiri/DATA/testing_results/{tool}/{lib}/{release}/{release}.txt"
-    output_dir = f"/media/nimashiri/DATA/testing_results/{tool}/{lib}/{release}/"
-    log_data_latest = read_txt(log_data_old)
+    _path_to_logs_old = f"/media/nimashiri/DATA/testing_results/tosem/code-{tool}/fewshot/output/{lib}_demo/{iteration}/{release}/{release}.txt"
+    output_dir = f"/media/nimashiri/DATA/testing_results/tosem/code-{tool}/fewshot/output"
+    log_data_latest = read_txt(_path_to_logs_old)
     log_decomposed = decompose_detections(log_data_latest)
-    for log in log_decomposed:
-        if "Processing file" in log[0]:
-            test_err_full = log[-5:]
-            test_err_symp = log[-1]
-            api_name = log[0].split('/')[-2]
-            
-            if api_name in target_data:
-                if '.py' in api_name:
-                    api_name = api_name.replace('.py', '')
-
-                print(api_name)
-
-                decom_ = ''.join(log)
-                output = [tool, release, api_name, decom_]
-                
-                with open(f"{output_dir}{release}.csv", "a", encoding="utf-8", newline='\n') as file:
-                    write = csv.writer(file)
-                    write.writerow(output)
-            else:
-                print('Not in target data!')
+    
+    try:    
+        for idx, row in ground_truth.iterrows():
+            for j, log in enumerate(log_decomposed):
+                print(f'Running {lib}:{release}:{iteration} ground truth record: {idx}/{len(ground_truth)} // Log record {j}/{len(log_decomposed)}')
+                if "Processing file" in log[0]:
+                    api_name = log[0].split('/')[-2]
+                    
+                    if api_name in target_data:
+                        if '.py' in api_name:
+                            api_name = api_name.replace('.py', '')
+                            
+                        log_merged = ''.join(log)
+                        pattern = re.compile(row['Log Rule'])
+                        match = pattern.search(log_merged)
+                        if match and row['Version'] == release:
+                            output = [tool, lib, iteration, row['Version'], release, api_name, row['Log Message'], log_merged]
+                                
+                            with open(f"{output_dir}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
+                                write = csv.writer(file)
+                                write.writerow(output)
+                    else:
+                        print('Not in target data!')
+    except Exception as e:
+        print(e)
 
 
                         
 def main():
-    lib = sys.argv[1]
-    iteration = sys.argv[2]
-    release = sys.argv[3]
-    env_name = sys.argv[4]
-    task = sys.argv[5]
+    # lib = sys.argv[1]
+    # iteration = sys.argv[2]
+    # release = sys.argv[3]
+    # env_name = sys.argv[4]
+    # task = sys.argv[5]
     
-    # lib = 'tf'
-    # iteration = 1
-    # release = '2.11.0'
-    # env_name = 'tf_2.11.0'
-    # task = 'capture'
+    lib = 'tf'
+    iteration = 1
+    release = '2.11.0'
+    env_name = 'tf_2.11.0'
+    task = 'detect'
     
     if task == 'dependency':
         insert_dependency(lib, iteration, release, env_name, 'atlasfuzz')
@@ -144,7 +150,15 @@ def main():
     elif task == 'capture':
         capture_output(lib, iteration, release, env_name, 'atlasfuzz')
     else:
-        save_atlasfuzz_results(lib, iteration, release, env_name, 'atlasfuzz')
+        for lib in ['torch', 'tf']:
+            for i in range(1, 2):
+                
+                if lib == 'tf':
+                    releases = ["2.11.0", "2.12.0", "2.13.0", "2.14.0"]
+                else:
+                    releases = ['2.0.0', '2.0.1', '2.1.0']
+                for release in releases:    
+                    detect_bugs(lib, i, release, 'atlasfuzz')
 
 
 if __name__ == '__main__':

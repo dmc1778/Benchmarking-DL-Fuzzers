@@ -47,26 +47,26 @@ def detect_bugs(lib, iteration,_version, tool):
     output_path  = f"/media/nimashiri/DATA/testing_results/tosem/{tool}"
     log_data_latest = read_txt(_path_to_logs_old)
     log_decomposed = decompose_detections(log_data_latest)
-    for idx, row in ground_truth.iterrows():
-        for log in log_decomposed:
-            if "Processing file" in log[0]:
-                api_name = log[0].split('/')[-3]
-                print(api_name)
-                if row['Buggy API'] == api_name:
-                    if '.py' in api_name:
-                        api_name = api_name.replace('.py', '')
-                    log_merged = ''.join(log)
-                    pattern = re.compile(row['Log Rule'])
-                    match = pattern.search(log_merged)
-                    if match and row['Version'] == _version:
-                        output = [tool, lib, iteration, row['Version'], _version, api_name, row['Log Message'], log_merged]
-                        
-                        with open(f"{output_path}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
-                            write = csv.writer(file)
-                            write.writerow(output)
-                    else:
-                        print('No detection')
 
+    for idx, row in ground_truth.iterrows():
+        for j, log in enumerate(log_decomposed):
+            print(f'Running {lib}:{_version}:{iteration} ground truth record: {idx}/{len(ground_truth)} // Log record {j}/{len(log_decomposed)}')
+            if "Processing file" in log[0]:
+                    api_name = log[0].split('/')[-2]
+                    if row['Buggy API'] == api_name:
+                        if '.py' in api_name:
+                            api_name = api_name.replace('.py', '')
+                        log_merged = ''.join(log)
+                        pattern = re.compile(row['Log Rule'])
+                        match = pattern.search(log_merged)
+                        if match and row['Version'] == _version:
+                            output = [tool, lib, iteration, row['Version'], _version, api_name, row['Log Message'], log_merged]
+                            
+                            with open(f"{output_path}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
+                                write = csv.writer(file)
+                                write.writerow(output)
+                        else:
+                            print('No detection')
 
 def main():
     # lib = sys.argv[1]
@@ -74,15 +74,14 @@ def main():
     # release = sys.argv[3]
     # env_name = sys.argv[4]
     # capture_output(lib, iteration,release, env_name, 'FreeFuzz')
-    capture_output('torch', 1, '2.0.0', 'torch_2.0.0', 'FreeFuzz')
-    # for lib in ['torch', 'tf']:
-    #     for i in range(1, 5):
-    #         if lib == 'tf':
-    #             releases = ["2.11.0", "2.12.0", "2.13.0", "2.14.0"]
-    #         else:
-    #             releases = ['2.0.0', '2.0.1', '2.1.0']
-    #         for release in releases:
-    #             detect_bugs(lib, i, release, 'FreeFuzz')
+    # capture_output('torch', 1, '2.0.0', 'torch_2.0.0', 'FreeFuzz')
+    for lib in ['torch','tf']:
+        if lib == 'tf':
+            releases = ["2.11.0", "2.12.0", "2.13.0", "2.14.0"]
+        else:
+            releases = ['2.0.0', '2.0.1', '2.1.0']
+        for release in releases:
+                detect_bugs(lib, 1, release, 'FreeFuzz')
 
 if __name__ == '__main__':
     main()

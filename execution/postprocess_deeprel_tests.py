@@ -69,7 +69,7 @@ def detect_bugs(lib, iteration,_version, tool) -> None:
     
     for idx, row in ground_truth.iterrows():
         for j, log in enumerate(log_decomposed):
-            print(f'Running {lib}:{release}:{iteration} ground truth record: {idx}/{len(ground_truth)} // Log record {j}/{len(log_decomposed)}')
+            print(f'Running {lib}:{_version}:{iteration} ground truth record: {idx}/{len(ground_truth)} // Log record {j}/{len(log_decomposed)}')
             if "Processing file" in log[0]:
                 api_name = log[0].split('/')
                 extracted_item = next((item for item in api_name if '+' in item), None)
