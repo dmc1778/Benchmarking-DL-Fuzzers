@@ -178,17 +178,18 @@ class SummarizeTestCases:
         
         directories = [item for item in directory_path if os.path.isdir(os.path.join(self.docter_root_path, item))]
         for dir_ in directories:
-            current_dir = os.path.join(self.docter_root_path, dir_)
-            if os.path.isdir(current_dir):
-                if os.path.isfile(os.path.join(current_dir, 'failure_record')):
-                    fail_records = read_txt(os.path.join(current_dir, 'failure_record'))
-                    self.docter_test_counter['fail'] += len(fail_records)
-                if os.path.isfile(os.path.join(current_dir, 'exception_record')):
-                    exception_records = read_txt(os.path.join(current_dir, 'exception_record'))
-                    self.docter_test_counter['exception'] += len(exception_records)
-                if os.path.isfile(os.path.join(current_dir, 'timeout_record')):
-                    timeout_record = read_txt(os.path.join(current_dir, 'timeout_record'))
-                    self.docter_test_counter['timeout'] += len(timeout_record)
+            if dir_ in target_data:
+                current_dir = os.path.join(self.docter_root_path, dir_)
+                if os.path.isdir(current_dir):
+                    if os.path.isfile(os.path.join(current_dir, 'failure_record')):
+                        fail_records = read_txt(os.path.join(current_dir, 'failure_record'))
+                        self.docter_test_counter['fail'] += len(fail_records)
+                    if os.path.isfile(os.path.join(current_dir, 'exception_record')):
+                        exception_records = read_txt(os.path.join(current_dir, 'exception_record'))
+                        self.docter_test_counter['exception'] += len(exception_records)
+                    if os.path.isfile(os.path.join(current_dir, 'timeout_record')):
+                        timeout_record = read_txt(os.path.join(current_dir, 'timeout_record'))
+                        self.docter_test_counter['timeout'] += len(timeout_record)
                 
         self.docter_test_counter['crash'] += count_docTer_crash(crash_records)
  
