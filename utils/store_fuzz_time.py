@@ -1,28 +1,10 @@
 
 
 
-import os, csv
+import os, csv, sys
 import pandas as pd
-
-def read_txt(_path):
-    with open(_path, "r") as f:
-        lines = [line.strip() for line in f.readlines()]
-    return lines
-
-def write_to_csv(data, toolname, parent):
-    with open(f"statistics/{parent}/{toolname}.csv", 'a', encoding="utf-8", newline='\n') as file_writer:
-        write = csv.writer(file_writer)
-        write.writerow(data)
-
-def list_python_files(directory):
-    python_files = []
-    
-    for root, dirs, files in os.walk(directory):
-        for file in files:
-            if file.endswith('.py'):
-                python_files.append(os.path.join(root, file))
-
-    return python_files
+sys.path.insert(0, '/home/nimashiri/Benchmarking-DL-Fuzzers/')
+from utils.fileUtils import read_txt, read_timestamps_from_file, write_to_csvV2, list_python_files
 
 class SummarizeTestCases:
     def __init__(self, tool_name, lib_name, iteration, release) -> None:
@@ -100,35 +82,39 @@ class SummarizeTestCases:
             target_data = read_txt('data/tf_apis.txt')
 
         fuzztime_data = pd.read_csv(os.path.join(self.freefuzz_root_path, 'fuzzTime.csv'))
-        fuzz_time_min = sum(fuzztime_data.iloc[:, 4])/60
+        fuzz_time_min = sum(fuzztime_data.iloc[:, 4])
+        fuzz_time_min = fuzz_time_min / 3600
         output_data = [self.tool_name, self.lib_name, self.iteration, self.release, fuzz_time_min]
-        write_to_csv(output_data,  self.tool_name,'fuzztime')
-        
+        write_to_csvV2(output_data,  self.tool_name,'fuzztime')
+
+
+
     def get_deeprel_fuzztime(self):
         if self.lib_name == 'torch':
             target_data = read_txt('data/torch_apis.txt')
         else:
             target_data = read_txt('data/tf_apis.txt')
 
-        directories = ['output-0']
-        for dir_ in directories:
-            current_dir = os.path.join(self.deeprel_root_path, dir_)
-            all_dirs = os.listdir(current_dir)
-            for pair in all_dirs:
-                if "+" not in pair:
-                    continue
-                current_api_pair= os.path.join(current_dir, pair)
-                current_oracles = os.listdir(current_api_pair)
-                for oracle in ['bug', 'err', 'fail', 'neq', 'success']:
-                    target_ = os.path.join(current_api_pair, oracle)
-                    if not os.path.exists(target_):
-                        continue
-                    test_files_list = os.listdir(target_)
-                    py_file_count = len([file for file in test_files_list if file.endswith('.py')])
-                    self.deeprel_test_counter[oracle] += py_file_count
-        output_data = [self.lib_name, self.iteration, self.release] + list(self.deeprel_test_counter.values())
-        write_to_csv(output_data, self.tool_name)
-        self.deeprel_test_counter = {key: 0 for key in self.deeprel_test_counter}
+        if self.lib_name == 'torch':
+            torch_path = os.path.join(self.deeprel_root_path, 'output-0', 'time.txt')
+            timestamp_ = read_timestamps_from_file(torch_path, self.lib_name)
+            if not timestamp_:
+                return
+            timestamp_sorted = sorted(timestamp_)
+            total_time = timestamp_sorted[-1] - timestamp_sorted[0]
+            total_time = total_time / 3600
+
+        else:
+            tf_path = os.path.join(self.deeprel_root_path, 'output-0', 'logs', 'time.txt')
+            timestamp_ = read_timestamps_from_file(tf_path, self.lib_name)
+            if not timestamp_:
+                return
+            timestamp_sorted = sorted(timestamp_)
+            total_time = timestamp_sorted[-1] - timestamp_sorted[0]
+            total_time = total_time / 3600
+            
+        output_data = [self.tool_name, self.lib_name, self.iteration, self.release, total_time]
+        write_to_csvV2(output_data,  self.tool_name,'fuzztime')
     
     def get_nablafuzz_fuzztime(self):
         if self.lib_name == 'torch':
@@ -141,9 +127,10 @@ class SummarizeTestCases:
             total_t = 0
             for idx, row in fuzztime_df.iterrows():
                 if row.iloc[0] in target_data:
-                    total_t =+ row.iloc[1]
+                    total_t = total_t + row.iloc[1]
+            total_t = total_t / 3600
             output_data = [self.tool_name, self.lib_name, self.iteration, self.release, total_t]
-            write_to_csv(output_data,  self.tool_name,'fuzztime')
+            write_to_csvV2(output_data,  self.tool_name,'fuzztime')
         else:
             total_t = 0
             fuzztime_data = read_txt(os.path.join(self.nablafuzz_root_path, 'time.txt'))
@@ -153,13 +140,31 @@ class SummarizeTestCases:
                     fuzzt = float(split_item[1].strip())
                     total_t =+ fuzzt
             output_data = [self.tool_name, self.lib_name, self.iteration, self.release, total_t]
-            write_to_csv(output_data,  self.tool_name,'fuzztime')
+            write_to_csvV2(output_data,  self.tool_name,'fuzztime')
         
     def get_docter_fuzztime(self):
         if self.lib_name == 'torch':
             target_data = read_txt('data/torch_apis.txt')
         else:
             target_data = read_txt('data/tf_apis.txt')
+            
+        directory_path = os.listdir(self.docter_root_path)
+        
+        directories = [item for item in directory_path if os.path.isdir(os.path.join(self.docter_root_path, item))]
+        total_t = 0
+        for dir_ in directories:
+            dir__ = ".".join(dir_.split('.')[0:-1])
+            if dir__ in target_data:
+                current_dir = os.path.join(self.docter_root_path, dir_, 'fuzz_time')
+                if not os.path.isfile(current_dir):
+                    continue
+                fuzztime = read_txt(current_dir)
+                fuzzt = float(fuzztime[0].split(" ")[0].strip())
+                total_t = total_t + fuzzt
+        total_t = total_t / 3600
+        output_data = [self.tool_name, self.lib_name, self.iteration, self.release, total_t]
+        write_to_csvV2(output_data,  self.tool_name,'fuzztime')
+        
         
     def get_ace_fuzztime(self):
         if self.lib_name== 'torch':
@@ -177,7 +182,7 @@ class SummarizeTestCases:
         self.ace_test_counter['OOM'] = filtered_results.iloc[:, 8].sum()
 
         output_data = [self.lib_name, self.iteration, self.release] + list(self.ace_test_counter.values())
-        write_to_csv(output_data, self.tool_name)
+        write_to_csvV2(output_data, self.tool_name)
         self.ace_test_counter = {key: 0 for key in self.ace_test_counter}
     
     def get_titanfuzz_fuzztime(self):
@@ -201,7 +206,7 @@ class SummarizeTestCases:
                     self.titanfuzz_test_counter[dir_] += len(py_files)
                         
             output_data = [self.lib_name, self.iteration, self.release] + list(self.titanfuzz_test_counter.values())
-            write_to_csv(output_data, self.tool_name)
+            write_to_csvV2(output_data, self.tool_name)
             self.titanfuzz_test_counter = {key: 0 for key in self.titanfuzz_test_counter}
         
         except Exception as e:
@@ -221,5 +226,5 @@ if __name__ == '__main__':
         for iteration in range(1, 6):
             for release in v:
                 print(f'Library: {k}, Iteration: {iteration}, Release: {release}')
-                obj_= SummarizeTestCases('NablaFuzz', k, iteration, release)
-                obj_.get_nablafuzz_fuzztime()
+                obj_= SummarizeTestCases('DeepRel', k, iteration, release)
+                obj_.get_deeprel_fuzztime()
