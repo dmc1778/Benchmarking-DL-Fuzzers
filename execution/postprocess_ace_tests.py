@@ -38,7 +38,7 @@ def detect_bugs(lib, iteration,_version, tool):
         ground_truth = pd.read_csv(f'data/{lib}_groundtruth.csv')
     
     _path_to_logs_old = f"/media/nimashiri/DATA/testing_results/tosem/{tool}/Tester/src/output/output_{lib}_{iteration}/{_version}/{_version}.txt"
-    output_path  = f"/media/nimashiri/DATA/testing_results/tosem/{tool}/Tester/src/output"
+    output_path  = f"/media/nimashiri/DATA/testing_results/tosem"
     log_data_latest = read_txt(_path_to_logs_old)
     log_decomposed = decompose_detections(log_data_latest)
     
@@ -56,11 +56,11 @@ def detect_bugs(lib, iteration,_version, tool):
                     # score_ = calculate_similarity(ground_truth.iloc[idx, 4], decom_)
                     flag = row['Impact'] in decom_
                     if flag and row['Version'] == _version:
-                        output = [tool, lib, iteration, row['Version'], _version, api_name, row['Log Message'], decom_]
-                        
+                        output = [tool, lib, iteration, row['Issue'], row['Version'], _version, api_name, row['Log Message'], decom_]
                         with open(f"{output_path}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
                             write = csv.writer(file)
                             write.writerow(output)
+                        break
                     else:
                         print('No detection')
 

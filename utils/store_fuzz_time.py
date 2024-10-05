@@ -31,7 +31,7 @@ class SummarizeTestCases:
             full_lib_name = 'tensorflow'
             self.docter_root_path = f"/media/nimashiri/DATA/testing_results/tosem/workdir/{full_lib_name}/{self.iteration}/{self.release}/conform_constr"
         
-        self.acetest_root_path = f"/media/nimashiri/DATA/testing_results/tosem/{self.tool_name}/Tester/src/output/output_{self.lib_name}_{self.iteration}/{self.release}"
+        self.acetest_root_path = f"/media/nimashiri/DATA/testing_results/tosemForTime/{self.tool_name}/Tester/src/output/output_{self.lib_name}_{self.iteration}/{self.release}"
         
         self.titanfuzz_root_path = f"/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/{self.lib_name}/{self.release}/{self.iteration}"
         self.atlasfuzz_root_path = f"/media/nimashiri/DATA/testing_results/tosem/code-{self.tool_name}/fewshot/output/{self.lib_name}_demo/{self.iteration}/{self.release}"
@@ -172,19 +172,12 @@ class SummarizeTestCases:
         else:
             target_data = read_txt('data/tf_apis.txt')
 
+        fuzztime = pd.read_csv(os.path.join(self.acetest_root_path, 'fuzzTime.csv'), encoding='utf-8', sep=',', header=None)
+        timeval = float(fuzztime.iloc[:, 4]) / 3600
 
-        results = pd.read_csv(os.path.join(self.acetest_root_path, 'res.csv'), encoding='utf-8', sep=',')
-        filtered_results = results[results['api'].isin(target_data)]
-        
-        self.ace_test_counter['invalid'] = filtered_results.iloc[:, 5].sum()
-        self.ace_test_counter['crash'] = filtered_results.iloc[:, 6].sum()
-        self.ace_test_counter['timeout'] = filtered_results.iloc[:, 7].sum()
-        self.ace_test_counter['OOM'] = filtered_results.iloc[:, 8].sum()
+        output_data = [self.tool_name, self.lib_name, self.iteration, self.release, timeval]
+        write_to_csvV2(output_data,  self.tool_name,'fuzztime')
 
-        output_data = [self.lib_name, self.iteration, self.release] + list(self.ace_test_counter.values())
-        write_to_csvV2(output_data, self.tool_name)
-        self.ace_test_counter = {key: 0 for key in self.ace_test_counter}
-    
     def get_titanfuzz_fuzztime(self):
         if self.lib_name== 'torch':
             target_data = read_txt('data/torch_apis.txt')
@@ -226,5 +219,5 @@ if __name__ == '__main__':
         for iteration in range(1, 6):
             for release in v:
                 print(f'Library: {k}, Iteration: {iteration}, Release: {release}')
-                obj_= SummarizeTestCases('DeepRel', k, iteration, release)
-                obj_.get_deeprel_fuzztime()
+                obj_= SummarizeTestCases('ACETest', k, iteration, release)
+                obj_.get_ace_fuzztime()

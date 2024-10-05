@@ -39,7 +39,7 @@ def detect_bugs(lib, iteration,_version, tool):
         ground_truth = pd.read_csv(f'data/{lib}_groundtruth.csv')
     
     _path_to_logs_old = f"/media/nimashiri/DATA/testing_results/tosem/{tool}/{lib}/{iteration}/{_version}/{_version}.txt"
-    output_path  = f"/media/nimashiri/DATA/testing_results/tosem/{tool}"
+    output_path  = f"/media/nimashiri/DATA/testing_results/tosem"
     log_data_latest = read_txt(_path_to_logs_old)
     log_decomposed = decompose_detections(log_data_latest)
 
@@ -55,11 +55,12 @@ def detect_bugs(lib, iteration,_version, tool):
                         pattern = re.compile(row['Log Rule'])
                         match = pattern.search(log_merged)
                         if match and row['Version'] == _version:
-                            output = [tool, lib, iteration, row['Version'], _version, api_name, row['Log Message'], log_merged]
+                            output = [tool, lib, iteration, row['Issue'], row['Version'], _version, api_name, row['Log Message'], log_merged]
                             
                             with open(f"{output_path}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
                                 write = csv.writer(file)
                                 write.writerow(output)
+                            break
                         else:
                             print('No detection')
 
@@ -76,7 +77,7 @@ def main():
         else:
             releases = ['2.0.0', '2.0.1', '2.1.0']
         for release in releases:
-                detect_bugs(lib, 1, release, 'FreeFuzz')
+            detect_bugs(lib, 1, release, 'FreeFuzz')
 
 if __name__ == '__main__':
     main()

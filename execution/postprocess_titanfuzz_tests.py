@@ -1,4 +1,5 @@
 import re, csv, sys, subprocess, os, glob, shutil
+sys.path.insert(0, '/home/nimashiri/Benchmarking-DL-Fuzzers/')
 import pandas as pd
 from utils.fileUtils import read_txt
 
@@ -159,7 +160,7 @@ def detect_bug(lib, iteration, release, tool):
         ground_truth = pd.read_csv(f'data/{lib}_groundtruth.csv')
         
     _path_to_logs_old = f"/media/nimashiri/DATA/testing_results/tosem/{tool}/Results/{lib}/{release}/{iteration}/{release}.csv"
-    output_dir = f"/media/nimashiri/DATA/testing_results/tosem/{tool}/Results"
+    output_dir = f"/media/nimashiri/DATA/testing_results/tosem"
     
     log_data_old = pd.read_csv(_path_to_logs_old, sep=',', encoding='utf-8')
     
@@ -175,11 +176,12 @@ def detect_bug(lib, iteration, release, tool):
                     match = pattern.search(log_row.iloc[3])
                         
                     if match and row['Version'] == release:
-                            output = [tool, lib, iteration, row['Version'], release, api_name, row['Log Message'], log_row.iloc[3]]
+                        output = [tool, lib, iteration, row['Issue'], row['Version'], release, api_name, row['Log Message'], log_row.iloc[3]]
                                     
-                            with open(f"{output_dir}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
-                                write = csv.writer(file)
-                                write.writerow(output)
+                        with open(f"{output_dir}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
+                            write = csv.writer(file)
+                            write.writerow(output)
+                        break
     except Exception as e:
         print(e)
         

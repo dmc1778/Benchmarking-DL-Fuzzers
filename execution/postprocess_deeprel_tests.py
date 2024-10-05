@@ -36,7 +36,7 @@ def capture_output(lib, iteration, release, env_name, tool) -> None:
                     
 def detect_bugs(lib, iteration,_version, tool) -> None:
     _path_to_logs_old = f"/media/nimashiri/DATA/testing_results/tosem/{tool}/{lib}/{iteration}/{_version}/expr/{_version}.txt"
-    output_path  = f"/media/nimashiri/DATA/testing_results/tosem/{tool}"
+    output_path  = f"/media/nimashiri/DATA/testing_results/tosem"
     
     if lib == 'torch':
         target_data = read_txt('data/torch_apis.txt')
@@ -67,11 +67,12 @@ def detect_bugs(lib, iteration,_version, tool) -> None:
                     pattern = re.compile(row['Log Rule'])
                     match = pattern.search(log_merged)
                     if match and row['Version'] == _version:
-                        output = [tool, lib, iteration, row['Version'], _version, api_name, row['Log Message'], log_merged]
+                        output = [tool, lib, iteration,row['Issue'], row['Version'], _version, api_name, row['Log Message'], log_merged]
                         
                         with open(f"{output_path}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
                             write = csv.writer(file)
                             write.writerow(output)
+                        break
                 else:
                     print('Not among target APIs.')
     
