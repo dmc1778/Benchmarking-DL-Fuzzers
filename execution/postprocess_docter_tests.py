@@ -30,7 +30,6 @@ def capture_logs(lib, iteration,_version, tool):
                             with open(f"{output_path}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
                                 write = csv.writer(file)
                                 write.writerow(output)
-                            break
                 
 if __name__ == '__main__':
     for lib in ['torch', 'tf']:

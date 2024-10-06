@@ -76,7 +76,7 @@ def detect_bugs(lib, iteration, release, tool):
                 if "Processing file" in log[0]:
                     api_name = log[0].split('/')[-2]
                     
-                    if api_name in target_data:
+                    if api_name in target_data and row['Buggy API'] == api_name:
                         if '.py' in api_name:
                             api_name = api_name.replace('.py', '')
                             

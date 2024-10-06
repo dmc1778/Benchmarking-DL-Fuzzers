@@ -171,12 +171,12 @@ def detect_bug(lib, iteration, release, tool):
                 api_name = log_row.iloc[2].split('/')[1]
                 api_name = api_name.replace('.py', '')
                 api_name = api_name.split('_')[0]
-                if api_name in target_data:
+                if api_name in target_data and row['Buggy API'] == api_name:
                     pattern = re.compile(row['Log Rule'])
                     match = pattern.search(log_row.iloc[3])
                         
                     if match and row['Version'] == release:
-                        output = [tool, lib, iteration, row['Issue'], row['Version'], release, api_name, row['Log Message'], log_row.iloc[3]]
+                        output = [tool, lib, iteration, row['Issue'], row['Version'], release, log_row.iloc[2].split('/')[1], row['Log Message'], log_row.iloc[3]]
                                     
                         with open(f"{output_dir}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
                             write = csv.writer(file)

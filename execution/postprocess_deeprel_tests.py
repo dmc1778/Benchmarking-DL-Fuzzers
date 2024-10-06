@@ -52,6 +52,7 @@ def detect_bugs(lib, iteration,_version, tool) -> None:
         for j, log in enumerate(log_decomposed):
             print(f'Running {lib}:{_version}:{iteration} ground truth record: {idx}/{len(ground_truth)} // Log record {j}/{len(log_decomposed)}')
             if "Processing file" in log[0]:
+                c = c + 1
                 api_name = log[0].split('/')
                 extracted_item = next((item for item in api_name if '+' in item), None)
                 if "+" not in extracted_item:
@@ -72,7 +73,6 @@ def detect_bugs(lib, iteration,_version, tool) -> None:
                         with open(f"{output_path}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
                             write = csv.writer(file)
                             write.writerow(output)
-                        break
                 else:
                     print('Not among target APIs.')
     
