@@ -4,7 +4,7 @@
 import os, csv, sys
 import pandas as pd
 sys.path.insert(0, '/home/nimashiri/Benchmarking-DL-Fuzzers/')
-from utils.fileUtils import read_txt, read_timestamps_from_file, write_to_csvV2, list_python_files
+from utils.fileUtils import read_txt, read_timestamps_from_file, write_to_csvV2
 
 class SummarizeTestCases:
     def __init__(self, tool_name, lib_name, iteration, release) -> None:

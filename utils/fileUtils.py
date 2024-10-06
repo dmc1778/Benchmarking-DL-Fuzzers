@@ -1,6 +1,16 @@
 import csv, os, sys
 import pandas as pd
 
+
+def postprocess_test_statistics(df, tool_name, libname, release):
+    x = df[(df['Library'] == libname ) & (df['Release'] == release)]
+    
+    x = x.groupby(['Library','Release']).mean(numeric_only=True)
+    x = x.iloc[0].values.tolist()
+    x.insert(0, libname)
+    x.insert(1, release)
+    return x 
+
 def read_timestamps_from_file(file_path: str, libname: str):
     timestamps = []
     try:
@@ -50,7 +60,7 @@ def write_to_csv(dirName,fileName, data):
         writer_object = csv.writer(fd)
         writer_object.writerow(data)
         
-def write_to_csvV2(data, toolname, parent):
+def write_to_csvV2(data, parent, toolname):
     with open(f"statistics/{parent}/{toolname}.csv", 'a', encoding="utf-8", newline='\n') as file_writer:
         write = csv.writer(file_writer)
         write.writerow(data)
