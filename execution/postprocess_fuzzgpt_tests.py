@@ -22,9 +22,11 @@ def capture_output(lib, iteration, release, env_name, tool) -> None:
     for dir_ in directories:
         current_path = os.path.join(_path_to_logs_old, dir_)
         current_files = os.listdir(current_path)
+        if dir_ == 'TensorFlow' or dir_ == 'PyTorch' and dir_ in target_data:
+            continue
         for file_ in current_files:
             current_file = os.path.join(current_path, file_)
-            shell_command = ["post_processing/capture_log_fuzzgpt.sh",lib, release, tool, env_name, current_file, str(iteration)]
+            shell_command = ["/home/nimashiri/Benchmarking-DL-Fuzzers/execution/capture_log_fuzzgpt.sh",lib, release, tool, env_name, current_file, str(iteration)]
             subprocess.call(shell_command,shell=False)
     
 def insert_dependency(lib, iteration,_version, env_name, tool):
@@ -108,7 +110,7 @@ def main():
     iteration = 1
     release = '2.11.0'
     env_name = 'tf_2.11.0'
-    task = 'detect'
+    task = 'capture'
     
     if task == 'dependency':
         insert_dependency(lib, iteration, release, env_name, 'atlasfuzz')
