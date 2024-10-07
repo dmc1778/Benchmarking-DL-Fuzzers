@@ -61,6 +61,6 @@ def write_to_csv(dirName,fileName, data):
         writer_object.writerow(data)
         
 def write_to_csvV2(data, parent, toolname):
-    with open(f"statistics/{parent}/{toolname}.csv", 'a', encoding="utf-8", newline='\n') as file_writer:
+    with open(f"statistics/{parent}/{toolname}_1.csv", 'a', encoding="utf-8", newline='\n') as file_writer:
         write = csv.writer(file_writer)
         write.writerow(data)

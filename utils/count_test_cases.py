@@ -20,7 +20,7 @@ class SummarizeTestCases:
         if lib_name == 'torch':
             self.nablafuzz_root_path = f"/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/{self.iteration}/{self.release}/torch/union/"
         else:
-            self.nablafuzz_root_path = f"/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-TensorFlow/output-ad/{self.iteration}/{self.release}/torch/union/"
+            self.nablafuzz_root_path = f"/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-TensorFlow/src/expr_outputs/{self.iteration}/{self.release}/test/logs/"
         
         if lib_name == 'torch':
             full_lib_name = 'pytorch'
@@ -35,6 +35,12 @@ class SummarizeTestCases:
         self.atlasfuzz_root_path = f"/media/nimashiri/DATA/testing_results/tosem/code-{self.tool_name}/fewshot/output/{self.lib_name}_demo/{self.iteration}/{self.release}"
 
         self.execution_flag = True
+        
+        self.Nablaheader = [
+            'RANDOM', 'STATUS', 'NA', 'REV_STATUS', 'FWD_STATUS', 'REV_FWD_GRAD', 'ND_GRAD', 'PASS', 'NA', 'SKIP', 'DIRECT_CRASH', 'NA', 'NA', 'NA', 'NAN',
+            'ND_FAIL', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'REV_FWD_GRAD', 'ND_GRAD', 'PASS', 'CRASH', 'SKIP', 'NA', 'NA', 'NA', 'NA', 'NAN', 'NA'
+        ]
+        
         self.freefuzz_test_counter = {
             'fail': 0,
             'potential-bug': 0,
@@ -134,8 +140,7 @@ class SummarizeTestCases:
                 if api_name not in target_data:
                     continue
                 current_api_pair= os.path.join(current_dir, pair)
-                current_oracles = os.listdir(current_api_pair)
-                for oracle in ['bug', 'err', 'fail', 'neq', 'success']:
+                for oracle in ['err', 'fail', 'neq', 'success']:
                     target_ = os.path.join(current_api_pair, oracle)
                     if not os.path.exists(target_):
                         continue
@@ -155,22 +160,43 @@ class SummarizeTestCases:
         write_to_csvV2(output_data, "numtests", self.tool_name)
         self.deeprel_test_counter = {key: 0 for key in self.deeprel_test_counter}
 
-    def count_nabla_test_cases(self):
+    def count_nablafuzz_test_cases(self):
+        x = []
         if self.lib_name == 'torch':
             target_data = read_txt('data/torch_apis.txt')
         else:
             target_data = read_txt('data/tf_apis.txt')
 
-        directory_path = os.listdir(self.nablafuzz_root_path)
-        directories = [item for item in directory_path if os.path.isdir(os.path.join(self.nablafuzz_root_path, item))]
-        for dir_ in directories:
-            if 'torch.' in dir_ or 'tf.' in dir_:
-                if dir_ in target_data:
-                    all_test_files = os.path.join(self.nablafuzz_root_path, dir_, 'all')
-                    for test_file in os.listdir(all_test_files):
-                        t = os.path.join(self.nablafuzz_root_path, dir_, 'all', test_file)
+        if self.lib_name == 'torch':
+            data = pd.read_csv(os.path.join(self.nablafuzz_root_path, 'log.csv'), encoding='utf-8', sep=',', header=None)
+            for idx, row in data.iterrows():
+                if row.iloc[0] in target_data:
+                    x.append(list(row.values)[1:])
+            df = pd.DataFrame(x)
+            df_averaged = df.sum()
+            out_data = [self.lib_name, self.iteration, self.release]  + list(df_averaged.values)
+            write_to_csvV2(out_data, "numtests", self.tool_name)
+        else:
+            dirs = os.listdir(os.path.join(self.nablafuzz_root_path))
+            count_dict = {}
+            for dir in dirs:
+                current_dir = os.path.join(self.nablafuzz_root_path, dir)
+                if os.path.isdir(current_dir):
+                    current_data = read_txt(os.path.join(current_dir, 'test-log.txt'))
+                    for line in current_data:
+                        api, dict_str = line.split(' ', 1)
+                        if api in target_data:
+                            dict_data = eval(dict_str)
+                            for key, value in dict_data.items():
+                                if key in count_dict:
+                                    count_dict[key] += value
+                                else:
+                                    count_dict[key] = value
+            out_data = [self.lib_name, self.iteration, self.release]  + list(count_dict.values())
+            write_to_csvV2(out_data, "numtests", self.tool_name)
     
     def count_docter_test_cases(self):
+        global executed
         def count_docTer_crash(crash_records):
             count = 0
             for j in range(1, len(crash_records)):
@@ -187,7 +213,8 @@ class SummarizeTestCases:
         
         directories = [item for item in directory_path if os.path.isdir(os.path.join(self.docter_root_path, item))]
         for dir_ in directories:
-            if dir_ in target_data:
+            dir__ = ".".join(dir_.split('.')[0:-1])
+            if dir__ in target_data:
                 current_dir = os.path.join(self.docter_root_path, dir_)
                 if os.path.isdir(current_dir):
                     if os.path.isfile(os.path.join(current_dir, 'failure_record')):
@@ -203,6 +230,15 @@ class SummarizeTestCases:
         self.docter_test_counter['crash'] += count_docTer_crash(crash_records)
  
         output_data = [self.lib_name, self.iteration, self.release] + list(self.docter_test_counter.values())
+
+        if not executed:
+            headers = list(self.docter_test_counter.keys())
+            headers.insert(0, 'Library')
+            headers.insert(1, 'Iteration')
+            headers.insert(2, 'Release')
+
+            write_to_csvV2(headers, "numtests", self.tool_name)
+            executed = True
         write_to_csvV2(output_data, "numtests" , self.tool_name)
         self.docter_test_counter = {key: 0 for key in self.docter_test_counter}
         
@@ -262,8 +298,8 @@ if __name__ == '__main__':
         'torch': ['2.0.0', '2.0.1', '2.1.0'],
         'tf': ['2.11.0', '2.12.0', '2.13.0', '2.14.0'],
     }
-    tool_name = 'DeepRel'
-    tool_name_low = 'deeprel'
+    tool_name = 'DocTer'
+    tool_name_low = 'docter'
     
     if not os.path.isfile(f"statistics/numtests/{tool_name}_1.csv"):
         for k, v in lib.items():
@@ -274,7 +310,6 @@ if __name__ == '__main__':
                     function_call = f'obj_.count_{tool_name_low}_test_cases()'
                     eval(function_call)
                     # obj_.count_freefuzz_test_cases()
-
     lib = {
         'torch': ['2.0.0', '2.0.1', '2.1.0'],
         'tf': ['2.11.0', '2.12.0', '2.13.0', '2.14.0'],
