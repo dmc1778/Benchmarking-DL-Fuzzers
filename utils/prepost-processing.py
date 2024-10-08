@@ -149,22 +149,29 @@ def count_all_apis(dbname):
 def get_all_databases():
     print(myclient.list_database_names())
 
-
-def get_overlap_docter(libname):
-    files = os.listdir(f"/home/nima/code/docter/all_constr/{libname}")
-    i = 0
+def count_overlap_docter(libname):
+    j = 0
+    files = os.listdir(f"/home/nimashiri/code/docter/all_constr/{libname}")
     for api in files:
-        dst_path = os.path.join(f"/home/nima/code/docter/all_constr/{libname}", api)
+        api = ".".join(api.split('.')[0:-1])
+        flag = search_in_dataset(api, libname)
+        if flag:
+            j = j + 1
+    print(f'Total number of DocTer overlap APIs on {libname}: {j}')
+        
+def get_overlap_docter(libname):
+    files = os.listdir(f"/home/nimashiri/code/docter/all_constr/{libname}")
+    for api in files:
+        api = ".".join(api.split('.')[0:-1])
+        dst_path = os.path.join(f"/home/nimashiri/code/docter/all_constr/{libname}", api)
         api_split = api.split(".")
         new_api = ".".join(api_split[0:-1])
         flag = search_in_dataset(new_api, libname)
         if flag:
-            if not os.path.exists(f'/home/nima/code/docter/nima_constr/{libname}'):
-                os.makedirs(f'/home/nima/code/docter/nima_constr/{libname}')
-            shutil.copy(dst_path, f'/home/nima/code/docter/nima_constr/{libname}')
+            if not os.path.exists(f'/home/nimashiri/code/docter/all_constr/{libname}'):
+                os.makedirs(f'/home/nimashiri/code/docter/all_constr/{libname}')
+            shutil.copy(dst_path, f'/home/nimashiri/code/docter/all_constr/{libname}')
                 
-
-
 def remove_overlap_docter(libname):
     files = os.listdir(f"/home/nimashiri/Desktop/nima_constr/{libname}")
     i = 0
@@ -182,7 +189,7 @@ def remove_overlap_docter(libname):
 
 def search_in_dataset(api_name, lib):
     flag = False
-    if lib == "pt":
+    if lib == "pt" or lib == 'pytorch' or lib == 'torch':
         data = read_txt(
             "data/torch_apis.txt"
         )
@@ -193,20 +200,20 @@ def search_in_dataset(api_name, lib):
     for item in data:
         if api_name == item:
             flag = True
+            break
     return flag
 
 
-def get_overlap_freefuzz(tool_name, dbname, lib):
+def get_overlap_freefuzz_deeprel_nablafuzz(dbname, lib):
 
     DB = pymongo.MongoClient(host="localhost", port=27017)[dbname]
 
     i = 0
     for api_name in DB.list_collection_names():
-        flag = search_in_dataset(tool_name, api_name, lib)
+        flag = search_in_dataset(api_name, lib)
         if flag:
             i = i + 1
-            print(f"Found {api_name}:{i}")
-
+    print(f"Total Number of Overlapp APIs {i}")
 
 """
 Delete all documents in a collection based on the field source.
@@ -260,9 +267,28 @@ def remove_non_overlap_from_mongodb(libname):
                 # remove_object_files(api_name, libname)
         
 
-def main():    
-    # get_overlap_docter('tf2')
-    remove_non_overlap_from_mongodb('tf')
+def count_overlap_ace(libname):
+    i = 0
+    data = pd.read_csv(f"data/ace_{libname}.csv")
+    for idx, row in data.iterrows():
+        api_name = row.iloc[0].split(" ")[0]
+        flag = search_in_dataset(api_name, libname)
+        if flag:
+            i = i + 1
+    print(i)
+
+def count_overlap_titanfuzz(libname):
+    i = 0
+    data = pd.read_csv(f"data/ace_{libname}.csv")
+    for idx, row in data.iterrows():
+        api_name = row.iloc[0].split(" ")[0]
+        flag = search_in_dataset(api_name, libname)
+        if flag:
+            i = i + 1
+    print(i)
+
+def main():
+    count_overlap_titanfuzz('tf')
     
 
 
