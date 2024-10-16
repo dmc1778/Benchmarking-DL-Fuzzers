@@ -106,21 +106,19 @@ def main():
     env_name = sys.argv[4]
     task = sys.argv[5]
     
-    # lib = 'tf'
+    # lib = 'torch'
     # iteration = 1
-    # release = '2.11.0'
-    # env_name = 'tf_2.11.0'
+    # release = '2.0.0'
+    # env_name = 'torch_2.0.0'
     # task = 'capture'
     
     if task == 'dependency':
         insert_dependency(lib, iteration, release, env_name, 'atlasfuzz')
-    # insert_dependency('tf', 1, '2.11.0', 'tf_2.11.0', 'atlasfuzz')
     elif task == 'capture':
         capture_output(lib, iteration, release, env_name, 'atlasfuzz')
     else:
         for lib in ['torch', 'tf']:
             for i in range(1, 2):
-                
                 if lib == 'tf':
                     releases = ["2.11.0", "2.12.0", "2.13.0", "2.14.0"]
                 else:
