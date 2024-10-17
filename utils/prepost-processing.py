@@ -263,9 +263,7 @@ def remove_non_overlap_from_mongodb(libname):
                 drop_document(api_name, libname)
                 # remove_object_files(api_name, libname)
         
-
 def count_overlap_ace(libname):
-    i = 0
     data = pd.read_csv(f"data/ace_{libname}.csv")
     for idx, row in data.iterrows():
         api_name = row.iloc[0].split(" ")[0]
@@ -274,21 +272,31 @@ def count_overlap_ace(libname):
             write_list_to_txt4(api_name, f"statistics/overlap/ACETest_{libname}.txt")
 
 def count_overlap_titanfuzz(libname):
-    i = 0
-    data = pd.read_csv(f"data/ace_{libname}.csv")
-    for idx, row in data.iterrows():
-        api_name = row.iloc[0].split(" ")[0]
+    target_apis = read_txt(f"data/titanfuzz_apis/{libname}_apis.txt")
+    for api_name in target_apis:
         flag = search_in_dataset(api_name, libname)
         if flag:
-            i = i + 1
-    print(i)
+            write_list_to_txt4(api_name, f"statistics/overlap/TitanFuzz_{libname}.txt")
+
+def count_overlap_fuzzgpt(libname):
+    target_apis = read_txt(f"data/fuzzgpt_apis/{libname}_apis.txt")
+    for api_name in target_apis:
+        flag = search_in_dataset(api_name, libname)
+        if flag:
+            write_list_to_txt4(api_name, f"statistics/overlap/FuzzGPT_{libname}.txt")
+            
+def filter_groundTruth_with_overlap_apis(libname, toolname):
+    overlap_apis = read_txt(f'statistics/overlap/{toolname}_{libname}.txt')
+    data = pd.read_csv(f"data/groundtruth_{libname}.csv", sep=',', encoding='utf-8')
+    filtered_results = data[data['Buggy API'].isin(overlap_apis)]
+    filtered_results.to_csv(f'data/{toolname}/{toolname}_detected_bugs_{libname}.csv', index=False)
 
 def main():
     # get_overlap_freefuzz_deeprel_nablafuzz('torch', 'torch')
     # count_overlap_docter('tf2')
-    count_overlap_ace('tf')
-    
-
+    # count_overlap_ace('torch')
+    # count_overlap_fuzzgpt('tf')
+    filter_groundTruth_with_overlap_apis('torch', 'FuzzGPT')
 
 if __name__ == "__main__":
     main()
