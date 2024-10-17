@@ -156,8 +156,8 @@ def count_overlap_docter(libname):
         api = ".".join(api.split('.')[0:-1])
         flag = search_in_dataset(api, libname)
         if flag:
-            j = j + 1
-    print(f'Total number of DocTer overlap APIs on {libname}: {j}')
+            write_list_to_txt4(api, f"statistics/overlap/DocTer_{libname}.txt")
+
         
 def get_overlap_docter(libname):
     files = os.listdir(f"/home/nimashiri/code/docter/all_constr/{libname}")
@@ -205,15 +205,12 @@ def search_in_dataset(api_name, lib):
 
 
 def get_overlap_freefuzz_deeprel_nablafuzz(dbname, lib):
-
     DB = pymongo.MongoClient(host="localhost", port=27017)[dbname]
-
     i = 0
     for api_name in DB.list_collection_names():
         flag = search_in_dataset(api_name, lib)
         if flag:
-            i = i + 1
-    print(f"Total Number of Overlapp APIs {i}")
+            write_list_to_txt4(api_name, f"statistics/overlap/freefuzz_deeprel_nablafuzz_{lib}.txt")
 
 """
 Delete all documents in a collection based on the field source.
@@ -274,8 +271,7 @@ def count_overlap_ace(libname):
         api_name = row.iloc[0].split(" ")[0]
         flag = search_in_dataset(api_name, libname)
         if flag:
-            i = i + 1
-    print(i)
+            write_list_to_txt4(api_name, f"statistics/overlap/ACETest_{libname}.txt")
 
 def count_overlap_titanfuzz(libname):
     i = 0
@@ -288,7 +284,9 @@ def count_overlap_titanfuzz(libname):
     print(i)
 
 def main():
-    count_overlap_titanfuzz('tf')
+    # get_overlap_freefuzz_deeprel_nablafuzz('torch', 'torch')
+    # count_overlap_docter('tf2')
+    count_overlap_ace('tf')
     
 
 

@@ -2,10 +2,47 @@ import os, csv, sys
 import pandas as pd
 import re
 sys.path.insert(0, '/home/nimashiri/Benchmarking-DL-Fuzzers/')
-from utils.fileUtils import read_txt, postprocess_test_statistics, write_to_csvV2
+from utils.fileUtils import read_txt, postprocess_test_statistics, write_to_csvV2, write_to_csv
 from utils.decompose_log import decompose_detections
 
+REG_PTR = re.compile('torch')
+
 executed = False
+
+def decompose_detections_v2(splitted_lines):
+    super_temp = []
+    j = 0
+    indices = []
+    while j < len(splitted_lines):
+        if REG_PTR.search(splitted_lines[j]):
+            indices.append(j)
+        if REG_PTR.search(splitted_lines[j]):
+            indices.append(j)
+        j += 1
+
+    if len(indices) == 1:
+        for i, item in enumerate(splitted_lines):
+            if i != 0:
+                super_temp.append(item)
+        super_temp = [super_temp]
+    else:
+        i = 0
+        j = 1
+        while True:
+            temp = [] 
+            for row in range(indices[i], indices[j]):
+                temp.append(splitted_lines[row])
+            super_temp.append(temp)
+            if j == len(indices)-1:
+                temp = [] 
+                for row in range(indices[j], len(splitted_lines)):
+                    temp.append(splitted_lines[row])
+                super_temp.append(temp)
+                break
+            i+= 1
+            j+= 1
+
+    return super_temp
 
 class SummarizeTestCases:
     def __init__(self, tool_name, lib_name, iteration, release) -> None:
@@ -38,10 +75,33 @@ class SummarizeTestCases:
 
         self.execution_flag = True
         
-        self.Nablaheader = [
-            'RANDOM', 'STATUS', 'NA', 'REV_STATUS', 'FWD_STATUS', 'REV_FWD_GRAD', 'ND_GRAD', 'PASS', 'NA', 'SKIP', 'DIRECT_CRASH', 'NA', 'NA', 'NA', 'NAN',
-            'ND_FAIL', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'REV_FWD_GRAD', 'ND_GRAD', 'PASS', 'CRASH', 'SKIP', 'NA', 'NA', 'NA', 'NA', 'NAN', 'NA'
-        ]
+        self.nablafuzz_test_counter  = {
+            "SUCCESS": 0,
+            "PASS": 0,
+            "SKIP": 0,
+            "FWD_VALUE": 0,
+            "STATUS": 0,
+            "FWD_STATUS": 0,
+            "REV_STATUS": 0,
+            "REV_FWD_GRAD": 0,
+            "ND_GRAD": 0,
+            "GRAD_VALUE_MISMATCH": 0,
+            "REV_STATUS_MISMATCH": 0,
+            "VALUE_MISMATCH": 0,
+            "DIRECT_CRASH": 0,
+            "CRASH": 0, 
+            "REV_CRASH": 0,
+            "FWD_CRASH": 0,
+            "REV_GRAD_FAIL": 0,
+            "FWD_GRAD_FAIL": 0,
+            "ND_FAIL": 0,
+            "ARGS_FAIL": 0,
+            "DIRECT_FAIL": 0,
+            "GRAD_NOT_COMPUTED": 0,
+            "RANDOM": 0,
+            "DIRECT_NAN": 0,
+            'NAN':0}
+
         
         self.freefuzz_test_counter = {
             'fail': 0,
@@ -196,24 +256,42 @@ class SummarizeTestCases:
         self.deeprel_test_counter = {key: 0 for key in self.deeprel_test_counter}
 
     def count_nablafuzz_test_cases(self):
-        x = []
+        global executed
         if self.lib_name == 'torch':
             target_data = read_txt('data/torch_apis.txt')
         else:
             target_data = read_txt('data/tf_apis.txt')
 
         if self.lib_name == 'torch':
-            data = pd.read_csv(os.path.join(self.nablafuzz_root_path, 'log.csv'), encoding='utf-8', sep=',', header=None)
-            for idx, row in data.iterrows():
-                if row.iloc[0] in target_data:
-                    x.append(list(row.values)[1:])
-            df = pd.DataFrame(x)
-            df_averaged = df.sum()
-            out_data = [self.lib_name, self.iteration, self.release]  + list(df_averaged.values)
-            write_to_csvV2(out_data, "numtests", self.tool_name)
+            current_data = read_txt(os.path.join(self.nablafuzz_root_path, 'log.txt'))
+            decomposed_data = decompose_detections_v2(current_data)
+            for line in decomposed_data:
+                if not line:
+                    continue
+                if line[0] in target_data:
+                    for subline in line:
+                        if 'torch.' in subline:
+                            continue
+                        dict_data = eval(subline)
+                        for key, value in dict_data.items():
+                            if key in self.nablafuzz_test_counter.keys():
+                                self.nablafuzz_test_counter[key] += value
+                            else:
+                                self.nablafuzz_test_counter[key] = 0
+            out_data = [self.lib_name, self.iteration, self.release]  + list(self.nablafuzz_test_counter.values())
+
+            if not executed:
+                headers = list(self.nablafuzz_test_counter.keys())
+                headers.insert(0, 'Library')
+                headers.insert(1, 'Iteration')
+                headers.insert(2, 'Release')
+                write_to_csvV2(headers, "numtests", self.tool_name)
+                executed = True
+            
+            write_to_csvV2(out_data, "numtests" , self.tool_name)
+
         else:
             dirs = os.listdir(os.path.join(self.nablafuzz_root_path))
-            count_dict = {}
             for dir in dirs:
                 current_dir = os.path.join(self.nablafuzz_root_path, dir)
                 if os.path.isdir(current_dir):
@@ -223,12 +301,21 @@ class SummarizeTestCases:
                         if api in target_data:
                             dict_data = eval(dict_str)
                             for key, value in dict_data.items():
-                                if key in count_dict:
-                                    count_dict[key] += value
+                                if key in self.nablafuzz_test_counter:
+                                    self.nablafuzz_test_counter[key] += value
                                 else:
-                                    count_dict[key] = value
-            out_data = [self.lib_name, self.iteration, self.release]  + list(count_dict.values())
-            write_to_csvV2(out_data, "numtests", self.tool_name)
+                                    self.nablafuzz_test_counter[key] = 0
+            out_data = [self.lib_name, self.iteration, self.release]  + list(self.nablafuzz_test_counter.values())
+
+            if not executed:
+                headers = list(self.nablafuzz_test_counter.keys())
+                headers.insert(0, 'Library')
+                headers.insert(1, 'Iteration')
+                headers.insert(2, 'Release')
+                write_to_csvV2(headers, "numtests", self.tool_name)
+                executed = True
+            
+            write_to_csvV2(out_data, "numtests" , self.tool_name)
     
     def count_docter_test_cases(self):
         global executed
@@ -410,17 +497,17 @@ if __name__ == '__main__':
         'torch': ['2.0.0', '2.0.1', '2.1.0'],
         'tf': ['2.11.0', '2.12.0', '2.13.0', '2.14.0'],
     }
-    tool_name = 'DeepRel'
-    tool_name_low = 'deeprel'
+    tool_name = 'NablaFuzz'
+    tool_name_low = 'nablafuzz'
     
     if not os.path.isfile(f"statistics/numtests/{tool_name}_1.csv"):
-        for k, v in lib.items():
-                for iteration in [1, 2, 3, 4, 5]:
-                    for release in v:
-                        print(f'Library: {k}, Iteration: {iteration}, Release: {release}')
-                        obj_= SummarizeTestCases(tool_name, k, iteration, release)
-                        function_call = f'obj_.count_{tool_name_low}_test_cases()'
-                        eval(function_call)
+        for k, v in lib.items():  
+            for iteration in [1, 2, 3, 4, 5]:
+                for release in v:
+                    print(f'Library: {k}, Iteration: {iteration}, Release: {release}')
+                    obj_= SummarizeTestCases(tool_name, k, iteration, release)
+                    function_call = f'obj_.count_{tool_name_low}_test_cases()'
+                    eval(function_call)
                     
     lib = {
         'torch': ['2.0.0', '2.0.1', '2.1.0'],

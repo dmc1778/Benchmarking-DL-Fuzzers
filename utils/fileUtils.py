@@ -9,7 +9,7 @@ def postprocess_test_statistics(df, tool_name, libname, release):
     x = x.iloc[0].values.tolist()
     x.insert(0, libname)
     x.insert(1, release)
-    return x 
+    return x    
 
 def read_timestamps_from_file(file_path: str, libname: str):
     timestamps = []
@@ -55,8 +55,8 @@ def list_python_files(directory):
 def load_csv(fileName):
     return pd.read_csv(f'issues/{fileName}.csv', sep=',')
 
-def write_to_csv(dirName,fileName, data):
-    with open(f"./{dirName}/{fileName}.csv", "a", newline="\n",) as fd:
+def write_to_csv(fileName, data):
+    with open(f"{fileName}.csv", "a", newline="\n",) as fd:
         writer_object = csv.writer(fd)
         writer_object.writerow(data)
         
