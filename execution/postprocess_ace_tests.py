@@ -47,9 +47,10 @@ def detect_bugs(lib, iteration,_version, tool):
     for idx, row in ground_truth.iterrows():
         for log in log_decomposed:
             if "Processing file" in log[0]:
-                c = c + 1
                 api_name = log[0].split('/')[-3]
                 print(api_name)
+                if api_name not in target_data:
+                    continue
                 if row['Buggy API'] == api_name:
                     if '.py' in api_name:
                         api_name = api_name.replace('.py', '')
@@ -61,6 +62,7 @@ def detect_bugs(lib, iteration,_version, tool):
                         with open(f"{output_path}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
                             write = csv.writer(file)
                             write.writerow(output)
+                        break
                     else:
                         print('No detection')
 

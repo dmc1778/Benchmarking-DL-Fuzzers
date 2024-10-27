@@ -204,13 +204,13 @@ def search_in_dataset(api_name, lib):
     return flag
 
 
-def get_overlap_freefuzz_deeprel_nablafuzz(dbname, lib):
+def get_overlap_freefuzz_deeprel_nablafuzz(dbname, lib, toolName):
     DB = pymongo.MongoClient(host="localhost", port=27017)[dbname]
     i = 0
     for api_name in DB.list_collection_names():
         flag = search_in_dataset(api_name, lib)
         if flag:
-            write_list_to_txt4(api_name, f"statistics/overlap/freefuzz_deeprel_nablafuzz_{lib}.txt")
+            write_list_to_txt4(api_name, f"statistics/overlap/{toolName}_{lib}.txt")
 
 """
 Delete all documents in a collection based on the field source.
@@ -285,18 +285,30 @@ def count_overlap_fuzzgpt(libname):
         if flag:
             write_list_to_txt4(api_name, f"statistics/overlap/FuzzGPT_{libname}.txt")
             
-def filter_groundTruth_with_overlap_apis(libname, toolname):
+def summarizedMissedBugs(libname, toolname):
     overlap_apis = read_txt(f'statistics/overlap/{toolname}_{libname}.txt')
     data = pd.read_csv(f"data/groundtruth_{libname}.csv", sep=',', encoding='utf-8')
     filtered_results = data[data['Buggy API'].isin(overlap_apis)]
-    filtered_results.to_csv(f'data/{toolname}/{toolname}_detected_bugs_{libname}.csv', index=False)
+    filtered_results = filtered_results[filtered_results['Detected'] != toolname]
+    if not os.path.isdir(f"statistics/missedBugs/{toolname}/"):
+        os.mkdir(f"statistics/missedBugs/{toolname}/")
+    #x = filtered_results['Trigger'].value_counts()
+    x = filtered_results.groupby(['Category Trigger', 'Trigger']).size().reset_index(name='Frequency')
+    x.to_csv(f'statistics/missedBugs/{toolname}/{toolname}_missed_bugs_{libname}.csv', index=True)
 
 def main():
-    # get_overlap_freefuzz_deeprel_nablafuzz('torch', 'torch')
-    # count_overlap_docter('tf2')
+    ## Step 1
+    # for tool in ['FreeFuzz', 'DeepRel', 'NablaFuzz']:
+    #     get_overlap_freefuzz_deeprel_nablafuzz('tf', 'tf', tool)
+    # count_overlap_docter('pt')
     # count_overlap_ace('torch')
-    # count_overlap_fuzzgpt('tf')
-    filter_groundTruth_with_overlap_apis('torch', 'FuzzGPT')
-
+    # count_overlap_titanfuzz('torch')
+    # count_overlap_fuzzgpt('torch')
+    
+    ## Step 2 
+    for tool in ['FreeFuzz', 'DeepRel', 'NablaFuzz', 'DocTer', 'ACETest', 'FuzzGPT', 'TitanFuzz']:
+        for lib in ['tf', 'torch']:
+            summarizedMissedBugs(lib, tool)
+    
 if __name__ == "__main__":
     main()

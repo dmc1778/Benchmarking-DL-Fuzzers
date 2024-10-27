@@ -24,15 +24,20 @@ def capture_logs(lib, iteration,_version, tool):
                         continue
                     current_bug = item.split(',')
                     if row['Buggy API'] == current_bug[0]:
-                        flag = row['Impact'] in current_bug
-                        if flag and row['Version'] == _version:
+                        print(row['Log Rule 2'])
+                        #if row['Log Rule 2'] == 'Aborted':
+                            
+                        flag1 = row['Log Rule'] in current_bug
+                        flag2 = row['Log Rule 2'] in current_bug
+                        
+                        if flag1 or flag2 and row['Version'] == _version:
                             output = [tool, lib, iteration, row['Issue'], row['Version'], _version, current_bug[0], row['Log Message'], current_bug[1]]
                             with open(f"{output_path}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
                                 write = csv.writer(file)
                                 write.writerow(output)
                 
 if __name__ == '__main__':
-    for lib in ['torch', 'tf']:
+    for lib in ['tf']:
         for i in range(1, 6):
             if lib == 'tf':
                 releases = ["2.11.0", "2.12.0", "2.13.0", "2.14.0"]

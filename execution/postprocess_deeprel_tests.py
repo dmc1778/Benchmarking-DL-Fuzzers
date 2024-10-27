@@ -52,13 +52,14 @@ def detect_bugs(lib, iteration,_version, tool) -> None:
         for j, log in enumerate(log_decomposed):
             print(f'Running {lib}:{_version}:{iteration} ground truth record: {idx}/{len(ground_truth)} // Log record {j}/{len(log_decomposed)}')
             if "Processing file" in log[0]:
-                c = c + 1
                 api_name = log[0].split('/')
                 extracted_item = next((item for item in api_name if '+' in item), None)
                 if "+" not in extracted_item:
                     continue
                 apis_extracted = extracted_item.split('+')
-                api_name =apis_extracted[0]
+                api_name = apis_extracted[0]
+                if api_name not in target_data:
+                    continue
                 if row['Buggy API'] == api_name:
                     if '.py' in api_name:
                         api_name = api_name.replace('.py', '')
@@ -69,10 +70,10 @@ def detect_bugs(lib, iteration,_version, tool) -> None:
                     match = pattern.search(log_merged)
                     if match and row['Version'] == _version:
                         output = [tool, lib, iteration,row['Issue'], row['Version'], _version, api_name, row['Log Message'], log_merged]
-                        
                         with open(f"{output_path}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
                             write = csv.writer(file)
                             write.writerow(output)
+                        break
                 else:
                     print('Not among target APIs.')
     

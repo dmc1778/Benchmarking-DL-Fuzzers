@@ -19,7 +19,6 @@ torch.nn.BatchNorm2d
 torch.onnx.export
 torch.onnx.export
 torch.onnx.export
-torch.onnx.export
 torch.Tensor.norm
 torch.nn.Sequential
 torch.nn.LSTM
@@ -39,7 +38,6 @@ torch.jit.annotate
 torch.index_select
 torch.index_add
 torch.fx.symbolic_trace
-torch.fx.symbolic_trace
 torch.func.jacrev
 torch.func.functional_call.jacrev
 torch.func.functional_call
@@ -57,11 +55,7 @@ torch.compile
 torch.compile
 torch.compile
 torch.compile
-torch.compile
-torch.compile
-torch.compile
 torch.func.grad
-torch.compile
 torch.compile
 torch.compile
 torch.compile
@@ -94,8 +88,6 @@ torch.optim.Optimizer.add_param_group
 torch.optim.lr_scheduler.StepLR
 torch.ops.aten.clamp.out
 torch.ops.aten.arange.out
-torch.onnx.export
-torch.onnx.export
 torch.onnx.export
 torch.onnx.export
 torch.onnx.export
@@ -148,9 +140,7 @@ torch.compile
 torch.compile
 torch.compile
 torch.compile
-torch.compile
 torch.nn.Sequential
-torch.compile
 torch.Tensor.as_strided_
 torch.ao.quantization.quantize_dynamic
 torch.amp.autocast
@@ -231,8 +221,6 @@ torch.compile
 torch.compile
 torch.compile
 torch.compile
-torch.compile
-torch.compile
 torch.sum
 torch.compile
 torch.compile
@@ -279,9 +267,6 @@ torch._C._special.special_spherical_bessel_j0
 torch.cosine_similarity
 torch._C._linalg.linalg_svdvals
 torch.nn.MultiheadAttention
-torch.distributed.fsdp.FullyShardedDataParallel
-torch.jit
-torch.nn.TransformerEncoderLayer
 torch.nn.functional.embedding
 torch.einsum
 torch.fft.ifft
@@ -348,7 +333,6 @@ torch.Tensor.unfold
 torch.fx.replace_pattern
 torch.Tensor.addcmul_
 torch.Tensor.addcmul_
-torch.nn.functional.log_softmax
 torch.Tensor.mul
 torch.linalg.lstsq
 torch.vmap

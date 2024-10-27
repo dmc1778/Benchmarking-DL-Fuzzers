@@ -1,0 +1,16 @@
+,Category Trigger,Trigger,Frequency
+0,API Input Context,Empty Input Tensor,1
+1,API Input Context,Inputs with Incompatible Shapes,1
+2,API Input Context,Large Input Tensor,7
+3,API Input Context,Modeling Parameter Space,6
+4,API Input Context,Negative Integer Argument,2
+5,API Input Context,Oracle for Performance Bug Detection,1
+6,API Input Context,Supporting Specific Data Types,6
+7,Test Case Context,Model Tensor Execution on CUDA Devices,1
+8,Test Case Context,Modeling Compile/Eager Execution Mode,1
+9,Test Case Context,Modeling Complex Tensor Operations and Layer Interactions,2
+10,Test Case Context,Modeling Complex Tensor Operations and Layer Interactions+Modeling Compile/Eager Execution Mode,3
+11,Test Case Context,Modeling Multiple API Usage Pattern,4
+12,Test Case Context,Oracle for Performance Bug Detection,1
+13,Test Case Context+API Input Context,Modeling Complex Tensor Operations and Layer Interactions+Modeling Parameter Space,1
+14,Test Case Context+API Input Context,Modeling Multiple API Usage Pattern+Modeling Parameter Space,1

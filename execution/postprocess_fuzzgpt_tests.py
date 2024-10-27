@@ -100,17 +100,17 @@ def detect_bugs(lib, iteration, release, tool):
 
                         
 def main():
-    lib = sys.argv[1]
-    iteration = sys.argv[2]
-    release = sys.argv[3]
-    env_name = sys.argv[4]
-    task = sys.argv[5]
+    # lib = sys.argv[1]
+    # iteration = sys.argv[2]
+    # release = sys.argv[3]
+    # env_name = sys.argv[4]
+    # task = sys.argv[5]
     
-    # lib = 'torch'
-    # iteration = 1
-    # release = '2.0.0'
-    # env_name = 'torch_2.0.0'
-    # task = 'capture'
+    lib = 'torch'
+    iteration = 1
+    release = '2.0.0'
+    env_name = 'torch_2.0.0'
+    task = 'detect'
     
     if task == 'dependency':
         insert_dependency(lib, iteration, release, env_name, 'atlasfuzz')

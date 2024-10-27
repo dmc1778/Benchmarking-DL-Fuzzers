@@ -12,7 +12,7 @@ torch.embedding
 torch.histogramdd
 torch.index_add
 torch.index_select
-torch.is_floating_point 
+torch.is_floating_point
 torch.isin
 torch._C._linalg.linalg_svdvals
 torch.logical_and
