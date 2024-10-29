@@ -1,5 +1,5 @@
 import pymongo
-import os
+import os, csv
 import re, shutil
 import subprocess
 import logging
@@ -95,7 +95,7 @@ rootCause = {
           "TitanFuzz": {"torch": "-", "tf": "-"},
           "FuzzGPT": {"torch": "-", "tf": "-"}
         },
-        "Supporting Specific Data Types": {
+        "Modeling Specific Data Types": {
           "FreeFuzz": {"torch": "-", "tf": "-"},
           "DeepRel": {"torch": "-", "tf": "-"},
           "DocTer": {"torch": "-", "tf": "-"},
@@ -129,6 +129,14 @@ rootCause = {
         }
       },
       "Test Case Context": {
+        "Modeling Multiple API Usage Pattern+Modeling Compile/Eager Execution Mode": {
+          "FreeFuzz": {"torch": "-", "tf": "-"},
+          "DeepRel": {"torch": "-", "tf": "-"},
+          "DocTer": {"torch": "-", "tf": "-"},
+          "ACETest": {"torch": "-", "tf": "-"},
+          "TitanFuzz": {"torch": "-", "tf": "-"},
+          "FuzzGPT": {"torch": "-", "tf": "-"}
+        },
         "Modeling Complex Tensor Operations and Layer Interactions": {
           "FreeFuzz": {"torch": "-", "tf": "-"},
           "DeepRel": {"torch": "-", "tf": "-"},
@@ -193,14 +201,6 @@ rootCause = {
           "TitanFuzz": {"torch": "-", "tf": "-"},
           "FuzzGPT": {"torch": "-", "tf": "-"}
         },
-        "Model XLA Compilation": {
-          "FreeFuzz": {"torch": "-", "tf": "-"},
-          "DeepRel": {"torch": "-", "tf": "-"},
-          "DocTer": {"torch": "-", "tf": "-"},
-          "ACETest": {"torch": "-", "tf": "-"},
-          "TitanFuzz": {"torch": "-", "tf": "-"},
-          "FuzzGPT": {"torch": "-", "tf": "-"}
-        },
         "Modeling Complex Tensor Operations and Layer Interactions": {
           "FreeFuzz": {"torch": "-", "tf": "-"},
           "DeepRel": {"torch": "-", "tf": "-"},
@@ -228,6 +228,14 @@ rootCause = {
           "FuzzGPT": {"torch": "-", "tf": "-"}
         },
         "Modeling Multiple API Usage Pattern+Modeling Parameter Space": {
+          "FreeFuzz": {"torch": "-", "tf": "-"},
+          "DeepRel": {"torch": "-", "tf": "-"},
+          "DocTer": {"torch": "-", "tf": "-"},
+          "ACETest": {"torch": "-", "tf": "-"},
+          "TitanFuzz": {"torch": "-", "tf": "-"},
+          "FuzzGPT": {"torch": "-", "tf": "-"}
+        },
+        "Model XLA Compilation": {
           "FreeFuzz": {"torch": "-", "tf": "-"},
           "DeepRel": {"torch": "-", "tf": "-"},
           "DocTer": {"torch": "-", "tf": "-"},
@@ -509,6 +517,8 @@ def summarizedMissedBugs(libname, toolname):
     data = pd.read_csv(f"data/{libname}_groundtruth.csv", sep=',', encoding='utf-8')
     filtered_results = data[data['Buggy API'].isin(overlap_apis)]
     filtered_results = filtered_results[filtered_results['Detected'] != toolname]
+    if toolname == 'ACETest':
+        filtered_results = filtered_results[filtered_results['Detected'] != 'ace_1']
     if not os.path.isdir(f"statistics/missedBugs/{toolname}/"):
         os.mkdir(f"statistics/missedBugs/{toolname}/")
     #x = filtered_results['Trigger'].value_counts()
@@ -518,6 +528,17 @@ def summarizedMissedBugs(libname, toolname):
     
     #x.to_csv(f'statistics/missedBugs/{toolname}/{toolname}_missed_bugs_{libname}.csv', index=True)
 
+    # Helper function to flatten the nested dictionary
+def flatten_dict(d, parent_key='', sep=' > '):
+        items = []
+        for k, v in d.items():
+            new_key = f"{parent_key}{sep}{k}" if parent_key else k
+            if isinstance(v, dict):
+                items.extend(flatten_dict(v, new_key, sep=sep).items())
+            else:
+                items.append((new_key, v))
+        return dict(items)
+    
 def main():
     ## Step 1
     # for tool in ['FreeFuzz', 'DeepRel', 'NablaFuzz']:
@@ -531,7 +552,9 @@ def main():
     for tool in ['FreeFuzz', 'DeepRel', 'DocTer', 'ACETest', 'FuzzGPT', 'TitanFuzz']:
         for lib in ['tf', 'torch']:
             summarizedMissedBugs(lib, tool)
-    print('')
-    
+
+    import json
+    with open('rootcause.json', 'w') as fp:
+        json.dump(rootCause, fp, indent=2)
 if __name__ == "__main__":
     main()

@@ -1,0 +1,660 @@
+{
+  "Category": {
+    "API Input Context": {
+      "Modeling Parameter Space": {
+        "FreeFuzz": {
+          "torch": 37,
+          "tf": 13
+        },
+        "DeepRel": {
+          "torch": 38,
+          "tf": 13
+        },
+        "DocTer": {
+          "torch": 23,
+          "tf": 13
+        },
+        "ACETest": {
+          "torch": 6,
+          "tf": 3
+        },
+        "TitanFuzz": {
+          "torch": 58,
+          "tf": 17
+        },
+        "FuzzGPT": {
+          "torch": 58,
+          "tf": 17
+        }
+      },
+      "Inputs with Incompatible Shapes": {
+        "FreeFuzz": {
+          "torch": 5,
+          "tf": 5
+        },
+        "DeepRel": {
+          "torch": 5,
+          "tf": 5
+        },
+        "DocTer": {
+          "torch": 1,
+          "tf": 4
+        },
+        "ACETest": {
+          "torch": 1,
+          "tf": 3
+        },
+        "TitanFuzz": {
+          "torch": 4,
+          "tf": 10
+        },
+        "FuzzGPT": {
+          "torch": 5,
+          "tf": 10
+        }
+      },
+      "Large Integer Argument": {
+        "FreeFuzz": {
+          "torch": 2,
+          "tf": 4
+        },
+        "DeepRel": {
+          "torch": 1,
+          "tf": 4
+        },
+        "DocTer": {
+          "torch": "-",
+          "tf": 2
+        },
+        "ACETest": {
+          "torch": "-",
+          "tf": 2
+        },
+        "TitanFuzz": {
+          "torch": 2,
+          "tf": 6
+        },
+        "FuzzGPT": {
+          "torch": 2,
+          "tf": 5
+        }
+      },
+      "Large List Element": {
+        "FreeFuzz": {
+          "torch": "-",
+          "tf": 5
+        },
+        "DeepRel": {
+          "torch": "-",
+          "tf": 5
+        },
+        "DocTer": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "ACETest": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "TitanFuzz": {
+          "torch": "-",
+          "tf": 3
+        },
+        "FuzzGPT": {
+          "torch": "-",
+          "tf": 3
+        }
+      },
+      "Empty List Element": {
+        "FreeFuzz": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "DeepRel": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "DocTer": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "ACETest": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "TitanFuzz": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "FuzzGPT": {
+          "torch": "-",
+          "tf": "-"
+        }
+      },
+      "Large Input Tensor": {
+        "FreeFuzz": {
+          "torch": 9,
+          "tf": 9
+        },
+        "DeepRel": {
+          "torch": 9,
+          "tf": 11
+        },
+        "DocTer": {
+          "torch": 2,
+          "tf": 4
+        },
+        "ACETest": {
+          "torch": 7,
+          "tf": 6
+        },
+        "TitanFuzz": {
+          "torch": 12,
+          "tf": 15
+        },
+        "FuzzGPT": {
+          "torch": 12,
+          "tf": 15
+        }
+      },
+      "Zero Input Tensor": {
+        "FreeFuzz": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "DeepRel": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "DocTer": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "ACETest": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "TitanFuzz": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "FuzzGPT": {
+          "torch": "-",
+          "tf": "-"
+        }
+      },
+      "Negative Input Tensor": {
+        "FreeFuzz": {
+          "torch": "-",
+          "tf": 1
+        },
+        "DeepRel": {
+          "torch": "-",
+          "tf": 1
+        },
+        "DocTer": {
+          "torch": "-",
+          "tf": 2
+        },
+        "ACETest": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "TitanFuzz": {
+          "torch": "-",
+          "tf": 2
+        },
+        "FuzzGPT": {
+          "torch": "-",
+          "tf": 1
+        }
+      },
+      "Negative Integer Argument": {
+        "FreeFuzz": {
+          "torch": 3,
+          "tf": "-"
+        },
+        "DeepRel": {
+          "torch": 2,
+          "tf": "-"
+        },
+        "DocTer": {
+          "torch": 1,
+          "tf": "-"
+        },
+        "ACETest": {
+          "torch": 2,
+          "tf": "-"
+        },
+        "TitanFuzz": {
+          "torch": 3,
+          "tf": "-"
+        },
+        "FuzzGPT": {
+          "torch": 3,
+          "tf": "-"
+        }
+      },
+      "Supporting Specific Data Types": {
+        "FreeFuzz": {
+          "torch": 16,
+          "tf": 15
+        },
+        "DeepRel": {
+          "torch": 16,
+          "tf": 15
+        },
+        "DocTer": {
+          "torch": 10,
+          "tf": 11
+        },
+        "ACETest": {
+          "torch": 6,
+          "tf": 1
+        },
+        "TitanFuzz": {
+          "torch": 19,
+          "tf": 17
+        },
+        "FuzzGPT": {
+          "torch": 19,
+          "tf": 17
+        }
+      },
+      "Zero Integer Argument": {
+        "FreeFuzz": {
+          "torch": 3,
+          "tf": 1
+        },
+        "DeepRel": {
+          "torch": 3,
+          "tf": 2
+        },
+        "DocTer": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "ACETest": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "TitanFuzz": {
+          "torch": 3,
+          "tf": 3
+        },
+        "FuzzGPT": {
+          "torch": 3,
+          "tf": 3
+        }
+      },
+      "Empty Input Tensor": {
+        "FreeFuzz": {
+          "torch": 8,
+          "tf": 1
+        },
+        "DeepRel": {
+          "torch": 7,
+          "tf": 1
+        },
+        "DocTer": {
+          "torch": 2,
+          "tf": 2
+        },
+        "ACETest": {
+          "torch": 1,
+          "tf": 1
+        },
+        "TitanFuzz": {
+          "torch": 9,
+          "tf": 5
+        },
+        "FuzzGPT": {
+          "torch": 9,
+          "tf": 5
+        }
+      },
+      "Others": {
+        "FreeFuzz": {
+          "torch": "-",
+          "tf": 3
+        },
+        "DeepRel": {
+          "torch": "-",
+          "tf": 3
+        },
+        "DocTer": {
+          "torch": "-",
+          "tf": 2
+        },
+        "ACETest": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "TitanFuzz": {
+          "torch": "-",
+          "tf": 3
+        },
+        "FuzzGPT": {
+          "torch": "-",
+          "tf": 2
+        }
+      }
+    },
+    "Test Case Context": {
+      "Modeling Complex Tensor Operations and Layer Interactions": {
+        "FreeFuzz": {
+          "torch": 18,
+          "tf": 6
+        },
+        "DeepRel": {
+          "torch": 18,
+          "tf": 6
+        },
+        "DocTer": {
+          "torch": 11,
+          "tf": 7
+        },
+        "ACETest": {
+          "torch": 2,
+          "tf": "-"
+        },
+        "TitanFuzz": {
+          "torch": 35,
+          "tf": 10
+        },
+        "FuzzGPT": {
+          "torch": 36,
+          "tf": 10
+        }
+      },
+      "Modeling Complex Tensor Operations and Layer Interactions+Modeling Compile/Eager Execution Mode": {
+        "FreeFuzz": {
+          "torch": 4,
+          "tf": "-"
+        },
+        "DeepRel": {
+          "torch": 4,
+          "tf": "-"
+        },
+        "DocTer": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "ACETest": {
+          "torch": 3,
+          "tf": "-"
+        },
+        "TitanFuzz": {
+          "torch": 4,
+          "tf": "-"
+        },
+        "FuzzGPT": {
+          "torch": 4,
+          "tf": "-"
+        }
+      },
+      "Modeling Complex Tensor Operations and Layer Interactions+Modeling Multiple API Usage Pattern": {
+        "FreeFuzz": {
+          "torch": 4,
+          "tf": "-"
+        },
+        "DeepRel": {
+          "torch": 4,
+          "tf": "-"
+        },
+        "DocTer": {
+          "torch": 2,
+          "tf": "-"
+        },
+        "ACETest": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "TitanFuzz": {
+          "torch": 6,
+          "tf": "-"
+        },
+        "FuzzGPT": {
+          "torch": 6,
+          "tf": "-"
+        }
+      },
+      "Oracle for Performance Bug Detection": {
+        "FreeFuzz": {
+          "torch": 8,
+          "tf": 3
+        },
+        "DeepRel": {
+          "torch": 8,
+          "tf": 3
+        },
+        "DocTer": {
+          "torch": 9,
+          "tf": 2
+        },
+        "ACETest": {
+          "torch": 2,
+          "tf": "-"
+        },
+        "TitanFuzz": {
+          "torch": 18,
+          "tf": 5
+        },
+        "FuzzGPT": {
+          "torch": 18,
+          "tf": 5
+        }
+      },
+      "Modeling Multiple API Usage Pattern": {
+        "FreeFuzz": {
+          "torch": 21,
+          "tf": "-"
+        },
+        "DeepRel": {
+          "torch": 21,
+          "tf": "-"
+        },
+        "DocTer": {
+          "torch": 8,
+          "tf": 2
+        },
+        "ACETest": {
+          "torch": 4,
+          "tf": 3
+        },
+        "TitanFuzz": {
+          "torch": 27,
+          "tf": 7
+        },
+        "FuzzGPT": {
+          "torch": 28,
+          "tf": 6
+        }
+      },
+      "Supporting External Library API": {
+        "FreeFuzz": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "DeepRel": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "DocTer": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "ACETest": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "TitanFuzz": {
+          "torch": 1,
+          "tf": "-"
+        },
+        "FuzzGPT": {
+          "torch": 1,
+          "tf": "-"
+        }
+      },
+      "Model Tensor Execution on CUDA Devices": {
+        "FreeFuzz": {
+          "torch": 15,
+          "tf": 2
+        },
+        "DeepRel": {
+          "torch": 15,
+          "tf": 2
+        },
+        "DocTer": {
+          "torch": 4,
+          "tf": 2
+        },
+        "ACETest": {
+          "torch": 1,
+          "tf": "-"
+        },
+        "TitanFuzz": {
+          "torch": 19,
+          "tf": 2
+        },
+        "FuzzGPT": {
+          "torch": 20,
+          "tf": 2
+        }
+      },
+      "Modeling Compile/Eager Execution Mode": {
+        "FreeFuzz": {
+          "torch": 5,
+          "tf": 4
+        },
+        "DeepRel": {
+          "torch": 5,
+          "tf": 3
+        },
+        "DocTer": {
+          "torch": "-",
+          "tf": 5
+        },
+        "ACETest": {
+          "torch": 1,
+          "tf": 2
+        },
+        "TitanFuzz": {
+          "torch": 7,
+          "tf": 8
+        },
+        "FuzzGPT": {
+          "torch": 7,
+          "tf": 8
+        }
+      },
+      "Model XLA Compilation": {
+        "FreeFuzz": {
+          "torch": "-",
+          "tf": 6
+        },
+        "DeepRel": {
+          "torch": "-",
+          "tf": 6
+        },
+        "DocTer": {
+          "torch": "-",
+          "tf": 6
+        },
+        "ACETest": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "TitanFuzz": {
+          "torch": "-",
+          "tf": 7
+        },
+        "FuzzGPT": {
+          "torch": "-",
+          "tf": 7
+        }
+      },
+      "Others": {
+        "FreeFuzz": {
+          "torch": 1,
+          "tf": "-"
+        },
+        "DeepRel": {
+          "torch": 1,
+          "tf": "-"
+        },
+        "DocTer": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "ACETest": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "TitanFuzz": {
+          "torch": 2,
+          "tf": "-"
+        },
+        "FuzzGPT": {
+          "torch": 2,
+          "tf": "-"
+        }
+      }
+    },
+    "Test Case Context+API Input Context": {
+      "Modeling Complex Tensor Operations and Layer Interactions+Modeling Parameter Space": {
+        "FreeFuzz": {
+          "torch": 7,
+          "tf": "-"
+        },
+        "DeepRel": {
+          "torch": 7,
+          "tf": "-"
+        },
+        "DocTer": {
+          "torch": 11,
+          "tf": "-"
+        },
+        "ACETest": {
+          "torch": 1,
+          "tf": "-"
+        },
+        "TitanFuzz": {
+          "torch": 18,
+          "tf": "-"
+        },
+        "FuzzGPT": {
+          "torch": 18,
+          "tf": "-"
+        }
+      },
+      "Modeling Multiple API Usage Pattern+Modeling Parameter Space": {
+        "FreeFuzz": {
+          "torch": 2,
+          "tf": "-"
+        },
+        "DeepRel": {
+          "torch": 2,
+          "tf": "-"
+        },
+        "DocTer": {
+          "torch": "-",
+          "tf": "-"
+        },
+        "ACETest": {
+          "torch": 1,
+          "tf": "-"
+        },
+        "TitanFuzz": {
+          "torch": 2,
+          "tf": "-"
+        },
+        "FuzzGPT": {
+          "torch": 2,
+          "tf": "-"
+        }
+      }
+    }
+  }
+}
