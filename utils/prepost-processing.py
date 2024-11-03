@@ -39,6 +39,14 @@ rootCause = {
           "TitanFuzz": {"torch": "-", "tf": "-"},
           "FuzzGPT": {"torch": "-", "tf": "-"}
         },
+        "Modeling Specific Data Types": {
+          "FreeFuzz": {"torch": "-", "tf": "-"},
+          "DeepRel": {"torch": "-", "tf": "-"},
+          "DocTer": {"torch": "-", "tf": "-"},
+          "ACETest": {"torch": "-", "tf": "-"},
+          "TitanFuzz": {"torch": "-", "tf": "-"},
+          "FuzzGPT": {"torch": "-", "tf": "-"}
+        },
         "Large Integer Argument": {
           "FreeFuzz": {"torch": "-", "tf": "-"},
           "DeepRel": {"torch": "-", "tf": "-"},
@@ -209,6 +217,22 @@ rootCause = {
           "TitanFuzz": {"torch": "-", "tf": "-"},
           "FuzzGPT": {"torch": "-", "tf": "-"}
         },
+        "Model XLA Compilation": {
+          "FreeFuzz": {"torch": "-", "tf": "-"},
+          "DeepRel": {"torch": "-", "tf": "-"},
+          "DocTer": {"torch": "-", "tf": "-"},
+          "ACETest": {"torch": "-", "tf": "-"},
+          "TitanFuzz": {"torch": "-", "tf": "-"},
+          "FuzzGPT": {"torch": "-", "tf": "-"}
+        },
+        "Model XLA Compilation+Model Tensor Execution on CUDA Devices": {
+          "FreeFuzz": {"torch": "-", "tf": "-"},
+          "DeepRel": {"torch": "-", "tf": "-"},
+          "DocTer": {"torch": "-", "tf": "-"},
+          "ACETest": {"torch": "-", "tf": "-"},
+          "TitanFuzz": {"torch": "-", "tf": "-"},
+          "FuzzGPT": {"torch": "-", "tf": "-"}
+        },
         "Others": {
           "FreeFuzz": {"torch": "-", "tf": "-"},
           "DeepRel": {"torch": "-", "tf": "-"},
@@ -235,7 +259,7 @@ rootCause = {
           "TitanFuzz": {"torch": "-", "tf": "-"},
           "FuzzGPT": {"torch": "-", "tf": "-"}
         },
-        "Model XLA Compilation": {
+        "Model XLA Compilation+Modeling Parameter Space": {
           "FreeFuzz": {"torch": "-", "tf": "-"},
           "DeepRel": {"torch": "-", "tf": "-"},
           "DocTer": {"torch": "-", "tf": "-"},

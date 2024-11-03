@@ -104,30 +104,25 @@ class SummarizeTestCases:
 
         
         self.freefuzz_test_counter = {
-            'fail': 0,
-            'potential-bug': 0,
+            'exception': 0,
             'success': 0,
             'crash': 0,
             'timeout': 0
         }
 
         self.deeprel_test_counter = {
-            'bug': 0,
-            'err': 0,
-            'fail': 0,
-            'neq': 0,
+            'exception': 0,
             'success': 0
         }
         
         self.docter_test_counter = {
             'crash': 0,
             'exception': 0,
-            'fail': 0,
             'timeout': 0,
         }
 
         self.ace_test_counter = {
-            'invalid': 0,
+            'exception': 0,
             'crash': 0,
             'timeout': 0,
             'OOM': 0,
@@ -194,7 +189,10 @@ class SummarizeTestCases:
                         test_files_path = os.path.join(current_oracle, api)
                         test_files_list = os.listdir(test_files_path)
                         py_file_count = len([file for file in test_files_list if file.endswith('.py')])
-                        self.freefuzz_test_counter[oracle] += py_file_count
+                        if oracle == 'fail' or oracle == 'potential-bug':
+                            self.freefuzz_test_counter['exception'] += py_file_count
+                        else:
+                            self.freefuzz_test_counter[oracle] += py_file_count
                         
         crashed_tests = read_txt(os.path.join(self.freefuzz_root_path,'runcrash.txt'))
         timedout_tests = read_txt(os.path.join(self.freefuzz_root_path,'timeout.txt'))
@@ -241,7 +239,10 @@ class SummarizeTestCases:
                         continue
                     test_files_list = os.listdir(target_)
                     py_file_count = len([file for file in test_files_list if file.endswith('.py')])
-                    self.deeprel_test_counter[oracle] += py_file_count
+                    if oracle == 'err' or oracle == 'fail' or oracle == 'neq':
+                        self.deeprel_test_counter['exception'] += py_file_count
+                    else:
+                        self.deeprel_test_counter[oracle] += py_file_count
         output_data = [self.lib_name, self.iteration, self.release] + list(self.deeprel_test_counter.values())
         
         if not executed:
@@ -341,7 +342,7 @@ class SummarizeTestCases:
                 if os.path.isdir(current_dir):
                     if os.path.isfile(os.path.join(current_dir, 'failure_record')):
                         fail_records = read_txt(os.path.join(current_dir, 'failure_record'))
-                        self.docter_test_counter['fail'] += len(fail_records)
+                        self.docter_test_counter['exception'] += len(fail_records)
                     if os.path.isfile(os.path.join(current_dir, 'exception_record')):
                         exception_records = read_txt(os.path.join(current_dir, 'exception_record'))
                         self.docter_test_counter['exception'] += len(exception_records)
@@ -374,7 +375,7 @@ class SummarizeTestCases:
         results = pd.read_csv(os.path.join(self.acetest_root_path, 'res.csv'), encoding='utf-8', sep=',')
         filtered_results = results[results['api'].isin(target_data)]
         
-        self.ace_test_counter['invalid'] = filtered_results.iloc[:, 5].sum()
+        self.ace_test_counter['exception'] = filtered_results.iloc[:, 5].sum()
         self.ace_test_counter['crash'] = filtered_results.iloc[:, 6].sum()
         self.ace_test_counter['timeout'] = filtered_results.iloc[:, 7].sum()
         self.ace_test_counter['OOM'] = filtered_results.iloc[:, 8].sum()
@@ -497,8 +498,8 @@ if __name__ == '__main__':
         'torch': ['2.0.0', '2.0.1', '2.1.0'],
         'tf': ['2.11.0', '2.12.0', '2.13.0', '2.14.0'],
     }
-    tool_name = 'NablaFuzz'
-    tool_name_low = 'nablafuzz'
+    tool_name = 'atlasfuzz'
+    tool_name_low = 'atlasfuzz'
     
     if not os.path.isfile(f"statistics/numtests/{tool_name}_1.csv"):
         for k, v in lib.items():  
