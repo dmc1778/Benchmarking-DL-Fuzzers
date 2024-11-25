@@ -540,17 +540,20 @@ def summarizedMissedBugs(libname, toolname):
     overlap_apis = read_txt(f'statistics/overlap/{toolname}_{libname}.txt')
     data = pd.read_csv(f"data/{libname}_groundtruth.csv", sep=',', encoding='utf-8')
     filtered_results = data[data['Buggy API'].isin(overlap_apis)]
-    filtered_results = filtered_results[filtered_results['Detected'] != toolname]
+    toolname = [toolname]
+    filtered_results = filtered_results[~(filtered_results['Detected1'].isin(toolname) | filtered_results['Detected2'].isin(toolname))]
     if toolname == 'ACETest':
         filtered_results = filtered_results[filtered_results['Detected'] != 'ace_1']
+    print(f"{toolname}-{libname}:{filtered_results.shape}")
     if not os.path.isdir(f"statistics/missedBugs/{toolname}/"):
         os.mkdir(f"statistics/missedBugs/{toolname}/")
     #x = filtered_results['Trigger'].value_counts()
     x = filtered_results.groupby(['Category', 'Trigger']).size().reset_index(name='Frequency')
-    for idx, row in x.iterrows():
-        rootCause['Category'][row['Category']][row['Trigger']][toolname][libname] = row['Frequency']
     
-    #x.to_csv(f'statistics/missedBugs/{toolname}/{toolname}_missed_bugs_{libname}.csv', index=True)
+    # for idx, row in x.iterrows():
+    #     rootCause['Category'][row['Category']][row['Trigger']][toolname][libname] = row['Frequency']
+    
+    x.to_csv(f'statistics/missedBugs/{toolname[0]}/{toolname[0]}_missed_bugs_{libname}.csv', index=True)
 
     # Helper function to flatten the nested dictionary
 def flatten_dict(d, parent_key='', sep=' > '):
@@ -572,9 +575,10 @@ def main():
     # count_overlap_titanfuzz('torch')
     # count_overlap_fuzzgpt('torch')
     
-    ## Step 2 
-    for tool in ['FreeFuzz', 'DeepRel', 'DocTer', 'ACETest', 'FuzzGPT', 'TitanFuzz']:
-        for lib in ['tf', 'torch']:
+    ## Step 2
+    # ['FreeFuzz', 'DeepRel', 'DocTer', 'ACETest', 'FuzzGPT', 'TitanFuzz'] 
+    for tool in ['FreeFuzz', 'DeepRel', 'DocTer', 'ACETest', 'TitanFuzz', 'FuzzGPT']:
+        for lib in ['torch', 'tf']:
             summarizedMissedBugs(lib, tool)
 
     import json
