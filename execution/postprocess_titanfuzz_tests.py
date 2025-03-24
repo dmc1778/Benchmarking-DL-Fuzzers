@@ -153,11 +153,11 @@ def process(lib, iteration,_version, env_name, tool):
 
 def detect_bug(lib, iteration, release, tool):
     if lib == 'torch':
-        target_data = read_txt('data/torch_apis.txt')
-        ground_truth = pd.read_csv(f'data/{lib}_groundtruth.csv')
+        target_data = read_txt('data/torch_icse_data.txt')
+        ground_truth = pd.read_csv(f'data/checker_groundtruth.csv')
     else:
-        target_data = read_txt('data/tf_apis.txt')
-        ground_truth = pd.read_csv(f'data/{lib}_groundtruth.csv')
+        target_data = read_txt('data/tf_icse_data.txt')
+        ground_truth = pd.read_csv(f'data/checker_groundtruth.csv')
         
     _path_to_logs_old = f"/media/nimashiri/DATA/testing_results/tosem/{tool}/Results/{lib}/{release}/{iteration}/{release}.csv"
     output_dir = f"/media/nimashiri/DATA/testing_results/tosem"
@@ -166,22 +166,26 @@ def detect_bug(lib, iteration, release, tool):
     
     try:
         for idx, row in ground_truth.iterrows():
-            for j, log_row in log_data_old.iterrows():
-                print(f'Running {lib}:{release}:{iteration} ground truth record: {idx}/{len(ground_truth)} // Log record {j}/{len(_path_to_logs_old)}')
-                api_name = log_row.iloc[2].split('/')[1]
-                api_name = api_name.replace('.py', '')
-                api_name = api_name.split('_')[0]
-                if api_name in target_data and row['Buggy API'] == api_name:
-                    pattern = re.compile(row['Log Rule'])
-                    match = pattern.search(log_row.iloc[3])
+            if not isinstance(row['Buggy API'], float):
+                for j, log_row in log_data_old.iterrows():
+                    print(f'Running {lib}:{release}:{iteration} ground truth record: {idx}/{len(ground_truth)} // Log record {j}/{len(_path_to_logs_old)}')
+                    api_name = log_row.iloc[2].split('/')[1]
+                    api_name = api_name.replace('.py', '')
+                    api_name = api_name.split('_')[0]
+                    if api_name in target_data and row['Buggy API'] == api_name:
+                        # if isinstance(row['Log Rule'], str):
+                        #     pattern = re.compile(row['Log Rule'])
+                        #     match = pattern.search(log_row.iloc[3])
+                        # else:
+                        #     print("Invalid pattern:", row['Log Rule'])
                         
-                    if match and row['Version'] == release:
-                        output = [tool, lib, iteration, row['Issue'], row['Version'], release, log_row.iloc[2].split('/')[1], row['Log Message'], log_row.iloc[3]]
-                                    
-                        with open(f"{output_dir}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
-                            write = csv.writer(file)
-                            write.writerow(output)
-                        break
+                        if row['Log Rule'] in log_row.iloc[3]:#and row['Version'] == release:
+                            # output = [tool, lib, iteration, row['Issue'], row['Version'], release, log_row.iloc[2].split('/')[1], row['Log Message'], log_row.iloc[3]]
+                            output = [tool, lib, row['Commit'], release, api_name, row['Log Rule'], log_row.iloc[3]]          
+                            with open(f"{output_dir}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
+                                write = csv.writer(file)
+                                write.writerow(output)
+                            break
     except Exception as e:
         print(e)
         

@@ -1,0 +1,17 @@
+tf.boolean_mask
+tf.clip_by_norm
+tf.histogram_fixed_width_bins
+tf.is_tensor
+tf.linalg.triangular_solve
+tf.math.cumsum
+tf.math.real
+tf.nn.dilation2d
+tf.random.learned_unigram_candidate_sampler
+tf.raw_ops.AvgPoolGrad
+tf.raw_ops.GRUBlockCell
+tf.raw_ops.TridiagonalSolve
+tf.single.rfft2d
+tf.sparse.reorder
+tf.stack
+tf.Variable
+tf.where

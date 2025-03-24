@@ -58,13 +58,12 @@ def insert_dependency(lib, iteration,_version, env_name, tool):
                             out_file.write(line + "\n")
                         
 def detect_bugs(lib, iteration, release, tool):
-
     if lib == 'torch':
-        target_data = read_txt('data/torch_apis.txt')
-        ground_truth = pd.read_csv(f'data/{lib}_groundtruth.csv')
+        target_data = read_txt('data/torch_icse_data.txt')
+        ground_truth = pd.read_csv(f'data/checker_groundtruth.csv')
     else:
-        target_data = read_txt('data/tf_apis.txt')
-        ground_truth = pd.read_csv(f'data/{lib}_groundtruth.csv')
+        target_data = read_txt('data/tf_icse_data.txt')
+        ground_truth = pd.read_csv(f'data/checker_groundtruth.csv')
 
     _path_to_logs_old = f"/media/nimashiri/DATA/testing_results/tosem/code-{tool}/fewshot/output/{lib}_demo/{iteration}/{release}/{release}.txt"
     output_dir = f"/media/nimashiri/DATA/testing_results/tosem"
@@ -73,27 +72,29 @@ def detect_bugs(lib, iteration, release, tool):
     
     try:    
         for idx, row in ground_truth.iterrows():
-            for j, log in enumerate(log_decomposed):
-                print(f'Running {lib}:{release}:{iteration} ground truth record: {idx}/{len(ground_truth)} // Log record {j}/{len(log_decomposed)}')
-                if "Processing file" in log[0]:
-                    api_name = log[0].split('/')[-2]
-                    
-                    if api_name in target_data and row['Buggy API'] == api_name:
-                        if '.py' in api_name:
-                            api_name = api_name.replace('.py', '')
+            if not isinstance(row['Buggy API'], float):
+                for j, log in enumerate(log_decomposed):
+                    print(f'Running {lib}:{release}:{iteration} ground truth record: {idx}/{len(ground_truth)} // Log record {j}/{len(log_decomposed)}')
+                    if "Processing file" in log[0]:
+                        api_name = log[0].split('/')[-2]
+                        
+                        if api_name in target_data and row['Buggy API'] == api_name:
+                            if '.py' in api_name:
+                                api_name = api_name.replace('.py', '')
                             
-                        log_merged = ''.join(log)
-                        pattern = re.compile(row['Log Rule'])
-                        match = pattern.search(log_merged)
-                        if match and row['Version'] == release:
-                            output = [tool, lib, iteration, row['Issue'], row['Version'], release, api_name, row['Log Message'], log_merged]
-                                
-                            with open(f"{output_dir}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
-                                write = csv.writer(file)
-                                write.writerow(output)
-                            break
-                    else:
-                        print('Not in target data!')
+                            log_merged = ''.join(log)
+                            # pattern = re.compile(row['Log Rule'])
+                            # match = pattern.search(log_merged)
+                            if row['Log Rule'] in log_merged:#and row['Release'] == release:
+                                #output = [tool, lib, iteration, row['Issue'], row['Version'], release, api_name, row['Log Message'], log_merged]
+                                output = [tool, lib, row['Commit'], release, api_name, row['Log Rule'], log_merged] 
+                                    
+                                with open(f"{output_dir}/detected_bugs.csv", "a", encoding="utf-8", newline='\n') as file:
+                                    write = csv.writer(file)
+                                    write.writerow(output)
+                                break
+                        else:
+                            print('Not in target data!')
     except Exception as e:
         print(e)
 

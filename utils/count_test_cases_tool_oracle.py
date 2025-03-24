@@ -45,33 +45,34 @@ def decompose_detections_v2(splitted_lines):
     return super_temp
 
 class SummarizeTestCases:
-    def __init__(self, tool_name, lib_name, iteration, release) -> None:
+    def __init__(self, tool_name, lib_name, iteration, release, venue) -> None:
         self.tool_name = tool_name
         self.lib_name = lib_name
+        self.venue = venue
         if tool_name == 'ACETest':
             self.iteration = iteration - 1
         else:
             self.iteration = iteration
         self.release = release
-        self.freefuzz_root_path  = f"/media/nimashiri/DATA/testing_results/tosem/{self.tool_name}/{self.lib_name}/{self.iteration}/{self.release}"
-        self.deeprel_root_path = f"/media/nimashiri/DATA/testing_results/tosem/{self.tool_name}/{self.lib_name}/{self.iteration}/{self.release}/expr"
+        self.freefuzz_root_path  = f"/media/nimashiri/DATA/testing_results/{self.venue}/{self.tool_name}/{self.lib_name}/{self.iteration}/{self.release}"
+        self.deeprel_root_path = f"/media/nimashiri/DATA/testing_results/{self.venue}/{self.tool_name}/{self.lib_name}/{self.iteration}/{self.release}/expr"
         
         if lib_name == 'torch':
-            self.nablafuzz_root_path = f"/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/{self.iteration}/{self.release}/torch/union/"
+            self.nablafuzz_root_path = f"/media/nimashiri/DATA/testing_results/{self.venue}/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/{self.iteration}/{self.release}/torch/union/"
         else:
-            self.nablafuzz_root_path = f"/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-TensorFlow/src/expr_outputs/{self.iteration}/{self.release}/test/logs/"
+            self.nablafuzz_root_path = f"/media/nimashiri/DATA/testing_results/{self.venue}/NablaFuzz/NablaFuzz-TensorFlow/src/expr_outputs/{self.iteration}/{self.release}/test/logs/"
         
         if lib_name == 'torch':
             full_lib_name = 'pytorch'
-            self.docter_root_path = f"/media/nimashiri/DATA/testing_results/tosem/workdir/{full_lib_name}/{self.iteration}/{self.release}+cu118/conform_constr"
+            self.docter_root_path = f"/media/nimashiri/DATA/testing_results/{self.venue}/workdir/{full_lib_name}/{self.iteration}/{self.release}+cu118/conform_constr"
         else:
             full_lib_name = 'tensorflow'
-            self.docter_root_path = f"/media/nimashiri/DATA/testing_results/tosem/workdir/{full_lib_name}/{self.iteration}/{self.release}/conform_constr"
+            self.docter_root_path = f"/media/nimashiri/DATA/testing_results/{self.venue}/workdir/{full_lib_name}/{self.iteration}/{self.release}/conform_constr"
         
-        self.acetest_root_path = f"/media/nimashiri/DATA/testing_results/tosem/{self.tool_name}/Tester/src/output/output_{self.lib_name}_{self.iteration}/{self.release}"
+        self.acetest_root_path = f"/media/nimashiri/DATA/fuzzers/{self.tool_name}/Tester/src/output/output_{self.lib_name}_{self.iteration}/{self.release}"
         
-        self.titanfuzz_root_path = f"/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/{self.lib_name}/{self.release}/{self.iteration}"
-        self.atlasfuzz_root_path = f"/media/nimashiri/DATA/testing_results/tosem/code-{self.tool_name}/fewshot/output/{self.lib_name}_demo/{self.iteration}/{self.release}"
+        self.titanfuzz_root_path = f"/media/nimashiri/DATA/testing_results/{self.venue}/titanfuzz/Results/{self.lib_name}/{self.release}/{self.iteration}"
+        self.atlasfuzz_root_path = f"/media/nimashiri/DATA/testing_results/{self.venue}/code-{self.tool_name}/fewshot/output/{self.lib_name}_demo/{self.iteration}/{self.release}"
 
         self.execution_flag = True
         
@@ -173,9 +174,9 @@ class SummarizeTestCases:
     def count_freefuzz_test_cases(self):
         global executed
         if self.lib_name == 'torch':
-            target_data = read_txt('data/torch_apis.txt')
+            target_data = read_txt('data/torch_icse_data.txt')
         else:
-            target_data = read_txt('data/tf_apis.txt')
+            target_data = read_txt('data/tf_icse_data.txt')
             
         directory_path = os.listdir(self.freefuzz_root_path)
         directories = [item for item in directory_path if os.path.isdir(os.path.join(self.freefuzz_root_path, item))]
@@ -193,12 +194,14 @@ class SummarizeTestCases:
                             self.freefuzz_test_counter['exception'] += py_file_count
                         else:
                             self.freefuzz_test_counter[oracle] += py_file_count
-                        
-        crashed_tests = read_txt(os.path.join(self.freefuzz_root_path,'runcrash.txt'))
-        timedout_tests = read_txt(os.path.join(self.freefuzz_root_path,'timeout.txt'))
         
-        self.freefuzz_test_counter['crash'] = len(crashed_tests)
-        self.freefuzz_test_counter['timeout'] = len(timedout_tests)
+        if os.path.isfile(os.path.join(self.freefuzz_root_path,'runcrash.txt')):
+            crashed_tests = read_txt(os.path.join(self.freefuzz_root_path,'runcrash.txt'))
+            self.freefuzz_test_counter['crash'] = len(crashed_tests)
+        
+        if os.path.isfile(os.path.join(self.freefuzz_root_path,'timeout.txt')):
+            timedout_tests = read_txt(os.path.join(self.freefuzz_root_path,'timeout.txt'))
+            self.freefuzz_test_counter['timeout'] = len(timedout_tests)
         
         output_data = [self.lib_name, self.iteration, self.release] + list(self.freefuzz_test_counter.values())
         
@@ -208,17 +211,17 @@ class SummarizeTestCases:
             headers.insert(1, 'Iteration')
             headers.insert(2, 'Release')
 
-            write_to_csvV2(headers, "numtests" , self.tool_name)
+            write_to_csvV2(headers, "numtests" , self.tool_name, self.venue)
             executed = True
-        write_to_csvV2(output_data, "numtests" , self.tool_name)
+        write_to_csvV2(output_data, "numtests" , self.tool_name, self.venue)
         self.freefuzz_test_counter = {key: 0 for key in self.freefuzz_test_counter}
         
     def count_deeprel_test_cases(self):
         global executed
         if self.lib_name == 'torch':
-            target_data = read_txt('data/torch_apis.txt')
+            target_data = read_txt('data/torch_icse_data.txt')
         else:
-            target_data = read_txt('data/tf_apis.txt')
+            target_data = read_txt('data/tf_icse_data.txt')
 
         directories = ['output-0']
         for dir_ in directories:
@@ -251,17 +254,17 @@ class SummarizeTestCases:
             headers.insert(1, 'Iteration')
             headers.insert(2, 'Release')
 
-            write_to_csvV2(headers, "numtests", self.tool_name)
+            write_to_csvV2(headers, "numtests", self.tool_name, self.venue)
             executed = True
-        write_to_csvV2(output_data, "numtests", self.tool_name)
+        write_to_csvV2(output_data, "numtests", self.tool_name, self.venue)
         self.deeprel_test_counter = {key: 0 for key in self.deeprel_test_counter}
 
     def count_nablafuzz_test_cases(self):
         global executed
         if self.lib_name == 'torch':
-            target_data = read_txt('data/torch_apis.txt')
+            target_data = read_txt('data/torch_icse_data.txt')
         else:
-            target_data = read_txt('data/tf_apis.txt')
+            target_data = read_txt('data/tf_icse_data.txt')
 
         if self.lib_name == 'torch':
             current_data = read_txt(os.path.join(self.nablafuzz_root_path, 'log.txt'))
@@ -327,9 +330,9 @@ class SummarizeTestCases:
                 count += int(split_records[2])
             return count
         if self.lib_name == 'torch':
-            target_data = read_txt('data/torch_apis.txt')
+            target_data = read_txt('data/torch_icse_data.txt')
         else:
-            target_data = read_txt('data/tf_apis.txt')
+            target_data = read_txt('data/tf_icse_data.txt')
             
         directory_path = os.listdir(self.docter_root_path)
         crash_records = read_txt(os.path.join(self.docter_root_path, 'bug_list'))
@@ -365,12 +368,12 @@ class SummarizeTestCases:
         write_to_csvV2(output_data, "numtests" , self.tool_name)
         self.docter_test_counter = {key: 0 for key in self.docter_test_counter}
         
-    def count_ace_test_cases(self):
+    def count_acetest_test_cases(self):
         global executed
-        if self.lib_name== 'torch':
-            target_data = read_txt('data/torch_apis.txt')
+        if self.lib_name == 'torch':
+            target_data = read_txt('data/torch_icse_data.txt')
         else:
-            target_data = read_txt('data/tf_apis.txt')
+            target_data = read_txt('data/tf_icse_data.txt')
 
         results = pd.read_csv(os.path.join(self.acetest_root_path, 'res.csv'), encoding='utf-8', sep=',')
         filtered_results = results[results['api'].isin(target_data)]
@@ -388,17 +391,17 @@ class SummarizeTestCases:
             headers.insert(1, 'Iteration')
             headers.insert(2, 'Release')
 
-            write_to_csvV2(headers, "numtests", self.tool_name)
+            write_to_csvV2(headers, "numtests", self.tool_name, self.venue)
             executed = True
-        write_to_csvV2(output_data, "numtests" , self.tool_name)
+        write_to_csvV2(output_data, "numtests" , self.tool_name, self.venue)
         self.ace_test_counter = {key: 0 for key in self.ace_test_counter}
     
     def count_titanfuzz_test_cases(self):
         global executed
-        if self.lib_name== 'torch':
-            target_data = read_txt('data/torch_apis.txt')
+        if self.lib_name == 'torch':
+            target_data = read_txt('data/torch_icse_data.txt')
         else:
-            target_data = read_txt('data/tf_apis.txt')
+            target_data = read_txt('data/tf_icse_data.txt')
 
         target_dirs = ['crash', 'exception', 'hangs', 'flaky', 'notarget', 'valid']
         try:
@@ -420,10 +423,10 @@ class SummarizeTestCases:
                 headers.insert(0, 'Library')
                 headers.insert(1, 'Iteration')
                 headers.insert(2, 'Release')
-                write_to_csvV2(headers, "numtests", self.tool_name)
+                write_to_csvV2(headers, "numtests", self.tool_name, self.venue)
                 executed = True
             
-            write_to_csvV2(output_data, "numtests" , self.tool_name)
+            write_to_csvV2(output_data, "numtests" , self.tool_name, self.venue)
             self.titanfuzz_test_counter = {key: 0 for key in self.titanfuzz_test_counter}
         
         except Exception as e:
@@ -432,9 +435,9 @@ class SummarizeTestCases:
     def count_atlasfuzz_test_cases(self):
         global executed    
         if self.lib_name == 'torch':
-            target_data = read_txt('data/torch_apis.txt')
+            target_data = read_txt('data/torch_icse_data.txt')
         else:
-            target_data = read_txt('data/tf_apis.txt')
+            target_data = read_txt('data/tf_icse_data.txt')
 
         _path_to_logs_old = f"/media/nimashiri/DATA/testing_results/tosem/code-{self.tool_name}/fewshot/output/{self.lib_name}_demo/{self.iteration}/{self.release}/{self.release}.txt"
         log_data_latest = read_txt(_path_to_logs_old)
@@ -484,29 +487,31 @@ class SummarizeTestCases:
                 headers.insert(0, 'Library')
                 headers.insert(1, 'Iteration')
                 headers.insert(2, 'Release')
-                write_to_csvV2(headers, "numtests", self.tool_name)
+                write_to_csvV2(headers, "numtests", self.tool_name, self.venue)
                 executed = True
                     
-            write_to_csvV2(output_data, "numtests" , self.tool_name)
+            write_to_csvV2(output_data, "numtests" , self.tool_name, self.venue)
             self.fuzzgpt_test_counter = {key: 0 for key in self.fuzzgpt_test_counter}
         except Exception as e:
             print(e)
 
 if __name__ == '__main__':
     
+    venue = 'icse26'
+    
     lib = {
         'torch': ['2.0.0', '2.0.1', '2.1.0'],
         'tf': ['2.11.0', '2.12.0', '2.13.0', '2.14.0'],
     }
-    tool_name = 'atlasfuzz'
-    tool_name_low = 'atlasfuzz'
+    tool_name = 'ACETest'
+    tool_name_low = tool_name.lower()
     
-    if not os.path.isfile(f"statistics/numtests/{tool_name}_1.csv"):
+    if not os.path.isfile(f"/home/nimashiri/Benchmarking-DL-Fuzzers/statistics/{venue}/numtests/{tool_name}_1.csv"):
         for k, v in lib.items():  
-            for iteration in [1, 2, 3, 4, 5]:
+            for iteration in [1]:
                 for release in v:
                     print(f'Library: {k}, Iteration: {iteration}, Release: {release}')
-                    obj_= SummarizeTestCases(tool_name, k, iteration, release)
+                    obj_= SummarizeTestCases(tool_name, k, iteration, release, venue)
                     function_call = f'obj_.count_{tool_name_low}_test_cases()'
                     eval(function_call)
                     
@@ -518,8 +523,8 @@ if __name__ == '__main__':
     value_holder = []
     for k, v in lib.items():
         for release in v:
-            data = pd.read_csv(f"statistics/numtests/{tool_name}_1.csv")
+            data = pd.read_csv(f"statistics/{venue}/numtests/{tool_name}_1.csv")
             value_holder.append(postprocess_test_statistics(data, tool_name, k, release))
     headers = list(data.columns.values)
     df = pd.DataFrame(value_holder, columns=headers)
-    df.to_csv(f"statistics/numtests/{tool_name}_2.csv", index=False)
+    df.to_csv(f"/home/nimashiri/Benchmarking-DL-Fuzzers/statistics/{venue}/numtests/{tool_name}_2.csv", index=False)

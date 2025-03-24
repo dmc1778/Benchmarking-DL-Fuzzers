@@ -1,0 +1,8 @@
+Library,Iteration,Release,exception,success
+torch,1,2.0.0,1362,0
+torch,1,2.0.1,1372,0
+torch,1,2.1.0,1355,0
+tf,1,2.11.0,737,0
+tf,1,2.12.0,769,0
+tf,1,2.13.0,789,0
+tf,1,2.14.0,716,0
