@@ -98,11 +98,13 @@ class CalculateCoverage:
             target_modules = []
             for k, v in file_names.items():
                 if v['executed_lines']:
-                    target_modules.append(v['summary']['percent_covered'])
+                    for subk, subv in v['functions'].items():
+                        target_modules.append(subv['summary']['percent_covered'])
+                    for subk, subv in v['classes'].items():
+                        target_modules.append(subv['summary']['percent_covered'])
                     
-
-            write_csv_headers(csv_file, ["tool_name", "lib_name", "release", "filePath"] + list(v['summary'].keys()))            
-            append_to_csv(csv_file, [self.tool_name, self.lib_name, self.release, target_file] + list(v['summary'].values()))
+            write_csv_headers(csv_file, ["tool_name", "lib_name", "release", "filePath", 'percent_covered'])            
+            append_to_csv(csv_file, [self.tool_name, self.lib_name, self.release, target_file, np.mean(target_modules)])
             
             subprocess.run(f"rm {coverage_file_path}", shell=True)
             subprocess.run(f"rm {json_file_path}", shell=True)
@@ -249,7 +251,7 @@ class CalculateCoverage:
 def api_name_to_module(api_name):
     parts = api_name.split('.')
     if len(parts) == 1:
-        return importlib.import_module(s)
+        return importlib.import_module(api_name)
     module_name = '.'.join(parts[:-1])
     attr_name = parts[-1]
     module = importlib.import_module(module_name)
