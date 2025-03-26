@@ -60,25 +60,34 @@ class CalculateCoverage:
         
         self.acetest_root_path = f"/media/nimashiri/DATA/testing_results/{self.venue}/{self.tool_name}/Tester/src/output/output_{self.lib_name}_{self.iteration}/{self.release}"
         
+        self.titanfuzz_root_path = f"/media/nimashiri/DATA/testing_results/{self.venue}/titanfuzz/Results/{self.lib_name}/{self.release}/{self.iteration}"
+        self.atlasfuzz_root_path = f"/media/nimashiri/DATA/testing_results/{self.venue}/code-{self.tool_name}/fewshot/output/{self.lib_name}_demo/{self.iteration}/{self.release}"
+
         self.env_name = f"{self.libname_small}_{release}"
         self.lib_src = f"/home/nimashiri/anaconda3/envs/{self.env_name}/lib/python3.9/site-packages/tensorflow"
 
 
-    def run_coverage(self, target_file, output_w, csv_file, api_name):
+    def run_coverage(self, target_file, output_w, csv_file, api_name, titanflag=False):
         
         # object_ = api_name_to_module(api_name)
         # source_name = inspect.isbuiltin(object_)
         
         coverage_file_path = os.path.join(output_w, f".coverage_{self.lib_name}_{self.tool_name}")
-        json_file_path = f"{output_w}/{self.tool_name}.json"
+        json_file_path = f"{output_w}/{self.tool_name}_{self.lib_name}.json"
         
         if target_file.endswith('.py'):
             print(f"calculating coverage for {self.tool_name} ::: {self.lib_name} ::: {self.release} ::: {target_file}")
             
-            if self.lib_name == 'torch':
-                cov_cmd = f'coverage run --branch --data-file={coverage_file_path} --source=torch {target_file}'
+            if titanflag:
+                if self.lib_name == 'torch':
+                    cov_cmd = f'coverage run --branch --data-file={coverage_file_path} --source=torch test_{self.lib_name}.py'
+                else:
+                    cov_cmd = f'coverage run --branch --data-file={coverage_file_path} --source={self.lib_src} test_{self.lib_name}.py'    
             else:
-                cov_cmd = f'coverage run --branch --data-file={coverage_file_path} --source={self.lib_src} {target_file}'
+                if self.lib_name == 'torch':
+                    cov_cmd = f'coverage run --branch --data-file={coverage_file_path} --source=torch {target_file}'
+                else:
+                    cov_cmd = f'coverage run --branch --data-file={coverage_file_path} --source={self.lib_src} {target_file}'
                 
             cov_cmd_json = f'coverage json --data-file={coverage_file_path} -o {json_file_path}'
             
@@ -98,18 +107,13 @@ class CalculateCoverage:
             target_modules = []
             for k, v in file_names.items():
                 if v['executed_lines']:
-                    for subk, subv in v['functions'].items():
-                        target_modules.append(subv['summary']['percent_covered'])
-                    for subk, subv in v['classes'].items():
-                        target_modules.append(subv['summary']['percent_covered'])
+                    target_modules.append(v['summary']['percent_covered'])
                     
             write_csv_headers(csv_file, ["tool_name", "lib_name", "release", "filePath", 'percent_covered'])            
             append_to_csv(csv_file, [self.tool_name, self.lib_name, self.release, target_file, np.mean(target_modules)])
             
             subprocess.run(f"rm {coverage_file_path}", shell=True)
             subprocess.run(f"rm {json_file_path}", shell=True)
-                                
-
 
     def get_coverage_json(self):
         global executed
@@ -136,14 +140,13 @@ class CalculateCoverage:
                     current_apis = os.listdir(current_oracle)
                     for api in current_apis:
                         if api in target_data:
-                            backend_source_file = inspect.getsourcefile(api)
                             test_files_path = os.path.join(current_oracle, api)
                             test_files_list = os.listdir(test_files_path)
                             if len(test_files_list) > 1:
                                 test_files_list = random.sample(test_files_list, 1)
                             for file in test_files_list:
                                 target_file = os.path.join(test_files_path, file)
-                                self.run_coverage(target_file, output_w, csv_file, api)
+                                self.run_coverage(target_file, output_w, csv_file, api, False)
                                 
         elif self.tool_name == 'DeepRel':
             directories = ['output-0']
@@ -170,7 +173,7 @@ class CalculateCoverage:
                         for file in test_files_list:
                             target_file = os.path.join(target_, file)
                             try:
-                                self.run_coverage(target_file, output_w, csv_file, api_name)
+                                self.run_coverage(target_file, output_w, csv_file, api_name, False)
                             except Exception as e:
                                 print(e)
                             
@@ -187,7 +190,7 @@ class CalculateCoverage:
                             for file in test_files_list:
                                 target_file = os.path.join(current_api_dir, file)
                                 try:
-                                    self.run_coverage(target_file, output_w, csv_file, item)
+                                    self.run_coverage(target_file, output_w, csv_file, item, False)
                                 except Exception as e:
                                     print(e)
         
@@ -234,8 +237,40 @@ class CalculateCoverage:
                         for file in test_files_list:
                             if file.endswith('.py'):
                                 test_file_path = os.path.join(self.acetest_root_path,api,oracle,file)
-                                self.run_coverage(test_file_path, output_w, csv_file, api)
+                                self.run_coverage(test_file_path, output_w, csv_file, api, False)
+        elif self.tool_name == 'titanfuzz':
+            memory = []
+            target_dirs = ['crash', 'exception', 'hangs', 'flaky', 'valid']
+            try:
+                for dir_ in target_dirs:
+                    current_target_dir = os.path.join(self.titanfuzz_root_path, dir_)
+                    py_files = os.listdir(current_target_dir)
+                    if py_files:
+                        for j, file_ in enumerate(py_files):
+                            api_name = file_.split('_')[0]
+                            if api_name in target_data and api_name not in memory:
+                                test_file_path = os.path.join(current_target_dir, file_)
+                            
+                                with open(test_file_path, "r") as file:
+                                    content = file.read()
+                                    
+                                if self.lib_name == 'torch':
+                                    updated_content = "import torch\n" + content
+                                    updated_content = "import numpy as np\n" + updated_content
+                                else:
+                                    updated_content = "import tensorflow as tf\n" + content
+                                    updated_content = "import numpy as np\n" + updated_content
 
+                                with open(f"test_{self.lib_name}.py", "w") as file:
+                                    file.write(updated_content)
+                                
+                                self.run_coverage(test_file_path, output_w, csv_file, api_name, True)
+                                memory.append(api_name)
+                                subprocess.run(f"rm test_{self.lib_name}.py", shell=True)
+
+            except Exception as e:
+                print(e)
+            
         else:
             return 
 
@@ -258,16 +293,16 @@ def api_name_to_module(api_name):
     return getattr(module, attr_name)
                            
 if __name__=="__main__": 
-    # tool_name = sys.argv[1]
-    # libname =  sys.argv[2]
-    # iteration = sys.argv[3]
-    # release = sys.argv[4]
-    # venue = sys.argv[5]
+    tool_name = sys.argv[1]
+    libname =  sys.argv[2]
+    iteration = sys.argv[3]
+    release = sys.argv[4]
+    venue = sys.argv[5]
     
-    tool_name = 'ACETest'
-    libname = 'torch'
-    iteration = 1
-    release = "2.0.0"
-    venue = 'tosem'
+    # tool_name = 'titanfuzz'
+    # libname = 'torch'
+    # iteration = 1
+    # release = "2.0.0"
+    # venue = 'tosem'
     obj_= CalculateCoverage(tool_name, libname, iteration, release, venue)
     obj_.get_coverage_json()

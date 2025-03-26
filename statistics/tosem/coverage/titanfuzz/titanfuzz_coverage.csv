@@ -1,0 +1,11 @@
+tool_name,lib_name,release,filePath,percent_covered
+titanfuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/torch/2.0.0/1/exception/torch.addcmul_15.py,50.91977015055423
+titanfuzz,tf,2.11.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/tf/2.11.0/1/exception/tf.autodiff.ForwardAccumulator_1.py,58.4639764633516
+titanfuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/torch/2.0.0/1/exception/torch.nn.Softmax_57.py,50.92715089954836
+titanfuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/torch/2.0.0/1/exception/torch.nn.TransformerDecoderLayer_1.py,50.91977015055423
+titanfuzz,tf,2.11.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/tf/2.11.0/1/exception/tf.ragged.constant_15.py,58.53482239382834
+titanfuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/torch/2.0.0/1/exception/torch.nn.functional.conv1d_74.py,50.91977015055423
+titanfuzz,tf,2.11.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/tf/2.11.0/1/exception/tf.linalg.logdet_62.py,58.51772637093562
+titanfuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/torch/2.0.0/1/exception/torch.nn.functional.conv2d_1.py,50.91977015055423
+titanfuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/torch/2.0.0/1/exception/torch.Tensor.erfinv_1.py,50.91977015055423
+titanfuzz,tf,2.11.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/tf/2.11.0/1/exception/tf.device_20.py,58.427652139020104

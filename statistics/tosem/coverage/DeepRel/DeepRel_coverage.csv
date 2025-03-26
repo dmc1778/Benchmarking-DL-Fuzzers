@@ -1,3 +1,0 @@
-tool_name,lib_name,release,filePath,percent_covered
-DeepRel,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/DeepRel/torch/1/2.0.0/expr/output-0/torch.addcmul+torch.addcdiv+0/neq/1.py,9.857859646583833
-DeepRel,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/DeepRel/torch/1/2.0.0/expr/output-0/torch.addcmul+torch.addcdiv+rel+1/neq/17.py,9.83515673320568
