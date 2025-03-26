@@ -9,8 +9,8 @@ import torch
 sys.path.insert(0, '/home/nimashiri/Benchmarking-DL-Fuzzers/')
 from utils.fileUtils import read_txt, load_json
 ROOT_PATH=os.getcwd()
-import uuid, re
-
+import uuid, re, inspect, importlib
+import numpy as np
 import multiprocessing
 
 class TimeoutException(Exception):
@@ -64,10 +64,10 @@ class CalculateCoverage:
         self.lib_src = f"/home/nimashiri/anaconda3/envs/{self.env_name}/lib/python3.9/site-packages/tensorflow"
 
 
-    def run_coverage(self, target_file, output_w, csv_file):
+    def run_coverage(self, target_file, output_w, csv_file, api_name):
         
-        # random_uuid1 = uuid.uuid4()
-        # random_uuid2 = uuid.uuid4()
+        # object_ = api_name_to_module(api_name)
+        # source_name = inspect.isbuiltin(object_)
         
         coverage_file_path = os.path.join(output_w, f".coverage_{self.lib_name}_{self.tool_name}")
         json_file_path = f"{output_w}/{self.tool_name}.json"
@@ -93,10 +93,16 @@ class CalculateCoverage:
             
             cov_info_ = load_json(json_file_path)
             totals = cov_info_.get("totals", {})
-            
-            write_csv_headers(csv_file, ["tool_name", "lib_name", "release", "filePath"] + list(totals.keys()))
-            
-            append_to_csv(csv_file, [self.tool_name, self.lib_name, self.release, target_file] + list(totals.values()))
+            file_names = cov_info_.get('files', {})
+
+            target_modules = []
+            for k, v in file_names.items():
+                if v['executed_lines']:
+                    target_modules.append(v['summary']['percent_covered'])
+                    
+
+            write_csv_headers(csv_file, ["tool_name", "lib_name", "release", "filePath"] + list(v['summary'].keys()))            
+            append_to_csv(csv_file, [self.tool_name, self.lib_name, self.release, target_file] + list(v['summary'].values()))
             
             subprocess.run(f"rm {coverage_file_path}", shell=True)
             subprocess.run(f"rm {json_file_path}", shell=True)
@@ -128,13 +134,14 @@ class CalculateCoverage:
                     current_apis = os.listdir(current_oracle)
                     for api in current_apis:
                         if api in target_data:
+                            backend_source_file = inspect.getsourcefile(api)
                             test_files_path = os.path.join(current_oracle, api)
                             test_files_list = os.listdir(test_files_path)
                             if len(test_files_list) > 1:
                                 test_files_list = random.sample(test_files_list, 1)
                             for file in test_files_list:
                                 target_file = os.path.join(test_files_path, file)
-                                self.run_coverage(target_file, output_w, csv_file)
+                                self.run_coverage(target_file, output_w, csv_file, api)
                                 
         elif self.tool_name == 'DeepRel':
             directories = ['output-0']
@@ -161,7 +168,7 @@ class CalculateCoverage:
                         for file in test_files_list:
                             target_file = os.path.join(target_, file)
                             try:
-                                self.run_coverage(target_file, output_w, csv_file)
+                                self.run_coverage(target_file, output_w, csv_file, api_name)
                             except Exception as e:
                                 print(e)
                             
@@ -178,7 +185,7 @@ class CalculateCoverage:
                             for file in test_files_list:
                                 target_file = os.path.join(current_api_dir, file)
                                 try:
-                                    self.run_coverage(target_file, output_w, csv_file)
+                                    self.run_coverage(target_file, output_w, csv_file, item)
                                 except Exception as e:
                                     print(e)
         
@@ -210,7 +217,7 @@ class CalculateCoverage:
                                 file.write(updated_content)
                             
                             try:
-                                self.run_coverage(test_file_path, output_w, csv_file)
+                                self.run_coverage(test_file_path, output_w, csv_file, dir__)
                             except Exception as e:
                                 print(e)
         elif self.tool_name == 'ACETest':
@@ -225,7 +232,7 @@ class CalculateCoverage:
                         for file in test_files_list:
                             if file.endswith('.py'):
                                 test_file_path = os.path.join(self.acetest_root_path,api,oracle,file)
-                                self.run_coverage(test_file_path, output_w, csv_file)
+                                self.run_coverage(test_file_path, output_w, csv_file, api)
 
         else:
             return 
@@ -239,7 +246,15 @@ class CalculateCoverage:
         #         pool.join()
         #         pool.terminate()
     
-                                
+def api_name_to_module(api_name):
+    parts = api_name.split('.')
+    if len(parts) == 1:
+        return importlib.import_module(s)
+    module_name = '.'.join(parts[:-1])
+    attr_name = parts[-1]
+    module = importlib.import_module(module_name)
+    return getattr(module, attr_name)
+                           
 if __name__=="__main__": 
     # tool_name = sys.argv[1]
     # libname =  sys.argv[2]
