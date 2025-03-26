@@ -1,6 +1,10 @@
-import csv, os, sys
+import csv, os, sys, json
 import pandas as pd
 
+def load_json(data_path):
+    with open(data_path) as json_file:
+        data = json.load(json_file)
+    return data
 
 def postprocess_test_statistics(df, tool_name, libname, release):
     x = df[(df['Library'] == libname ) & (df['Release'] == release)]
