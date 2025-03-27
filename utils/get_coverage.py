@@ -242,7 +242,11 @@ class CalculateCoverage:
                         for file in test_files_list:
                             if file.endswith('.py'):
                                 test_file_path = os.path.join(self.acetest_root_path,api,oracle,file)
-                                self.run_coverage(test_file_path, output_w, csv_file, api, False)
+                                try:
+                                    self.run_coverage(test_file_path, output_w, csv_file, api, False)
+                                except Exception as e:
+                                    print(e)
+                                    
         elif self.tool_name == 'titanfuzz':
             memory = []
             target_dirs = ['crash', 'exception', 'hangs', 'flaky', 'valid']
@@ -268,8 +272,11 @@ class CalculateCoverage:
 
                                 with open(f"test_{self.lib_name}.py", "w") as file:
                                     file.write(updated_content)
-                                
-                                self.run_coverage(test_file_path, output_w, csv_file, api_name, True)
+                                try:
+                                    self.run_coverage(test_file_path, output_w, csv_file, api_name, True)
+                                except Exception as e:
+                                    print(e)
+                                    
                                 memory.append(api_name)
                                 subprocess.run(f"rm test_{self.lib_name}.py", shell=True)
 
@@ -287,7 +294,10 @@ class CalculateCoverage:
                     for file in test_files_list:
                         if file.endswith('.py'):
                             test_file_path = os.path.join(self.atlasfuzz_root_path,api,file)
-                            self.run_coverage(test_file_path, output_w, csv_file, api, False)
+                            try:
+                                self.run_coverage(test_file_path, output_w, csv_file, api, False)
+                            except Exception as e:
+                                print(e)
         else:
             return 
 
@@ -310,16 +320,16 @@ def api_name_to_module(api_name):
     return getattr(module, attr_name)
                            
 if __name__=="__main__": 
-    # tool_name = sys.argv[1]
-    # libname =  sys.argv[2]
-    # iteration = sys.argv[3]
-    # release = sys.argv[4]
-    # venue = sys.argv[5]
+    tool_name = sys.argv[1]
+    libname =  sys.argv[2]
+    iteration = sys.argv[3]
+    release = sys.argv[4]
+    venue = sys.argv[5]
     
-    tool_name = 'atlasfuzz'
-    libname = 'torch'
-    iteration = 1
-    release = "2.0.0"
-    venue = 'tosem'
+    # tool_name = 'atlasfuzz'
+    # libname = 'torch'
+    # iteration = 1
+    # release = "2.0.0"
+    # venue = 'tosem'
     obj_= CalculateCoverage(tool_name, libname, iteration, release, venue)
     obj_.get_coverage_json()
