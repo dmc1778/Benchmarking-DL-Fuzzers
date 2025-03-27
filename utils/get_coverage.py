@@ -63,6 +63,8 @@ class CalculateCoverage:
         self.titanfuzz_root_path = f"/media/nimashiri/DATA/testing_results/{self.venue}/titanfuzz/Results/{self.lib_name}/{self.release}/{self.iteration}"
         self.atlasfuzz_root_path = f"/media/nimashiri/DATA/testing_results/{self.venue}/code-{self.tool_name}/fewshot/output/{self.lib_name}_demo/{self.iteration}/{self.release}"
 
+        self.atlasfuzz_root_path = f"/media/nimashiri/DATA/testing_results/{self.venue}/code-{self.tool_name}/fewshot/output/{self.lib_name}_demo/{self.iteration}/{self.release}"
+
         self.env_name = f"{self.libname_small}_{release}"
         self.lib_src = f"/home/nimashiri/anaconda3/envs/{self.env_name}/lib/python3.9/site-packages/tensorflow"
 
@@ -146,7 +148,10 @@ class CalculateCoverage:
                                 test_files_list = random.sample(test_files_list, 1)
                             for file in test_files_list:
                                 target_file = os.path.join(test_files_path, file)
-                                self.run_coverage(target_file, output_w, csv_file, api, False)
+                                try:
+                                    self.run_coverage(target_file, output_w, csv_file, api, False)
+                                except Exception as e:
+                                    print(e)
                                 
         elif self.tool_name == 'DeepRel':
             directories = ['output-0']
@@ -270,7 +275,19 @@ class CalculateCoverage:
 
             except Exception as e:
                 print(e)
-            
+        
+        elif self.tool_name == 'atlasfuzz':
+            current_dirs = os.listdir(self.atlasfuzz_root_path)
+            for api in current_dirs:
+                if api in target_data:
+                    current_api = os.path.join(self.atlasfuzz_root_path, api)
+                    test_files_list = os.listdir(current_api)
+                    if len(test_files_list) > 1:
+                        test_files_list = random.sample(test_files_list, 1)
+                    for file in test_files_list:
+                        if file.endswith('.py'):
+                            test_file_path = os.path.join(self.atlasfuzz_root_path,api,file)
+                            self.run_coverage(test_file_path, output_w, csv_file, api, False)
         else:
             return 
 
@@ -293,16 +310,16 @@ def api_name_to_module(api_name):
     return getattr(module, attr_name)
                            
 if __name__=="__main__": 
-    tool_name = sys.argv[1]
-    libname =  sys.argv[2]
-    iteration = sys.argv[3]
-    release = sys.argv[4]
-    venue = sys.argv[5]
+    # tool_name = sys.argv[1]
+    # libname =  sys.argv[2]
+    # iteration = sys.argv[3]
+    # release = sys.argv[4]
+    # venue = sys.argv[5]
     
-    # tool_name = 'titanfuzz'
-    # libname = 'torch'
-    # iteration = 1
-    # release = "2.0.0"
-    # venue = 'tosem'
+    tool_name = 'atlasfuzz'
+    libname = 'torch'
+    iteration = 1
+    release = "2.0.0"
+    venue = 'tosem'
     obj_= CalculateCoverage(tool_name, libname, iteration, release, venue)
     obj_.get_coverage_json()
