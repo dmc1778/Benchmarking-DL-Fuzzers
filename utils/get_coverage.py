@@ -29,7 +29,28 @@ def append_to_csv(file_path, data):
     with open(file_path, mode="a", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(data)
-            
+        
+def get_api_source(api_str):
+    parts = api_str.split('.')
+    if parts[0] == 'tf':
+        parts[0] = 'tensorflow'
+    module = importlib.import_module(parts[0])
+    obj = module
+    for part in parts[1:]:
+        obj = getattr(obj, part)
+    
+    try:
+        return inspect.getfile(obj)
+    except TypeError:
+        if inspect.isbuiltin(obj):
+            mod = inspect.getmodule(obj)
+            if mod is not None and hasattr(mod, '__file__'):
+                return mod.__file__
+            else:
+                return f"Source file not available for built-in function {api_str}"
+        else:
+            return f"Source file not available for {api_str}"
+
 class CalculateCoverage:
     def __init__(self, tool_name, lib_name, iteration, release, venue):
         self.tool_name = tool_name
@@ -66,57 +87,79 @@ class CalculateCoverage:
         self.atlasfuzz_root_path = f"/media/nimashiri/DATA/testing_results/{self.venue}/code-{self.tool_name}/fewshot/output/{self.lib_name}_demo/{self.iteration}/{self.release}"
 
         self.env_name = f"{self.libname_small}_{release}"
-        self.lib_src = f"/home/nimashiri/anaconda3/envs/{self.env_name}/lib/python3.9/site-packages/tensorflow"
+        self.lib_src = f"/home/nimashiri/anaconda3/envs/{self.env_name}/lib/python3.9/site-packages/{self.lib_name}"
 
+    def get_import_statement(self, module_file_path, site_packages_path):
+        if self.lib_name == 'tf':
+            libname_ = 'tensorflow'
+        else:
+            libname_ = self.lib_name
+        module_path_split = module_file_path.split(libname_)
+
+        sub_split = module_path_split[-1].split('/')
+        sub_split = [item for item in sub_split if item]
+        import_part = sub_split[0:-1]
+        after_ = sub_split[-1].replace('.py', '')
+        
+        import_part = ".".join(import_part)
+        
+        import_full = f"from {libname_}.{import_part} import {after_}"
+        return import_full
 
     def run_coverage(self, target_file, output_w, csv_file, api_name, titanflag=False):
+        api_source = get_api_source(api_name)
+        # module_import_stmt = self.get_import_statement(api_source, self.lib_src)
+        api_source = os.path.dirname(api_source)
         
-        # object_ = api_name_to_module(api_name)
-        # source_name = inspect.isbuiltin(object_)
+        # with open(target_file, "r") as file:
+        #     content = file.read()
+        
+        # content = f"{module_import_stmt}\n" + content
+        
+        # test_file_name = f"{self.tool_name}_{self.lib_name}_{self.release}.py"
+        # with open(test_file_name, "w") as file:
+        #     file.write(content)
         
         coverage_file_path = os.path.join(output_w, f".coverage_{self.tool_name}_{self.lib_name}_{self.release}")
         json_file_path = f"{output_w}/{self.tool_name}_{self.lib_name}_{self.release}.json"
         
-        if target_file.endswith('.py'):
-            print(f"calculating coverage for {self.tool_name} ::: {self.lib_name} ::: {self.release} ::: {target_file}")
-            
-            if titanflag:
-                if self.lib_name == 'torch':
-                    cov_cmd = f'coverage run --branch --data-file={coverage_file_path} --source=torch test_{self.lib_name}.py'
-                else:
-                    cov_cmd = f'coverage run --branch --data-file={coverage_file_path} --source={self.lib_src} test_{self.lib_name}.py'    
-            else:
-                if self.lib_name == 'torch':
-                    cov_cmd = f'coverage run --branch --data-file={coverage_file_path} --source=torch {target_file}'
-                else:
-                    cov_cmd = f'coverage run --branch --data-file={coverage_file_path} --source={self.lib_src} {target_file}'
-                
-            cov_cmd_json = f'coverage json --data-file={coverage_file_path} -o {json_file_path}'
-            
-            signal.alarm(60)
-            try:
-                subprocess.run(cov_cmd, shell=True)
-                subprocess.run(cov_cmd_json, shell=True)
-            except TimeoutException:
-                pass 
-            else:
-                signal.alarm(0)
 
-            cov_info_ = load_json(json_file_path)
-            totals = cov_info_.get("totals", {})
-            file_names = cov_info_.get('files', {})
-            # '/media/nimashiri/DATA/testing_results/tosem/FreeFuzz/torch/1/2.0.1/cuda-oracle/potential-bug/torch.empty/128.py'
-            # target_modules = []
-            # for k, v in file_names.items():
-            #     if v['executed_lines']:
-            #         target_modules.append(v['summary']['percent_covered'])
-            branch_coverage = totals['covered_branches'] / totals['num_branches']
-            statement_coverage = totals['covered_lines'] / totals['num_statements']
-            write_csv_headers(csv_file, ["tool_name", "lib_name", "release", "filePath", 'percent_covered'])            
-            append_to_csv(csv_file, [self.tool_name, self.lib_name, self.release, target_file, branch_coverage, statement_coverage])
+        print(f"calculating coverage for {self.tool_name} ::: {self.lib_name} ::: {self.release} ::: {target_file}")
+        
+        if titanflag:
+            if self.lib_name == 'torch':
+                cov_cmd = f'coverage run --branch --data-file={coverage_file_path} --source={api_source} test_{self.lib_name}.py'
+            else:
+                cov_cmd = f'coverage run --branch --data-file={coverage_file_path} --source={api_source} test_{self.lib_name}.py'    
+        else:
+            if self.lib_name == 'torch':
+                cov_cmd = f'coverage run --branch --data-file={coverage_file_path} --source={api_source} {target_file}'
+            else:
+                cov_cmd = f'coverage run --branch --data-file={coverage_file_path} --source={api_source} {target_file}'
             
-            subprocess.run(f"rm {coverage_file_path}", shell=True)
-            subprocess.run(f"rm {json_file_path}", shell=True)
+        cov_cmd_json = f'coverage json --data-file={coverage_file_path} -o {json_file_path}'
+        
+        signal.alarm(60)
+        try:
+            subprocess.run(cov_cmd, shell=True)
+            subprocess.run(cov_cmd_json, shell=True)
+        except TimeoutException:
+            pass 
+        else:
+            signal.alarm(0)
+        
+        cov_info_ = load_json(json_file_path)
+        totals = cov_info_.get("totals", {})
+        file_names = cov_info_.get('files', {})
+        
+        branch_coverage = totals['covered_branches'] / totals['num_branches']
+        statement_coverage = totals['covered_lines'] / totals['num_statements']
+        write_csv_headers(csv_file, ["tool_name", "lib_name", "release", "filePath", 'percent_covered'])            
+        append_to_csv(csv_file, [self.tool_name, self.lib_name, self.release, target_file, branch_coverage, statement_coverage])
+        
+        subprocess.run(f"rm {coverage_file_path}", shell=True)
+        subprocess.run(f"rm {json_file_path}", shell=True)
+        # subprocess.run(f"rm {test_file_name}", shell=True)
 
     def get_coverage_json(self):
         global executed
@@ -327,17 +370,17 @@ def api_name_to_module(api_name):
     return getattr(module, attr_name)
                            
 if __name__=="__main__": 
-    # tool_name = sys.argv[1]
-    # libname =  sys.argv[2]
-    # iteration = sys.argv[3]
-    # release = sys.argv[4]
-    # venue = sys.argv[5]
+    tool_name = sys.argv[1]
+    libname =  sys.argv[2]
+    iteration = sys.argv[3]
+    release = sys.argv[4]
+    venue = sys.argv[5]
     
-    tool_name = 'DeepRel'
-    libname = 'torch'
-    iteration = 1
-    release = "2.0.1"
-    venue = 'tosem'
+    # tool_name = 'FreeFuzz'
+    # libname = 'torch'
+    # iteration = 1
+    # release = "2.0.0"
+    # venue = 'tosem'
     
     obj_= CalculateCoverage(tool_name, libname, iteration, release, venue)
     obj_.get_coverage_json()

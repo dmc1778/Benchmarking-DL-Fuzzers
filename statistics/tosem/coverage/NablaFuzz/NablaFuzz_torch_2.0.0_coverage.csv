@@ -1,0 +1,17 @@
+tool_name,lib_name,release,filePath,percent_covered
+NablaFuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.0/torch/union/torch.addcmul/all/629.py,0.008590482649485701,0.12737481818899324
+NablaFuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.0/torch/union/torch.cat/all/637.py,0.008590482649485701,0.12737481818899324
+NablaFuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.0/torch/union/torch.einsum/all/153.py,0.008590482649485701,0.12737481818899324
+NablaFuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.0/torch/union/torch.empty/all/715.py,0.008590482649485701,0.12737481818899324
+NablaFuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.0/torch/union/torch.Tensor.norm/all/897.py,0.008590482649485701,0.12737481818899324
+NablaFuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.0/torch/union/torch.Tensor.split/all/112.py,0.008590482649485701,0.12737481818899324
+NablaFuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.0/torch/union/torch.unique/all/942.py,0.008590482649485701,0.12737481818899324
+NablaFuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.0/torch/union/torch.where/all/751.py,0.008590482649485701,0.12737481818899324
+NablaFuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.0/torch/union/torch.zeros_like/all/442.py,0.008590482649485701,0.12737481818899324
+NablaFuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.0/torch/union/torch.index_select/all/285.py,0.008590482649485701,0.12737481818899324
+NablaFuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.0/torch/union/torch.is_floating_point/all/394.py,0.008590482649485701,0.12737481818899324
+NablaFuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.0/torch/union/torch.logical_and/all/59.py,0.008590482649485701,0.12737481818899324
+NablaFuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.0/torch/union/torch.matmul/all/23.py,0.008590482649485701,0.12737481818899324
+NablaFuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.0/torch/union/torch.meshgrid/all/822.py,0.008590482649485701,0.12737481818899324
+NablaFuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.0/torch/union/torch.nn.AdaptiveAvgPool2d/all/103.py,0.0057306590257879654,0.33089051743282255
+NablaFuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.0/torch/union/torch.nn.AdaptiveAvgPool3d/all/194.py,0.0057306590257879654,0.33089051743282255
