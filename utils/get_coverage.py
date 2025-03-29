@@ -74,8 +74,8 @@ class CalculateCoverage:
         # object_ = api_name_to_module(api_name)
         # source_name = inspect.isbuiltin(object_)
         
-        coverage_file_path = os.path.join(output_w, f".coverage_{self.lib_name}_{self.tool_name}")
-        json_file_path = f"{output_w}/{self.tool_name}_{self.lib_name}.json"
+        coverage_file_path = os.path.join(output_w, f".coverage_{self.tool_name}_{self.lib_name}_{self.release}")
+        json_file_path = f"{output_w}/{self.tool_name}_{self.lib_name}_{self.release}.json"
         
         if target_file.endswith('.py'):
             print(f"calculating coverage for {self.tool_name} ::: {self.lib_name} ::: {self.release} ::: {target_file}")
@@ -101,18 +101,19 @@ class CalculateCoverage:
                 pass 
             else:
                 signal.alarm(0)
-            
+
             cov_info_ = load_json(json_file_path)
             totals = cov_info_.get("totals", {})
             file_names = cov_info_.get('files', {})
-
-            target_modules = []
-            for k, v in file_names.items():
-                if v['executed_lines']:
-                    target_modules.append(v['summary']['percent_covered'])
-                    
+            # '/media/nimashiri/DATA/testing_results/tosem/FreeFuzz/torch/1/2.0.1/cuda-oracle/potential-bug/torch.empty/128.py'
+            # target_modules = []
+            # for k, v in file_names.items():
+            #     if v['executed_lines']:
+            #         target_modules.append(v['summary']['percent_covered'])
+            branch_coverage = totals['covered_branches'] / totals['num_branches']
+            statement_coverage = totals['covered_lines'] / totals['num_statements']
             write_csv_headers(csv_file, ["tool_name", "lib_name", "release", "filePath", 'percent_covered'])            
-            append_to_csv(csv_file, [self.tool_name, self.lib_name, self.release, target_file, np.mean(target_modules)])
+            append_to_csv(csv_file, [self.tool_name, self.lib_name, self.release, target_file, branch_coverage, statement_coverage])
             
             subprocess.run(f"rm {coverage_file_path}", shell=True)
             subprocess.run(f"rm {json_file_path}", shell=True)
@@ -127,7 +128,7 @@ class CalculateCoverage:
         output_w = f'statistics/{self.venue}/coverage/{self.tool_name}'
 
         
-        csv_file = f"{output_w}/{self.tool_name}_coverage.csv"
+        csv_file = f"{output_w}/{self.tool_name}_{self.lib_name}_{self.release}_coverage.csv"
 
         os.makedirs(output_w, exist_ok=True)
         signal.signal(signal.SIGALRM, timeout_handler)
@@ -161,6 +162,9 @@ class CalculateCoverage:
                 for pair in all_dirs:
                     
                     if "+" not in pair:
+                        continue
+                    
+                    if 'rel+0' in pair or 'rel+1' in pair:
                         continue
                     apis_extracted = pair.split('+')
                     api_name =apis_extracted[0]
@@ -205,31 +209,34 @@ class CalculateCoverage:
                 if dir__ in target_data:
                     dir__ = os.path.join(self.docter_root_path,dir_)
                     files = os.listdir(dir__)
+                    files = [file for file in files if file.endswith('.py')]
+                    if len(files) > 1:
+                        files = random.sample(files, 1)
                     for file in files:
-                        if file.endswith('.py'):
-                            test_file_path = os.path.join(dir__,file)
-                            with open(test_file_path, "r") as file:
-                                content = file.read()
+                        test_file_path = os.path.join(dir__,file)
+                        with open(test_file_path, "r") as file:
+                            content = file.read()
 
-                            if self.lib_name == 'torch':
-                                updated_content = re.sub(
-                                    r"(/home/nima/)(workdir/pytorch/)",
-                                    r"/media/nimashiri/DATA/testing_results/tosem/\g<2>1/",
-                                    content
-                                )
-                            else:
-                                updated_content = re.sub(
-                                    r"(/home/nima/)(workdir/tensorflow/)",
-                                    r"/media/nimashiri/DATA/testing_results/tosem/\g<2>1/",
-                                    content
-                                )
-                            with open(test_file_path, "w") as file:
-                                file.write(updated_content)
-                            
-                            try:
-                                self.run_coverage(test_file_path, output_w, csv_file, dir__)
-                            except Exception as e:
-                                print(e)
+                        if self.lib_name == 'torch':
+                            updated_content = re.sub(
+                                r"(/home/nima/)(workdir/pytorch/)",
+                                r"/media/nimashiri/DATA/testing_results/tosem/\g<2>1/",
+                                content
+                            )
+                        else:
+                            updated_content = re.sub(
+                                r"(/home/nima/)(workdir/tensorflow/)",
+                                r"/media/nimashiri/DATA/testing_results/tosem/\g<2>1/",
+                                content
+                            )
+                        with open(test_file_path, "w") as file:
+                            file.write(updated_content)
+                        
+                        try:
+                            self.run_coverage(test_file_path, output_w, csv_file, dir__)
+                        except Exception as e:
+                            print(e)
+                                
         elif self.tool_name == 'ACETest':
             api_dirs = os.listdir(self.acetest_root_path)
             for api in api_dirs:
@@ -320,16 +327,17 @@ def api_name_to_module(api_name):
     return getattr(module, attr_name)
                            
 if __name__=="__main__": 
-    tool_name = sys.argv[1]
-    libname =  sys.argv[2]
-    iteration = sys.argv[3]
-    release = sys.argv[4]
-    venue = sys.argv[5]
+    # tool_name = sys.argv[1]
+    # libname =  sys.argv[2]
+    # iteration = sys.argv[3]
+    # release = sys.argv[4]
+    # venue = sys.argv[5]
     
-    # tool_name = 'atlasfuzz'
-    # libname = 'torch'
-    # iteration = 1
-    # release = "2.0.0"
-    # venue = 'tosem'
+    tool_name = 'DeepRel'
+    libname = 'torch'
+    iteration = 1
+    release = "2.0.1"
+    venue = 'tosem'
+    
     obj_= CalculateCoverage(tool_name, libname, iteration, release, venue)
     obj_.get_coverage_json()
