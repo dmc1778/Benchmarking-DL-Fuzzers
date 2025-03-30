@@ -1,0 +1,9 @@
+tool_name,lib_name,release,filePath,percent_covered
+DocTer,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/workdir/tensorflow/1/2.12.0/conform_constr/tf.keras.layers.Conv1D.yaml_workdir/7385ceb5818dced797d199f90ec54dfd4ed602b9_13bd3fa41ddc045ab0f645a66e11d4c7d9236ffb.py,0.05789473684210526,0.397341211225997
+DocTer,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/workdir/tensorflow/1/2.12.0/conform_constr/tf.nn.conv2d.yaml_workdir/6e79672f14f8a496d23fc280934dcf8ce02387f1.py,0.2762312633832976,0.49837662337662336
+DocTer,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/workdir/tensorflow/1/2.12.0/conform_constr/tf.nn.leaky_relu.yaml_workdir/16d4336a53323a7c8710bf54f1a51c446c9a20dc.py,0.2676659528907923,0.4914772727272727
+DocTer,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/workdir/tensorflow/1/2.12.0/conform_constr/tf.nn.max_pool2d.yaml_workdir/b53e1779a00b7ded8f3745f1dc63acaeaad7f1ce.py,0.2740899357601713,0.49756493506493504
+DocTer,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/workdir/tensorflow/1/2.12.0/conform_constr/tf.signal.inverse_stft.yaml_workdir/9bfdad86fd0627cb71b5d6091d4a0993f4a62f5e.py,0.2740899357601713,0.49756493506493504
+DocTer,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/workdir/tensorflow/1/2.12.0/conform_constr/tf.signal.stft.yaml_workdir/1b4ea5217775e7778943e3187ffac642089445fa.py,0.2740899357601713,0.49756493506493504
+DocTer,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/workdir/tensorflow/1/2.12.0/conform_constr/tf.keras.layers.MaxPool2D.yaml_workdir/f4294816908ff4a81a89ad434ea02f1022d98a86_268046ced930f2efa331394923d9d882985fa443.py,0.05172413793103448,0.5406976744186046
+DocTer,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/workdir/tensorflow/1/2.12.0/conform_constr/tf.linalg.diag.yaml_workdir/37d4e38cb422e9f402d59e335314de2f88ed129f.py,0.2740899357601713,0.49756493506493504

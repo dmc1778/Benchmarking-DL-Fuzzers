@@ -5,13 +5,14 @@ import signal
 import json
 import random, csv
 # import tensorflow as tf
-import torch
+# import torch
 sys.path.insert(0, '/home/nimashiri/Benchmarking-DL-Fuzzers/')
 from utils.fileUtils import read_txt, load_json
 ROOT_PATH=os.getcwd()
 import uuid, re, inspect, importlib
 import numpy as np
 import multiprocessing
+
 
 class TimeoutException(Exception):
     pass
@@ -143,23 +144,22 @@ class CalculateCoverage:
         try:
             subprocess.run(cov_cmd, shell=True)
             subprocess.run(cov_cmd_json, shell=True)
+            cov_info_ = load_json(json_file_path)
+                
+            totals = cov_info_.get("totals", {})
+            file_names = cov_info_.get('files', {})
+            
+            branch_coverage = totals['covered_branches'] / totals['num_branches']
+            statement_coverage = totals['covered_lines'] / totals['num_statements']
+            write_csv_headers(csv_file, ["tool_name", "lib_name", "release", "filePath", 'percent_covered'])            
+            append_to_csv(csv_file, [self.tool_name, self.lib_name, self.release, target_file, branch_coverage, statement_coverage])
+            
+            subprocess.run(f"rm {coverage_file_path}", shell=True)
+            subprocess.run(f"rm {json_file_path}", shell=True)
         except TimeoutException:
             pass 
         else:
             signal.alarm(0)
-        
-        cov_info_ = load_json(json_file_path)
-        totals = cov_info_.get("totals", {})
-        file_names = cov_info_.get('files', {})
-        
-        branch_coverage = totals['covered_branches'] / totals['num_branches']
-        statement_coverage = totals['covered_lines'] / totals['num_statements']
-        write_csv_headers(csv_file, ["tool_name", "lib_name", "release", "filePath", 'percent_covered'])            
-        append_to_csv(csv_file, [self.tool_name, self.lib_name, self.release, target_file, branch_coverage, statement_coverage])
-        
-        subprocess.run(f"rm {coverage_file_path}", shell=True)
-        subprocess.run(f"rm {json_file_path}", shell=True)
-        # subprocess.run(f"rm {test_file_name}", shell=True)
 
     def get_coverage_json(self):
         global executed
@@ -250,13 +250,13 @@ class CalculateCoverage:
             for dir_ in os.listdir(self.docter_root_path):
                 dir__ = ".".join(dir_.split('.')[0:-1])
                 if dir__ in target_data:
-                    dir__ = os.path.join(self.docter_root_path,dir_)
-                    files = os.listdir(dir__)
+                    api_name = os.path.join(self.docter_root_path,dir_)
+                    files = os.listdir(api_name)
                     files = [file for file in files if file.endswith('.py')]
                     if len(files) > 1:
                         files = random.sample(files, 1)
                     for file in files:
-                        test_file_path = os.path.join(dir__,file)
+                        test_file_path = os.path.join(api_name,file)
                         with open(test_file_path, "r") as file:
                             content = file.read()
 
@@ -376,7 +376,7 @@ if __name__=="__main__":
     release = sys.argv[4]
     venue = sys.argv[5]
     
-    # tool_name = 'FreeFuzz'
+    # tool_name = 'DocTer'
     # libname = 'torch'
     # iteration = 1
     # release = "2.0.0"
