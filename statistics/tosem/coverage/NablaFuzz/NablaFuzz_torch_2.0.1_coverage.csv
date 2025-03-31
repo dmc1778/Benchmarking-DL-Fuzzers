@@ -1,4 +1,4 @@
-tool_name,lib_name,release,filePath,percent_covered
+tool_name,lib_name,release,filePath,percent_covered_branch, percent_covered_stmt
 NablaFuzz,torch,2.0.1,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.1/torch/union/torch.addcmul/all/58.py,0.008584660567039422,0.12734485498385578
 NablaFuzz,torch,2.0.1,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.1/torch/union/torch.cat/all/918.py,0.008584660567039422,0.12734485498385578
 NablaFuzz,torch,2.0.1,/media/nimashiri/DATA/testing_results/tosem/NablaFuzz/NablaFuzz-PyTorch-Jax/output-ad/1/2.0.1/torch/union/torch.einsum/all/815.py,0.008584660567039422,0.12734485498385578

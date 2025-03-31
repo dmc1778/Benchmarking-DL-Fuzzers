@@ -1,4 +1,4 @@
-tool_name,lib_name,release,filePath,percent_covered
+tool_name,lib_name,release,filePath,percent_covered_branch, percent_covered_stmt
 DeepRel,tf,2.13.0,/media/nimashiri/DATA/testing_results/tosem/DeepRel/tf/1/2.13.0/expr/output-0/tf.compat.v1.boolean_mask+tf.boolean_mask+1+test/fail/1.py,0.23475046210720887,0.4609955423476969
 DeepRel,tf,2.13.0,/media/nimashiri/DATA/testing_results/tosem/DeepRel/tf/1/2.13.0/expr/output-0/tf.compat.v1.boolean_mask+tf.compat.v1.manip.reshape+1+ver/neq/3.py,0.23475046210720887,0.45950965824665674
 DeepRel,tf,2.13.0,/media/nimashiri/DATA/testing_results/tosem/DeepRel/tf/1/2.13.0/expr/output-0/tf.compat.v1.boolean_mask+tf.compat.v1.manip.reshape+2+ver/neq/2.py,0.2356746765249538,0.4609955423476969

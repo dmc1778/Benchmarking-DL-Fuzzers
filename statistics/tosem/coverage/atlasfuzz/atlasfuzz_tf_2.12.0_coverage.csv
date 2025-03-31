@@ -1,4 +1,4 @@
-tool_name,lib_name,release,filePath,percent_covered
+tool_name,lib_name,release,filePath,percent_covered_branch, percent_covered_stmt
 atlasfuzz,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/code-atlasfuzz/fewshot/output/tf_demo/1/2.12.0/tf.autodiff.ForwardAccumulator/93.py,0.0,0.0
 atlasfuzz,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/code-atlasfuzz/fewshot/output/tf_demo/1/2.12.0/tf.cast/32.py,0.2676659528907923,0.4914772727272727
 atlasfuzz,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/code-atlasfuzz/fewshot/output/tf_demo/1/2.12.0/tf.compat.v1.boolean_mask/1.py,0.0,0.0

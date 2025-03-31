@@ -1,4 +1,4 @@
-tool_name,lib_name,release,filePath,percent_covered
+tool_name,lib_name,release,filePath,percent_covered_branch, percent_covered_stmt
 titanfuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/torch/2.0.0/1/exception/torch.addcmul_15.py,0.0085151275385253,0.12720005412048574
 titanfuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/torch/2.0.0/1/exception/torch.nn.Softmax_57.py,0.0057306590257879654,0.33089051743282255
 titanfuzz,torch,2.0.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/torch/2.0.0/1/exception/torch.nn.TransformerDecoderLayer_1.py,0.0,0.32378414390406396

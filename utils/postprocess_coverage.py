@@ -1,8 +1,47 @@
 import os
 import pandas as pd
 from functools import reduce
+import numpy as np
+import csv
 
 COVERAGE_FILES_PATH = "statistics/tosem/coverage"
+TOTAL_COVERAGE = "total_coverage.csv"
+
+def append_to_csv(file_path, data):
+    with open(file_path, mode="a", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(data)
+                
+def summarizeCoverage():
+    
+    fuzzers = os.listdir(COVERAGE_FILES_PATH)
+    
+    lib_info = {
+        "torch":
+            ["2.0.0", "2.0.1", "2.1.0"],
+        "tf":
+            ["2.11.0", "2.12.0", "2.13.0", "2.14.0"]
+    }
+    for fuzzer in fuzzers:
+        # if fuzzer == 'DeepRel':
+        #     continue
+        holder = []
+        for k, v in lib_info.items():
+            for release in v:
+                current_fuzzer_dir = os.path.join(COVERAGE_FILES_PATH, fuzzer)
+                file_name = f"{current_fuzzer_dir}/{fuzzer}_{k}_{release}_coverage.csv"
+                
+                if not os.path.isfile(file_name):
+                    continue
+                
+                coverage_data = pd.read_csv(file_name, encoding="utf-8", sep=",")
+                
+                average_coverage_branch = np.round(np.average(coverage_data.iloc[:, 4])*100, 2)
+                average_coverage_stmt = np.round(np.average(coverage_data.iloc[:, 5])*100, 2)
+                holder = holder + [average_coverage_branch, average_coverage_stmt]
+                
+        data = [fuzzer] + holder
+        append_to_csv(TOTAL_COVERAGE, data)
 
 def getAPINames(libname):
     api_name_holder = {
@@ -47,4 +86,5 @@ def getAPINames(libname):
     print('')
 
 if __name__ == '__main__':
-    getAPINames('torch')
+    summarizeCoverage()
+    #getAPINames('torch')

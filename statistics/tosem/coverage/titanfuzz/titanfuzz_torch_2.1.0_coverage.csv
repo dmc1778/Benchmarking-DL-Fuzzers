@@ -1,4 +1,4 @@
-tool_name,lib_name,release,filePath,percent_covered
+tool_name,lib_name,release,filePath,percent_covered_branch, percent_covered_stmt
 titanfuzz,torch,2.1.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/torch/2.1.0/1/exception/torch.nn.LSTM_46.py,0.04442970822281167,0.34967251214874284
 titanfuzz,torch,2.1.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/torch/2.1.0/1/exception/torch.nn.MaxPool1d_15.py,0.0,0.31967039932389607
 titanfuzz,torch,2.1.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/torch/2.1.0/1/exception/torch.nn.MaxPool2d_1.py,0.006631299734748011,0.3289668286499049

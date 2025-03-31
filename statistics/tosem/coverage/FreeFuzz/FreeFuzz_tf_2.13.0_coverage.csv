@@ -1,4 +1,4 @@
-tool_name,lib_name,release,filePath,percent_covered
+tool_name,lib_name,release,filePath,percent_covered_branch, percent_covered_stmt
 FreeFuzz,tf,2.13.0,/media/nimashiri/DATA/testing_results/tosem/FreeFuzz/tf/1/2.13.0/precision-oracle/potential-bug/tf.compat.v1.boolean_mask/137.py,0.23475046210720887,0.45950965824665674
 FreeFuzz,tf,2.13.0,/media/nimashiri/DATA/testing_results/tosem/FreeFuzz/tf/1/2.13.0/precision-oracle/potential-bug/tf.concat/5.py,0.23382624768946395,0.45950965824665674
 FreeFuzz,tf,2.13.0,/media/nimashiri/DATA/testing_results/tosem/FreeFuzz/tf/1/2.13.0/precision-oracle/potential-bug/tf.experimental.numpy.floor_divide/13.py,0.08666666666666667,0.3357354811360746

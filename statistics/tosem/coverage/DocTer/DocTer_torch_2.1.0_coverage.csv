@@ -1,4 +1,4 @@
-tool_name,lib_name,release,filePath,percent_covered
+tool_name,lib_name,release,filePath,percent_covered_branch, percent_covered_stmt
 DocTer,torch,2.1.0,/media/nimashiri/DATA/testing_results/tosem/workdir/pytorch/1/2.1.0+cu118/conform_constr/torch.distributed.isend.yaml_workdir/1496ee4f77fd523f7b8a8a1b2a490aafc56ff187.py,0.0028621204579392734,0.02705749718151071
 DocTer,torch,2.1.0,/media/nimashiri/DATA/testing_results/tosem/workdir/pytorch/1/2.1.0+cu118/conform_constr/torch.distributed.scatter.yaml_workdir/6eeb7664ab15db2213c8db45c0ff62ec6bb865f7.py,0.0036087605774016924,0.027782251570301175
 DocTer,torch,2.1.0,/media/nimashiri/DATA/testing_results/tosem/workdir/pytorch/1/2.1.0+cu118/conform_constr/torch.matmul.yaml_workdir/2a0be41a1472d1aa463a6184c7056e97e1babdec.py,0.008195985761718165,0.09647303379532332

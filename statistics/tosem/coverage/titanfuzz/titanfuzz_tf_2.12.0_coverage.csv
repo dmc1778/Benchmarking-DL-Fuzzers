@@ -1,4 +1,4 @@
-tool_name,lib_name,release,filePath,percent_covered
+tool_name,lib_name,release,filePath,percent_covered_branch, percent_covered_stmt
 titanfuzz,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/tf/2.12.0/1/exception/tf.autodiff.ForwardAccumulator_1.py,0.061893203883495146,0.3233753637245393
 titanfuzz,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/tf/2.12.0/1/exception/tf.pad_13.py,0.2676659528907923,0.4914772727272727
 titanfuzz,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/titanfuzz/Results/tf/2.12.0/1/exception/tf.ragged.constant_10.py,0.2740899357601713,0.4971590909090909

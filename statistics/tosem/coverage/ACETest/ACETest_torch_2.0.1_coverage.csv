@@ -1,4 +1,4 @@
-tool_name,lib_name,release,filePath,percent_covered
+tool_name,lib_name,release,filePath,percent_covered_branch, percent_covered_stmt
 ACETest,torch,2.0.1,/media/nimashiri/DATA/testing_results/tosem/ACETest/Tester/src/output/output_torch_1/2.0.1/torch.masked_scatter/invalid/gpu_1_1.py,0.009168266877517978,0.12763223883288347
 ACETest,torch,2.0.1,/media/nimashiri/DATA/testing_results/tosem/ACETest/Tester/src/output/output_torch_1/2.0.1/torch.adaptive_avg_pool1d/invalid/gpu_26_9.py,0.008509356526977672,0.12717017068346642
 ACETest,torch,2.0.1,/media/nimashiri/DATA/testing_results/tosem/ACETest/Tester/src/output/output_torch_1/2.0.1/torch.adaptive_max_pool1d/invalid/gpu_2_45.py,0.009168266877517978,0.12763223883288347

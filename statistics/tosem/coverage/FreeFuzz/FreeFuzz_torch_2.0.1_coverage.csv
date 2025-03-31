@@ -1,4 +1,4 @@
-tool_name,lib_name,release,filePath,percent_covered
+tool_name,lib_name,release,filePath,percent_covered_branch, percent_covered_stmt
 FreeFuzz,torch,2.0.1,/media/nimashiri/DATA/testing_results/tosem/FreeFuzz/torch/1/2.0.1/cuda-oracle/potential-bug/torch.empty/199.py,0.009601265107873038,0.12787454286245584
 FreeFuzz,torch,2.0.1,/media/nimashiri/DATA/testing_results/tosem/FreeFuzz/torch/1/2.0.1/cuda-oracle/potential-bug/torch.index_select/1.py,0.009695395157950225,0.12798724241109413
 FreeFuzz,torch,2.0.1,/media/nimashiri/DATA/testing_results/tosem/FreeFuzz/torch/1/2.0.1/cuda-oracle/potential-bug/torch.lobpcg/1.py,0.011389736059339583,0.1296157508889177

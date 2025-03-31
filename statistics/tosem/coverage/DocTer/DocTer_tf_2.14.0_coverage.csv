@@ -1,4 +1,4 @@
-tool_name,lib_name,release,filePath,percent_covered
+tool_name,lib_name,release,filePath,percent_covered_branch, percent_covered_stmt
 DocTer,tf,2.14.0,/media/nimashiri/DATA/testing_results/tosem/workdir/tensorflow/1/2.14.0/conform_constr/tf.keras.layers.Conv2D.yaml_workdir/ac0f535f0cfa2e02bc88aaa2060d55c4d039e541_97d170e1550eee4afc0af065b78cda302a97674c.py,0.05789473684210526,0.397341211225997
 DocTer,tf,2.14.0,/media/nimashiri/DATA/testing_results/tosem/workdir/tensorflow/1/2.14.0/conform_constr/tf.gather.yaml_workdir/d2628431f45118fff9a635e60f48d476c407475b.py,0.20235934664246824,0.4400579500181094
 DocTer,tf,2.14.0,/media/nimashiri/DATA/testing_results/tosem/workdir/tensorflow/1/2.14.0/conform_constr/tf.nn.conv2d.yaml_workdir/90784c52d4ba44a835e5fffed17bf8c58e28acc1.py,0.20326678765880218,0.4400579500181094

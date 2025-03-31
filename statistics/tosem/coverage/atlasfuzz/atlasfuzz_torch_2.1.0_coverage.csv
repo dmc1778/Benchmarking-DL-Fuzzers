@@ -1,4 +1,4 @@
-tool_name,lib_name,release,filePath,percent_covered
+tool_name,lib_name,release,filePath,percent_covered_branch, percent_covered_stmt
 atlasfuzz,torch,2.1.0,/media/nimashiri/DATA/testing_results/tosem/code-atlasfuzz/fewshot/output/torch_demo/1/2.1.0/torch.adaptive_max_pool1d/27.py,0.0,0.00010073121706203669
 atlasfuzz,torch,2.1.0,/media/nimashiri/DATA/testing_results/tosem/code-atlasfuzz/fewshot/output/torch_demo/1/2.1.0/torch.affine_grid_generator/67.py,0.007208877987496635,0.09557561022513426
 atlasfuzz,torch,2.1.0,/media/nimashiri/DATA/testing_results/tosem/code-atlasfuzz/fewshot/output/torch_demo/1/2.1.0/torch.amp.autocast/92.py,0.0,0.0

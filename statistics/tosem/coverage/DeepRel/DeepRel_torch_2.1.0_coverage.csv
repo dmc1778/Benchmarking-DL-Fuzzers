@@ -1,4 +1,4 @@
-tool_name,lib_name,release,filePath,percent_covered
+tool_name,lib_name,release,filePath,percent_covered_branch, percent_covered_stmt
 DeepRel,torch,2.1.0,/media/nimashiri/DATA/testing_results/tosem/DeepRel/torch/1/2.1.0/expr/output-0/torch.logical_and+torch.Tensor.logical_and_+0/neq/14.py,0.007223834165893931,0.09559850368355746
 DeepRel,torch,2.1.0,/media/nimashiri/DATA/testing_results/tosem/DeepRel/torch/1/2.1.0/expr/output-0/torch.nn.AdaptiveMaxPool1d+torch.nn.AdaptiveMaxPool2d+0/neq/4.py,0.007294429708222812,0.3287555461652229
 DeepRel,torch,2.1.0,/media/nimashiri/DATA/testing_results/tosem/DeepRel/torch/1/2.1.0/expr/output-0/torch.nn.AdaptiveMaxPool1d+torch.nn.MaxPool2d+0/neq/33.py,0.006631299734748011,0.329811958588633

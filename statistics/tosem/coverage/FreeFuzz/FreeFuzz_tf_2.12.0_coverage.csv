@@ -1,4 +1,4 @@
-tool_name,lib_name,release,filePath,percent_covered
+tool_name,lib_name,release,filePath,percent_covered_branch, percent_covered_stmt
 FreeFuzz,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/FreeFuzz/tf/1/2.12.0/cuda-oracle/potential-bug/tf.compat.v1.gather/5.py,0.2751605995717345,0.49756493506493504
 FreeFuzz,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/FreeFuzz/tf/1/2.12.0/cuda-oracle/potential-bug/tf.compat.v1.layers.MaxPooling1D/18.py,0.085,0.465149359886202
 FreeFuzz,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/FreeFuzz/tf/1/2.12.0/cuda-oracle/potential-bug/tf.custom_gradient/271.py,0.0036360246130896887,0.16390849026922558

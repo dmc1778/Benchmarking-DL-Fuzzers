@@ -1,4 +1,4 @@
-tool_name,lib_name,release,filePath,percent_covered
+tool_name,lib_name,release,filePath,percent_covered_branch, percent_covered_stmt
 ACETest,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/ACETest/Tester/src/output/output_tf_1/2.12.0/tf.raw_ops.Acos/invalid/gpu_1_1.py,0.26873661670235544,0.492288961038961
 ACETest,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/ACETest/Tester/src/output/output_tf_1/2.12.0/tf.raw_ops.Asinh/invalid/gpu_1_1.py,0.2740899357601713,0.49756493506493504
 ACETest,tf,2.12.0,/media/nimashiri/DATA/testing_results/tosem/ACETest/Tester/src/output/output_tf_1/2.12.0/tf.raw_ops.BiasAdd/invalid/cpu_ori_143_199.py,0.26873661670235544,0.492288961038961
